@@ -1,0 +1,366 @@
+title,year,source,cluster,dist_to_centroid
+Music Instrument Recognition using Deep Learning,2023,,0,0.8573
+CNN-ML Framework-Based Predominant Musical Instrument Recognition Using Mel-Spectrogram,2025,,0,0.8586
+Identification of specific Musical instruments using Machine Learning models,2025,,0,0.8673
+Comparative Analysis of Different Spectrogram Types for Musical Instrument Classification,2025,,0,0.8674
+Robust CNN-based Musical Instrument Recognition with Enhanced Feature Learning,2025,,0,0.8696
+Predominant Instrument Recognition in Polyphonic Music Using Hybrid-CNN Model Algorithm,2025,,0,0.8716
+"Deep Neural Network and SVM-Based Multiclass Musical Instruments Classification Using MFCC, STFT, and Related Acoustic Features",2025,,0,0.8768
+Predominant Musical Instrument Identification Using Deep Hybrid Neural Networks,2025,,0,0.8856
+Supervised classification of Piano and Violin instruments using audio feature extraction and Machine Learning techniques,2026,,0,0.8877
+Spatio-Channel Complementary Learning for Polyphonic Music Instrument Recognition,2025,,0,0.8881
+Classification of Musical Instruments' Sound using kNN and CNN,2024,,0,0.8882
+Chinese Traditional Musical Instrument Computer Intelligent Recognition Based on Recurrent Neural Network,2022,,0,0.8883
+Musical Instruments Recognition App,2021,,0,0.8932
+Fusion of Hilbert-Huang transform and deep convolutional neural network for predominant musical instruments recognition,2020,,0,0.8934
+Predominant Instrument Recognition Based on Deep Neural Network with Auxiliary Classification,2020,,0,0.8984
+Designing Musical Instrument Identification Systems Using Lightweight Machine Learning Architectures,2025,,0,0.9064
+Deep Convolution Neural Network for Thai Classical Music Instruments Sound Recognition,2021,,0,0.9111
+MMIC: A forward-bidirectional mamba architecture for musical instrument classification,2026,,0,0.9121
+MusicTalk: A Microservice Approach for Musical Instrument Recognition,2024,,0,0.9135
+MIC_FuzzyNET: Fuzzy Integral Based Ensemble for Automatic Classification of Musical Instruments From Audio Signals,2022,,0,0.9139
+Boost Predominant Instrument Recognition Performance with MagiaSearch and MagiaClassifier,2023,,0,0.9154
+End-to-End Learning for Musical Instruments Classification,2021,,0,0.9157
+Evaluating Feature Selection Algorithms for Machine Learning-Based Musical Instrument Identification in Monophonic Recordings,2024,,0,0.9195
+1D CNN-Based Traditional Instrument Classification and Notation Generation in Sinhala for Gataberaya and Flute,2024,,0,0.9233
+Combined Evidence of MFCC and CRP Features Using Machine Learning Algorithms for Singer Identification,2021,,0,0.9237
+A Comparative Study on the Drum Sound Recognition Algorithms Based Deep Learning,2021,,0,0.9245
+Music Score Recognition Method Based on Deep Learning,2022,,0,0.9247
+Augmentation methods on monophonic audio for instrument classification in polyphonic music,2021,,0,0.9261
+Rhythmic Resonance: A New Era of Musical Instrument Categorization with CNN-SVM,2024,,0,0.9274
+ENHANCING AUDIO SIGNAL SEGMENTATION FOR MUSICAL INSTRUMENTS WITH REFINED MFCC-BASED FEATURES,2024,,0,0.9275
+TMIR: Transient Length Extraction Strategy for ANN-inspired Musical Instrument Recognition,2020,,0,0.9302
+Multi-Instance Multi-Scale Graph Attention Neural Net with Label Semantic Embeddings for Instrument Recognition,2025,,0,0.9303
+Transfer Learning using Musical/Non-Musical Mixtures for Multi-Instrument Recognition,2023,,0,0.9329
+An Ensemble Approach to Raga Classification Using Deep and Traditional Machine Learning,2024,,0,0.9356
+A novel deep learning-based multi-instrument recognition method for polyphonic music,2023,,0,0.9446
+Real Time Music Beat Recognition Algorithm Combining Music Style Information and Caching Mechanism,2024,,0,0.949
+The Application of Minority Music Style Recognition Based on Deep Convolution Loop Neural Network,2022,,0,0.9505
+Instrument Independent Chord Recognition Using Lossless-to-Lossy Transcoding in Homophonic Audio Signals,2024,,0,0.9532
+Instrumentality Classification Evaluation System for Natural Sounds,2024,,0,0.9609
+Automatic Tabla Stroke Source Separation Using Machine Learning,2021,,0,0.9612
+Classification of piano performers with deep learning models,2026,,0,0.9638
+Onset Detection for String Instruments Using Bidirectional Temporal and Convolutional Recurrent Networks,2023,,0,0.9652
+Predominant musical instrument detection using ensemble learning,2024,,0,0.9661
+Separation of Electric Guitar Sound based on stacked Recurrent Neural Network,2020,,0,0.968
+Accuracy Improvement of Automatic Chord Recognition with Source Separation Preprocessing,2025,,0,0.9683
+Beat Tracking Algorithm Based on Multi-scale Feature Fusion and Attention Mechanism,2026,,0,0.9712
+On Beat Tracking and Tempo Estimation of Musical Audio Signals via Deep Learning,2023,,0,0.9732
+A U-Net Based Architecture for Automatic Music Transcription,2023,,1,0.8901
+A comparison of deep learning methods for timbre analysis in polyphonic automatic music transcription,2021,,1,0.892
+Transcription of Audio to MIDI Using Deep Learning,2022,,1,0.8925
+EXPLORING TRANSFORMER'S POTENTIAL ON AUTOMATIC PIANO TRANSCRIPTION,2022,,1,0.8928
+Polyphonic piano transcription based on graph convolutional network,2023,,1,0.8944
+An EB-enhanced CNN Model for Piano Music Transcription,2021,,1,0.9
+DAFE-MSGAT: Dual-Attention Feature Extraction and Multi-Scale Graph Attention Network for Polyphonic Piano Transcription,2024,,1,0.901
+Piano automatic transcription based on transformer,2023,,1,0.9051
+Automatic Piano Sheet Music Transcription with Machine Learning,2021,,1,0.9067
+A Hybrid Model for Automatic Music Transcription of Hulusi Based on Multi-Feature Fusion,2025,,1,0.9069
+Sight to Sound: An End-to-End Approach for Visual Piano Transcription,2020,,1,0.9105
+Transcription of Arabic and Turkish Music Using Convolutional Neural Networks,2023,,1,0.9116
+Expanding Automatic Music Transcription Dataset via Single Note Audio Synthesized Data,2025,,1,0.9117
+Enhancing automatic music transcription of Thai xylophone music performed with hard mallets: a deep learning approach and comparative analysis,2026,,1,0.9121
+Research on Automatic Piano Music Transcription Algorithm Based on CNN,2024,,1,0.9158
+Multi-Instrument Polyphonic Melody Transcription Based on Deep Learning,2023,,1,0.9167
+Automatic Music Transcription using CNN Neural Networks on Segmented Audio,2021,,1,0.9173
+Music Transcription Based on Deep Learning,2023,,1,0.9185
+Robust Piano Music Transcription Based on Computer Vision,2020,,1,0.9191
+A study on improving the performance of the machine-learning based automatic music transcription model by utilizing pitch number information,2024,,1,0.9196
+Deep Learning Long Short-Term Memory based Automatic Music Transcription System for Carnatic Music,2022,,1,0.9211
+"Deep Learning-Based Automatic Music Transcription of the Diwdiw-as, a Native Filipino Bamboo Flute",2023,,1,0.9216
+Spectrogram Event Based Feature Representation for Generalizable Automatic Music Transcription,2026,,1,0.9224
+Multitrack Music Transcription Based on Joint Learning of Onset and Frame Streams,2026,,1,0.9225
+Automatic Guitar Transcription With Deep Neural Networks,2025,,1,0.9228
+Enhancing Piano Transcription by Dilated Convolution,2020,,1,0.9229
+Audio-to-Score Alignment Using Deep Automatic Music Transcription,2021,,1,0.9246
+Stereo Feature Enhancement and Temporal Information Extraction Network for Automatic Music Transcription,2021,,1,0.9255
+Dual Task Monophonic Singing Transcription,2022,,1,0.9277
+Feature engineering and stacked echo state networks for musical onset detection,2020,,1,0.9287
+No Data Required: Zero-Shot Domain Adaptation for Automatic Music Transcription,2025,,1,0.9292
+Sound and music biases in deep music transcription models: a systematic analysis,2026,,1,0.9296
+Transformer-Based Music Language Modelling and Transcription,2022,,1,0.9296
+Mobile-AMT: Real-time Polyphonic Piano Transcription for In-the-Wild Recordings,2024,,1,0.9311
+High-Quality and Reproducible Automatic Drum Transcription from Crowdsourced Data,2023,,1,0.9326
+Balancing bias and performance in polyphonic piano transcription systems,2022,,1,0.9337
+Improving Music Transcription by Pre-Stacking A U-Net,2020,,1,0.934
+An Integrated Processing Method Based on Wasserstein Barycenter Algorithm for Automatic Music Transcription,2020,,1,0.934
+NetScribed: A Deep Learning Approach for Machine-Based Melody Transcription of Audio Files,2025,,1,0.9366
+YourMT3+: Multi-Instrument Music Transcription with Enhanced Transformer Architectures and Cross-Dataset STEM Augmentation,2024,,1,0.9376
+Annotation-Free Automatic Music Transcription with Scalable Synthetic Data and Adversarial Domain Confusion,2024,,1,0.9394
+Inspecting Deep Learning Techniques for Music Transcription,2025,,1,0.9396
+Polyphonic Piano Music Transcription System Exploiting Mutual Correlations of Different Musical Note States,2024,,1,0.9402
+Musicdetr: A Position-Aware Spectral Note Detection Model for Singing Transcription,2026,,1,0.9403
+MusicYOLO: A Vision-Based Framework for Automatic Singing Transcription,2023,,1,0.9406
+A perceptual measure for evaluating the resynthesis of automatic music transcriptions,2022,,1,0.9421
+Songs2Notes : ML Model Converting Songs to Music Notes,2025,,1,0.9438
+Comparative Analysis of Deep Learning Architectures and Vision Transformers for Musical Key Estimation,2023,,1,0.9473
+Transition-Aware: A More Robust Approach for Piano Transcription,2021,,1,0.9486
+Evaluating and Comparing Deep Learning Methods with Vision Transformers for Musical Key Assessment,2025,,1,0.9491
+Note and Playing Technique Transcription of Electric Guitar Solos in Real-World Music Performance,2023,,1,0.9491
+Development of an Automatic Musical Keys Notes Detection Technique Using Mir Toolbox,2024,,1,0.9492
+Timbre-Based Pretraining with Pseudo-Labels for Multi-Instrument Automatic Music Transcription,2026,,1,0.9521
+Automatic musical transcription of the Tatar folk song: comparative analysis of AI-powered programs,2022,,1,0.9545
+Design and Development of Real‐Time Music Transcription Using Digital Signal Processing,2023,,1,0.9546
+A post-processing of onset detection based on verification with neural network,2020,,1,0.9561
+Automatic Music Transcription for the Thai Xylophone played with Soft Mallets,2022,,1,0.9571
+Converting Vocal Performances into Sheet Music Leveraging Large Language Models,2024,,1,0.9572
+Noise-to-Notes: Diffusion-Based Generation and Refinement for Automatic Drum Transcription,2026,,1,0.9581
+Statistical correction of transcribed melody notes based on probabilistic integration of a music language model and a transcription error model,2021,,1,0.9627
+HIPI: A Hierarchical Performer Identification Model Based on Symbolic Representation of Music,2023,,1,0.9638
+Automatic Transcription of Organ Tablature Music Notation with Deep Neural Networks,2021,,1,0.9643
+Implementation of Music Similarity Analysis System Employing Source Separation and Automatic Transcription Learning,2023,,1,0.9645
+Korean Pansori Vocal Note Transcription Using Attention-Based Segmentation and Viterbi Decoding,2024,,1,0.9668
+Deep Autotuner: A Pitch Correcting Network for Singing Performances,2020,,1,0.9674
+Harmonic Structure-Based Neural Network Model for Music Pitch Detection,2020,,1,0.968
+Piano keyboard detection algorithm using deep learning,2026,,1,0.9708
+Hardware-Accelerated Music Transcription on the Cloud via FPGA Implementation,2025,,1,0.9747
+The IRMA Dataset: A Structured Audio–MIDI Corpus for Iranian Classical Music,2025,,1,0.9748
+Meta-Learning-Based Percussion Transcription and $T\bar{a}la$ Identification From Low-Resource Audio,2025,,1,0.978
+A Multi-Stage Automatic Evaluation System for Sight-Singing,2023,,1,0.9788
+Residual attention based network for automatic classification of phonation modes,2020,,1,0.9796
+Velocity2DMs: A Contextual Modeling Approach to Dynamics Marking Prediction in Piano Performance,2025,,1,0.9798
+MCSSME: Multi-Task Contrastive Learning for Semi-supervised Singing Melody Extraction from Polyphonic Music,2024,,2,0.8879
+Toward Leveraging Pre-Trained Self-Supervised Frontends for Automatic Singing Voice Understanding Tasks: Three Case Studies,2023,,2,0.8922
+Singing voice detection in opera recordings: A case study on robustness and generalization,2021,,2,0.9066
+Deep Learning Approaches in Topics of Singing Information Processing,2022,,2,0.9142
+Research on singing voice detection based on a long-term recurrent convolutional network with vocal separation and temporal smoothing,2020,,2,0.9161
+Interactive Singing Melody Extraction Based on Active Adaptation,2024,,2,0.9172
+HAMLET-Net: A Deep Harmonic-Aware Semisupervised Network for Interpretable Melody Extraction of Music and Singing,2025,,2,0.9173
+ENHANCING NOTE-LEVEL SINGING TRANSCRIPTION MODEL WITH UNLABELED AND WEAKLY LABELED DATA,2024,,2,0.9182
+Improving Singing Voice Transcription Generalization with AI Generated Accompaniments,2025,,2,0.9213
+Singing Voice Accompaniment Data Augmentation with Generative Models,2025,,2,0.9216
+Note-level singing melody transcription with transformers,2023,,2,0.9217
+Semi-Supervised Singing Voice Separation with Noisy Self-Training,2021,,2,0.9222
+Cross-version Singing Voice Detection in Opera Recordings: Challenges for Supervised Learning,2020,,2,0.9226
+CoMelSinger: Discrete Token-Based Zero-Shot Singing Synthesis With Structured Melody Control and Guidance,2026,,2,0.9234
+Singing Melody Extraction Based on Joint Network with Res-CBAM,2022,,2,0.9254
+VocEmb4SVS: Improving Singing Voice Separation with Vocal Embeddings,2022,,2,0.9272
+Knowledge distillation for singing voice detection,2021,,2,0.928
+Meta-Learning-Based Supervised Domain Adaptation for Melody Extraction,2024,,2,0.9317
+F0 estimation using blind source separation for analyzing noh singing,2020,,2,0.932
+Paralinguistic singing attribute recognition using supervised machine learning for describing the classical tenor solo singing voice in vocal pedagogy,2022,,2,0.9321
+PhonHuBERT: A Phoneme Transcription Tool for Song Datasets,2024,,2,0.9322
+SingAug: Data Augmentation for Singing Voice Synthesis with Cycle-consistent Training Strategy,2022,,2,0.9334
+Transinger: Cross-Lingual Singing Voice Synthesis via IPA-Based Phonetic Alignment,2025,,2,0.9342
+SinTechSVS: A Singing Technique Controllable Singing Voice Synthesis System,2024,,2,0.9368
+Automatic Lyrics Transcription of Polyphonic Music With Lyrics-Chord Multi-Task Learning,2022,,2,0.9381
+RevNet: A Review Network with Group Aggregation Fusion for Singing Melody Extraction,2024,,2,0.9388
+Zero-Note Samba: Self-Supervised Beat Tracking,2023,,2,0.9392
+Singer Identification Using Deep Timbre Feature Learning with Knn-Net,2021,,2,0.9406
+Self-Transriber: Few-Shot Lyrics Transcription With Self-Training,2023,,2,0.9425
+Audio Classification for Melody Transcription in the Context of Indian Art Music,2022,,2,0.9559
+Visually Guided Audio Source Separation with Meta Consistency Learning,2024,,2,0.9598
+Ensemble Machine Learning Models for Root Note Detection in Irish Instrumental Dance Music,2023,,2,0.9603
+Violinist identification based on vibrato features,2021,,2,0.9629
+Harmonic Representation for CNN-LSTM Automatic Chord Recognition,2021,,2,0.9653
+Mitigating Western Bias in Music Genre Classification: A Contrastive Learning Approach for Greek Music,2026,,2,0.9662
+EDM10: A Polyphonic Stereo Dataset with Identical BGM for Musical Instrument Identification,2025,,2,0.9682
+Multi-Task Learning Approaches for Music Similarity Representation Learning Based on Individual Instrument Sounds,2024,,2,0.9696
+Deep learning model using squeezenet and promoted ideal gas molecular motion for music genre classification from audio spectrograms,2025,,2,0.9701
+A Comparative Study of Statistical Features and Deep Learning for Orchestral Texture Classification,2025,,2,0.9748
+Machine Learning Approaches for Classification of Indian Folk Music Genres,2026,,2,0.9791
+Methods for Combining Time-Frequency Representations: A Python Package,2026,,2,0.9806
+Unsupervised Music Source Separation Using Differentiable Parametric Source Models,2023,,3,0.8859
+How Far Can a U-Net Go? An Empirical Analysis of Music Source Separation Performance,2026,,3,0.8905
+Interpretable Machine Learning Techniques for Audio Source Separation,2025,,3,0.9006
+Score-Informed Music Source Separation: Improving Synthetic-To-Real Generalization in Classical Music,2025,,3,0.9011
+SCNet: Sparse Compression Network for Music Source Separation,2024,,3,0.9031
+Monaural Music Source Separation Using Deep Convolutional Neural Network Embedded with Feature Extraction Module,2022,,3,0.9042
+Two-Step Sound Source Separation: Training on Learned Latent Targets,2020,,3,0.9047
+Enhanced audio source separation and musical component analysis,2020,,3,0.9065
+Stripe-Transformer: deep stripe feature learning for music source separation,2023,,3,0.9069
+Vocal harmony separation using time-domain neural networks,2021,,3,0.907
+Source Separation and Depthwise Separable Convolutions for Computer Audition (Student Abstract),2021,,3,0.9073
+A comparative study of blind source separation methods,2023,,3,0.9083
+HTMD-Net: A Hybrid Masking-Denoising Approach to Time-Domain Monaural Singing Voice Separation,2021,,3,0.9083
+The Inverse Drum Machine: Source Separation Through Joint Transcription and Analysis-by-Synthesis,2026,,3,0.9095
+SynthSOD: Developing an Heterogeneous Dataset for Orchestra Music Source Separation,2025,,3,0.9119
+Spain-NET: SPATIALLY-INFORMED STEREOPHONIC MUSIC SOURCE SEPARATION,2022,,3,0.9128
+Benchmarking Music Demixing Models for Deep Drum Source Separation,2024,,3,0.9141
+Parallel stacked hourglass network for music source separation,2020,,3,0.9141
+Contrastive Learning based Deep Latent Masking for Music Source Separation,2023,,3,0.915
+Music Source Separation Using Deform-Conv Dense U-Net,2021,,3,0.9152
+An Ensemble Approach to Music Source Separation: A Comparative Analysis of Conventional and Hierarchical Stem Separation,2025,,3,0.9155
+Direction specific ambisonics source separation with end-to-end deep learning,2023,,3,0.916
+Visual Scene Graphs for Audio Source Separation,2021,,3,0.9168
+"Multi-task learning for detection, recovery, and separation of polyphonic music",2020,,3,0.9175
+Source Separation of Piano Concertos Using Musically Motivated Augmentation Techniques,2024,,3,0.9179
+Finding Strength in Weakness: Learning to Separate Sounds with Weak Supervision,2020,,3,0.9179
+Improved Separation of Polyphonic Chamber Music Signals by Integrating Instrument Activity Labels,2023,,3,0.918
+MUSIC SOURCE SEPARATION BASED ON A LIGHTWEIGHT DEEP LEARNING FRAMEWORK (DTTNET: DUAL-PATH TFC-TDF UNET),2024,,3,0.92
+RTrans-D3Net: Music Source Separation with Multi-Dilated Convolutions and Transformer,2025,,3,0.9206
+Chinese instrument music source separation with frequency-attentive multi-band neural networks,2025,,3,0.9212
+SepMLP: An All-MLP Architecture for Music Source Separation,2023,,3,0.9213
+Improving Music Source Separation with Simo Stereo Band-Split Rnn,2024,,3,0.9224
+Source Separation For A Cappella Music,2026,,3,0.9227
+Mixing-Specific Data Augmentation Techniques for Improved Blind Violin/Piano Source Separation,2020,,3,0.9229
+Toward deep drum source separation,2024,,3,0.9238
+An Efficient Short-Time Discrete Cosine Transform and Attentive MultiResUNet Framework for Music Source Separation,2022,,3,0.9256
+Music Source Components Isolation using MultiHead Transformers and Encoders,2024,,3,0.9258
+Adversarial Unsupervised Domain Adaptation for Harmonic-Percussive Source Separation,2020,,3,0.9259
+VISUAL SOUND SOURCE SEPARATION WITH PARTIAL SUPERVISION LEARNING,2022,,3,0.9261
+MDX-Mixer: Music Demixing by Leveraging Source Signals Separated by Existing Demixing Models,2024,,3,0.9265
+Music Source Separation With Band-Split RNN,2023,,3,0.9265
+Tackling the Cocktail Fork Problem for Separation and Transcription of Real-World Soundtracks,2023,,3,0.9267
+Improving Universal Sound Separation Using Sound Classification,2020,,3,0.9274
+Music Source Separation Using Generative Adversarial Network and U-Net,2020,,3,0.9277
+Music Source Separation Method Based on Unet Combining SE and BiSRU,2021,,3,0.9284
+Determined audio source separation with multichannel star generative adversarial network,2020,,3,0.9284
+Integrating High Order Ambisonics and Deep Learning for Advanced Instrument Separation in Spatial Audio Applications,2025,,3,0.9299
+Simultaneous Separation and Transcription of Mixtures with Multiple Polyphonic and Percussive Instruments,2020,,3,0.9309
+The Spheres Dataset: Multitrack Orchestral Recordings for Music Source Separation and Information Retrieval,2026,,3,0.9359
+Multi-channel U-Net for Music Source Separation,2020,,3,0.9362
+Channel-wise subband input for better voice and accompaniment separation on high resolution music,2020,,3,0.9367
+Sound source separation for musical pedagogy,2021,,3,0.9368
+A lightweight real-time karaoke system with improved singing voice separation via fundamental frequency estimation integration,2026,,3,0.9382
+Spec2Spec: Towards the general framework of music processing using generative adversarial networks,2020,,3,0.9382
+Visually Guided Sound Source Separation and Localization using Self-Supervised Motion Representations,2022,,3,0.9386
+Towards Blind Data Cleaning: A Case Study in Music Source Separation,2026,,3,0.9387
+Exploiting Music Source Separation For Singing Voice Detection,2023,,3,0.9398
+"A Deep-Learning Based Framework for Source Separation, Analysis, and Synthesis of Choral Ensembles",2022,,3,0.9424
+Separate and Transcribe: Deep Guitar String Separation and its Application for Tablature Transcription Enhancement,2025,,3,0.943
+A Performance Analysis on Matrix Factorisations in Solving Musical Instrument Source Separation Problem,2025,,3,0.9439
+Hybrid Deep Learning Model for Singing Voice Separation,2021,,3,0.9445
+Hybrid dual-path network: Singing voice separation in the waveform domain by combining Conformer and Transformer architectures,2025,,3,0.9453
+Research on Deep Learning-Based Vocal Separation and Digital Synthesis in Choral Music,2026,,3,0.9483
+DIFFERENTIABLE DIGITAL SIGNAL PROCESSING MIXTURE MODEL FOR SYNTHESIS PARAMETER EXTRACTION FROM MIXTURE OF HARMONIC SOUNDS,2022,,3,0.9484
+Leveraging Prompt Engineering and Retrieval-Augmented Generation with Large Language Models for AI-Driven Music Source Separation,2026,,3,0.9485
+Source Separation-based Data Augmentation for Improved Joint Beat and Downbeat Tracking,2021,,3,0.9486
+Drum-Aware Ensemble Architecture for Improved Joint Musical Beat and Downbeat Tracking,2021,,3,0.9527
+Non-negative Matrix Factorization and DenseNet based Monophonic Singing Voice Separation,2022,,3,0.9539
+Towards Practical Real-Time Low-Latency Music Source Separation,2025,,3,0.9544
+A Joint Diagonalization Based Efficient Approach to Underdetermined Blind Audio Source Separation Using the Multichannel Wiener Filter,2021,,3,0.9545
+Multiband Kick Drum Separation with Genre-Guided Optimization,2025,,3,0.9548
+Multi-band multi-resolution fully convolutional neural networks for singing voice separation,2021,,3,0.9604
+DLVS4Audio2Sheet: Deep Learning-Based Vocal Separation for Audio into Music Sheet Conversion,2024,,3,0.9767
+Learning Multi-Pitch Estimation from Weakly Aligned Score-Audio Pairs Using a Multi-Label CTC Loss,2021,,4,0.8393
+A Music Cognition–Guided Framework for Multi-pitch Estimation,2023,,4,0.8573
+Proposal and Evaluation of a Pitch Estimation Model Based on Reconstruction of the Spectrum of Input Sound by Using Timbre Information and Pitch Information,2025,,4,0.8577
+Comparing Deep Models and Evaluation Strategies for Multi-Pitch Estimation in Music Recordings,2022,,4,0.8657
+Pitch Estimation by Denoising Preprocessor and Hybrid Estimation Model,2023,,4,0.8735
+Multi-Layer Combined Frequency and Periodicity Representations for Multi-Pitch Estimation of Multi-Instrument Music,2024,,4,0.8752
+Deep Neural Network for Multi-Pitch Estimation Using Weighted Cross Entropy Loss,2021,,4,0.8753
+Multi-pitch estimation with polyphony per instrument information for Western classical and electronic music,2025,,4,0.8865
+Soft Dynamic Time Warping for Multi-Pitch Estimation and Beyond,2023,,4,0.8891
+MF-PAM: Accurate Pitch Estimation through Periodicity Analysis and Multi-level Feature Fusion,2023,,4,0.8893
+Multi-Instrument Automatic Music Transcription with Self-Attention-Based Instance Segmentation,2020,,4,0.8934
+Voice Assignment in Vocal Quartets Using Deep Learning Models Based on Pitch Salience,2022,,4,0.8977
+Pitch-aware generative pretraining improves multi-pitch estimation with scarce data,2024,,4,0.9005
+Challenges and Advancements in Automated Music Transcription: A Focus on Multiple-Pitch Estimation,2025,,4,0.9017
+Timbre-Trap: A Low-Resource Framework for Instrument-Agnostic Music Transcription,2024,,4,0.9045
+TAPE: An End-to-End Timbre-Aware Pitch Estimator,2023,,4,0.9111
+Personalized Music Improvisation,2024,,4,0.9145
+Evolving a multi-classifier system for multi-pitch estimation of piano music and beyond: An application of cartesian genetic programming,2021,,4,0.9256
+Unsupervised Domain Adaptation for Music Transcription: Exploiting Cross-Version Consistency,2025,,4,0.943
+Haptic Music Feedback through Audio Decomposition,2025,,4,0.9501
+Towards Robust Local Key Estimation with a Musically Inspired Neural Network,2024,,4,0.9556
+Evaluating High-Resolution Piano Sustain Pedal Depth Estimation with Musically Informed Metrics,2026,,4,0.9655
+Design and Development of University Vocal Music Teaching System Based on Optimized Neural Network,2025,,5,0.9005
+Application of convolutional neural network in the evaluation of singing teaching effect,2025,,5,0.9035
+Study on the Design of an AI-Based Singing Training System Using Feature Comparison,2026,,5,0.906
+The multi-dimensional performance intelligent evaluation and feedback system for music education,2026,,5,0.9112
+Research on Stage Vocal Classification Based on Long Short-Term Memory Artificial Neural Networks,2025,,5,0.9218
+An objective evaluation method of vocal singing effect based on artificial intelligence technology,2024,,5,0.9236
+A Method for Evaluating and Improving Vocal Pronunciation Quality of Vocal Music Students Based on Artificial Intelligence Technology,2026,,5,0.9242
+Singing Timbre Popularity Assessment Based on Multimodal Large Foundation Model,2025,,5,0.9269
+Dense dynamic convolutional network for Bel canto vocal technique assessment,2025,,5,0.9302
+Integrating intelligent algorithms in music education to analyze and improve posture and motion in instrumental training,2025,,5,0.9322
+Utilizing AI and machine learning in vocal training programs: A contemporary approach,2026,,5,0.9337
+AI-assisted feedback and reflection in vocal music training: effects on metacognition and singing performance,2025,,5,0.9366
+Ta Ka Di Mi: AI for Konnakkol and Rhythm Training,2025,,5,0.9371
+Deep learning-based personalized learning path planning and optimization model for music education,2026,,5,0.9383
+ARTIFICIAL INTELLIGENCE AND THE EVOLUTION OF MUSICAL INTONATION,2026,,5,0.939
+Identifying Critical Segments Affecting Piano Performance Evaluation,2025,,5,0.9393
+Application of deep learning and generative adversarial network in music data analysis of Internet of Things,2025,,5,0.9396
+FORMATION OF MUSICAL IDENTITY DURING VOCAL TRAINING BASED ON MACHINE INTELLIGENCE TOOLS,2026,,5,0.9399
+A Data-Driven Approach to Piano Pedagogy Through Audio Feature-Based Performance Evaluation,2025,,5,0.9402
+Evaluation Singing Art Voice Quality Using Siamese Gated Recurrent Extreme Learning Networks,2025,,5,0.9406
+A Novel Voice-Processing Method Leveraging Polyphonic Audio for Instrument Recognition Using Machine Learning,2025,,5,0.9421
+Application Research of Neural Network Technology in Vocal Music Evaluation,2021,,5,0.9426
+Speech emotion recognition with light weight deep neural ensemble model using hand crafted features,2025,,5,0.9427
+Advancing deep learning for expressive music composition and performance modeling,2025,,5,0.9445
+Research on the Design of Music Learning Singing System Based on Artificial Intelligence Feature Comparison,2024,,5,0.9448
+Real-Time Human-Classified Emotional MIDI Dataset Integration for Symbolic Music Generation,2024,,5,0.9455
+Evaluation of Deep Learning Approaches for Pitch Scoring in Piano Practice and Performance,2025,,5,0.9459
+EEG-Based Music Emotion Prediction Using Supervised Feature Extraction for MIDI Generation,2025,,5,0.9471
+Singing-Voice Timbre Evaluations Based on Transfer Learning,2022,,5,0.9472
+AI-Powered Voice Separation Algorithms: Testing Accuracy in Reconstructing Fundamental Frequency for Vocal Analysis,2026,,5,0.9475
+The singing style of female roles in ethnic opera under artificial intelligence and deep neural networks,2025,,5,0.9496
+AI-ASSISTED NOTATION SYSTEMS IN MUSIC PEDAGOGY,2026,,5,0.9497
+Investigation on the Extraction Methods of Timbre Features in Vocal Singing Based on Machine Learning,2022,,5,0.9502
+Deep Reinforcement Learning for Personalised Music Learning Pathways,2026,,5,0.9503
+Vocal music teaching evaluation model based on pattern recognition and voiceprint feature analysis,2021,,5,0.9506
+Simulation-based deep learning for IoT-oriented music improvisation optimization,2026,,5,0.9514
+An investigation of CNN-LSTM music recognition algorithm in ethnic vocal technique singing,2024,,5,0.9515
+Evaluating pre-trained audio embeddings for the classification of traditional Portuguese musical instruments,2026,,5,0.9519
+A Signal Processing-Guided Machine Learning Approach to Automated Detection of Time Signatures in Music,2026,,5,0.9534
+Improving Piano Notation Transcription in Bisa Aku Bisa Children's Music Using Deep Learning,2025,,5,0.9553
+PRSF: Pitched-Noise-Robust Score Following Based on Multimodal Learning,2025,,5,0.9553
+AI-Driven Music Classrooms: An Empirical Analysis of Feature Adoption and Teacher Role Transformation,2026,,5,0.9556
+Joint Learning of Emotion and Singing Style for Enhanced Music Style Understanding,2025,,5,0.9561
+Implementation of Deep Learning Models on an SoC-FPGA Device for Real-Time Music Genre Classification,2023,,5,0.9563
+Automatic extraction method for humming-to-Guzheng melody based on improved YIN algorithm,2025,,5,0.9572
+Contextual Characteristics of Human Assessment in School Music Performance and Design Considerations for AI-based Assessment Models,2026,,5,0.9578
+A hybrid CNN-LSTM model with adaptive instance normalization for one shot singing voice conversion,2024,,5,0.9587
+Music time signature detection using ResNet18,2024,,5,0.959
+Classification of Music Structural Functions using Deep Learning,2025,,5,0.9594
+A two-stage deep learning framework for lead instrument recognition in polyphonic music featuring Chinese instruments,2026,,5,0.9596
+Applying Artificial Intelligence Techniques to Build a Singing Evaluation System in Choral Singing,2025,,5,0.9598
+Research on Music Emotion Recognition Based on Multi-scale Attention and Cross-modal Contrastive Learning,2026,,5,0.9606
+ChordFormer: A Conformer-Based Architecture for Large-Vocabulary Audio Chord Recognition,2026,,5,0.9607
+Classification of the perceptual impression of source-level blending between violins in a joint performance,2023,,5,0.9616
+Synthesis and Optimization of Instrumental Tone Quality Using Deep Learning,2025,,5,0.9624
+A Falsetto Detection Algorithm for Enhancing Voice Gender Recognition,2025,,5,0.9629
+Genetic Algorithm-Based Optimization of Weighted Voting in Ensemble Models for Time Signature Detection,2024,,5,0.9629
+Application of Computational Methods for Comparative Music Analysis,2023,,5,0.9644
+DEEP PERFORMER: SCORE-TO-AUDIO MUSIC PERFORMANCE SYNTHESIS,2022,,5,0.9646
+Machine Learning for Monitoring Vocal Health and Performance of Professional Singers,2024,,5,0.9652
+BACHI: Boundary-Aware Symbolic Chord Recognition Through Masked Iterative Decoding on POP and Classical Music,2026,,5,0.967
+Percussion and Instrumentation in Music Emotion Recognition: A Feature Engineering Approach,2026,,5,0.9673
+Construction of a vocal singing style repository based on a deep learning model,2024,,5,0.9678
+Audio2Midi: a ResNet-18 based architecture for Accurate Audio-to-MIDI Translation,2024,,5,0.9686
+EEG-based cross-subject passive music pitch perception using deep learning models,2025,,5,0.9689
+A Quantitative Evaluation of a Musical Performance Support System Utilizing a Musical Sophistication Test Battery,2026,,5,0.9723
+Towards Automatic Measure-Wise Feature Extraction Pipeline for Music Performance Analysis,2022,,5,0.9736
+Instrumental Timbre Transfer Based on Disentangled Representation of Timbre and Pitch,2024,,5,0.9737
+An Optimized Hybrid Deep Feature Fusion Framework for Hardware-Efficient Music Retrieval,2026,,5,0.9744
+Deformable CNN and Imbalance-Aware Feature Learning for Singing Technique Classification,2022,,5,0.9744
+Modeling Human Experts’ Identification of Orchestral Blends Using Symbolic Information,2021,,5,0.9751
+"Impact of Rhythm, Tempo, and Rest Variations on Pitch Detection in Deep Learning-Based Piano Transcription Models",2024,,5,0.9752
+A Deep Learning Based Approach for Janya Raga Classification in Carnatic Music,2022,,5,0.9761
+AI Assisted Workflow for Set-list Preparation with Loops for Live Musicians,2024,,5,0.9766
+Music Similarity Detection Through Comparative Imagery Data,2025,,5,0.9768
+Singing Transcription from Multimedia Audio Signals using Contour Filtering,2021,,5,0.9773
+Segmenting and Predicting Musical Phrase Structure Exploits Neural Gain Modulation and Phase Precession,2024,,5,0.9796
+The Ensonification Interface: A Comprehensive Toolkit for Ensemble Sonification of Temporal Data,2026,,5,0.9799
+Melodic Filtering for Indian Classical Instrumental Music,2021,,5,0.9847
+Improving Deep-Learning-based Optical Music Recognition for Camera-based Inputs,2022,,6,0.83
+On the Use of Transformers for End-to-End Optical Music Recognition,2022,,6,0.8394
+Sequential Next-Symbol Prediction for Optical Music Recognition,2021,,6,0.8459
+Practical End-to-End Optical Music Recognition for Pianoform Music,2024,,6,0.858
+Region-based layout analysis of music score images,2022,,6,0.8622
+A holistic approach for image-to-graph: application to optical music recognition,2022,,6,0.8623
+Decoupling music notation to improve end-to-end Optical Music Recognition,2022,,6,0.8639
+Multimodal image and audio music transcription,2022,,6,0.8688
+A Region-Based Approach for Layout Analysis of Music Score Images in Scarce Data Scenarios,2024,,6,0.8739
+Late multimodal fusion for image and audio music transcription,2023,,6,0.8754
+Multimodal Strategies for Image and Audio Music Transcription: A Comparative Study,2023,,6,0.8849
+Musigraph: Optical Music Recognition Through Object Detection and Graph Neural Network,2022,,6,0.8901
+An ensemble of deep transfer learning models for handwritten music symbol recognition,2022,,6,0.8941
+"Design of a Music Recognition, Encoding, and Transcription Online Tool",2026,,6,0.8946
+Decentralized Optical Music Recognition Using YOLO and FedGP for Music Education,2025,,6,0.8957
+Advancing Handwritten Musical Notation Recognition Using Deep Learning: A Convolutional Neural Network-Based Approach with Improved Accuracy,2024,,6,0.8983
+Stacking ensemble learning for optical music recognition,2023,,6,0.9068
+Experimenting Active and Sequential Learning in a Medieval Music Manuscript,2025,,6,0.9168
+Real World Music Object Recognition,2024,,6,0.9173
+"U-MusT: A Unified Framework for Cross-Modal Translation of Score Images, Symbolic Music, and Performance Audio",2026,,6,0.9215
+Multi-modal Conditional Bounding Box Regression for Music Score Following,2021,,6,0.9238
+Deep learning-based approach for old handwritten music symbol recognition,2021,,6,0.9256
+A detector for page-level handwritten music object recognition based on deep learning,2023,,6,0.9265
+Evaluation of Lyrics Extraction from Folk Music Sheets Using Vision Language Models (VLMs),2025,,6,0.9292
+Design of a Semantic Understanding System for Optical Staff Symbols,2023,,6,0.9355
+Can Patch Selection Heuristics Enhance Layout Analysis of Music Scores?,2026,,6,0.9384
+A Lightweight Music Recognition Method Based on Improved CRNN,2023,,6,0.9405
+Music Sheet Understanding and Tone Transposition,2022,,6,0.9552
+Real-Time Music Following in Score Sheet Images via Multi-Resolution Prediction,2021,,6,0.961
+Music Sheet Classification using Squeeze-and-Excitation ResNet50 Network,2023,,6,0.98
