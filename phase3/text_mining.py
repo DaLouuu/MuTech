@@ -65,7 +65,8 @@ COLUMN_ALIASES: dict[str, list[str]] = {
     "year":     ["year", "py", "publication year", "date"],
     "authors":  ["authors", "author", "au", "author full names", "author(s)"],
     "doi":      ["doi", "di", "digital object identifier"],
-    "source":   ["source title", "source", "journal", "publication name", "so"],
+    "source":   ["source title", "source", "journal", "publication name",
+                 "publication venue", "so"],
 }
 
 # Relevance filter -------------------------------------------------------------

@@ -1,0 +1,8 @@
+,0:Instrument Recognition / Classification,1:Automatic Music Transcription (AMT),2:Singing Voice / Melody Extraction,3:Source Separation,4:Multi-Pitch Estimation,5:Music Education & Performance Assessment,6:Optical Music Recognition (OMR)
+0:Instrument Recognition / Classification,187,52,33,27,2,99,11
+1:Automatic Music Transcription (AMT),52,272,46,36,42,89,23
+2:Singing Voice / Melody Extraction,33,46,102,50,7,48,6
+3:Source Separation,27,36,50,309,15,43,3
+4:Multi-Pitch Estimation,2,42,7,15,76,16,3
+5:Music Education & Performance Assessment,99,89,48,43,16,238,15
+6:Optical Music Recognition (OMR),11,23,6,3,3,15,138

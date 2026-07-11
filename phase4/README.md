@@ -4,124 +4,71 @@
 
 Groups the SLR papers into topics using all four models from the masterfile:
 **K-Means, Agglomerative, NMF, and LDA**. Takes the TF-IDF output of
-[Phase 3](https://github.com/UnityGrave/mutech-phase3-textmining) as input.
+[Phase 3](../phase3) as input.
 
 ## 🚀 New here? Start with this
 
-**No local setup needed.** Open
-[`MuTech_Phase4_All_Models.ipynb`](MuTech_Phase4_All_Models.ipynb) in
-[Google Colab](https://colab.research.google.com) (File ▸ Open notebook ▸ GitHub ▸
-paste this repo's URL), then run every cell top to bottom. That's it — it clones
-this repo, generates test data, runs all four models, and shows the results.
+**Open [`MuTech_Phase4_Detailed_Analysis.ipynb`](MuTech_Phase4_Detailed_Analysis.ipynb).**
+It's the canonical Phase 4 artifact: EDA, a leakage-safe 80/20 train/test split, all four
+models each with baseline fit, held-out generalization check, `RandomizedSearchCV`
+tuning, error analysis, and a final refit on the full 365-paper corpus — ending in an
+explicit **final model selection** (K-Means; see `phase4_output_detailed/comparison/
+FINAL_MODEL_SELECTION.txt` for the full rationale against the other three).
 
-Running locally instead:
+For a fast, untuned run (e.g. testing a change without the full validation pass), use the
+scripts directly from the command line:
 
 ```bash
-git clone https://github.com/UnityGrave/mutech-phase4-clustering.git
-cd mutech-phase4-clustering
 pip install -r requirements.txt
-python topic_models.py --mock        # works today, no real data needed
+python topic_models.py --mock        # synthetic data, no real corpus needed
+python kmeans_clustering.py --mock   # K-Means only, deeper k-selection diagnostics
 ```
+
+There used to be two thin Colab-wrapper notebooks around these scripts
+(`MuTech_Phase4_All_Models.ipynb`, `MuTech_Phase4_KMeans_Clustering.ipynb`); they were
+removed because `MuTech_Phase4_Detailed_Analysis.ipynb` now runs every model they ran
+with strictly more rigor (tuning, held-out validation, error analysis) — keeping them
+around just meant three notebooks to maintain for the same four models. The scripts
+themselves are untouched and still fully usable from the command line, including their
+`--mock` synthetic-data mode.
 
 ## Where this sits in the pipeline
 
 ```mermaid
 flowchart LR
-    A["Finalized papers CSV<br/>(Rayyan/Scopus export — Marian)"] --> B["Phase 3<br/>text_mining.py<br/>clean + tokenize + TF-IDF"]
+    A["Finalized papers CSV<br/>(Rayyan/Scopus export)"] --> B["Phase 3<br/>text_mining.py<br/>clean + tokenize + TF-IDF"]
     B --> C["phase3_output/<br/>tfidf_matrix.npz<br/>tfidf_vectorizer.pkl<br/>cleaned_corpus.csv"]
     C --> D["Phase 4 (this repo)<br/>K-Means · Agglomerative · NMF · LDA"]
-    D --> E["Topic labels + top terms<br/>→ Phases 5 & 6"]
+    D --> E["Final model selection<br/>→ Phase 5 (SNA cluster network)"]
 ```
 
-## 📌 Status (last updated July 8, 2026)
+## 📌 Status
 
 | Item | Status |
 | --- | --- |
-| Phase 4 code (all four models) | ✅ Done, tested end-to-end on mock data |
-| Waiting on | ⏳ Finalized dataset → Phase 3 run on it |
-| Then someone runs | `python topic_models.py --indir path/to/phase3_output` |
-| Deadline | Phases 4 & 5 due **July 10** |
-
-The **mock mode** exists so Phase 4 didn't have to wait for the dataset: it
-fabricates ~100 synthetic papers in *exact* Phase 3 output format (same
-filenames, schema, and TF-IDF settings). Swapping mock → real is only a path
-change. **Nobody needs to edit code to finish this phase.**
+| All four models, quick pipeline (`topic_models.py`, `kmeans_clustering.py`) | ✅ Done — real run in `phase4_output_real/` |
+| All four models, rigorous validation (`MuTech_Phase4_Detailed_Analysis.ipynb`) | ✅ Done — leakage-safe, tuned, validated, real run in `phase4_output_detailed/` |
+| Final model selection | ✅ **K-Means** — see `phase4_output_detailed/comparison/FINAL_MODEL_SELECTION.txt` |
 
 Per the masterfile, each model has an owner: **K-Means — Kean · NMF — Marian ·
-Agglomerative — Yesha · LDA — Dana**. This repo gives every owner a working
-baseline for their model; still open per the masterfile: RandomizedSearchCV
-tuning and a Topic Coherence score for LDA (the masterfile notes silhouette
-isn't the right metric for LDA).
+Agglomerative — Yesha · LDA — Dana**.
+
+## Two output directories — what's the difference
+
+| Directory | Produced by | What it represents |
+| --- | --- | --- |
+| `phase4_output_real/` | `topic_models.py` / `kmeans_clustering.py` | Quick, untuned baseline — one shared k across all four models, no held-out validation. Useful as a fast sanity check. |
+| `phase4_output_detailed/` | `MuTech_Phase4_Detailed_Analysis.ipynb` | The validated, leakage-safe result — each model independently tuned and held-out-tested before being refit on the full corpus. **This is the source of truth**; `comparison/FINAL_SELECTED_assignments.csv` is what Phase 5 and the manuscript should use. |
 
 ## The two scripts
 
 | Script | What it does | When to use it |
 | --- | --- | --- |
-| `topic_models.py` | Runs **all four models** with a shared k and compares them (silhouette + ARI). | The main Phase 4 deliverable. |
-| `kmeans_clustering.py` | K-Means only, in more depth: k-selection curves, distance-to-centroid per paper, saved model. | Digging into the primary model; also holds the shared loader + mock generator that `topic_models.py` imports. |
+| `topic_models.py` | Runs all four models with a shared k and compares them (silhouette + ARI). | Fast iteration / sanity-checking a Phase 3 change, via `--mock` or `--indir`. |
+| `kmeans_clustering.py` | K-Means only, in more depth: k-selection curves, distance-to-centroid per paper, saved model. Also holds the shared loader + mock generator that `topic_models.py` imports. | Digging into K-Means specifically without the full notebook. |
 
-Common flags for both: `--mock` (synthetic data), `--indir DIR` (real Phase 3
-output), `--outdir DIR`, `--k N` (force the number of topics).
-
-## How to read the outputs
-
-### 1. Choosing k (how many topics)
-
-We try k = 2…12 and score each. **Left:** inertia ("elbow") — how tight the
-clusters are; look for the bend. **Right:** silhouette — how well-separated
-they are; higher is better, dashed line = the automatic pick. On the mock
-corpus with 5 planted topics it correctly picks **k = 5**:
-
-![k selection: elbow and silhouette curves](phase4_output/k_selection.png)
-
-> ⚠️ On the real corpus the silhouette curve will likely be flatter and the
-> score lower — that's normal for messy real text. The script warns you when
-> this happens. Don't trust the automatic pick blindly: try a few k values
-> with `--k` and keep the one whose top terms read like coherent SLR themes.
-
-### 2. Seeing the clusters
-
-TF-IDF space has ~2,000 dimensions, so we flatten it to 2D (TruncatedSVD)
-purely for visualization. One dot = one paper, color = its cluster. Distinct
-islands mean the clustering found real structure:
-
-![papers in 2D colored by K-Means cluster](phase4_output/clusters_2d.png)
-
-### 3. Comparing the four models
-
-Same corpus, same k, four algorithms side by side:
-
-![same corpus clustered by all four models](phase4_output/models/models_2d.png)
-
-And numerically (`model_comparison.csv`). **ARI** = Adjusted Rand Index between
-two groupings: 1.0 = identical, ~0 = unrelated. Mock-run results:
-
-| model | silhouette | ARI vs planted topics |
-| --- | --- | --- |
-| K-Means | 0.36 | **1.00** |
-| Agglomerative | 0.36 | **1.00** |
-| NMF | 0.36 | **1.00** |
-| LDA | 0.29 | 0.78 |
-
-Three of the four recover the planted topics perfectly. LDA merges two related
-topics — expected on a small corpus: LDA is probabilistic, works on raw term
-counts (rebuilt internally with `CountVectorizer`, because TF-IDF weights are
-not valid LDA input), and typically wants more documents.
-
-### 4. The deliverable files
-
-`topic_models.py` → `phase4_output/models/`:
-
-| File | What it is |
-| --- | --- |
-| `<model>_assignments.csv` | Paper → topic label, one file per model. **This is what Phases 5/6 consume.** |
-| `<model>_top_terms.csv` | Top 15 terms per topic — use these to *name* the themes in the SLR. |
-| `model_comparison.csv` | Silhouette + pairwise ARI. |
-| `models_2d.png`, `models_summary.txt` | The comparison figure + a plain-text run recap. |
-
-`kmeans_clustering.py` → `phase4_output/`: `cluster_assignments.csv`,
-`cluster_top_terms.csv`, `k_selection.csv/.png`, `clusters_2d.png`,
-`kmeans_model.pkl` (reload it later to label newly added papers), `run_summary.txt`.
+Common flags for both: `--mock` (synthetic data), `--indir DIR` (real Phase 3 output),
+`--outdir DIR`, `--k N` (force the number of topics).
 
 ## 🔧 Troubleshooting
 
@@ -129,14 +76,10 @@ not valid LDA input), and typically wants more documents.
 | --- | --- |
 | `Missing Phase 3 output file(s)` | You pointed `--indir` at the wrong folder, or Phase 3 hasn't been run yet. Use `--mock` to test without real data. |
 | `Matrix rows != corpus rows` | The `.npz` and the `.csv` are from *different* Phase 3 runs. Re-run Phase 3 once and use all three files from the same run. |
-| Silhouette warning / weird automatic k | Normal on real data — force k manually: `--k 5`, `--k 6`, … and compare top terms. |
-| Empty/tiny vocabulary on a small test CSV | Phase 3's `min_df=2` drops terms that appear in <2 papers. Fine on the real ~100-paper corpus; on toy CSVs use mock mode instead. |
-| LDA topics look merged/vague | Known small-corpus behavior (see comparison above). Report it; don't fight it. |
-| Results differ between runs | They shouldn't — everything is seeded (`RANDOM_STATE = 42`). If they do, check you're on the same scikit-learn version (`pip install -r requirements.txt`). |
+| Silhouette warning / weird automatic k | Normal on real data. The detailed notebook already searches k via `RandomizedSearchCV`; for the quick scripts, force k manually with `--k`. |
 
-## Handing off to Phases 5/6
+## Handing off to Phase 5
 
-Everything downstream needs is in `phase4_output/models/`:
-per-paper topic labels (`*_assignments.csv`) and human-readable topic
-descriptions (`*_top_terms.csv`). The 2D figures and comparison table drop
-straight into the SLR's methodology/results sections and the demo for Dr. Raffy.
+Phase 5 (`../phase5`) consumes `phase4_output_detailed/comparison/FINAL_SELECTED_assignments.csv`
+and `FINAL_SELECTED_top_terms.csv` — the validated K-Means labels, not the quick-pipeline
+output.

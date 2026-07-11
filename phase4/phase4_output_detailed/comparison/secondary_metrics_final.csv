@@ -1,0 +1,6 @@
+model,metric,value
+kmeans,inertia,316.29
+agglomerative,n/a (no native objective),
+nmf,reconstruction_err_,17.646
+lda,perplexity,967.8
+lda,umass_coherence,-0.8492

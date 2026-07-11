@@ -1,0 +1,6 @@
+MuTech Phase 4 - FINAL MODEL SELECTION
+  selected model : kmeans
+  k              : 7
+  silhouette     : 0.0389
+  runner-up      : nmf (silhouette 0.0385, statistically tied, but 2/9 topics are methodology clusters rather than MIR subthemes)
+  rejected       : agglomerative (5/11 clusters have <10 papers, lowest silhouette of the non-LDA models), lda (only 3 topics, under-resolves the corpus, largest train/test perplexity gap of any model)

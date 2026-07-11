@@ -1,0 +1,19 @@
+MuTech Phase 4 (Detailed) - run summary
+  papers (full corpus)     : 365
+  train / test split       : 292 / 73 (80/20, random_state=42)
+  baseline k (train-only)  : 7
+
+Final full-corpus models:
+  kmeans        : k=7, silhouette=0.0389
+  agglomerative : n_clusters=11, linkage=average, silhouette=0.0279
+  nmf           : n_components=9, silhouette=0.0385, reconstruction_err_=17.646
+  lda           : n_components=3, perplexity=967.8, umass_coherence=-0.8492
+
+Comparison:
+        model  silhouette_cosine  ari_vs_kmeans  ari_vs_agglomerative  ari_vs_nmf  ari_vs_lda
+       kmeans             0.0389         1.0000                0.4180      0.5238      0.2837
+agglomerative             0.0279         0.4180                1.0000      0.4629      0.2117
+          nmf             0.0385         0.5238                0.4629      1.0000      0.2280
+          lda             0.0220         0.2837                0.2117      0.2280      1.0000
+
+FINAL MODEL SELECTED: kmeans (see comparison/FINAL_MODEL_SELECTION.txt for rationale)
