@@ -1,0 +1,100 @@
+challenge,domain,cluster,cite,title
+data scarcity,General MIR,Music Education & Performance Assessment,"[Chongyang, 2026]",Research on Music Emotion Recognition Based on Multi-scale Attention and Cross-modal Contrastive Learning
+data scarcity,General MIR,Singing Voice / Melody Extraction,"[Kritsovas, 2026]",Mitigating Western Bias in Music Genre Classification: A Contrastive Learning Approach for Greek Music
+data scarcity,General MIR,Music Education & Performance Assessment,"[Chowdhury, 2025]",Speech emotion recognition with light weight deep neural ensemble model using hand crafted features
+data scarcity,General MIR,Multi-Pitch Estimation,"[Pilataki, 2024]",Pitch-aware generative pretraining improves multi-pitch estimation with scarce data
+data scarcity,Instrumental,Source Separation,"[Mezza, 2024]",Toward deep drum source separation
+data scarcity,General MIR,Singing Voice / Melody Extraction,"[Yu, 2024]",MCSSME: Multi-Task Contrastive Learning for Semi-supervised Singing Melody Extraction from Polyphonic Music
+data scarcity,Instrumental,Instrument Recognition / Classification,"[Dulmi, 2024]",1D CNN-Based Traditional Instrument Classification and Notation Generation in Sinhala for Gataberaya and Flute
+data scarcity,General MIR,Optical Music Recognition (OMR),"[Castellanos, 2024]",A Region-Based Approach for Layout Analysis of Music Score Images in Scarce Data Scenarios
+data scarcity,Solo Singing,Singing Voice / Melody Extraction,"[Qiu, 2024]",ENHANCING NOTE-LEVEL SINGING TRANSCRIPTION MODEL WITH UNLABELED AND WEAKLY LABELED DATA
+data scarcity,Solo Singing,Singing Voice / Melody Extraction,"[Yamamoto, 2023]",Toward Leveraging Pre-Trained Self-Supervised Frontends for Automatic Singing Voice Understanding Tasks: Three Case Studies
+data scarcity,Solo Singing,Automatic Music Transcription (AMT),"[Yang, 2023]",A Multi-Stage Automatic Evaluation System for Sight-Singing
+data scarcity,Solo Singing,Singing Voice / Melody Extraction,"[Krause, 2021]",Singing voice detection in opera recordings: A case study on robustness and generalization
+data scarcity,Instrumental,Multi-Pitch Estimation,"[Weiss, 2021]",Learning Multi-Pitch Estimation from Weakly Aligned Score-Audio Pairs Using a Multi-Label CTC Loss
+data scarcity,General MIR,Source Separation,"[Lancheros-Molano, 2021]",Sound source separation for musical pedagogy
+data scarcity,General MIR,Singing Voice / Melody Extraction,"[X., 2023]",Self-Transriber: Few-Shot Lyrics Transcription With Self-Training
+data scarcity,General MIR,Music Education & Performance Assessment,"[M., 2026]",BACHI: Boundary-Aware Symbolic Chord Recognition Through Masked Iterative Decoding on POP and Classical Music
+generalization,Instrumental,Automatic Music Transcription (AMT),"[Marták, 2026]",Sound and music biases in deep music transcription models: a systematic analysis
+generalization,Solo Singing,Singing Voice / Melody Extraction,"[Zhao, 2026]",CoMelSinger: Discrete Token-Based Zero-Shot Singing Synthesis With Structured Melody Control and Guidance
+generalization,Instrumental,Music Education & Performance Assessment,"[Meng, 2025]",EEG-based cross-subject passive music pitch perception using deep learning models
+generalization,General MIR,Singing Voice / Melody Extraction,"[Xue, 2025]",Deep learning model using squeezenet and promoted ideal gas molecular motion for music genre classification from audio spectrograms
+generalization,Instrumental,Multi-Pitch Estimation,"[Taenzer, 2025]",Multi-pitch estimation with polyphony per instrument information for Western classical and electronic music
+generalization,Solo Singing,Singing Voice / Melody Extraction,"[Shen, 2025]",Transinger: Cross-Lingual Singing Voice Synthesis via IPA-Based Phonetic Alignment
+generalization,Solo Singing,Singing Voice / Melody Extraction,"[Perez, 2025]",Improving Singing Voice Transcription Generalization with AI Generated Accompaniments
+generalization,Instrumental,Singing Voice / Melody Extraction,"[Lin, 2025]",A Comparative Study of Statistical Features and Deep Learning for Orchestral Texture Classification
+generalization,Solo Singing,Music Education & Performance Assessment,"[Dong, 2025]",Evaluation Singing Art Voice Quality Using Siamese Gated Recurrent Extreme Learning Networks
+generalization,Instrumental,Multi-Pitch Estimation,"[Liu, 2025]",Unsupervised Domain Adaptation for Music Transcription: Exploiting Cross-Version Consistency
+generalization,Instrumental,Automatic Music Transcription (AMT),"[McLeod, 2025]",No Data Required: Zero-Shot Domain Adaptation for Automatic Music Transcription
+generalization,Solo Singing,Singing Voice / Melody Extraction,"[Perez, 2025]",Singing Voice Accompaniment Data Augmentation with Generative Models
+generalization,Instrumental,Instrument Recognition / Classification,"[Sivalingam, 2025]",Robust CNN-based Musical Instrument Recognition with Enhanced Feature Learning
+generalization,General MIR,Multi-Pitch Estimation,"[Pilataki, 2024]",Pitch-aware generative pretraining improves multi-pitch estimation with scarce data
+generalization,General MIR,Singing Voice / Melody Extraction,"[Yu, 2024]",MCSSME: Multi-Task Contrastive Learning for Semi-supervised Singing Melody Extraction from Polyphonic Music
+generalization,General MIR,Singing Voice / Melody Extraction,"[Islam, 2024]",Visually Guided Audio Source Separation with Meta Consistency Learning
+generalization,Instrumental,Automatic Music Transcription (AMT),"[Kusaka, 2024]",Mobile-AMT: Real-time Polyphonic Piano Transcription for In-the-Wild Recordings
+generalization,General MIR,Source Separation,"[Chen, 2024]",MUSIC SOURCE SEPARATION BASED ON A LIGHTWEIGHT DEEP LEARNING FRAMEWORK (DTTNET: DUAL-PATH TFC-TDF UNET)
+generalization,Solo Singing,Music Education & Performance Assessment,"[Huang, 2024]",An objective evaluation method of vocal singing effect based on artificial intelligence technology
+generalization,Solo Singing,Singing Voice / Melody Extraction,"[Park, 2023]",Note-level singing melody transcription with transformers
+generalization,General MIR,Singing Voice / Melody Extraction,"[Desblancs, 2023]",Zero-Note Samba: Self-Supervised Beat Tracking
+generalization,General MIR,Optical Music Recognition (OMR),"[Castellanos, 2022]",Region-based layout analysis of music score images
+generalization,Solo Singing,Music Education & Performance Assessment,"[Li, 2022]",Singing-Voice Timbre Evaluations Based on Transfer Learning
+generalization,Instrumental,Automatic Music Transcription (AMT),"[Marták, 2022]",Balancing bias and performance in polyphonic piano transcription systems
+generalization,Solo Singing,Source Separation,"[Zhao, 2022]",Non-negative Matrix Factorization and DenseNet based Monophonic Singing Voice Separation
+generalization,General MIR,Source Separation,"[Wang, 2022]",VISUAL SOUND SOURCE SEPARATION WITH PARTIAL SUPERVISION LEARNING
+generalization,Instrumental,Multi-Pitch Estimation,"[Weis, 2022]",Comparing Deep Models and Evaluation Strategies for Multi-Pitch Estimation in Music Recordings
+generalization,Ensemble,Multi-Pitch Estimation,"[Cuesta, 2022]",Voice Assignment in Vocal Quartets Using Deep Learning Models Based on Pitch Salience
+generalization,Instrumental,Automatic Music Transcription (AMT),"[Ou, 2022]",EXPLORING TRANSFORMER'S POTENTIAL ON AUTOMATIC PIANO TRANSCRIPTION
+generalization,Instrumental,Source Separation,"[Petermann, 2022]",Spain-NET: SPATIALLY-INFORMED STEREOPHONIC MUSIC SOURCE SEPARATION
+generalization,General MIR,Source Separation,"[Zhang, 2021]",Music Source Separation Method Based on Unet Combining SE and BiSRU
+generalization,Solo Singing,Singing Voice / Melody Extraction,"[Krause, 2021]",Singing voice detection in opera recordings: A case study on robustness and generalization
+generalization,Instrumental,Automatic Music Transcription (AMT),"[Wang, 2021]",Transition-Aware: A More Robust Approach for Piano Transcription
+generalization,Instrumental,Multi-Pitch Estimation,"[Weiss, 2021]",Learning Multi-Pitch Estimation from Weakly Aligned Score-Audio Pairs Using a Multi-Label CTC Loss
+generalization,Instrumental,Automatic Music Transcription (AMT),"[Wang, 2020]",Enhancing Piano Transcription by Dilated Convolution
+generalization,General MIR,Source Separation,"[Manilow, 2020]",Simultaneous Separation and Transcription of Mixtures with Multiple Polyphonic and Percussive Instruments
+generalization,Solo Singing,Singing Voice / Melody Extraction,"[Mimilakis, 2020]",Cross-version Singing Voice Detection in Opera Recordings: Challenges for Supervised Learning
+generalization,Solo Singing,Automatic Music Transcription (AMT),"[Lin, 2020]",A post-processing of onset detection based on verification with neural network
+generalization,General MIR,Automatic Music Transcription (AMT),"[Y., 2025]",Expanding Automatic Music Transcription Dataset via Single Note Audio Synthesized Data
+generalization,General MIR,Automatic Music Transcription (AMT),"[S., 2024]",YourMT3+: Multi-Instrument Music Transcription with Enhanced Transformer Architectures and Cross-Dataset STEM Augmentation
+generalization,General MIR,Automatic Music Transcription (AMT),"[P., 2026]",Spectrogram Event Based Feature Representation for Generalizable Automatic Music Transcription
+generalization,General MIR,Automatic Music Transcription (AMT),"[R., 2026]",Timbre-Based Pretraining with Pseudo-Labels for Multi-Instrument Automatic Music Transcription
+generalization,Instrumental,Automatic Music Transcription (AMT),"[H., 2025]",Velocity2DMs: A Contextual Modeling Approach to Dynamics Marking Prediction in Piano Performance
+generalization,Instrumental,Music Education & Performance Assessment,"[Z., 2025]",PRSF: Pitched-Noise-Robust Score Following Based on Multimodal Learning
+generalization,General MIR,Multi-Pitch Estimation,"[Y., 2024]",Towards Robust Local Key Estimation with a Musically Inspired Neural Network
+generalization,Instrumental,Source Separation,"[E., 2025]",Score-Informed Music Source Separation: Improving Synthetic-To-Real Generalization in Classical Music
+generalization,Instrumental,Automatic Music Transcription (AMT),"[M., 2026]",Noise-to-Notes: Diffusion-Based Generation and Refinement for Automatic Drum Transcription
+generalization,General MIR,Multi-Pitch Estimation,"[T., 2024]",Multi-Layer Combined Frequency and Periodicity Representations for Multi-Pitch Estimation of Multi-Instrument Music
+generalization,Ensemble,Source Separation,"[L., 2026]",Source Separation For A Cappella Music
+evaluation inconsistency (strict),General MIR,Music Education & Performance Assessment,"[Zhao, 2026]",Study on the Design of an AI-Based Singing Training System Using Feature Comparison
+real-world degradation,Instrumental,Music Education & Performance Assessment,"[Zheng, 2026]",A two-stage deep learning framework for lead instrument recognition in polyphonic music featuring Chinese instruments
+real-world degradation,Solo Singing,Music Education & Performance Assessment,"[Wu, 2026]",Utilizing AI and machine learning in vocal training programs: A contemporary approach
+real-world degradation,General MIR,Music Education & Performance Assessment,"[Virk, 2026]",ARTIFICIAL INTELLIGENCE AND THE EVOLUTION OF MUSICAL INTONATION
+real-world degradation,Solo Singing,Music Education & Performance Assessment,"[Cruz, 2026]",AI-Powered Voice Separation Algorithms: Testing Accuracy in Reconstructing Fundamental Frequency for Vocal Analysis
+real-world degradation,General MIR,Optical Music Recognition (OMR),"[Rizo, 2026]","Design of a Music Recognition, Encoding, and Transcription Online Tool"
+real-world degradation,Solo Singing,Music Education & Performance Assessment,"[Wang, 2025]",Singing Timbre Popularity Assessment Based on Multimodal Large Foundation Model
+real-world degradation,Instrumental,Music Education & Performance Assessment,"[Gomez-Morales, 2025]",EEG-Based Music Emotion Prediction Using Supervised Feature Extraction for MIDI Generation
+real-world degradation,Instrumental,Source Separation,"[Garcia-Martinez, 2025]",SynthSOD: Developing an Heterogeneous Dataset for Orchestra Music Source Separation
+real-world degradation,General MIR,Optical Music Recognition (OMR),"[Sales, 2025]",Evaluation of Lyrics Extraction from Folk Music Sheets Using Vision Language Models (VLMs)
+real-world degradation,General MIR,Source Separation,"[Garcia-Martinez, 2025]",Integrating High Order Ambisonics and Deep Learning for Advanced Instrument Separation in Spatial Audio Applications
+real-world degradation,General MIR,Source Separation,"[Wu, 2025]",Towards Practical Real-Time Low-Latency Music Source Separation
+real-world degradation,Solo Singing,Music Education & Performance Assessment,"[Dong, 2025]",Evaluation Singing Art Voice Quality Using Siamese Gated Recurrent Extreme Learning Networks
+real-world degradation,General MIR,Automatic Music Transcription (AMT),"[Divya, 2025]",Evaluating and Comparing Deep Learning Methods with Vision Transformers for Musical Key Assessment
+real-world degradation,Solo Singing,Music Education & Performance Assessment,"[Yu, 2024]",Research on the Design of Music Learning Singing System Based on Artificial Intelligence Feature Comparison
+real-world degradation,General MIR,Music Education & Performance Assessment,"[Chaudhuri, 2024]",AI Assisted Workflow for Set-list Preparation with Loops for Live Musicians
+real-world degradation,Instrumental,Automatic Music Transcription (AMT),"[Kusaka, 2024]",Mobile-AMT: Real-time Polyphonic Piano Transcription for In-the-Wild Recordings
+real-world degradation,General MIR,Automatic Music Transcription (AMT),"[Sato, 2024]",Annotation-Free Automatic Music Transcription with Scalable Synthetic Data and Adversarial Domain Confusion
+real-world degradation,General MIR,Optical Music Recognition (OMR),"[Tuggener, 2024]",Real World Music Object Recognition
+real-world degradation,Instrumental,Automatic Music Transcription (AMT),"[Huang, 2023]",Note and Playing Technique Transcription of Electric Guitar Solos in Real-World Music Performance
+real-world degradation,General MIR,Source Separation,"[Petermann, 2023]",Tackling the Cocktail Fork Problem for Separation and Transcription of Real-World Soundtracks
+real-world degradation,General MIR,Optical Music Recognition (OMR),"[Minh, 2022]",Music Sheet Understanding and Tone Transposition
+real-world degradation,General MIR,Source Separation,"[Wang, 2022]",VISUAL SOUND SOURCE SEPARATION WITH PARTIAL SUPERVISION LEARNING
+real-world degradation,Instrumental,Optical Music Recognition (OMR),"[Henkel, 2021]",Real-Time Music Following in Score Sheet Images via Multi-Resolution Prediction
+real-world degradation,Instrumental,Optical Music Recognition (OMR),"[Henkel, 2021]",Multi-modal Conditional Bounding Box Regression for Music Score Following
+real-world degradation,General MIR,Source Separation,"[Chatterjee, 2021]",Visual Scene Graphs for Audio Source Separation
+real-world degradation,Solo Singing,Automatic Music Transcription (AMT),"[Wager, 2020]",Deep Autotuner: A Pitch Correcting Network for Singing Performances
+real-world degradation,General MIR,Source Separation,"[Bhattarai, 2020]",Parallel stacked hourglass network for music source separation
+real-world degradation,Instrumental,Source Separation,"[Choi, 2020]",Spec2Spec: Towards the general framework of music processing using generative adversarial networks
+real-world degradation,General MIR,Automatic Music Transcription (AMT),"[P., 2026]",Spectrogram Event Based Feature Representation for Generalizable Automatic Music Transcription
+real-world degradation,Instrumental,Automatic Music Transcription (AMT),"[T., 2024]",Polyphonic Piano Music Transcription System Exploiting Mutual Correlations of Different Musical Note States
+real-world degradation,Instrumental,Instrument Recognition / Classification,"[L., 2025]",Spatio-Channel Complementary Learning for Polyphonic Music Instrument Recognition
+real-world degradation,General MIR,Source Separation,"[A., 2026]",Towards Blind Data Cleaning: A Case Study in Music Source Separation
+real-world degradation,Solo Singing,Singing Voice / Melody Extraction,"[C., 2022]",Deep Learning Approaches in Topics of Singing Information Processing
