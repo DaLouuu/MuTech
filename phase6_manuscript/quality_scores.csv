@@ -1,0 +1,366 @@
+title,year,cluster_label,domain,q_design,q_data,q_methods,q_validation,q_alignment,q_contribution,q_applicability,q_significance,q_reproducibility,quality_meth,quality_rel,quality_total
+Deep learning-based personalized learning path planning and optimization model for music education,2026,Music Education & Performance Assessment,General MIR,5,3,5,5,5,3,5,3,3,18,19,37
+The multi-dimensional performance intelligent evaluation and feedback system for music education,2026,Music Education & Performance Assessment,General MIR,5,1,5,3,5,3,5,3,3,14,19,33
+Simulation-based deep learning for IoT-oriented music improvisation optimization,2026,Music Education & Performance Assessment,General MIR,3,3,5,3,5,3,3,3,3,14,17,31
+Sound and music biases in deep music transcription models: a systematic analysis,2026,Automatic Music Transcription (AMT),Instrumental,3,3,5,3,5,5,5,5,3,14,23,37
+Evaluating pre-trained audio embeddings for the classification of traditional Portuguese musical instruments,2026,Music Education & Performance Assessment,Instrumental,1,3,5,5,5,3,5,3,3,14,19,33
+Methods for Combining Time-Frequency Representations: A Python Package,2026,Singing Voice / Melody Extraction,General MIR,3,1,3,3,5,3,3,3,1,10,15,25
+MMIC: A forward-bidirectional mamba architecture for musical instrument classification,2026,Instrument Recognition / Classification,Instrumental,3,3,5,5,5,3,5,3,5,16,21,37
+Piano keyboard detection algorithm using deep learning,2026,Automatic Music Transcription (AMT),Instrumental,3,1,5,5,5,5,5,3,3,14,21,35
+Study on the Design of an AI-Based Singing Training System Using Feature Comparison,2026,Music Education & Performance Assessment,General MIR,5,3,5,3,5,3,5,3,3,16,19,35
+AI-Driven Music Classrooms: An Empirical Analysis of Feature Adoption and Teacher Role Transformation,2026,Music Education & Performance Assessment,General MIR,5,1,1,3,5,3,5,5,3,10,21,31
+A two-stage deep learning framework for lead instrument recognition in polyphonic music featuring Chinese instruments,2026,Music Education & Performance Assessment,Instrumental,5,3,5,1,5,5,5,3,5,14,23,37
+Classification of piano performers with deep learning models,2026,Instrument Recognition / Classification,Instrumental,3,3,5,3,5,1,5,3,3,14,17,31
+Utilizing AI and machine learning in vocal training programs: A contemporary approach,2026,Music Education & Performance Assessment,Solo Singing,3,1,5,5,5,3,5,3,3,14,19,33
+The Ensonification Interface: A Comprehensive Toolkit for Ensemble Sonification of Temporal Data,2026,Music Education & Performance Assessment,General MIR,5,1,1,1,5,5,5,3,1,8,19,27
+How Far Can a U-Net Go? An Empirical Analysis of Music Source Separation Performance,2026,Source Separation,General MIR,5,5,3,3,5,5,5,5,3,16,23,39
+A lightweight real-time karaoke system with improved singing voice separation via fundamental frequency estimation integration,2026,Source Separation,Solo Singing,3,3,5,3,5,3,5,3,3,14,19,33
+ARTIFICIAL INTELLIGENCE AND THE EVOLUTION OF MUSICAL INTONATION,2026,Music Education & Performance Assessment,General MIR,3,1,5,3,5,3,5,3,3,12,19,31
+AI-ASSISTED NOTATION SYSTEMS IN MUSIC PEDAGOGY,2026,Music Education & Performance Assessment,General MIR,3,1,5,3,5,3,5,3,3,12,19,31
+Multitrack Music Transcription Based on Joint Learning of Onset and Frame Streams,2026,Automatic Music Transcription (AMT),General MIR,5,3,5,5,5,5,5,3,3,18,21,39
+Can Patch Selection Heuristics Enhance Layout Analysis of Music Scores?,2026,Optical Music Recognition (OMR),General MIR,3,3,3,3,5,3,3,3,1,12,15,27
+Research on Deep Learning-Based Vocal Separation and Digital Synthesis in Choral Music,2026,Source Separation,Ensemble,3,1,3,5,3,5,5,3,1,12,17,29
+The Spheres Dataset: Multitrack Orchestral Recordings for Music Source Separation and Information Retrieval,2026,Source Separation,Instrumental,3,3,3,3,5,3,5,5,1,12,19,31
+AI-Powered Voice Separation Algorithms: Testing Accuracy in Reconstructing Fundamental Frequency for Vocal Analysis,2026,Music Education & Performance Assessment,Solo Singing,1,3,3,3,5,1,5,5,3,10,19,29
+Supervised classification of Piano and Violin instruments using audio feature extraction and Machine Learning techniques,2026,Instrument Recognition / Classification,Instrumental,1,5,5,3,5,3,5,3,3,14,19,33
+An Optimized Hybrid Deep Feature Fusion Framework for Hardware-Efficient Music Retrieval,2026,Music Education & Performance Assessment,General MIR,5,5,5,5,3,5,3,5,3,20,19,39
+Deep Reinforcement Learning for Personalised Music Learning Pathways,2026,Music Education & Performance Assessment,General MIR,5,1,1,5,3,5,5,3,1,12,17,29
+FORMATION OF MUSICAL IDENTITY DURING VOCAL TRAINING BASED ON MACHINE INTELLIGENCE TOOLS,2026,Music Education & Performance Assessment,General MIR,5,1,1,3,5,3,5,3,1,10,17,27
+Contextual Characteristics of Human Assessment in School Music Performance and Design Considerations for AI-based Assessment Models,2026,Music Education & Performance Assessment,General MIR,3,3,3,3,5,3,5,3,3,12,19,31
+A Method for Evaluating and Improving Vocal Pronunciation Quality of Vocal Music Students Based on Artificial Intelligence Technology,2026,Music Education & Performance Assessment,General MIR,3,1,3,3,5,3,5,3,3,10,19,29
+CoMelSinger: Discrete Token-Based Zero-Shot Singing Synthesis With Structured Melody Control and Guidance,2026,Singing Voice / Melody Extraction,Solo Singing,5,1,5,3,5,3,5,5,3,14,21,35
+Machine Learning Approaches for Classification of Indian Folk Music Genres,2026,Singing Voice / Melody Extraction,General MIR,5,1,5,1,5,3,3,3,3,12,17,29
+Enhancing automatic music transcription of Thai xylophone music performed with hard mallets: a deep learning approach and comparative analysis,2026,Automatic Music Transcription (AMT),General MIR,3,3,5,3,5,3,5,3,3,14,19,33
+Beat Tracking Algorithm Based on Multi-scale Feature Fusion and Attention Mechanism,2026,Instrument Recognition / Classification,Instrumental,3,3,5,3,5,3,5,3,3,14,19,33
+Research on Music Emotion Recognition Based on Multi-scale Attention and Cross-modal Contrastive Learning,2026,Music Education & Performance Assessment,General MIR,3,3,5,3,5,3,3,3,3,14,17,31
+Leveraging Prompt Engineering and Retrieval-Augmented Generation with Large Language Models for AI-Driven Music Source Separation,2026,Source Separation,General MIR,5,1,3,5,5,5,5,3,3,14,21,35
+ChordFormer: A Conformer-Based Architecture for Large-Vocabulary Audio Chord Recognition,2026,Music Education & Performance Assessment,General MIR,3,3,5,5,5,5,5,3,3,16,21,37
+Percussion and Instrumentation in Music Emotion Recognition: A Feature Engineering Approach,2026,Music Education & Performance Assessment,Instrumental,5,3,5,5,5,5,5,3,3,18,21,39
+Mitigating Western Bias in Music Genre Classification: A Contrastive Learning Approach for Greek Music,2026,Singing Voice / Melody Extraction,General MIR,1,3,5,1,5,5,3,3,3,10,19,29
+The Inverse Drum Machine: Source Separation Through Joint Transcription and Analysis-by-Synthesis,2026,Source Separation,Instrumental,5,3,3,3,5,3,5,3,1,14,17,31
+"Design of a Music Recognition, Encoding, and Transcription Online Tool",2026,Optical Music Recognition (OMR),General MIR,3,1,5,1,5,3,5,3,3,10,19,29
+A Quantitative Evaluation of a Musical Performance Support System Utilizing a Musical Sophistication Test Battery,2026,Music Education & Performance Assessment,General MIR,1,1,3,3,5,1,3,3,3,8,15,23
+A Hybrid Model for Automatic Music Transcription of Hulusi Based on Multi-Feature Fusion,2025,Automatic Music Transcription (AMT),Instrumental,3,3,5,1,5,5,5,3,3,12,21,33
+EEG-based cross-subject passive music pitch perception using deep learning models,2025,Music Education & Performance Assessment,Instrumental,3,1,5,5,5,5,5,5,3,14,23,37
+Joint Learning of Emotion and Singing Style for Enhanced Music Style Understanding,2025,Music Education & Performance Assessment,Solo Singing,5,3,5,5,5,5,5,5,3,18,23,41
+Application of convolutional neural network in the evaluation of singing teaching effect,2025,Music Education & Performance Assessment,General MIR,3,1,5,5,5,3,5,5,3,14,21,35
+Chinese instrument music source separation with frequency-attentive multi-band neural networks,2025,Source Separation,Instrumental,3,3,3,3,5,3,5,3,3,12,19,31
+Deep learning model using squeezenet and promoted ideal gas molecular motion for music genre classification from audio spectrograms,2025,Singing Voice / Melody Extraction,General MIR,3,5,5,5,5,5,3,5,3,18,21,39
+Advancing deep learning for expressive music composition and performance modeling,2025,Music Education & Performance Assessment,General MIR,5,5,3,3,5,1,3,5,1,16,15,31
+The singing style of female roles in ethnic opera under artificial intelligence and deep neural networks,2025,Music Education & Performance Assessment,Solo Singing,3,5,5,5,5,5,5,3,5,18,23,41
+Dense dynamic convolutional network for Bel canto vocal technique assessment,2025,Music Education & Performance Assessment,General MIR,5,1,5,5,5,5,5,3,3,16,21,37
+Speech emotion recognition with light weight deep neural ensemble model using hand crafted features,2025,Music Education & Performance Assessment,General MIR,3,5,5,5,3,5,3,5,5,18,21,39
+Multi-pitch estimation with polyphony per instrument information for Western classical and electronic music,2025,Multi-Pitch Estimation,Instrumental,3,3,5,3,5,5,5,3,3,14,21,35
+Identifying Critical Segments Affecting Piano Performance Evaluation,2025,Music Education & Performance Assessment,Instrumental,5,3,3,3,5,3,5,3,3,14,19,33
+Application of deep learning and generative adversarial network in music data analysis of Internet of Things,2025,Music Education & Performance Assessment,General MIR,5,1,5,3,3,5,5,3,3,14,19,33
+Singing Timbre Popularity Assessment Based on Multimodal Large Foundation Model,2025,Music Education & Performance Assessment,Solo Singing,5,3,3,5,5,5,5,5,3,16,23,39
+Haptic Music Feedback through Audio Decomposition,2025,Multi-Pitch Estimation,Instrumental,5,1,3,3,5,5,5,3,1,12,19,31
+The IRMA Dataset: A Structured Audio–MIDI Corpus for Iranian Classical Music,2025,Automatic Music Transcription (AMT),General MIR,3,3,3,3,5,3,5,5,1,12,19,31
+Multi-Instance Multi-Scale Graph Attention Neural Net with Label Semantic Embeddings for Instrument Recognition,2025,Instrument Recognition / Classification,Instrumental,3,1,5,5,5,5,5,3,3,14,21,35
+Music Similarity Detection Through Comparative Imagery Data,2025,Music Education & Performance Assessment,General MIR,3,1,3,3,3,3,3,1,1,10,11,21
+Transinger: Cross-Lingual Singing Voice Synthesis via IPA-Based Phonetic Alignment,2025,Singing Voice / Melody Extraction,Solo Singing,5,3,1,5,5,5,5,5,1,14,21,35
+Applying Artificial Intelligence Techniques to Build a Singing Evaluation System in Choral Singing,2025,Music Education & Performance Assessment,Ensemble,3,3,3,3,5,3,5,3,1,12,17,29
+Automatic extraction method for humming-to-Guzheng melody based on improved YIN algorithm,2025,Music Education & Performance Assessment,Instrumental,3,1,1,1,5,3,5,3,1,6,17,23
+EEG-Based Music Emotion Prediction Using Supervised Feature Extraction for MIDI Generation,2025,Music Education & Performance Assessment,Instrumental,5,1,3,3,3,3,5,3,1,12,15,27
+Proposal and Evaluation of a Pitch Estimation Model Based on Reconstruction of the Spectrum of Input Sound by Using Timbre Information and Pitch Information,2025,Multi-Pitch Estimation,General MIR,3,1,5,3,5,3,3,3,3,12,17,29
+Hybrid dual-path network: Singing voice separation in the waveform domain by combining Conformer and Transformer architectures,2025,Source Separation,Solo Singing,3,5,5,5,5,5,5,3,3,18,21,39
+Identification of specific Musical instruments using Machine Learning models,2025,Instrument Recognition / Classification,Instrumental,1,3,5,3,5,1,5,3,3,12,17,29
+CNN-ML Framework-Based Predominant Musical Instrument Recognition Using Mel-Spectrogram,2025,Instrument Recognition / Classification,Instrumental,5,3,5,5,5,5,5,3,3,18,21,39
+A Performance Analysis on Matrix Factorisations in Solving Musical Instrument Source Separation Problem,2025,Source Separation,Instrumental,3,1,3,3,5,1,5,3,1,10,15,25
+Improving Singing Voice Transcription Generalization with AI Generated Accompaniments,2025,Singing Voice / Melody Extraction,Solo Singing,3,3,1,3,5,5,5,5,3,10,23,33
+SynthSOD: Developing an Heterogeneous Dataset for Orchestra Music Source Separation,2025,Source Separation,Instrumental,1,3,3,3,5,5,5,3,1,10,19,29
+Integrating intelligent algorithms in music education to analyze and improve posture and motion in instrumental training,2025,Music Education & Performance Assessment,General MIR,5,1,5,5,5,1,5,3,3,16,17,33
+Predominant Musical Instrument Identification Using Deep Hybrid Neural Networks,2025,Instrument Recognition / Classification,Instrumental,3,3,5,3,5,5,5,3,3,14,21,35
+EDM10: A Polyphonic Stereo Dataset with Identical BGM for Musical Instrument Identification,2025,Singing Voice / Melody Extraction,Instrumental,3,3,3,3,5,3,5,3,1,12,17,29
+Evaluation of Lyrics Extraction from Folk Music Sheets Using Vision Language Models (VLMs),2025,Optical Music Recognition (OMR),General MIR,3,3,1,3,5,5,5,3,1,10,19,29
+Multiband Kick Drum Separation with Genre-Guided Optimization,2025,Source Separation,Instrumental,5,3,3,3,5,3,5,3,1,14,17,31
+NetScribed: A Deep Learning Approach for Machine-Based Melody Transcription of Audio Files,2025,Automatic Music Transcription (AMT),General MIR,1,3,5,5,5,3,3,3,3,14,17,31
+Synthesis and Optimization of Instrumental Tone Quality Using Deep Learning,2025,Music Education & Performance Assessment,Instrumental,3,3,3,3,5,3,5,5,1,12,19,31
+Improving Piano Notation Transcription in Bisa Aku Bisa Children's Music Using Deep Learning,2025,Music Education & Performance Assessment,Instrumental,1,1,5,3,5,3,5,5,3,10,21,31
+Ta Ka Di Mi: AI for Konnakkol and Rhythm Training,2025,Music Education & Performance Assessment,Instrumental,5,1,3,3,5,3,5,3,3,12,19,31
+Inspecting Deep Learning Techniques for Music Transcription,2025,Automatic Music Transcription (AMT),General MIR,3,3,3,3,5,3,3,5,1,12,17,29
+Decentralized Optical Music Recognition Using YOLO and FedGP for Music Education,2025,Optical Music Recognition (OMR),General MIR,1,3,1,5,5,3,5,1,1,10,15,25
+A Falsetto Detection Algorithm for Enhancing Voice Gender Recognition,2025,Music Education & Performance Assessment,Solo Singing,3,1,5,3,3,5,5,3,3,12,19,31
+Designing Musical Instrument Identification Systems Using Lightweight Machine Learning Architectures,2025,Instrument Recognition / Classification,Instrumental,3,3,5,1,5,3,5,3,3,12,19,31
+A Novel Voice-Processing Method Leveraging Polyphonic Audio for Instrument Recognition Using Machine Learning,2025,Music Education & Performance Assessment,Instrumental,3,3,3,1,5,5,5,1,1,10,17,27
+Accuracy Improvement of Automatic Chord Recognition with Source Separation Preprocessing,2025,Instrument Recognition / Classification,Instrumental,3,1,5,3,5,3,5,3,3,12,19,31
+A Comparative Study of Statistical Features and Deep Learning for Orchestral Texture Classification,2025,Singing Voice / Melody Extraction,Instrumental,1,3,3,3,5,1,5,3,1,10,15,25
+Integrating High Order Ambisonics and Deep Learning for Advanced Instrument Separation in Spatial Audio Applications,2025,Source Separation,General MIR,5,3,3,3,5,3,5,5,3,14,21,35
+Towards Practical Real-Time Low-Latency Music Source Separation,2025,Source Separation,General MIR,3,1,3,3,5,5,5,3,1,10,19,29
+Experimenting Active and Sequential Learning in a Medieval Music Manuscript,2025,Optical Music Recognition (OMR),General MIR,3,3,3,3,5,3,3,3,3,12,17,29
+"Deep Neural Network and SVM-Based Multiclass Musical Instruments Classification Using MFCC, STFT, and Related Acoustic Features",2025,Instrument Recognition / Classification,Instrumental,5,5,5,3,5,5,5,3,5,18,23,41
+Design and Development of University Vocal Music Teaching System Based on Optimized Neural Network,2025,Music Education & Performance Assessment,General MIR,3,3,5,3,5,5,5,3,3,14,21,35
+Evaluation Singing Art Voice Quality Using Siamese Gated Recurrent Extreme Learning Networks,2025,Music Education & Performance Assessment,Solo Singing,3,1,5,3,5,3,5,5,3,12,21,33
+Research on Stage Vocal Classification Based on Long Short-Term Memory Artificial Neural Networks,2025,Music Education & Performance Assessment,General MIR,3,1,5,5,5,5,3,3,3,14,19,33
+Evaluating and Comparing Deep Learning Methods with Vision Transformers for Musical Key Assessment,2025,Automatic Music Transcription (AMT),General MIR,1,5,5,5,5,5,5,3,3,16,21,37
+Separate and Transcribe: Deep Guitar String Separation and its Application for Tablature Transcription Enhancement,2025,Source Separation,Instrumental,3,3,3,1,5,3,5,1,1,10,15,25
+Predominant Instrument Recognition in Polyphonic Music Using Hybrid-CNN Model Algorithm,2025,Instrument Recognition / Classification,Instrumental,3,3,5,3,5,3,5,3,3,14,19,33
+RTrans-D3Net: Music Source Separation with Multi-Dilated Convolutions and Transformer,2025,Source Separation,General MIR,3,5,5,5,5,5,3,3,3,18,19,37
+AI-assisted feedback and reflection in vocal music training: effects on metacognition and singing performance,2025,Music Education & Performance Assessment,General MIR,5,1,1,5,5,3,5,3,1,12,17,29
+Interpretable Machine Learning Techniques for Audio Source Separation,2025,Source Separation,General MIR,1,5,5,3,5,1,3,3,3,14,15,29
+Classification of Music Structural Functions using Deep Learning,2025,Music Education & Performance Assessment,Ensemble,5,1,5,1,5,3,5,3,3,12,19,31
+Songs2Notes : ML Model Converting Songs to Music Notes,2025,Automatic Music Transcription (AMT),General MIR,1,3,3,1,5,3,3,1,1,8,13,21
+Automatic Guitar Transcription With Deep Neural Networks,2025,Automatic Music Transcription (AMT),Instrumental,1,3,3,5,5,5,5,3,1,12,19,31
+Comparative Analysis of Different Spectrogram Types for Musical Instrument Classification,2025,Instrument Recognition / Classification,Instrumental,1,1,5,3,5,1,5,3,3,10,17,27
+Challenges and Advancements in Automated Music Transcription: A Focus on Multiple-Pitch Estimation,2025,Multi-Pitch Estimation,General MIR,1,3,1,1,5,3,3,1,1,6,13,19
+Unsupervised Domain Adaptation for Music Transcription: Exploiting Cross-Version Consistency,2025,Multi-Pitch Estimation,Instrumental,3,1,3,3,5,3,5,5,1,10,19,29
+No Data Required: Zero-Shot Domain Adaptation for Automatic Music Transcription,2025,Automatic Music Transcription (AMT),Instrumental,3,1,3,3,5,3,5,3,1,10,17,27
+Singing Voice Accompaniment Data Augmentation with Generative Models,2025,Singing Voice / Melody Extraction,Solo Singing,3,3,1,3,5,5,5,5,1,10,21,31
+Robust CNN-based Musical Instrument Recognition with Enhanced Feature Learning,2025,Instrument Recognition / Classification,Instrumental,3,3,5,3,5,3,5,5,3,14,21,35
+An Ensemble Approach to Music Source Separation: A Comparative Analysis of Conventional and Hierarchical Stem Separation,2025,Source Separation,Instrumental,3,1,5,3,5,3,5,3,3,12,19,31
+Pitch-aware generative pretraining improves multi-pitch estimation with scarce data,2024,Multi-Pitch Estimation,General MIR,3,3,3,3,5,5,3,5,3,12,21,33
+Research on Automatic Piano Music Transcription Algorithm Based on CNN,2024,Automatic Music Transcription (AMT),Instrumental,3,3,5,5,5,5,5,3,3,16,21,37
+Real Time Music Beat Recognition Algorithm Combining Music Style Information and Caching Mechanism,2024,Instrument Recognition / Classification,General MIR,3,1,5,3,5,3,5,3,3,12,19,31
+Music time signature detection using ResNet18,2024,Music Education & Performance Assessment,General MIR,1,3,3,5,5,3,3,3,1,12,15,27
+Research on the Design of Music Learning Singing System Based on Artificial Intelligence Feature Comparison,2024,Music Education & Performance Assessment,Solo Singing,3,1,1,3,5,3,5,3,1,8,17,25
+DAFE-MSGAT: Dual-Attention Feature Extraction and Multi-Scale Graph Attention Network for Polyphonic Piano Transcription,2024,Automatic Music Transcription (AMT),Instrumental,3,3,5,3,5,5,5,3,3,14,21,35
+Evaluating Feature Selection Algorithms for Machine Learning-Based Musical Instrument Identification in Monophonic Recordings,2024,Instrument Recognition / Classification,Instrumental,1,3,5,3,5,3,5,3,3,12,19,31
+MDX-Mixer: Music Demixing by Leveraging Source Signals Separated by Existing Demixing Models,2024,Source Separation,Solo Singing,5,5,3,3,5,5,5,3,3,16,21,37
+Segmenting and Predicting Musical Phrase Structure Exploits Neural Gain Modulation and Phase Precession,2024,Music Education & Performance Assessment,General MIR,3,1,1,3,5,3,3,1,1,8,13,21
+Genetic Algorithm-Based Optimization of Weighted Voting in Ensemble Models for Time Signature Detection,2024,Music Education & Performance Assessment,General MIR,1,1,5,1,3,1,5,3,3,8,15,23
+Toward deep drum source separation,2024,Source Separation,Instrumental,1,3,3,3,5,5,5,3,1,10,19,29
+MCSSME: Multi-Task Contrastive Learning for Semi-supervised Singing Melody Extraction from Polyphonic Music,2024,Singing Voice / Melody Extraction,General MIR,5,3,3,3,5,5,3,5,1,14,19,33
+Advancing Handwritten Musical Notation Recognition Using Deep Learning: A Convolutional Neural Network-Based Approach with Improved Accuracy,2024,Optical Music Recognition (OMR),General MIR,3,3,5,5,5,5,3,5,3,16,21,37
+Visually Guided Audio Source Separation with Meta Consistency Learning,2024,Singing Voice / Melody Extraction,General MIR,3,3,3,3,5,3,3,5,1,12,17,29
+1D CNN-Based Traditional Instrument Classification and Notation Generation in Sinhala for Gataberaya and Flute,2024,Instrument Recognition / Classification,Instrumental,5,3,5,3,5,3,5,3,3,16,19,35
+Multi-Task Learning Approaches for Music Similarity Representation Learning Based on Individual Instrument Sounds,2024,Singing Voice / Melody Extraction,Instrumental,3,1,3,5,5,5,5,3,1,12,19,31
+An Ensemble Approach to Raga Classification Using Deep and Traditional Machine Learning,2024,Instrument Recognition / Classification,General MIR,1,1,5,3,5,1,3,5,3,10,17,27
+AI Assisted Workflow for Set-list Preparation with Loops for Live Musicians,2024,Music Education & Performance Assessment,General MIR,1,1,1,1,3,3,3,3,1,4,13,17
+"Impact of Rhythm, Tempo, and Rest Variations on Pitch Detection in Deep Learning-Based Piano Transcription Models",2024,Music Education & Performance Assessment,Instrumental,1,1,5,3,5,1,5,3,3,10,17,27
+Meta-Learning-Based Supervised Domain Adaptation for Melody Extraction,2024,Singing Voice / Melody Extraction,General MIR,3,1,3,5,5,5,3,3,1,12,17,29
+Mobile-AMT: Real-time Polyphonic Piano Transcription for In-the-Wild Recordings,2024,Automatic Music Transcription (AMT),Instrumental,5,3,5,3,5,5,5,5,3,16,23,39
+Benchmarking Music Demixing Models for Deep Drum Source Separation,2024,Source Separation,Instrumental,1,3,3,5,5,5,5,5,1,12,21,33
+MusicTalk: A Microservice Approach for Musical Instrument Recognition,2024,Instrument Recognition / Classification,Instrumental,1,5,5,3,5,5,5,3,3,14,21,35
+RevNet: A Review Network with Group Aggregation Fusion for Singing Melody Extraction,2024,Singing Voice / Melody Extraction,General MIR,3,3,3,3,5,3,3,3,1,12,15,27
+Annotation-Free Automatic Music Transcription with Scalable Synthetic Data and Adversarial Domain Confusion,2024,Automatic Music Transcription (AMT),General MIR,3,3,5,5,5,3,5,3,3,16,19,35
+Practical End-to-End Optical Music Recognition for Pianoform Music,2024,Optical Music Recognition (OMR),Instrumental,1,3,3,3,5,3,5,5,1,10,19,29
+A Region-Based Approach for Layout Analysis of Music Score Images in Scarce Data Scenarios,2024,Optical Music Recognition (OMR),General MIR,5,3,3,3,5,3,5,5,1,14,19,33
+An investigation of CNN-LSTM music recognition algorithm in ethnic vocal technique singing,2024,Music Education & Performance Assessment,General MIR,3,1,5,3,5,3,3,3,3,12,17,29
+PhonHuBERT: A Phoneme Transcription Tool for Song Datasets,2024,Singing Voice / Melody Extraction,Solo Singing,3,3,3,1,3,3,5,1,1,10,13,23
+MUSIC SOURCE SEPARATION BASED ON A LIGHTWEIGHT DEEP LEARNING FRAMEWORK (DTTNET: DUAL-PATH TFC-TDF UNET),2024,Source Separation,General MIR,5,3,3,3,5,5,3,5,1,14,19,33
+Machine Learning for Monitoring Vocal Health and Performance of Professional Singers,2024,Music Education & Performance Assessment,Solo Singing,1,3,3,1,3,3,5,3,1,8,15,23
+Personalized Music Improvisation,2024,Multi-Pitch Estimation,General MIR,1,1,5,1,5,3,5,3,3,8,19,27
+ENHANCING NOTE-LEVEL SINGING TRANSCRIPTION MODEL WITH UNLABELED AND WEAKLY LABELED DATA,2024,Singing Voice / Melody Extraction,Solo Singing,3,3,3,5,5,3,5,5,1,14,19,33
+A study on improving the performance of the machine-learning based automatic music transcription model by utilizing pitch number information,2024,Automatic Music Transcription (AMT),Instrumental,1,1,5,3,5,1,5,3,3,10,17,27
+A hybrid CNN-LSTM model with adaptive instance normalization for one shot singing voice conversion,2024,Music Education & Performance Assessment,Solo Singing,5,1,3,5,3,5,5,5,1,14,19,33
+Interactive Singing Melody Extraction Based on Active Adaptation,2024,Singing Voice / Melody Extraction,Solo Singing,3,3,3,5,5,5,5,5,1,14,21,35
+Real World Music Object Recognition,2024,Optical Music Recognition (OMR),General MIR,3,3,5,3,5,3,5,5,3,14,21,35
+Korean Pansori Vocal Note Transcription Using Attention-Based Segmentation and Viterbi Decoding,2024,Automatic Music Transcription (AMT),Solo Singing,5,5,5,3,5,1,5,5,3,18,19,37
+DLVS4Audio2Sheet: Deep Learning-Based Vocal Separation for Audio into Music Sheet Conversion,2024,Automatic Music Transcription (AMT),Ensemble,5,3,3,3,5,5,5,3,3,14,21,35
+SinTechSVS: A Singing Technique Controllable Singing Voice Synthesis System,2024,Singing Voice / Melody Extraction,Solo Singing,5,1,3,5,3,5,5,5,1,14,19,33
+An objective evaluation method of vocal singing effect based on artificial intelligence technology,2024,Music Education & Performance Assessment,Solo Singing,3,1,3,3,5,5,5,5,3,10,23,33
+Classification of Musical Instruments' Sound using kNN and CNN,2024,Instrument Recognition / Classification,Instrumental,3,1,5,1,5,3,5,3,3,10,19,29
+Source Separation of Piano Concertos Using Musically Motivated Augmentation Techniques,2024,Source Separation,Instrumental,3,5,3,3,5,5,5,5,3,14,23,37
+Construction of a vocal singing style repository based on a deep learning model,2024,Music Education & Performance Assessment,Solo Singing,1,1,3,1,5,1,5,3,1,6,15,21
+Instrument Independent Chord Recognition Using Lossless-to-Lossy Transcoding in Homophonic Audio Signals,2024,Instrument Recognition / Classification,General MIR,3,3,3,5,5,5,5,3,1,14,19,33
+Development of an Automatic Musical Keys Notes Detection Technique Using Mir Toolbox,2024,Automatic Music Transcription (AMT),Instrumental,1,3,5,3,5,3,5,3,3,12,19,31
+Instrumentality Classification Evaluation System for Natural Sounds,2024,Instrument Recognition / Classification,General MIR,3,3,3,3,5,3,5,3,1,12,17,29
+Instrumental Timbre Transfer Based on Disentangled Representation of Timbre and Pitch,2024,Music Education & Performance Assessment,General MIR,5,1,5,3,5,3,5,5,3,14,21,35
+ENHANCING AUDIO SIGNAL SEGMENTATION FOR MUSICAL INSTRUMENTS WITH REFINED MFCC-BASED FEATURES,2024,Instrument Recognition / Classification,Instrumental,1,1,3,5,5,3,5,5,3,10,21,31
+SCNet: Sparse Compression Network for Music Source Separation,2024,Source Separation,General MIR,3,5,5,5,5,5,3,3,3,18,19,37
+Converting Vocal Performances into Sheet Music Leveraging Large Language Models,2024,Automatic Music Transcription (AMT),Ensemble,3,1,1,1,5,3,5,3,1,6,17,23
+Real-Time Human-Classified Emotional MIDI Dataset Integration for Symbolic Music Generation,2024,Music Education & Performance Assessment,General MIR,3,3,3,1,5,3,3,3,1,10,15,25
+Design of a Semantic Understanding System for Optical Staff Symbols,2023,Optical Music Recognition (OMR),General MIR,3,3,5,3,5,3,5,3,3,14,19,33
+High-Quality and Reproducible Automatic Drum Transcription from Crowdsourced Data,2023,Automatic Music Transcription (AMT),Instrumental,1,3,5,5,5,3,5,3,5,14,21,35
+Stripe-Transformer: deep stripe feature learning for music source separation,2023,Source Separation,Instrumental,3,5,5,3,5,5,5,3,3,16,21,37
+Note-level singing melody transcription with transformers,2023,Singing Voice / Melody Extraction,Solo Singing,3,3,3,5,5,5,5,5,3,14,23,37
+Piano automatic transcription based on transformer,2023,Automatic Music Transcription (AMT),Instrumental,5,3,3,3,5,3,5,3,1,14,17,31
+Implementation of Music Similarity Analysis System Employing Source Separation and Automatic Transcription Learning,2023,Automatic Music Transcription (AMT),Solo Singing,3,3,5,1,5,3,5,5,5,12,23,35
+A Lightweight Music Recognition Method Based on Improved CRNN,2023,Optical Music Recognition (OMR),General MIR,3,3,5,3,5,3,3,5,3,14,19,33
+Polyphonic piano transcription based on graph convolutional network,2023,Automatic Music Transcription (AMT),Instrumental,3,3,3,3,5,3,5,3,1,12,17,29
+Stacking ensemble learning for optical music recognition,2023,Optical Music Recognition (OMR),General MIR,3,5,5,5,5,5,3,3,5,18,21,39
+Comparative Analysis of Deep Learning Architectures and Vision Transformers for Musical Key Estimation,2023,Automatic Music Transcription (AMT),General MIR,3,5,5,5,5,3,5,3,3,18,19,37
+Onset Detection for String Instruments Using Bidirectional Temporal and Convolutional Recurrent Networks,2023,Instrument Recognition / Classification,Instrumental,3,3,3,5,5,5,5,5,1,14,21,35
+Implementation of Deep Learning Models on an SoC-FPGA Device for Real-Time Music Genre Classification,2023,Music Education & Performance Assessment,General MIR,1,1,5,3,5,3,5,3,3,10,19,29
+A detector for page-level handwritten music object recognition based on deep learning,2023,Optical Music Recognition (OMR),General MIR,3,3,5,3,3,3,3,3,3,14,15,29
+Late multimodal fusion for image and audio music transcription,2023,Optical Music Recognition (OMR),General MIR,3,3,3,3,5,3,3,3,3,12,17,29
+TAPE: An End-to-End Timbre-Aware Pitch Estimator,2023,Multi-Pitch Estimation,Instrumental,1,1,1,3,5,5,5,3,1,6,19,25
+"Deep Learning-Based Automatic Music Transcription of the Diwdiw-as, a Native Filipino Bamboo Flute",2023,Automatic Music Transcription (AMT),Instrumental,3,1,5,1,5,3,5,1,3,10,17,27
+Ensemble Machine Learning Models for Root Note Detection in Irish Instrumental Dance Music,2023,Singing Voice / Melody Extraction,General MIR,3,3,5,3,5,3,3,3,3,14,17,31
+Music Instrument Recognition using Deep Learning,2023,Instrument Recognition / Classification,Instrumental,3,3,5,1,5,3,5,3,3,12,19,31
+Music Transcription Based on Deep Learning,2023,Automatic Music Transcription (AMT),General MIR,3,5,3,1,5,1,5,3,1,12,15,27
+Transfer Learning using Musical/Non-Musical Mixtures for Multi-Instrument Recognition,2023,Instrument Recognition / Classification,Instrumental,1,3,3,3,5,1,5,5,1,10,17,27
+On Beat Tracking and Tempo Estimation of Musical Audio Signals via Deep Learning,2023,Instrument Recognition / Classification,General MIR,3,3,5,3,5,3,5,5,3,14,21,35
+Toward Leveraging Pre-Trained Self-Supervised Frontends for Automatic Singing Voice Understanding Tasks: Three Case Studies,2023,Singing Voice / Melody Extraction,Solo Singing,3,3,3,5,5,3,5,3,1,14,17,31
+A comparative study of blind source separation methods,2023,Source Separation,General MIR,3,5,5,3,5,5,5,5,3,16,23,39
+Classification of the perceptual impression of source-level blending between violins in a joint performance,2023,Music Education & Performance Assessment,General MIR,3,3,5,5,5,3,3,3,3,16,17,33
+Exploiting Music Source Separation For Singing Voice Detection,2023,Source Separation,Solo Singing,3,5,3,3,5,5,5,3,1,14,19,33
+A U-Net Based Architecture for Automatic Music Transcription,2023,Automatic Music Transcription (AMT),General MIR,3,3,3,1,5,5,3,3,1,10,17,27
+Note and Playing Technique Transcription of Electric Guitar Solos in Real-World Music Performance,2023,Automatic Music Transcription (AMT),Instrumental,3,3,3,3,5,5,5,3,1,12,19,31
+Pitch Estimation by Denoising Preprocessor and Hybrid Estimation Model,2023,Multi-Pitch Estimation,General MIR,3,1,3,1,5,5,3,3,1,8,17,25
+Multimodal Strategies for Image and Audio Music Transcription: A Comparative Study,2023,Optical Music Recognition (OMR),General MIR,3,3,3,3,5,1,3,3,1,12,13,25
+Boost Predominant Instrument Recognition Performance with MagiaSearch and MagiaClassifier,2023,Instrument Recognition / Classification,Instrumental,3,3,5,3,5,5,5,3,3,14,21,35
+MF-PAM: Accurate Pitch Estimation through Periodicity Analysis and Multi-level Feature Fusion,2023,Multi-Pitch Estimation,General MIR,3,3,5,3,5,5,5,3,3,14,21,35
+Contrastive Learning based Deep Latent Masking for Music Source Separation,2023,Source Separation,General MIR,3,5,3,5,5,5,5,3,1,16,19,35
+A novel deep learning-based multi-instrument recognition method for polyphonic music,2023,Instrument Recognition / Classification,Instrumental,3,1,3,3,5,5,5,3,1,10,19,29
+Tackling the Cocktail Fork Problem for Separation and Transcription of Real-World Soundtracks,2023,Source Separation,General MIR,3,1,5,3,5,3,5,3,3,12,19,31
+Zero-Note Samba: Self-Supervised Beat Tracking,2023,Singing Voice / Melody Extraction,General MIR,3,3,3,1,5,5,3,5,1,10,19,29
+Direction specific ambisonics source separation with end-to-end deep learning,2023,Source Separation,General MIR,3,5,3,3,5,3,3,3,1,14,15,29
+Multi-Instrument Polyphonic Melody Transcription Based on Deep Learning,2023,Automatic Music Transcription (AMT),Instrumental,1,3,3,3,5,3,5,3,1,10,17,27
+Music Source Separation With Band-Split RNN,2023,Source Separation,Instrumental,3,5,3,5,5,5,5,3,1,16,19,35
+Transcription of Arabic and Turkish Music Using Convolutional Neural Networks,2023,Automatic Music Transcription (AMT),Instrumental,1,1,3,1,5,3,5,3,1,6,17,23
+Unsupervised Music Source Separation Using Differentiable Parametric Source Models,2023,Source Separation,Ensemble,3,3,3,5,5,5,5,3,1,14,19,33
+MusicYOLO: A Vision-Based Framework for Automatic Singing Transcription,2023,Automatic Music Transcription (AMT),General MIR,5,3,5,3,5,5,3,3,3,16,19,35
+SepMLP: An All-MLP Architecture for Music Source Separation,2023,Source Separation,General MIR,3,5,3,3,5,5,3,5,1,14,19,33
+A Music Cognition–Guided Framework for Multi-pitch Estimation,2023,Multi-Pitch Estimation,General MIR,5,3,5,3,5,5,3,3,1,16,17,33
+A Multi-Stage Automatic Evaluation System for Sight-Singing,2023,Automatic Music Transcription (AMT),Solo Singing,5,3,5,3,5,3,5,3,1,16,17,33
+Region-based layout analysis of music score images,2022,Optical Music Recognition (OMR),General MIR,3,1,3,3,5,5,3,5,1,10,19,29
+Dual Task Monophonic Singing Transcription,2022,Automatic Music Transcription (AMT),Instrumental,3,3,5,5,5,5,5,3,3,16,21,37
+A holistic approach for image-to-graph: application to optical music recognition,2022,Optical Music Recognition (OMR),General MIR,3,1,3,3,5,3,5,3,1,10,17,27
+Paralinguistic singing attribute recognition using supervised machine learning for describing the classical tenor solo singing voice in vocal pedagogy,2022,Singing Voice / Melody Extraction,Solo Singing,5,5,3,3,5,1,5,5,3,16,19,35
+Singing-Voice Timbre Evaluations Based on Transfer Learning,2022,Music Education & Performance Assessment,Solo Singing,3,3,3,3,5,3,5,5,1,12,19,31
+Transformer-Based Music Language Modelling and Transcription,2022,Automatic Music Transcription (AMT),Instrumental,3,3,5,1,5,5,5,5,1,12,21,33
+A perceptual measure for evaluating the resynthesis of automatic music transcriptions,2022,Automatic Music Transcription (AMT),Instrumental,3,3,3,3,5,5,5,3,1,12,19,31
+An ensemble of deep transfer learning models for handwritten music symbol recognition,2022,Optical Music Recognition (OMR),General MIR,3,5,3,3,5,5,3,5,3,14,21,35
+Decoupling music notation to improve end-to-end Optical Music Recognition,2022,Optical Music Recognition (OMR),General MIR,3,1,3,3,5,5,3,3,3,10,19,29
+Multimodal image and audio music transcription,2022,Optical Music Recognition (OMR),General MIR,5,3,3,5,5,3,3,3,1,16,15,31
+Music Sheet Understanding and Tone Transposition,2022,Optical Music Recognition (OMR),General MIR,3,1,1,1,5,3,5,3,1,6,17,23
+Balancing bias and performance in polyphonic piano transcription systems,2022,Automatic Music Transcription (AMT),Instrumental,5,3,3,3,5,5,5,5,3,14,23,37
+Non-negative Matrix Factorization and DenseNet based Monophonic Singing Voice Separation,2022,Source Separation,Solo Singing,3,1,3,3,3,5,5,5,1,10,19,29
+A Deep Learning Based Approach for Janya Raga Classification in Carnatic Music,2022,Music Education & Performance Assessment,General MIR,1,3,5,3,5,5,3,3,3,12,19,31
+VISUAL SOUND SOURCE SEPARATION WITH PARTIAL SUPERVISION LEARNING,2022,Source Separation,General MIR,1,3,3,5,5,5,5,5,1,12,21,33
+VocEmb4SVS: Improving Singing Voice Separation with Vocal Embeddings,2022,Singing Voice / Melody Extraction,Solo Singing,5,5,5,3,5,5,5,3,3,18,21,39
+"A Deep-Learning Based Framework for Source Separation, Analysis, and Synthesis of Choral Ensembles",2022,Source Separation,Ensemble,5,5,3,5,5,5,5,3,3,18,21,39
+Musigraph: Optical Music Recognition Through Object Detection and Graph Neural Network,2022,Optical Music Recognition (OMR),General MIR,1,1,3,3,5,1,5,3,1,8,15,23
+An Efficient Short-Time Discrete Cosine Transform and Attentive MultiResUNet Framework for Music Source Separation,2022,Source Separation,General MIR,5,1,3,3,5,5,3,3,1,12,17,29
+Transcription of Audio to MIDI Using Deep Learning,2022,Automatic Music Transcription (AMT),Instrumental,1,5,5,3,5,1,5,3,3,14,17,31
+Deformable CNN and Imbalance-Aware Feature Learning for Singing Technique Classification,2022,Music Education & Performance Assessment,General MIR,1,3,3,3,5,5,3,3,1,10,17,27
+SingAug: Data Augmentation for Singing Voice Synthesis with Cycle-consistent Training Strategy,2022,Singing Voice / Melody Extraction,Solo Singing,3,1,3,5,3,3,5,3,1,12,15,27
+MIC_FuzzyNET: Fuzzy Integral Based Ensemble for Automatic Classification of Musical Instruments From Audio Signals,2022,Instrument Recognition / Classification,Instrumental,5,3,5,3,5,3,5,5,3,16,21,37
+Improving Deep-Learning-based Optical Music Recognition for Camera-based Inputs,2022,Optical Music Recognition (OMR),General MIR,5,3,5,3,5,5,3,3,3,16,19,35
+Investigation on the Extraction Methods of Timbre Features in Vocal Singing Based on Machine Learning,2022,Music Education & Performance Assessment,General MIR,3,1,3,3,5,3,5,3,1,10,17,27
+Comparing Deep Models and Evaluation Strategies for Multi-Pitch Estimation in Music Recordings,2022,Multi-Pitch Estimation,Instrumental,3,5,3,3,5,3,5,5,1,14,19,33
+Automatic Music Transcription for the Thai Xylophone played with Soft Mallets,2022,Automatic Music Transcription (AMT),General MIR,3,3,5,5,5,5,5,3,3,16,21,37
+Music Score Recognition Method Based on Deep Learning,2022,Instrument Recognition / Classification,General MIR,3,3,3,5,5,3,5,3,1,14,17,31
+Deep Learning Long Short-Term Memory based Automatic Music Transcription System for Carnatic Music,2022,Automatic Music Transcription (AMT),General MIR,3,1,5,3,5,3,5,1,3,12,17,29
+Voice Assignment in Vocal Quartets Using Deep Learning Models Based on Pitch Salience,2022,Multi-Pitch Estimation,Ensemble,3,5,3,5,5,5,5,5,3,16,23,39
+Singing Melody Extraction Based on Joint Network with Res-CBAM,2022,Singing Voice / Melody Extraction,Solo Singing,3,3,5,3,5,3,5,3,3,14,19,33
+DIFFERENTIABLE DIGITAL SIGNAL PROCESSING MIXTURE MODEL FOR SYNTHESIS PARAMETER EXTRACTION FROM MIXTURE OF HARMONIC SOUNDS,2022,Source Separation,General MIR,3,1,3,3,5,3,3,3,1,10,15,25
+DEEP PERFORMER: SCORE-TO-AUDIO MUSIC PERFORMANCE SYNTHESIS,2022,Music Education & Performance Assessment,Instrumental,3,3,5,5,5,5,5,3,3,16,21,37
+EXPLORING TRANSFORMER'S POTENTIAL ON AUTOMATIC PIANO TRANSCRIPTION,2022,Automatic Music Transcription (AMT),Instrumental,1,5,3,3,5,1,5,3,1,12,15,27
+Spain-NET: SPATIALLY-INFORMED STEREOPHONIC MUSIC SOURCE SEPARATION,2022,Source Separation,Instrumental,3,3,5,3,5,3,5,3,3,14,19,33
+On the Use of Transformers for End-to-End Optical Music Recognition,2022,Optical Music Recognition (OMR),General MIR,1,1,3,1,5,3,5,5,1,6,19,25
+The Application of Minority Music Style Recognition Based on Deep Convolution Loop Neural Network,2022,Instrument Recognition / Classification,General MIR,3,3,3,3,5,3,5,3,1,12,17,29
+Automatic musical transcription of the Tatar folk song: comparative analysis of AI-powered programs,2022,Automatic Music Transcription (AMT),Instrumental,3,3,3,3,5,1,5,1,3,12,15,27
+Visually Guided Sound Source Separation and Localization using Self-Supervised Motion Representations,2022,Source Separation,General MIR,5,3,3,1,5,5,5,3,3,12,21,33
+Audio Classification for Melody Transcription in the Context of Indian Art Music,2022,Singing Voice / Melody Extraction,General MIR,3,3,3,1,5,1,3,1,1,10,11,21
+Hybrid Deep Learning Model for Singing Voice Separation,2021,Source Separation,Solo Singing,3,3,3,3,3,3,5,3,1,12,15,27
+Real-Time Music Following in Score Sheet Images via Multi-Resolution Prediction,2021,Optical Music Recognition (OMR),Instrumental,3,3,3,3,3,5,5,3,1,12,17,29
+Music Source Separation Method Based on Unet Combining SE and BiSRU,2021,Source Separation,General MIR,5,1,3,3,5,3,3,5,1,12,17,29
+Vocal music teaching evaluation model based on pattern recognition and voiceprint feature analysis,2021,Music Education & Performance Assessment,General MIR,3,1,5,3,5,3,3,3,3,12,17,29
+Deep learning-based approach for old handwritten music symbol recognition,2021,Optical Music Recognition (OMR),General MIR,3,3,3,3,5,3,3,3,1,12,15,27
+Singing voice detection in opera recordings: A case study on robustness and generalization,2021,Singing Voice / Melody Extraction,Solo Singing,5,3,3,3,5,3,5,5,1,14,19,33
+Evolving a multi-classifier system for multi-pitch estimation of piano music and beyond: An application of cartesian genetic programming,2021,Multi-Pitch Estimation,Instrumental,5,3,5,5,5,5,5,3,1,18,19,37
+A comparison of deep learning methods for timbre analysis in polyphonic automatic music transcription,2021,Automatic Music Transcription (AMT),Instrumental,3,1,3,5,5,5,5,3,1,12,19,31
+An EB-enhanced CNN Model for Piano Music Transcription,2021,Automatic Music Transcription (AMT),Instrumental,3,3,5,3,5,5,5,3,3,14,21,35
+Augmentation methods on monophonic audio for instrument classification in polyphonic music,2021,Instrument Recognition / Classification,Instrumental,3,3,5,3,5,3,5,3,3,14,19,33
+Multi-band multi-resolution fully convolutional neural networks for singing voice separation,2021,Source Separation,Solo Singing,3,1,3,3,5,3,5,3,1,10,17,27
+Automatic Music Transcription using CNN Neural Networks on Segmented Audio,2021,Automatic Music Transcription (AMT),General MIR,1,1,3,1,5,1,3,1,1,6,11,17
+Transition-Aware: A More Robust Approach for Piano Transcription,2021,Automatic Music Transcription (AMT),Instrumental,3,5,5,1,5,3,5,5,3,14,21,35
+Source Separation and Depthwise Separable Convolutions for Computer Audition (Student Abstract),2021,Source Separation,General MIR,3,3,3,3,5,5,3,3,1,12,17,29
+End-to-End Learning for Musical Instruments Classification,2021,Instrument Recognition / Classification,Instrumental,3,1,3,3,5,1,5,3,1,10,15,25
+Melodic Filtering for Indian Classical Instrumental Music,2021,Music Education & Performance Assessment,General MIR,1,1,3,3,5,1,3,3,1,8,13,21
+Audio-to-Score Alignment Using Deep Automatic Music Transcription,2021,Automatic Music Transcription (AMT),General MIR,5,3,3,3,5,5,3,3,1,14,17,31
+Deep Convolution Neural Network for Thai Classical Music Instruments Sound Recognition,2021,Instrument Recognition / Classification,Instrumental,3,3,5,5,5,3,5,3,3,16,19,35
+Deep Neural Network for Multi-Pitch Estimation Using Weighted Cross Entropy Loss,2021,Multi-Pitch Estimation,General MIR,3,3,3,3,5,1,5,3,1,12,15,27
+Harmonic Representation for CNN-LSTM Automatic Chord Recognition,2021,Singing Voice / Melody Extraction,General MIR,3,3,3,3,5,3,3,3,3,12,17,29
+Music Source Separation Using Deform-Conv Dense U-Net,2021,Source Separation,Instrumental,3,1,5,3,5,3,5,3,3,12,19,31
+Learning Multi-Pitch Estimation from Weakly Aligned Score-Audio Pairs Using a Multi-Label CTC Loss,2021,Multi-Pitch Estimation,Instrumental,5,3,3,3,5,3,5,3,1,14,17,31
+HTMD-Net: A Hybrid Masking-Denoising Approach to Time-Domain Monaural Singing Voice Separation,2021,Source Separation,Solo Singing,3,5,3,3,5,3,5,3,1,14,17,31
+Multi-modal Conditional Bounding Box Regression for Music Score Following,2021,Optical Music Recognition (OMR),Instrumental,3,3,3,5,5,5,5,5,1,14,21,35
+Knowledge distillation for singing voice detection,2021,Singing Voice / Melody Extraction,Solo Singing,1,3,3,1,5,3,5,3,1,8,17,25
+Vocal harmony separation using time-domain neural networks,2021,Source Separation,Ensemble,5,3,3,3,5,5,5,3,1,14,19,33
+Visual Scene Graphs for Audio Source Separation,2021,Source Separation,General MIR,3,3,3,3,5,5,3,3,1,12,17,29
+Automatic Tabla Stroke Source Separation Using Machine Learning,2021,Instrument Recognition / Classification,Instrumental,1,1,5,3,5,1,5,3,3,10,17,27
+Sequential Next-Symbol Prediction for Optical Music Recognition,2021,Optical Music Recognition (OMR),General MIR,5,1,5,3,5,5,3,3,3,14,19,33
+Statistical correction of transcribed melody notes based on probabilistic integration of a music language model and a transcription error model,2021,Automatic Music Transcription (AMT),Solo Singing,5,1,3,3,5,3,5,3,1,12,17,29
+Singer Identification Using Deep Timbre Feature Learning with Knn-Net,2021,Singing Voice / Melody Extraction,Solo Singing,3,3,3,5,5,5,5,3,1,14,19,33
+Semi-Supervised Singing Voice Separation with Noisy Self-Training,2021,Singing Voice / Melody Extraction,Solo Singing,5,3,3,3,5,3,5,3,1,14,17,31
+Source Separation-based Data Augmentation for Improved Joint Beat and Downbeat Tracking,2021,Source Separation,Instrumental,3,1,3,3,5,3,5,3,1,10,17,27
+Sound source separation for musical pedagogy,2021,Source Separation,General MIR,1,3,3,1,5,1,5,1,1,8,13,21
+Drum-Aware Ensemble Architecture for Improved Joint Musical Beat and Downbeat Tracking,2021,Source Separation,Instrumental,3,1,1,5,5,3,5,3,1,10,17,27
+A Joint Diagonalization Based Efficient Approach to Underdetermined Blind Audio Source Separation Using the Multichannel Wiener Filter,2021,Source Separation,General MIR,5,1,3,3,5,3,5,3,1,12,17,29
+A Comparative Study on the Drum Sound Recognition Algorithms Based Deep Learning,2021,Instrument Recognition / Classification,Instrumental,1,1,3,3,5,1,5,3,1,8,15,23
+Automatic Transcription of Organ Tablature Music Notation with Deep Neural Networks,2021,Automatic Music Transcription (AMT),Instrumental,3,1,5,3,5,3,5,3,3,12,19,31
+Modeling Human Experts’ Identification of Orchestral Blends Using Symbolic Information,2021,Music Education & Performance Assessment,Instrumental,1,1,1,3,5,3,5,3,1,6,17,23
+Automatic Piano Sheet Music Transcription with Machine Learning,2021,Automatic Music Transcription (AMT),Instrumental,3,1,5,3,5,1,5,3,3,12,17,29
+Combined Evidence of MFCC and CRP Features Using Machine Learning Algorithms for Singer Identification,2021,Instrument Recognition / Classification,Solo Singing,3,1,5,3,5,3,5,3,3,12,19,31
+TMIR: Transient Length Extraction Strategy for ANN-inspired Musical Instrument Recognition,2020,Instrument Recognition / Classification,Instrumental,1,3,5,1,5,1,5,3,3,10,17,27
+Enhanced audio source separation and musical component analysis,2020,Source Separation,General MIR,3,1,5,1,5,3,3,3,3,10,17,27
+Enhancing Piano Transcription by Dilated Convolution,2020,Automatic Music Transcription (AMT),Instrumental,3,5,3,3,5,5,5,5,1,14,21,35
+Harmonic Structure-Based Neural Network Model for Music Pitch Detection,2020,Automatic Music Transcription (AMT),General MIR,3,5,3,3,5,5,3,3,1,14,17,31
+"Multi-task learning for detection, recovery, and separation of polyphonic music",2020,Source Separation,General MIR,5,1,3,3,5,5,3,3,3,12,19,31
+Multi-channel U-Net for Music Source Separation,2020,Source Separation,General MIR,3,1,3,3,5,3,3,3,1,10,15,25
+Mixing-Specific Data Augmentation Techniques for Improved Blind Violin/Piano Source Separation,2020,Source Separation,Instrumental,3,1,5,3,5,3,5,3,3,12,19,31
+F0 estimation using blind source separation for analyzing noh singing,2020,Singing Voice / Melody Extraction,General MIR,1,1,3,3,5,3,3,3,1,8,15,23
+Determined audio source separation with multichannel star generative adversarial network,2020,Source Separation,General MIR,5,1,3,5,5,5,3,3,1,14,17,31
+Research on singing voice detection based on a long-term recurrent convolutional network with vocal separation and temporal smoothing,2020,Singing Voice / Melody Extraction,Solo Singing,3,3,3,3,5,5,5,3,1,12,19,31
+Robust Piano Music Transcription Based on Computer Vision,2020,Automatic Music Transcription (AMT),Instrumental,3,3,3,5,5,5,5,3,1,14,19,33
+Residual attention based network for automatic classification of phonation modes,2020,Automatic Music Transcription (AMT),Solo Singing,3,3,5,3,5,3,5,3,3,14,19,33
+Deep Autotuner: A Pitch Correcting Network for Singing Performances,2020,Automatic Music Transcription (AMT),Solo Singing,3,3,3,1,5,3,5,3,1,10,17,27
+Improving Music Transcription by Pre-Stacking A U-Net,2020,Automatic Music Transcription (AMT),General MIR,3,5,5,3,5,3,3,3,3,16,17,33
+Sight to Sound: An End-to-End Approach for Visual Piano Transcription,2020,Automatic Music Transcription (AMT),Instrumental,5,1,3,1,5,3,5,3,1,10,17,27
+Two-Step Sound Source Separation: Training on Learned Latent Targets,2020,Source Separation,General MIR,3,1,5,3,5,3,3,3,3,12,17,29
+Simultaneous Separation and Transcription of Mixtures with Multiple Polyphonic and Percussive Instruments,2020,Source Separation,General MIR,3,3,3,1,5,3,3,3,1,10,15,25
+Improving Universal Sound Separation Using Sound Classification,2020,Source Separation,General MIR,3,1,3,3,5,3,3,3,1,10,15,25
+Parallel stacked hourglass network for music source separation,2020,Source Separation,General MIR,3,3,5,5,5,5,5,3,3,16,21,37
+Feature engineering and stacked echo state networks for musical onset detection,2020,Automatic Music Transcription (AMT),General MIR,1,1,3,5,5,3,3,3,1,10,15,25
+Adversarial Unsupervised Domain Adaptation for Harmonic-Percussive Source Separation,2020,Source Separation,Instrumental,5,3,3,3,5,3,5,5,1,14,19,33
+Channel-wise subband input for better voice and accompaniment separation on high resolution music,2020,Source Separation,General MIR,3,3,5,3,5,3,3,3,3,14,17,31
+Multi-Instrument Automatic Music Transcription with Self-Attention-Based Instance Segmentation,2020,Multi-Pitch Estimation,General MIR,3,1,3,3,5,5,3,3,1,10,17,27
+Finding Strength in Weakness: Learning to Separate Sounds with Weak Supervision,2020,Source Separation,General MIR,3,3,5,3,5,3,3,5,3,14,19,33
+Fusion of Hilbert-Huang transform and deep convolutional neural network for predominant musical instruments recognition,2020,Instrument Recognition / Classification,Instrumental,3,3,5,5,5,3,5,5,3,16,21,37
+Cross-version Singing Voice Detection in Opera Recordings: Challenges for Supervised Learning,2020,Singing Voice / Melody Extraction,Solo Singing,1,3,3,3,5,3,5,5,1,10,19,29
+An Integrated Processing Method Based on Wasserstein Barycenter Algorithm for Automatic Music Transcription,2020,Automatic Music Transcription (AMT),General MIR,3,1,5,3,5,5,3,3,3,12,19,31
+Predominant Instrument Recognition Based on Deep Neural Network with Auxiliary Classification,2020,Instrument Recognition / Classification,Instrumental,3,3,5,3,5,3,5,3,3,14,19,33
+Spec2Spec: Towards the general framework of music processing using generative adversarial networks,2020,Source Separation,Instrumental,3,1,3,3,5,1,5,3,1,10,15,25
+A post-processing of onset detection based on verification with neural network,2020,Automatic Music Transcription (AMT),Solo Singing,3,3,3,1,5,3,5,5,1,10,19,29
+Expanding Automatic Music Transcription Dataset via Single Note Audio Synthesized Data,2025,Automatic Music Transcription (AMT),General MIR,5,3,3,5,5,5,5,5,3,16,23,39
+YourMT3+: Multi-Instrument Music Transcription with Enhanced Transformer Architectures and Cross-Dataset STEM Augmentation,2024,Automatic Music Transcription (AMT),General MIR,3,3,3,3,5,3,3,3,3,12,17,29
+Spectrogram Event Based Feature Representation for Generalizable Automatic Music Transcription,2026,Automatic Music Transcription (AMT),General MIR,5,3,5,3,5,5,5,5,3,16,23,39
+Timbre-Based Pretraining with Pseudo-Labels for Multi-Instrument Automatic Music Transcription,2026,Automatic Music Transcription (AMT),General MIR,5,3,5,3,5,3,3,5,5,16,21,37
+Polyphonic Piano Music Transcription System Exploiting Mutual Correlations of Different Musical Note States,2024,Automatic Music Transcription (AMT),Instrumental,3,5,3,5,5,3,5,3,3,16,19,35
+Music Sheet Classification using Squeeze-and-Excitation ResNet50 Network,2023,Optical Music Recognition (OMR),Instrumental,3,3,3,5,5,3,5,3,3,14,19,33
+HIPI: A Hierarchical Performer Identification Model Based on Symbolic Representation of Music,2023,Automatic Music Transcription (AMT),General MIR,3,3,5,5,5,3,5,3,3,16,19,35
+Spatio-Channel Complementary Learning for Polyphonic Music Instrument Recognition,2025,Instrument Recognition / Classification,Instrumental,5,3,5,3,5,5,5,3,3,16,21,37
+"U-MusT: A Unified Framework for Cross-Modal Translation of Score Images, Symbolic Music, and Performance Audio",2026,Optical Music Recognition (OMR),General MIR,5,3,5,3,5,5,3,3,3,16,19,35
+Stereo Feature Enhancement and Temporal Information Extraction Network for Automatic Music Transcription,2021,Automatic Music Transcription (AMT),General MIR,3,3,3,1,5,3,3,3,1,10,15,25
+Timbre-Trap: A Low-Resource Framework for Instrument-Agnostic Music Transcription,2024,Multi-Pitch Estimation,Instrumental,5,3,3,3,5,5,5,3,1,14,19,33
+Chinese Traditional Musical Instrument Computer Intelligent Recognition Based on Recurrent Neural Network,2022,Instrument Recognition / Classification,Instrumental,3,3,5,3,5,3,5,3,3,14,19,33
+Velocity2DMs: A Contextual Modeling Approach to Dynamics Marking Prediction in Piano Performance,2025,Automatic Music Transcription (AMT),Instrumental,5,3,1,3,5,5,5,5,1,12,21,33
+Music Source Components Isolation using MultiHead Transformers and Encoders,2024,Source Separation,Instrumental,5,3,3,3,5,5,5,3,1,14,19,33
+Predominant musical instrument detection using ensemble learning,2024,Instrument Recognition / Classification,Instrumental,1,1,3,5,5,3,5,3,1,10,17,27
+Automatic Lyrics Transcription of Polyphonic Music With Lyrics-Chord Multi-Task Learning,2022,Singing Voice / Melody Extraction,Solo Singing,3,3,5,5,5,5,5,3,3,16,21,37
+PRSF: Pitched-Noise-Robust Score Following Based on Multimodal Learning,2025,Music Education & Performance Assessment,Instrumental,3,3,3,3,5,3,5,3,1,12,17,29
+Towards Automatic Measure-Wise Feature Extraction Pipeline for Music Performance Analysis,2022,Music Education & Performance Assessment,General MIR,3,3,1,3,5,3,5,5,1,10,19,29
+Improved Separation of Polyphonic Chamber Music Signals by Integrating Instrument Activity Labels,2023,Source Separation,Instrumental,1,1,3,5,5,3,5,3,1,10,17,27
+Evaluation of Deep Learning Approaches for Pitch Scoring in Piano Practice and Performance,2025,Music Education & Performance Assessment,Instrumental,1,3,5,5,5,3,5,3,3,14,19,33
+Application of Computational Methods for Comparative Music Analysis,2023,Music Education & Performance Assessment,General MIR,3,3,1,3,5,3,5,5,3,10,21,31
+A Signal Processing-Guided Machine Learning Approach to Automated Detection of Time Signatures in Music,2026,Music Education & Performance Assessment,General MIR,5,3,5,5,5,5,3,3,3,18,19,37
+Musicdetr: A Position-Aware Spectral Note Detection Model for Singing Transcription,2026,Automatic Music Transcription (AMT),General MIR,5,3,5,3,5,5,3,3,5,16,21,37
+Towards Robust Local Key Estimation with a Musically Inspired Neural Network,2024,Multi-Pitch Estimation,General MIR,3,3,3,1,5,5,3,5,1,10,19,29
+Score-Informed Music Source Separation: Improving Synthetic-To-Real Generalization in Classical Music,2025,Source Separation,Instrumental,3,5,3,3,5,3,5,5,1,14,19,33
+Noise-to-Notes: Diffusion-Based Generation and Refinement for Automatic Drum Transcription,2026,Automatic Music Transcription (AMT),Instrumental,5,3,3,5,5,5,5,5,3,16,23,39
+Application Research of Neural Network Technology in Vocal Music Evaluation,2021,Music Education & Performance Assessment,General MIR,3,1,5,5,3,3,5,3,3,14,17,31
+Self-Transriber: Few-Shot Lyrics Transcription With Self-Training,2023,Singing Voice / Melody Extraction,General MIR,3,1,3,3,5,3,3,3,1,10,15,25
+Music Source Separation Using Generative Adversarial Network and U-Net,2020,Source Separation,General MIR,3,3,5,3,5,5,3,3,3,14,19,33
+Rhythmic Resonance: A New Era of Musical Instrument Categorization with CNN-SVM,2024,Instrument Recognition / Classification,Instrumental,1,3,5,3,5,1,5,3,3,12,17,29
+Singing Transcription from Multimedia Audio Signals using Contour Filtering,2021,Music Education & Performance Assessment,General MIR,3,3,1,3,5,3,3,3,1,10,15,25
+Monaural Music Source Separation Using Deep Convolutional Neural Network Embedded with Feature Extraction Module,2022,Source Separation,Solo Singing,3,3,3,3,5,5,5,3,1,12,19,31
+HAMLET-Net: A Deep Harmonic-Aware Semisupervised Network for Interpretable Melody Extraction of Music and Singing,2025,Singing Voice / Melody Extraction,General MIR,5,1,5,3,5,3,3,3,3,14,17,31
+Hardware-Accelerated Music Transcription on the Cloud via FPGA Implementation,2025,Automatic Music Transcription (AMT),General MIR,3,1,1,3,5,3,5,5,3,8,21,29
+Separation of Electric Guitar Sound based on stacked Recurrent Neural Network,2020,Instrument Recognition / Classification,Instrumental,3,1,3,3,5,3,5,3,1,10,17,27
+Towards Blind Data Cleaning: A Case Study in Music Source Separation,2026,Source Separation,General MIR,3,3,3,5,5,5,5,3,1,14,19,33
+A Data-Driven Approach to Piano Pedagogy Through Audio Feature-Based Performance Evaluation,2025,Music Education & Performance Assessment,Instrumental,5,3,1,3,5,5,5,5,1,12,21,33
+BACHI: Boundary-Aware Symbolic Chord Recognition Through Masked Iterative Decoding on POP and Classical Music,2026,Music Education & Performance Assessment,General MIR,3,3,5,5,5,5,3,5,3,16,21,37
+Meta-Learning-Based Percussion Transcription and $T\bar{a}la$ Identification From Low-Resource Audio,2025,Automatic Music Transcription (AMT),Instrumental,3,3,1,5,5,5,5,3,1,12,19,31
+Multi-Layer Combined Frequency and Periodicity Representations for Multi-Pitch Estimation of Multi-Instrument Music,2024,Multi-Pitch Estimation,General MIR,3,3,1,3,5,5,3,5,1,10,19,29
+Musical Instruments Recognition App,2021,Instrument Recognition / Classification,Instrumental,1,1,5,3,5,3,5,3,3,10,19,29
+Soft Dynamic Time Warping for Multi-Pitch Estimation and Beyond,2023,Multi-Pitch Estimation,General MIR,1,1,1,3,5,3,3,3,1,6,15,21
+Design and Development of Real‐Time Music Transcription Using Digital Signal Processing,2023,Automatic Music Transcription (AMT),Instrumental,3,5,1,1,5,3,5,3,1,10,17,27
+Source Separation For A Cappella Music,2026,Source Separation,Ensemble,1,3,3,5,5,5,5,5,3,12,23,35
+Deep Learning Approaches in Topics of Singing Information Processing,2022,Singing Voice / Melody Extraction,Solo Singing,1,3,3,3,5,3,5,1,1,10,15,25
+Improving Music Source Separation with Simo Stereo Band-Split Rnn,2024,Source Separation,General MIR,3,5,3,3,5,5,3,3,1,14,17,31
+Violinist identification based on vibrato features,2021,Singing Voice / Melody Extraction,Instrumental,3,3,5,3,5,3,5,3,3,14,19,33
+Evaluating High-Resolution Piano Sustain Pedal Depth Estimation with Musically Informed Metrics,2026,Multi-Pitch Estimation,Instrumental,5,1,1,5,5,5,5,3,3,12,21,33
+Audio2Midi: a ResNet-18 based architecture for Accurate Audio-to-MIDI Translation,2024,Music Education & Performance Assessment,General MIR,5,3,3,3,5,5,5,3,1,14,19,33

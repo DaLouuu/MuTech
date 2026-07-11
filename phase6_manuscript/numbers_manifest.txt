@@ -1,0 +1,42 @@
+MUTECH SLR NUMBERS MANIFEST v2 (post-validation, recomputed from repo CSVs)
+============================================================
+
+VALIDATION: 23-paper stratified sample reviewed by Kean 2026-07-11;
+  3 misclassifications found (1 domain, 2 modality); rules refined:
+  - added compound instrument phrases (instruments sound/recognition/classification)
+  - EEG/sensor terms now tag Multimodal
+  - 1 per-title human override (Musical Keys Notes Detection -> Multimodal)
+
+YEAR x DOMAIN:
+domain  Ensemble  General MIR  Instrumental  Solo Singing  All
+year                                                          
+2020           0           17            10             5   32
+2021           1           16            20             9   46
+2022           2           22            12             9   45
+2023           1           27            18             5   51
+2024           2           28            21            11   62
+2025           2           28            39             9   78
+2026           2           32            13             4   51
+All           10          170           133            52  365
+
+DOMAIN x MODALITY:
+modality      Audio  Multimodal  Symbolic  All
+domain                                        
+Ensemble          8           1         1   10
+General MIR     110          20        40  170
+Instrumental     96           9        28  133
+Solo Singing     45           5         2   52
+All             259          35        71  365
+
+CLUSTER x DOMAIN:
+domain                                    Ensemble  General MIR  Instrumental  Solo Singing
+cluster_label                                                                              
+Automatic Music Transcription (AMT)              2           28            37             7
+Instrument Recognition / Classification          0            7            39             1
+Multi-Pitch Estimation                           1           12             9             0
+Music Education & Performance Assessment         2           47            17            13
+Optical Music Recognition (OMR)                  0           26             4             0
+Singing Voice / Melody Extraction                0           15             4            22
+Source Separation                                5           35            23             9
+
+CLUSTER SIZES: Instrument Recognition / Classification=47, Automatic Music Transcription (AMT)=74, Singing Voice / Melody Extraction=41, Source Separation=72, Multi-Pitch Estimation=22, Music Education & Performance Assessment=79, Optical Music Recognition (OMR)=30
