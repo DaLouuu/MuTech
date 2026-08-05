@@ -1,0 +1,209 @@
+MUTECH SLR — CORRECTED NUMBERS MANIFEST v3
+==============================================================================
+
+Corpus frozen at 365 papers (Rayyan-included). No paper added or removed.
+All matching is word-boundary; ML-ensemble phrasing is neutralised before any
+musical-ensemble term is tested. Categories previously reported as 'General MIR'
+and 'Audio' were the tagger's no-match defaults and are now named as such.
+
+REBUILD LOG
+------------------------------------------------------------------------------
+  - cluster join: 365/365 papers matched to a K-Means cluster
+  - provenance recovered for 365/365 papers ({'Scopus': 316, 'IEEE': 49})
+  - publication venue recovered for 49/365 papers — IEEE rows only. Scopus venues were never pulled from the API, and the placeholder string 'Scopus' that the old harmonisation step wrote into that column has been nulled rather than propagated. Real Scopus venues need a re-pull or a Crossref DOI lookup.
+  - domain no-match defaults: 142/365 (was 170/365 reported as 'General MIR')
+  - modality no-match defaults: 72/365 (was 259/365 reported as 'Audio')
+  - q_alignment scores 5 for 345/365 papers; quality_total_excl_alignment added (max 40) so the near-constant criterion no longer inflates every total
+
+CORPUS PROVENANCE (recovered — was 'Rayyan' for all 365)
+------------------------------------------------------------------------------
+source_database
+Scopus    316
+IEEE       49
+
+DOMAIN (corrected; 'Unclassified' = no domain keyword matched)
+------------------------------------------------------------------------------
+  Instrumental            151   41.4%
+  Unclassified            142   38.9%
+  Solo Singing             62   17.0%
+  Ensemble (vocal)         10    2.7%
+
+  Change vs the v2 tags used in the manuscript drafts:
+domain              Ensemble (vocal)  Instrumental  Solo Singing  Unclassified
+domain_v2_original                                                            
+Ensemble                           9             0             0             1
+General MIR                        0            23             8           139
+Instrumental                       1           128             2             2
+Solo Singing                       0             0            52             0
+
+ENSEMBLE SCOPE (new orthogonal axis — the v2 'Ensemble' domain was vocal-only)
+------------------------------------------------------------------------------
+  Not indicated             342   93.7%
+  Instrumental ensemble      13    3.6%
+  Vocal ensemble              8    2.2%
+  Mixed / both                2    0.5%
+
+  Any multi-performer indication: 23 papers (6.3%) — compare the
+  manuscript's 'Ensemble is a 2.7% niche (10 papers)', which counted vocal only.
+
+  Ensemble scope x domain:
+domain                 Ensemble (vocal)  Instrumental  Solo Singing  Unclassified
+ensemble_scope                                                                   
+Instrumental ensemble                 0            13             0             0
+Mixed / both                          2             0             0             0
+Not indicated                         0           138            62           142
+Vocal ensemble                        8             0             0             0
+
+MODALITY (corrected; 'Unspecified' = no modality keyword matched)
+------------------------------------------------------------------------------
+  Audio                   180   49.3%
+  Symbolic                 77   21.1%
+  Unspecified              72   19.7%
+  Multimodal               36    9.9%
+
+  Change vs v2:
+modality              Audio  Multimodal  Symbolic  Unspecified
+modality_v2_original                                          
+Audio                   180           1         6           72
+Multimodal                0          34         1            0
+Symbolic                  0           1        70            0
+
+YEAR x DOMAIN (corrected)
+------------------------------------------------------------------------------
+domain  Ensemble (vocal)  Instrumental  Solo Singing  Unclassified  All
+year                                                                   
+2020                   0            13             5            14   32
+2021                   1            23            10            12   46
+2022                   2            13            10            20   45
+2023                   1            18             7            25   51
+2024                   2            24            12            24   62
+2025                   2            41            12            23   78
+2026                   2            19             6            24   51
+All                   10           151            62           142  365
+
+DOMAIN x MODALITY (corrected)
+------------------------------------------------------------------------------
+modality          Audio  Multimodal  Symbolic  Unspecified  All
+domain                                                         
+Ensemble (vocal)      5           1         2            2   10
+Instrumental         86          13        34           18  151
+Solo Singing         27           5         3           27   62
+Unclassified         62          17        38           25  142
+All                 180          36        77           72  365
+
+CLUSTER x DOMAIN (corrected)
+------------------------------------------------------------------------------
+domain                                    Ensemble (vocal)  Instrumental  Solo Singing  Unclassified  All
+cluster_label                                                                                            
+Automatic Music Transcription (AMT)                      3            38            11            22   74
+Instrument Recognition / Classification                  0            40             1             6   47
+Multi-Pitch Estimation                                   1            10             0            11   22
+Music Education & Performance Assessment                 1            24            18            36   79
+Optical Music Recognition (OMR)                          0             4             0            26   30
+Singing Voice / Melody Extraction                        0             4            22            15   41
+Source Separation                                        5            31            10            26   72
+All                                                     10           151            62           142  365
+
+CLUSTER SIZES (unchanged — K-Means partition is not touched)
+------------------------------------------------------------------------------
+  Music Education & Performance Assessment        79   21.6%
+  Automatic Music Transcription (AMT)             74   20.3%
+  Source Separation                               72   19.7%
+  Instrument Recognition / Classification         47   12.9%
+  Singing Voice / Melody Extraction               41   11.2%
+  Optical Music Recognition (OMR)                 30    8.2%
+  Multi-Pitch Estimation                          22    6.0%
+
+CLUSTER GROWTH — RAW vs PER-YEAR vs SHARE-NORMALISED
+------------------------------------------------------------------------------
+The manuscript's 6.2x figure compares 2020-2022 (3 years, 123 papers) against
+2023-2026 (4 years, 242 papers, 2026 partial). Raw ratios inherit that asymmetry.
+
+year                                      2020-2022  2023-2026  raw_ratio  per_year_ratio  share_early_%  share_late_%  share_ratio
+cluster_label                                                                                                                      
+Music Education & Performance Assessment         11         68       6.18            4.64            8.9          28.1         3.16
+Multi-Pitch Estimation                            6         16       2.67            2.00            4.9           6.6         1.35
+Instrument Recognition / Classification          15         32       2.13            1.60           12.2          13.2         1.08
+Automatic Music Transcription (AMT)              28         46       1.64            1.23           22.8          19.0         0.83
+Singing Voice / Melody Extraction                16         25       1.56            1.17           13.0          10.3         0.79
+Optical Music Recognition (OMR)                  13         17       1.31            0.98           10.6           7.0         0.66
+Source Separation                                34         38       1.12            0.84           27.6          15.7         0.57
+
+  Whole corpus: 123 -> 242 = 1.97x raw, 1.48x per year.
+  Music Education & Performance Assessment: 6.18x raw becomes 4.64x per year and
+  3.14x once normalised against corpus growth. The relative ordering of clusters
+  survives all three framings; the headline multiplier does not.
+
+QUALITY SCORES — CORRECTED BINS AND ALIGNMENT-ADJUSTED TOTALS
+------------------------------------------------------------------------------
+Original bin labels (0-20, 20-25, 25-30, ...) overlap at every boundary. They
+compute correctly only because nine criteria scored 1/3/5 can never sum to an even
+number — quality_total takes only 13 attainable odd values, 17 to 41.
+
+  Total (max 45, as reported):
+    17-20       3    0.8%
+    21-25      43   11.8%
+    26-30      99   27.1%
+    31-35     167   45.8%
+    36-40      50   13.7%
+    41-45       3    0.8%
+
+  mean 31.07  median 31  range 17-41
+  below 30/45: 145 papers (39.7%)
+
+  Alignment-adjusted total (max 40, q_alignment removed — 345/365 papers score 5
+  on it, so it discriminates almost nothing while contributing 11% of the maximum):
+    mean 26.18  median 26  range 12-36
+
+  Per-criterion means (n=365):
+    q_design             3.12   (=5 for  86 papers)
+    q_data               2.57   (=5 for  44 papers)
+    q_methods            3.68   (=5 for 155 papers)
+    q_validation         3.24   (=5 for  92 papers)
+    q_alignment          4.89   (=5 for 345 papers)
+    q_contribution       3.60   (=5 for 145 papers)
+    q_applicability      4.46   (=5 for 266 papers)
+    q_significance       3.41   (=5 for  90 papers)
+    q_reproducibility    2.11   (=5 for  10 papers)
+
+  Reproducibility caveat: q_reproducibility is scored by looking for code- and
+  data-availability language in abstracts. 47.4% sit at the 1/5 floor, but the
+  instrument cannot distinguish 'no code released' from 'code released, not
+  mentioned in the abstract'. Report as an abstract-reporting-practice measure.
+
+KNOWN DEFECTS THAT CANNOT BE REPAIRED WITHOUT RE-SCREENING
+------------------------------------------------------------------------------
+Corpus is frozen, so these are recorded for footnoting rather than fixed:
+
+  1. Phase 1-2 screening used substring matching (`term in text`). Bare tokens
+     'mir', 'omr', 'ensemble' and 'instrumental' were in priority_terms, so
+     'mir' matched inside longer words and 'ensemble' matched ensemble LEARNING.
+     15 of 37 'ensemble' hits in the final corpus use ML phrasing; 'ensemble' is
+     the sole qualifying music term for 17 included papers.
+  2. A missing-comma bug in exclude_terms silently concatenated six criteria into
+     three unmatchable strings: artist tagging, semantic tagging, genre tagging,
+     hearing aid, hearing impairment, music generation never ran.
+  3. One verified inclusion error follows from (1) and (2): 'Speech emotion
+     recognition with light weight deep neural ensemble model using hand crafted
+     features' is a speech paper in the final 365.
+  4. PRISMA identification counts Scopus at 8,943, but that file is already
+     post-exclusion (non-Article/Conference types and null-abstract records were
+     dropped in the extraction cell). The true identification count was printed
+     to a cell output that was not captured.
+  5. IEEE returned exactly 1,000 records — an export ceiling, not a result. The
+     notebook's IEEE cell sets max_records=200, which does not match the 1,000-row
+     file, so the checked-in export came from an undocumented route.
+  6. Scopus 'creator' is the FIRST AUTHOR ONLY. All 365 records carry one name.
+     Fixing this needs a Scopus re-pull with author_names, or a Crossref DOI
+     lookup — neither is possible offline. Every 'et al.' in the drafts and 18 of
+     99 citations in challenge_evidence.csv (initials parsed as surnames) depend
+     on it.
+  7. Silhouette for the selected K-Means partition is 0.0389. The clusters are
+     interpretable but weakly separated; cluster-level claims are exploratory.
+  8. Phase 5's modularity 0.53 is computed on a kNN graph built from the same
+     TF-IDF cosine geometry K-Means partitions, so it is not independent
+     validation. Louvain on that graph finds 10 communities, not 7.
+  9. validation_sample_30.xlsx is an empty template (header + 23 blank rows).
+     The 'validated against a manually reviewed sample' claim has no receipt.
+ 10. quality_spotcheck_15.xlsx flags 7 of 15 rows — a 47% human-scorer
+     disagreement rate. No post-fix re-validation sheet exists.
