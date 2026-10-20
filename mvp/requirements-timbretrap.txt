@@ -1,0 +1,8 @@
+# Only needed to run the Timbre-Trap comparison (eval/tt_estimate.py). Tested on Python 3.12.3, CPU.
+# Also install Timbre-Trap's own dependencies from its repo (cqt-pytorch, tqdm, pyyaml, pandas, matplotlib, mido, jams, requests, scikit-learn, torchmetrics, sacred, tensorboard, mir_eval, einops).
+torch==2.14.1
+torchaudio==2.11.0
+cqt-pytorch==0.0.5
+torchmetrics==1.9.0
+librosa==1.0.0
+numpy==2.5.4
