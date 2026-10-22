@@ -14,7 +14,7 @@ Starting point for the group's MVP. It came out of **Task 1**: find an open sour
 | Working on the **back end** | [docs/BACKEND_GUIDE.md](docs/BACKEND_GUIDE.md) |
 | Working on the **front end** | [docs/FRONTEND_GUIDE.md](docs/FRONTEND_GUIDE.md) |
 | Re-running or extending the tests | [docs/EVALUATION_GUIDE.md](docs/EVALUATION_GUIDE.md) |
-| Planning the next steps | [docs/DECISIONS_AND_NEXT_STEPS.md](docs/DECISIONS_AND_NEXT_STEPS.md) |
+| Planning the next steps | [docs/DECISIONS_AND_NEXT_STEPS.md](docs/DECISIONS_AND_NEXT_STEPS.md) & [docs/IMPLEMENTATION_CHECKLIST.md](docs/IMPLEMENTATION_CHECKLIST.md) |
 | Looking up a term | [docs/GLOSSARY.md](docs/GLOSSARY.md) |
 
 ## What is in this folder
@@ -37,6 +37,7 @@ mvp/
 │   └── tt_test.py               synthetic check that Timbre-Trap runs unmodified
 └── docs/
     ├── RESEARCH_REPORT.md       full findings: candidates, tests, datasets, risks, sources
+    ├── IMPLEMENTATION_CHECKLIST.md  step-by-step 4-phase implementation checklist
     ├── BACKEND_GUIDE.md
     ├── FRONTEND_GUIDE.md
     ├── EVALUATION_GUIDE.md

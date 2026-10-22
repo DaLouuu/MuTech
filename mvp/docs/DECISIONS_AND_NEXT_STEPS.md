@@ -23,6 +23,8 @@
 
 ## 3. Work breakdown
 
+> **Note:** A detailed 4-phase implementation checklist with formula specs, UI requirements, and role assignments is maintained in [IMPLEMENTATION_CHECKLIST.md](IMPLEMENTATION_CHECKLIST.md).
+
 Suggested split (for the group to confirm). Checkboxes show what exists today.
 
 ### Back end
