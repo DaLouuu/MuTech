@@ -21,6 +21,7 @@ flowchart LR
 | [`phase5/`](phase5) | Cluster-relationship network (NetworkX + Gephi) + dashboard refresh | ✅ Done — modularity 0.53, dashboard rebuilt on final 365-paper corpus |
 | [`docs/`](docs) | SNA dashboard (GitHub Pages) | Published, rebuilt by Phase 5 on the final included corpus |
 | Phase 6 | Manuscript | Not started |
+| [`mvp/`](mvp) | MVP base: ported multif0 choir pitch tracker, API, evaluation, docs | In progress (see [mvp/README.md](mvp/README.md)) |
 
 Each phase folder has its own README with the detailed pipeline diagram, inputs/outputs,
 and how to run it — start there for specifics.
