@@ -54,11 +54,11 @@ flowchart TD
 
 ---
 
-## 2. Quick-Start & Setup Instructions
+## 2. Quick-Start & Running Instructions
 
-### Method A: Single-Command Docker Deployment (Recommended)
+### Option 1: Run Website & Backend with Docker (Fastest & Recommended)
 
-Requires [Docker Desktop](https://www.docker.com/products/docker-desktop/). This builds the multi-stage backend container and starts the static frontend studio in one command:
+Requires [Docker Desktop](https://www.docker.com/products/docker-desktop/). This single command builds the hardened backend container and launches the Nginx web server hosting the studio:
 
 ```bash
 # 1. Clone repository
@@ -69,68 +69,107 @@ cd MuTech
 docker compose up --build
 ```
 
-Once running:
-- **Web Frontend Studio:** [`http://localhost:3000`](http://localhost:3000)
-- **FastAPI Backend API:** [`http://localhost:8000`](http://localhost:8000)
-- **Interactive Swagger Docs:** [`http://localhost:8000/docs`](http://localhost:8000/docs)
-- **Container Health Probe:** [`http://localhost:8000/health`](http://localhost:8000/health)
+Once launched, access the application services in your browser:
+- 🌐 **Web Studio Website:** [`http://localhost:3000`](http://localhost:3000)
+- ⚡ **FastAPI Backend API:** [`http://localhost:8000`](http://localhost:8000)
+- 📖 **Interactive Swagger Docs:** [`http://localhost:8000/docs`](http://localhost:8000/docs)
+- 🩺 **System Health Probe:** [`http://localhost:8000/health`](http://localhost:8000/health)
+
+To stop the containers:
+```bash
+docker compose down
+```
 
 ---
 
-### Method B: Local Development Setup (Python Backend)
+### Option 2: Run Website & Backend Locally (Without Docker)
 
-Requires Python 3.12+ (tested on Python 3.12 and 3.14).
+You can run both the Python backend API and the static web studio locally on your machine without Docker.
+
+#### Step 1: Start the Backend API (Port 8000)
+Requires Python 3.12+ (tested on Python 3.12 and 3.14):
 
 ```bash
-# 1. Navigate to MVP backend
+# Navigate to the backend directory
 cd mvp/backend
 
-# 2. Create and activate a Python virtual environment
+# Create and activate a Python virtual environment
 python -m venv .venv
 # On Windows:
 .venv\Scripts\activate
 # On Linux/macOS:
 source .venv/bin/activate
 
-# 3. Install pinned dependencies
+# Install dependencies
 pip install -r ../requirements.txt
 
-# 4. Automatically acquire multif0 model weights (one-click helper)
+# Download multif0 model weights (one-click automated utility)
 python download_weights.py
 
-# 5. Run the FastAPI development server
+# Launch the FastAPI development server
 uvicorn app:app --host 0.0.0.0 --port 8000 --reload
+```
+*The backend API will be live at `http://localhost:8000`.*
+
+#### Step 2: Start the Website Studio (Port 3000)
+In a **second terminal window**, serve the frontend directory using any of the following methods:
+
+- **Using Python built-in server (No installs needed):**
+  ```bash
+  # From repository root:
+  python -m http.server 3000 --directory mvp/frontend
+  ```
+
+- **Using Node.js / npx:**
+  ```bash
+  npx serve mvp/frontend -l 3000
+  ```
+
+- **Direct Browser Inspection:**
+  You can also double-click and open [`mvp/frontend/index.html`](mvp/frontend/index.html) directly in any modern browser (Chrome, Firefox, Safari, Edge). It automatically connects to the backend API at `http://localhost:8000`.
+
+Open your browser and navigate to:
+👉 **[`http://localhost:3000`](http://localhost:3000)**
+
+---
+
+### Option 3: Running the Automated Test Suite & Code Reviewer
+
+To verify all 32 unit, integration, and security tests across the backend:
+
+```bash
+# Run pytest test suite from repository root
+python -m pytest mvp/backend/tests/test_suite.py -v
+
+# Or run the automated MuTech Code Reviewer validation gate:
+python .agents/skills/mutech-code-reviewer/scripts/run_reviewer_checks.py
+```
+
+Test Results:
+```
+============================= test session starts =============================
+collected 32 items
+mvp/backend/tests/test_suite.py::test_parabolic_interpolation_symmetric PASSED             [  3%]
+mvp/backend/tests/test_suite.py::test_cents_conversion_standard_pitches PASSED             [ 12%]
+mvp/backend/tests/test_suite.py::test_refine_salience_peaks_synthetic PASSED               [ 18%]
+mvp/backend/tests/test_suite.py::test_stitch_overlapping_blocks PASSED                     [ 21%]
+mvp/backend/tests/test_suite.py::test_link_contours_two_voices PASSED                      [ 34%]
+mvp/backend/tests/test_suite.py::test_compute_ensemble_analytics PASSED                    [ 37%]
+mvp/backend/tests/test_suite.py::test_generate_csv_export PASSED                           [ 40%]
+mvp/backend/tests/test_suite.py::test_generate_midi_type1 PASSED                           [ 56%]
+mvp/backend/tests/test_suite.py::test_csv_injection_sanitization PASSED                    [ 78%]
+mvp/backend/tests/test_suite.py::test_resample_nonstandard_rate_dos_protection PASSED      [ 81%]
+mvp/backend/tests/test_suite.py::test_identify_vertical_chord PASSED                       [ 93%]
+mvp/backend/tests/test_suite.py::test_job_sse_stream_events PASSED                         [100%]
+======================== 32 passed, 1 warning in 2.95s ========================
 ```
 
 ---
 
-### Method C: Running the Automated Test Suite
+### Option 4: Published Online Research Dashboard (GitHub Pages)
 
-The test suite validates all DSP math, audio conditioning, trajectory linking, ensemble analytics, MIDI/CSV exports, security defenses, and API endpoints:
-
-```bash
-cd mvp/backend
-python -m pytest test_suite.py -v
-```
-
-Output:
-```
-============================= test session starts =============================
-collected 32 items
-test_suite.py::test_parabolic_interpolation_symmetric PASSED             [  3%]
-test_suite.py::test_cents_conversion_standard_pitches PASSED             [ 12%]
-test_suite.py::test_refine_salience_peaks_synthetic PASSED               [ 18%]
-test_suite.py::test_stitch_overlapping_blocks PASSED                     [ 21%]
-test_suite.py::test_link_contours_two_voices PASSED                      [ 34%]
-test_suite.py::test_compute_ensemble_analytics PASSED                    [ 37%]
-test_suite.py::test_generate_csv_export PASSED                           [ 40%]
-test_suite.py::test_generate_midi_type1 PASSED                           [ 56%]
-test_suite.py::test_csv_injection_sanitization PASSED                    [ 78%]
-test_suite.py::test_resample_nonstandard_rate_dos_protection PASSED      [ 81%]
-test_suite.py::test_identify_vertical_chord PASSED                       [ 93%]
-test_suite.py::test_job_sse_stream_events PASSED                         [100%]
-======================== 32 passed, 1 warning in 2.95s ========================
-```
+The interactive Social Network Analysis (SNA) topic cluster visualizer from the Systematic Literature Review is hosted live on GitHub Pages:
+🔗 **Live Dashboard:** [https://dalouuu.github.io/MuTech/](https://dalouuu.github.io/MuTech/)
 
 ---
 

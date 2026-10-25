@@ -246,7 +246,15 @@ async def stream_job_events(job_id: str):
     async def event_generator():
         last_progress = -1.0
         last_status = ""
+        last_ping_time = time.time()
+        start_time = time.time()
+        max_stream_duration = 600.0  # 10 minutes maximum stream lifetime
+
         while True:
+            if time.time() - start_time > max_stream_duration:
+                yield f"event: error\ndata: {json.dumps({'error': 'SSE stream exceeded maximum connection duration (10m)'})}\n\n"
+                break
+
             current_job = job_manager.get_job(job_id)
             if not current_job:
                 yield f"event: error\ndata: {json.dumps({'error': 'Job not found'})}\n\n"
@@ -272,6 +280,13 @@ async def stream_job_events(job_id: str):
                     break
                 else:
                     yield f"event: progress\ndata: {json.dumps(payload)}\n\n"
+                    last_ping_time = time.time()
+            else:
+                # Periodic keep-alive heartbeat comment every 15 seconds
+                now = time.time()
+                if now - last_ping_time >= 15.0:
+                    yield ": ping\n\n"
+                    last_ping_time = now
 
             await asyncio.sleep(0.15)
 
