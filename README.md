@@ -1,27 +1,277 @@
-# MuTech — Systematic Literature Review on Intelligent Music Processing (MIR)
+# MuTech — Intelligent Music Processing (MIR) & Choir Intonation Studio
 
-A team SLR pipeline: collect candidate papers, screen them, mine and vectorize the text,
-and cluster them into thematic topics.
+[![Python](https://img.shields.io/badge/Python-3.12%20%7C%203.14-blue.svg)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.156-green.svg)](https://fastapi.tiangolo.com/)
+[![Keras](https://img.shields.io/badge/Keras-3.15-red.svg)](https://keras.io/)
+[![Docker](https://img.shields.io/badge/Docker-Compose%20Ready-2496ED.svg)](https://www.docker.com/)
+[![Tests](https://img.shields.io/badge/Tests-32%20Passing-brightgreen.svg)]()
+[![PRISMA](https://img.shields.io/badge/SLR%20Corpus-365%20Papers-purple.svg)]()
 
-## Pipeline
+> **MuTech** is a two-part research and engineering initiative for **Intelligent Music Processing (Music Information Retrieval - MIR)**:
+> 1. **Academic Pillar:** A Systematic Literature Review (SLR) analyzing 365 peer-reviewed studies on singing, ensemble performance, and multi-pitch estimation using PRISMA, NLP text-mining, topic clustering, and Social Network Analysis (SNA).
+> 2. **Engineering Pillar:** An applied polyphonic **Choir Pitch Tracker & Intonation Studio MVP** powered by a modernized, production-hardened port of the deep convolutional `multif0` model (Cuesta et al., ISMIR 2020 / TISMIR 2022).
+
+---
+
+## 1. Project Workflow & Architecture Summary
+
+The repository bridges academic literature synthesis with applied engineering:
 
 ```mermaid
-flowchart LR
-    A["Phase 1-2<br/>Collection + PRISMA screening"] --> B["Phase 3<br/>NLP text mining + TF-IDF"]
-    B --> C["Phase 4<br/>Topic clustering (K-Means, Agglomerative, NMF, LDA)"]
-    C --> D["Phase 5<br/>SNA cluster network + dashboard"]
-    D --> E["Phase 6<br/>manuscript"]
+flowchart TD
+    subgraph Research_Pillar ["Pillar 1: Systematic Literature Review (SLR) Pipeline"]
+        direction TB
+        P1["<b>Phase 1-2: Ingestion & Screening</b><br/>Scopus & IEEE exports (N=365) via PRISMA"]
+        P3["<b>Phase 3: Text Mining</b><br/>NLP cleaning, tokenization & TF-IDF vectorization"]
+        P4["<b>Phase 4: Topic Modeling</b><br/>K-Means, Agglomerative, NMF, LDA clustering"]
+        P5["<b>Phase 5: Social Network Analysis</b><br/>Co-occurrence network & GitHub Pages dashboard"]
+        P6["<b>Phase 6: Academic Manuscript</b><br/>LaTeX submission synthesizing 365 papers"]
+        P1 --> P3 --> P4 --> P5 --> P6
+    end
+
+    subgraph Literature_Gaps ["Identified Research Gaps (SLR Findings)"]
+        GAP1["<b>Gap 1: Ensemble Singing & Polyphony</b><br/>Lack of real-time intonation tools for vocal groups"]
+        GAP2["<b>Cluster 4: Multi-Pitch Estimation (MPE)</b><br/>Need for non-overlapping tracking & voice separation"]
+    end
+
+    P4 -.-> Literature_Gaps
+
+    subgraph Engineering_Pillar ["Pillar 2: Choir Pitch Tracker & Intonation Studio (MVP)"]
+        direction TB
+        M1["<b>Core DSP & Ingestion (1.1 - 1.3)</b><br/>-20 dBFS RMS, 30 Hz High-pass, Sub-bin Parabolic Refinement"]
+        M2["<b>Inference Engine (FastAPI)</b><br/>multif0 Keras 3 port, contiguous Hann block stitching, SSE events"]
+        M3["<b>Voicing & Intonation Analytics</b><br/>Bipartite trajectory linking, SATB tessitura, tuning drift, chords"]
+        M4["<b>Interactive Web Studio UI</b><br/>Piano Roll Canvas, Web Audio player, tuner tooltip, MIDI/CSV export"]
+        M1 --> M2 --> M3 --> M4
+    end
+
+    Literature_Gaps ==> Engineering_Pillar
+
+    style Research_Pillar fill:#1e293b,stroke:#3b82f6,color:#fff
+    style Literature_Gaps fill:#0f172a,stroke:#f59e0b,color:#fff
+    style Engineering_Pillar fill:#1e293b,stroke:#10b981,color:#fff
 ```
 
-| Folder | Stage | Status |
-| --- | --- | --- |
-| [`phase1_2/`](phase1_2) | Collection (Scopus/IEEE) + PRISMA screening (Rayyan) | ✅ Done — 365 papers included |
-| [`phase3/`](phase3) | NLP cleaning, tokenization, TF-IDF vectorization | ✅ Done — real run on 365 papers |
-| [`phase4/`](phase4) | Topic clustering — one model per owner (K-Means, Agglomerative, NMF, LDA) | ✅ Quick pipeline + detailed leakage-safe validation notebook both done; **K-Means selected as final model** |
-| [`phase5/`](phase5) | Cluster-relationship network (NetworkX + Gephi) + dashboard refresh | ✅ Done — modularity 0.53, dashboard rebuilt on final 365-paper corpus |
-| [`docs/`](docs) | SNA dashboard (GitHub Pages) | Published, rebuilt by Phase 5 on the final included corpus |
-| Phase 6 | Manuscript | Not started |
-| [`mvp/`](mvp) | MVP base: ported multif0 choir pitch tracker, API, evaluation, docs | In progress (see [mvp/README.md](mvp/README.md)) |
+---
 
-Each phase folder has its own README with the detailed pipeline diagram, inputs/outputs,
-and how to run it — start there for specifics.
+## 2. Quick-Start & Setup Instructions
+
+### Method A: Single-Command Docker Deployment (Recommended)
+
+Requires [Docker Desktop](https://www.docker.com/products/docker-desktop/). This builds the multi-stage backend container and starts the static frontend studio in one command:
+
+```bash
+# 1. Clone repository
+git clone https://github.com/DaLouuu/MuTech.git
+cd MuTech
+
+# 2. Build and launch all services
+docker compose up --build
+```
+
+Once running:
+- **Web Frontend Studio:** [`http://localhost:3000`](http://localhost:3000)
+- **FastAPI Backend API:** [`http://localhost:8000`](http://localhost:8000)
+- **Interactive Swagger Docs:** [`http://localhost:8000/docs`](http://localhost:8000/docs)
+- **Container Health Probe:** [`http://localhost:8000/health`](http://localhost:8000/health)
+
+---
+
+### Method B: Local Development Setup (Python Backend)
+
+Requires Python 3.12+ (tested on Python 3.12 and 3.14).
+
+```bash
+# 1. Navigate to MVP backend
+cd mvp/backend
+
+# 2. Create and activate a Python virtual environment
+python -m venv .venv
+# On Windows:
+.venv\Scripts\activate
+# On Linux/macOS:
+source .venv/bin/activate
+
+# 3. Install pinned dependencies
+pip install -r ../requirements.txt
+
+# 4. Automatically acquire multif0 model weights (one-click helper)
+python download_weights.py
+
+# 5. Run the FastAPI development server
+uvicorn app:app --host 0.0.0.0 --port 8000 --reload
+```
+
+---
+
+### Method C: Running the Automated Test Suite
+
+The test suite validates all DSP math, audio conditioning, trajectory linking, ensemble analytics, MIDI/CSV exports, security defenses, and API endpoints:
+
+```bash
+cd mvp/backend
+python -m pytest test_suite.py -v
+```
+
+Output:
+```
+============================= test session starts =============================
+collected 32 items
+test_suite.py::test_parabolic_interpolation_symmetric PASSED             [  3%]
+test_suite.py::test_cents_conversion_standard_pitches PASSED             [ 12%]
+test_suite.py::test_refine_salience_peaks_synthetic PASSED               [ 18%]
+test_suite.py::test_stitch_overlapping_blocks PASSED                     [ 21%]
+test_suite.py::test_link_contours_two_voices PASSED                      [ 34%]
+test_suite.py::test_compute_ensemble_analytics PASSED                    [ 37%]
+test_suite.py::test_generate_csv_export PASSED                           [ 40%]
+test_suite.py::test_generate_midi_type1 PASSED                           [ 56%]
+test_suite.py::test_csv_injection_sanitization PASSED                    [ 78%]
+test_suite.py::test_resample_nonstandard_rate_dos_protection PASSED      [ 81%]
+test_suite.py::test_identify_vertical_chord PASSED                       [ 93%]
+test_suite.py::test_job_sse_stream_events PASSED                         [100%]
+======================== 32 passed, 1 warning in 2.95s ========================
+```
+
+---
+
+## 3. Repository Sitemap & Directory Structure
+
+```
+MuTech/
+├── .agents/                       # Agentic workflows, custom skills & code reviewers
+│   └── skills/mutech-code-reviewer# Automated & guided code review skill
+├── docker-compose.yml             # Root launch configuration for backend & frontend
+├── .dockerignore                  # Docker build context exclusion rules
+├── .gitignore                     # Git tracking exclusions (caches, weights, virtualenvs)
+├── README.md                      # Executive overview, architecture & setup (this file)
+│
+├── mvp/                           # ── Applied Engineering MVP (Choir Pitch Tracker) ──
+│   ├── Dockerfile                 # Hardened multi-stage container (non-root appuser)
+│   ├── requirements.txt           # Production backend dependencies
+│   ├── requirements-timbretrap.txt# Comparative evaluation dependencies
+│   │
+│   ├── backend/                   # FastAPI & Core DSP Inference Engine
+│   │   ├── app.py                 # REST API, Server-Sent Events (/jobs/{id}/events), CORS
+│   │   ├── audio_processor.py     # Decoder, mono downmix, -20 dBFS RMS, 30 Hz HP filter
+│   │   ├── dsp_utils.py           # Sub-bin parabolic interpolation, cents, chords
+│   │   ├── mf0_service.py         # Keras 3 multif0 port, Hann window block stitching
+│   │   ├── contour_tracker.py     # Bipartite trajectory linker & SATB voice assignment
+│   │   ├── analytics.py           # Cumulative tuning drift, dispersion, vibrato metrics
+│   │   ├── midi_exporter.py       # Standard MIDI Type 1 multi-track file generator
+│   │   ├── job_manager.py         # In-memory async job store with TTL cleanup
+│   │   ├── download_weights.py    # Automated weights downloader utility
+│   │   └── tests/                 # Comprehensive Unit, Integration & Security Tests
+│   │       ├── conftest.py        # Test fixtures & backend import path configuration
+│   │       ├── test_suite.py      # 32 unit, integration, and security tests
+│   │       └── test_api.py        # API smoke tester
+│   │
+│   ├── frontend/                  # Interactive HTML5 Web Studio
+│   │   ├── index.html             # Studio UI (Canvas piano roll, controls, metrics)
+│   │   ├── app.js                 # Web Audio API engine & SSE event consumer
+│   │   ├── sample_transcription.json # Pre-computed benchmark transcription (offline ready)
+│   │   └── sample_audio.wav       # Synthesized demonstration choral audio
+│   │
+│   ├── eval/                      # MIR Research Benchmarks & Evaluation
+│   │   ├── evaluate.py            # mir_eval RPA, RCA, F-measure evaluation runner
+│   │   ├── prep_data.py           # Choral Singing Dataset (CSD) test mixture generator
+│   │   └── ...
+│   │
+│   └── docs/                      # Technical Documentation & Roadmaps
+│       ├── IMPLEMENTATION_CHECKLIST.md  # Detailed master checklist & developer kit
+│       ├── IMPLEMENTATION_CHECKLIST.docx# Word version with high-res architecture diagram
+│       ├── BACKEND_GUIDE.md       # Math formulas, settings, & DSP documentation
+│       ├── FRONTEND_GUIDE.md      # Canvas architecture & Web Audio synchronization
+│       ├── RESEARCH_REPORT.md     # SLR evidence, benchmark metrics, & limitations
+│       ├── DECISIONS_AND_NEXT_STEPS.md # Key architecture decisions log
+│       └── GLOSSARY.md            # MIR & choral intonation domain definitions
+│
+├── slr/                           # ── Systematic Literature Review (SLR) Pipeline ──
+│   ├── README.md                  # SLR methodology, pipeline phases, and data inventory
+│   ├── guides/                    # Research Audit & Paper Update Guides
+│   │   ├── ROOT_CAUSE_AUDIT.md    # Cluster discrepancy and anomaly root cause audit
+│   │   └── SLR_PAPER_UPDATE_GUIDE.md # Systematic guide for updating survey manuscript
+│   ├── phase1_2/                  # Domain 1: Paper Collection & PRISMA Screening
+│   ├── phase3/                    # Domain 2: NLP Text Mining & TF-IDF Vectorization
+│   ├── phase4/                    # Domain 3: Machine Learning Topic Modeling (K-Means/NMF/LDA)
+│   ├── phase5/                    # Domain 4: Social Network Analysis (SNA) Graph Modeling
+│   └── phase6_manuscript/         # Domain 5: Academic Manuscript Draft & Camera-Ready Figures
+│
+└── docs/                          # ── Published GitHub Pages Dashboard ──
+    ├── README.md                  # GitHub Pages hosting documentation
+    └── index.html                 # Interactive SNA cluster visualizer (live on GitHub Pages)
+```
+
+---
+
+## 4. Key Features of the Choir Pitch Tracker MVP
+
+### High-Precision Multi-Pitch Tracking
+- **Modernized Neural Network:** Ported `multif0` from legacy TensorFlow 1.15 to **Keras 3 / Python 3.12+**.
+- **Continuous Sub-Bin Pitch Refinement:** Parabolic interpolation over discrete 20-cent bins achieves $\pm 1\text{ cent}$ precision:
+  $$\Delta = \frac{\alpha - \gamma}{2(\alpha - 2\beta + \gamma)}, \quad f_{\text{refined}} = f_{\text{min}} \cdot 2^{(k + \Delta)/60}$$
+- **Contiguous Long-File Stitching:** Hann window cross-fading over $500\text{-frame}$ overlapping margins ($L=5000, M=250$) eliminates slice-boundary seams on arbitrary duration files.
+
+### Vocal Trajectory Linking & Voice Roles
+- **Bipartite Trajectory Linker:** Cents-time Hungarian-style matching ($|\Delta\text{cents}| \le 80\text{c}, \Delta t \le 25\text{ms}$) bridges short dropouts and removes sensor noise.
+- **Vibrato-Preserving Smoothing:** 5-point moving median filter + Savitzky-Golay polynomial smoothing preserves $5-7\text{ Hz}$ vocal vibrato.
+- **SATB Tessitura Partitioning:** Assigns tracks to **Soprano**, **Alto**, **Tenor**, and **Bass** roles using pitch centroids and non-crossing heuristics.
+
+### Instant Harmonic Chord Identification
+- **Vertical Choral Harmony Recognition:** Reduces sounding frequencies per frame to pitch classes to identify Major, Minor, Diminished, Augmented, Dominant 7ths, Suspended chords, and Open 5ths.
+- **Bass Note Inversions:** Automatically detects the lowest sounding pitch to identify inversions (e.g., `C Major / E` for 1st inversion).
+
+### Ensemble Intonation & Performance Analytics
+- **Cumulative Tuning Drift:** Tracks whether an a cappella ensemble is singing sharp or going flat over several minutes:
+  $$\text{Drift}(t) = \frac{1}{|K_t|} \sum_{k \in K_t} \delta_{\text{cents}}(k)$$
+- **Unison Dispersion Metric:** Measures the frequency spread (in cents) when multiple voices sing the same pitch class.
+- **Pitch Stability & Vibrato:** Calculates pitch standard deviation, vibrato rate (Hz), and vibrato depth (cents) on sustained notes.
+- **Polyphony Distribution:** Frame-by-frame breakdown of silence, solo, 2-part, 3-part, and 4-part textures.
+
+### Data Export & Real-Time Streaming
+- **Real-Time Server-Sent Events (SSE):** `GET /jobs/{id}/events` streams progressive status ($0\% \rightarrow 100\%$) directly to the browser.
+- **Standard MIDI File (Type 1):** Converts continuous trajectories into multi-track MIDI with continuous pitch-wheel intonation messages.
+- **Sanitized CSV Export:** Neutralizes CSV formula injection attempts (CWE-1236) for secure reporting.
+
+---
+
+## 5. Security & Defensive Hardening Highlights
+
+During development, the backend was systematically audited and hardened against standard production vulnerabilities:
+- **CSV Formula Injection (CWE-1236):** Sanitizes user-supplied contour IDs, note names, and voice parts by escaping formula trigger characters (`=`, `+`, `-`, `@`, `\t`, `\r`).
+- **Algorithmic CPU Denial of Service (CWE-400):** Polyphase audio resampling bounds coprime sample rates (e.g. 44,101 Hz) via rational approximation (`Fraction.limit_denominator(200)`), preventing CPU freezes from filter allocation.
+- **Memory Exhaustion Safeguards:** Request streaming buffers limit upload payload sizes to 50 MB; Pydantic models enforce strict length caps on frames ($\le 60,000$) and contours ($\le 500$).
+- **CIS Docker Compliance (CWE-250):** The container image executes as an unprivileged system user (`appuser`, UID 1000) rather than root.
+
+---
+
+## 6. Project Roadmap & Team Track Assignments
+
+Refer to [IMPLEMENTATION_CHECKLIST.md](mvp/docs/IMPLEMENTATION_CHECKLIST.md) (or the compiled [IMPLEMENTATION_CHECKLIST.docx](mvp/docs/IMPLEMENTATION_CHECKLIST.docx)) for task dependencies, parallel workstreams, and hand-off kits:
+
+| Team Role | Primary Responsibilities | Milestone Deliverables |
+|---|---|---|
+| **Backend Lead** | DSP Algorithms, Ingestion, API, Jobs, MIDI/CSV | Phases 1.1–1.4, 3.1–3.4 (✅ 100% Complete) |
+| **Frontend Lead** | HTML5 Piano Roll Canvas, Audio Sync, Tuner Tooltip | Phases 2.1–2.6.1, 3.5 (In Progress) |
+| **Fullstack Integrator** | Live Upload Integration, Docker Compose, QA | Phases 2.6.2, 5.1, 5.2 (✅ Tested & Integrated) |
+| **MIR / Research Lead** | Cantoría Benchmark, Noise Stress Tests, SLR Alignment | Phases 4.1–4.3, Phase 6 Manuscript |
+
+---
+
+## 7. Developer & Agentic Tooling
+
+The repository includes customized agentic developer tooling located in [`.agents/skills/`](.agents/skills/):
+- **`mutech-code-reviewer`**: Automated & guided multi-dimensional code reviewer tailored specifically for MuTech.
+  - Verifies DSP/MIR mathematical correctness (sub-bin parabolic interpolation, non-crossing SATB assignments, cent conversions).
+  - Enforces FastAPI async event loop non-blocking offload (`asyncio.to_thread`), concurrency controls, and security practices.
+  - Automatically runs AST syntax parsing, anti-pattern heuristics, and the 32-test backend test suite:
+    ```bash
+    python .agents/skills/mutech-code-reviewer/scripts/run_reviewer_checks.py
+    ```
+
+---
+
+## 8. License & Academic Attribution
+
+- **multif0 Architecture & Weights:** Ported from [helenacuesta/multif0-estimation-polyvocals](https://github.com/helenacuesta/multif0-estimation-polyvocals) (Cuesta et al., 2020), licensed under the **MIT License**.
+- **Choral Singing Dataset (CSD):** Benchmark evaluation stems licensed by MTG / UPF for non-commercial research.
+- **MuTech Project:** Developed for educational and research purposes at De La Salle University (DLSU).

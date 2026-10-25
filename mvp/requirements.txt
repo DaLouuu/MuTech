@@ -11,6 +11,8 @@ soundfile==0.14.0
 fastapi==0.156.1
 uvicorn==0.54.0
 python-multipart==0.0.32
+psutil==7.1.3
+mido==1.3.3
 # Evaluation only
 mir_eval==0.8.2
 httpx==0.28.1
