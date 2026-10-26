@@ -28,6 +28,10 @@ mvp/
 │   ├── mf0_service.py           the ported multif0 model: load, features, predict, peak picking
 │   ├── app.py                   FastAPI web API (GET /health, POST /transcribe)
 │   └── test_api.py              smoke test for the API
+├── frontend/
+│   ├── package.json             TypeScript + Vite frontend starter
+│   ├── src/                     upload flow, API client, pitch conversion, canvas chart
+│   └── sample_transcription.json sample response for offline UI development
 ├── eval/
 │   ├── prep_data.py             builds the 14 test mixtures from Choral Singing Dataset stems
 │   ├── mf0_estimate.py          runs multif0 over the test mixtures, saves activations
@@ -90,7 +94,7 @@ The first start takes about 5 seconds to load the model. A 30 second clip takes 
 | Long file handling (block overlap) | **Not done** |
 | Comparison against the original TensorFlow 1.15 outputs | **Not done** |
 | Test on a dataset multif0 was not trained on (Cantoría) | **Not done** |
-| Front end | **Not started** |
+| Front end | Starter implemented; polish and feature work remain |
 
 ## Who is doing what
 

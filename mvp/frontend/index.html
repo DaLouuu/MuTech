@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore choir pitch traces from an audio recording."
+    />
+    <title>MuTech | Choir Pitch Studio</title>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="MuTech home">
+          <span class="brand-mark" aria-hidden="true">M</span>
+          <span>MuTech <span class="brand-divider">/</span> Pitch Studio</span>
+        </a>
+        <div class="connection" aria-live="polite">
+          <span id="connection-dot" class="connection-dot"></span>
+          <span id="connection-label">Checking backend</span>
+        </div>
+      </header>
+
+      <main>
+        <section class="intro">
+          <p class="eyebrow">CHOIR PITCH TRACKER</p>
+          <h1>See every pitch.<br /><span>Understand the sound.</span></h1>
+          <p class="intro-copy">
+            Upload a choir recording to explore its pitches over time. The
+            analysis is offline and can take a while for longer recordings.
+          </p>
+        </section>
+
+        <section class="workspace" aria-label="Audio analysis">
+          <div class="control-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">01 / ANALYZE</p>
+                <h2>Choose a recording</h2>
+              </div>
+              <span class="format-tag">WAV · FLAC · OGG · MP3</span>
+            </div>
+
+            <label class="dropzone" for="audio-file">
+              <span class="upload-icon" aria-hidden="true">↑</span>
+              <span class="drop-title">Choose an audio file</span>
+              <span id="file-label" class="drop-subtitle">
+                or drag and drop it here · up to 30 MB
+              </span>
+            </label>
+            <input
+              id="audio-file"
+              class="visually-hidden"
+              type="file"
+              accept=".wav,.flac,.ogg,.mp3,audio/*"
+            />
+
+            <div class="selected-file" id="selected-file" hidden>
+              <span class="file-icon" aria-hidden="true">♫</span>
+              <span class="file-info">
+                <strong id="file-name"></strong>
+                <span id="file-meta"></span>
+              </span>
+              <button id="clear-file" class="icon-button" type="button" aria-label="Remove selected file">
+                ×
+              </button>
+            </div>
+
+            <div class="setting-row">
+              <div>
+                <label for="threshold">Sensitivity</label>
+                <p class="setting-help">Higher values may miss quieter notes.</p>
+              </div>
+              <output id="threshold-value" for="threshold">0.50</output>
+            </div>
+            <input
+              id="threshold"
+              class="range-input"
+              type="range"
+              min="0.3"
+              max="0.8"
+              step="0.05"
+              value="0.5"
+            />
+            <div class="range-labels"><span>More pitches</span><span>Cleaner trace</span></div>
+
+            <div class="actions">
+              <button id="analyze-button" class="button button-primary" type="button" disabled>
+                Analyze recording <span aria-hidden="true">→</span>
+              </button>
+              <button id="sample-button" class="button button-secondary" type="button">
+                Load sample
+              </button>
+            </div>
+            <p id="status-message" class="status-message" role="status" aria-live="polite">
+              Choose an audio file or load the sample to get started.
+            </p>
+          </div>
+
+          <section class="chart-panel" aria-labelledby="chart-title">
+            <div class="chart-heading">
+              <div>
+                <p class="eyebrow">02 / EXPLORE</p>
+                <h2 id="chart-title">Pitch trace</h2>
+              </div>
+              <span id="chart-duration" class="duration-label">No analysis yet</span>
+            </div>
+            <div id="chart-empty" class="chart-empty">
+              <span class="wave-mark" aria-hidden="true">∿</span>
+              <p>Your pitch trace will appear here</p>
+              <span>Time runs left to right · note height follows musical pitch</span>
+            </div>
+            <div id="chart-wrap" class="chart-wrap" hidden>
+              <canvas
+                id="pitch-chart"
+                role="img"
+                aria-label="Pitch trace over time"
+              ></canvas>
+              <div id="chart-tooltip" class="chart-tooltip" hidden></div>
+            </div>
+            <div id="chart-legend" class="chart-legend" hidden>
+              <span class="legend-dot"></span>
+              <span>Detected pitches</span>
+              <span class="legend-note">Each dot is one detected pitch in a frame</span>
+            </div>
+          </section>
+        </section>
+
+        <section class="limits" aria-label="How to read this chart">
+          <div class="limits-title">
+            <span class="info-icon" aria-hidden="true">i</span>
+            <h2>How to read this chart</h2>
+          </div>
+          <ul>
+            <li>Pitches are an unordered set. Dots are not assigned to individual singers.</li>
+            <li>Pitch estimates have a grid of about 20 cents; cents are approximate.</li>
+            <li>Noisy or quiet sections may have gaps, and sparse recordings may show extra pitches.</li>
+          </ul>
+        </section>
+      </main>
+
+      <footer>
+        <span>MuTech Choir Pitch Tracker</span>
+        <span>Offline analysis · Not real-time</span>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
