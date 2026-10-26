@@ -183,6 +183,18 @@ def test_highpass_filter():
     assert abs(np.mean(filtered[sr // 4:])) < 0.05
 
 
+def test_audio_processor_empty_and_edge_inputs():
+    """Verify audio processor handles empty arrays without crashing or throwing unhandled errors."""
+    empty = np.array([], dtype=np.float32)
+    assert len(downmix_to_mono(empty)) == 0
+    assert len(apply_highpass_filter(empty, 22050)) == 0
+    assert len(normalize_rms(empty)) == 0
+    assert len(resample_audio(empty, 44100, 22050)) == 0
+    # Invalid sample rates guard
+    assert len(resample_audio(empty, -1, 22050)) == 0
+    assert len(apply_highpass_filter(empty, -1)) == 0
+
+
 # -------------------------------------------------------------
 # 3.1 & 3.2 Contour Linking & SATB Tests
 # -------------------------------------------------------------

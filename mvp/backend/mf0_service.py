@@ -26,7 +26,27 @@ from audio_processor import load_and_condition_audio, TARGET_SR
 from contour_tracker import link_contours
 from analytics import compute_ensemble_analytics
 
-REPO = os.environ.get("MF0_REPO", "./multif0-estimation-polyvocals")
+def _find_repo_path() -> str:
+    """Find valid multif0-estimation-polyvocals repo path dynamically."""
+    env_repo = os.environ.get("MF0_REPO")
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    candidates = [
+        env_repo,
+        os.path.abspath(os.path.join(base_dir, "..", "multif0-estimation-polyvocals")),
+        os.path.abspath(os.path.join(base_dir, "multif0-estimation-polyvocals")),
+        os.path.abspath(os.path.join(base_dir, "..", "..", "multif0-estimation-polyvocals")),
+        os.path.abspath("./multif0-estimation-polyvocals"),
+    ]
+    for c in candidates:
+        if c and os.path.exists(os.path.join(c, "models", "exp3multif0.pkl")):
+            return c
+    for c in candidates:
+        if c and os.path.exists(c):
+            return c
+    return env_repo or os.path.abspath(os.path.join(base_dir, "..", "multif0-estimation-polyvocals"))
+
+
+REPO = _find_repo_path()
 HOP = 256
 SR = TARGET_SR
 BLOCK_SIZE = 5000       # ~58.05 s
@@ -163,19 +183,15 @@ def activations(
     if progress_callback:
         progress_callback(20.0)
 
-    mag = d["dphase/mag"][0].transpose(1, 2, 0)[None]      # (1, 360, n_frames, 5)
-    dph = d["dphase/dphase"][0].transpose(1, 2, 0)[None]   # (1, 360, n_frames, 5)
+    # pumpp output d["dphase/mag"][0] shape is (n_frames, 360, 5)
+    # Transpose to (1, 360, n_frames, 5) matching (batch, height=bins, width=time, channels=harmonics)
+    mag = d["dphase/mag"][0].transpose(1, 0, 2)[None]
+    dph = d["dphase/dphase"][0].transpose(1, 0, 2)[None]
     total_frames = mag.shape[2]
 
     # If audio is shorter than a single block, run in one pass
     if total_frames <= BLOCK_SIZE:
-        out = _model.predict(
-            [
-                np.transpose(mag, (0, 1, 3, 2)),
-                np.transpose(dph, (0, 1, 3, 2)),
-            ],
-            verbose=0,
-        )[0]  # (360, total_frames)
+        out = _model.predict([mag, dph], verbose=0)[0]  # (360, total_frames)
         if progress_callback:
             progress_callback(75.0)
         return out
@@ -190,13 +206,7 @@ def activations(
         mag_chunk = mag[:, :, start:end, :]
         dph_chunk = dph[:, :, start:end, :]
 
-        chunk_out = _model.predict(
-            [
-                np.transpose(mag_chunk, (0, 1, 3, 2)),
-                np.transpose(dph_chunk, (0, 1, 3, 2)),
-            ],
-            verbose=0,
-        )[0]
+        chunk_out = _model.predict([mag_chunk, dph_chunk], verbose=0)[0]
         blocks.append(chunk_out)
 
         if progress_callback:

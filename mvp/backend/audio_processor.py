@@ -57,6 +57,8 @@ def validate_file_metadata(filename: str, file_size: int):
         raise UnsupportedAudioFormatError(
             f"File format '{ext}' is unsupported. Allowed: {', '.join(sorted(ALLOWED_EXTENSIONS))}"
         )
+    if file_size == 0:
+        raise AudioProcessingError("Audio file is empty (0 bytes).", status_code=400)
     if file_size > MAX_FILE_SIZE_BYTES:
         raise FileTooLargeError(
             f"File size ({file_size / (1024*1024):.1f} MB) exceeds maximum allowed limit (50 MB)."
@@ -70,11 +72,19 @@ def decode_audio(
 
     Supports WAV, FLAC, OGG, and MP3 using soundfile.
     """
+    if isinstance(source, bytes) and len(source) == 0:
+        raise AudioProcessingError("Audio data is empty (0 bytes).", status_code=400)
+    if isinstance(source, io.BytesIO) and source.getbuffer().nbytes == 0:
+        raise AudioProcessingError("Audio data is empty (0 bytes).", status_code=400)
+    if isinstance(source, str) and os.path.isfile(source) and os.path.getsize(source) == 0:
+        raise AudioProcessingError("Audio file is empty (0 bytes).", status_code=400)
+
     try:
         if isinstance(source, bytes):
             file_obj = io.BytesIO(source)
             y, sr = sf.read(file_obj, dtype="float32")
         elif isinstance(source, io.BytesIO):
+            source.seek(0)
             y, sr = sf.read(source, dtype="float32")
         else:
             y, sr = sf.read(source, dtype="float32")
@@ -86,7 +96,11 @@ def decode_audio(
             if isinstance(source, bytes):
                 file_obj = io.BytesIO(source)
                 y, sr = librosa.load(file_obj, sr=None, mono=False)
-                # librosa gives (channels, samples) for stereo
+                if y.ndim > 1:
+                    y = y.T
+            elif isinstance(source, io.BytesIO):
+                source.seek(0)
+                y, sr = librosa.load(source, sr=None, mono=False)
                 if y.ndim > 1:
                     y = y.T
             else:
@@ -100,6 +114,8 @@ def decode_audio(
 
 def downmix_to_mono(y: np.ndarray) -> np.ndarray:
     """Downmix multi-channel audio to mono via energy-preserving channel averaging."""
+    if y.size == 0 or y.ndim == 0:
+        return np.array([], dtype=np.float32)
     if y.ndim == 1:
         return y.astype(np.float32)
     elif y.ndim == 2:
@@ -109,7 +125,9 @@ def downmix_to_mono(y: np.ndarray) -> np.ndarray:
         else:  # shape is (channels, samples)
             return np.mean(y, axis=0, dtype=np.float32)
     else:
-        return np.mean(y, axis=tuple(range(y.ndim - 1)), dtype=np.float32)
+        longest_axis = int(np.argmax(y.shape))
+        axes_to_reduce = tuple(i for i in range(y.ndim) if i != longest_axis)
+        return np.mean(y, axis=axes_to_reduce, dtype=np.float32)
 
 
 def apply_highpass_filter(
@@ -119,6 +137,8 @@ def apply_highpass_filter(
     order: int = HIGHPASS_ORDER,
 ) -> np.ndarray:
     """Apply Butterworth 4th-order high-pass filter to remove stage rumble and DC offset."""
+    if y.size == 0 or sr <= 0:
+        return y
     nyquist = 0.5 * sr
     norm_cutoff = cutoff_hz / nyquist
     if norm_cutoff >= 1.0 or norm_cutoff <= 0.0:
@@ -129,8 +149,10 @@ def apply_highpass_filter(
 
 def normalize_rms(y: np.ndarray, target_dbfs: float = TARGET_RMS_DBFS) -> np.ndarray:
     """Normalize audio loudness to target dBFS RMS (e.g. -20 dBFS)."""
+    if y.size == 0:
+        return y
     current_rms = float(np.sqrt(np.mean(y ** 2)))
-    if current_rms < 1e-7:
+    if np.isnan(current_rms) or current_rms < 1e-7:
         return y
     target_rms = 10.0 ** (target_dbfs / 20.0)
     gain = target_rms / current_rms
@@ -148,7 +170,7 @@ def resample_audio(y: np.ndarray, orig_sr: int, target_sr: int = TARGET_SR) -> n
     Guards against CPU exhaustion on non-standard sample rates by limiting
     polyphase filter rational approximation (CWE-400).
     """
-    if orig_sr == target_sr:
+    if y.size == 0 or orig_sr <= 0 or target_sr <= 0 or orig_sr == target_sr:
         return y
     gcd = math.gcd(orig_sr, target_sr)
     up = target_sr // gcd
@@ -179,6 +201,8 @@ def load_and_condition_audio(
     """
     if isinstance(source, bytes):
         validate_file_metadata(filename, len(source))
+    elif isinstance(source, io.BytesIO):
+        validate_file_metadata(filename, source.getbuffer().nbytes)
     elif isinstance(source, str) and os.path.isfile(source):
         validate_file_metadata(filename, os.path.getsize(source))
 
@@ -193,6 +217,8 @@ def load_and_condition_audio(
     # Check duration bounds
     if len(y_mono) == 0:
         raise AudioProcessingError("Audio signal is empty (0 samples).", status_code=400)
+    if orig_sr <= 0:
+        raise AudioProcessingError(f"Invalid audio sample rate: {orig_sr}", status_code=400)
     duration_s = float(len(y_mono) / orig_sr)
     if duration_s < 0.05:
         raise AudioProcessingError(f"Audio duration ({duration_s:.3f} s) is too short. Minimum 0.05 s required.", status_code=400)
