@@ -64,34 +64,29 @@ def _build_model():
     import tensorflow as tf
     from keras import layers
 
-    bn = [0]
-    def BN():
-        bn[0] += 1
-        return layers.BatchNormalization(name=f"batch_normalization_{bn[0]}")
-
-    def base(x, let):
-        x = BN()(x)
-        for nm, f, k in [
+    def base(x, let, b_start):
+        x = layers.BatchNormalization(name=f"batch_normalization_{b_start}")(x)
+        for i, (nm, f, k) in enumerate([
             ("conv1", 16, (5, 5)),
             ("conv2", 32, (5, 5)),
             ("conv3", 32, (5, 5)),
             ("conv4", 32, (5, 5)),
             ("harm1", 32, (70, 3)),
             ("harm2", 32, (70, 3)),
-        ]:
+        ]):
             x = layers.Conv2D(f, k, padding="same", activation="relu", name=nm + let)(x)
-            x = BN()(x)
+            x = layers.BatchNormalization(name=f"batch_normalization_{b_start + 1 + i}")(x)
         return x
 
     i1 = keras.Input((None, None, 5))
     i2 = keras.Input((None, None, 5))
-    c = layers.Concatenate()([base(i1, "a"), base(i2, "b")])
+    c = layers.Concatenate()([base(i1, "a", 1), base(i2, "b", 8)])
     x = layers.Conv2D(64, (3, 3), padding="same", activation="relu", name="conv7")(c)
-    x = BN()(x)
+    x = layers.BatchNormalization(name="batch_normalization_15")(x)
     x = layers.Conv2D(64, (3, 3), padding="same", activation="relu", name="conv8")(x)
-    x = BN()(x)
-    x = layers.Conv2D(8, (360, 1), padding="same", activation="sigmoid", name="distribution")(x)
-    x = BN()(x)
+    x = layers.BatchNormalization(name="batch_normalization_16")(x)
+    x = layers.Conv2D(8, (360, 1), padding="same", activation="relu", name="distribution")(x)
+    x = layers.BatchNormalization(name="batch_normalization_17")(x)
     x = layers.Conv2D(1, (1, 1), padding="same", activation="sigmoid", name="squishy")(x)
     return keras.Model([i1, i2], layers.Lambda(lambda z: tf.squeeze(z, axis=3))(x))
 
@@ -129,16 +124,17 @@ def load():
         with h5py.File(weights_path, "r") as f:
             weights = f["model_weights"]
             for L in m.layers:
-                if L.name in weights:
-                    g = weights[L.name][L.name]
+                if L.name in weights and L.weights:
+                    g = weights[L.name]
+                    subgroup = g[L.name] if L.name in g else g
                     if isinstance(L, layers.Conv2D):
-                        L.set_weights([g["kernel:0"][()], g["bias:0"][()]])
+                        L.set_weights([subgroup["kernel:0"][()], subgroup["bias:0"][()]])
                     elif isinstance(L, layers.BatchNormalization):
                         L.set_weights([
-                            g["gamma:0"][()],
-                            g["beta:0"][()],
-                            g["moving_mean:0"][()],
-                            g["moving_variance:0"][()],
+                            subgroup["gamma:0"][()],
+                            subgroup["beta:0"][()],
+                            subgroup["moving_mean:0"][()],
+                            subgroup["moving_variance:0"][()],
                         ])
         _model = m
         _pump = pumpp.Pump(
