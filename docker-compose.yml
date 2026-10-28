@@ -1,0 +1,23 @@
+services:
+  backend:
+    build:
+      context: ./mvp
+      dockerfile: Dockerfile
+    container_name: mutech-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - CORS_ORIGINS=*
+      - MF0_REPO=/app/multif0-estimation-polyvocals
+    restart: unless-stopped
+
+  frontend:
+    image: nginx:alpine
+    container_name: mutech-frontend
+    ports:
+      - "3000:80"
+    volumes:
+      - ./mvp/frontend:/usr/share/nginx/html:ro
+    depends_on:
+      - backend
+    restart: unless-stopped

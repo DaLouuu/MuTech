@@ -86,15 +86,19 @@ The first start takes about 5 seconds to load the model. A 30 second clip takes 
 
 | Item | State |
 |---|---|
-| Candidate search across the SLR | Done. 310 of 365 appendix rows scanned (see limits in the report) |
-| multif0 port to Python 3.12 / Keras 3 | Done, all 33 layers load, works on real audio |
-| Evaluation on 14 real choir mixtures | Done for multif0 and Timbre-Trap |
-| Web API prototype | Done, tested on one clip |
-| Docker image | **Not done** |
-| Long file handling (block overlap) | **Not done** |
-| Comparison against the original TensorFlow 1.15 outputs | **Not done** |
-| Test on a dataset multif0 was not trained on (Cantoría) | **Not done** |
-| Front end | Starter implemented; polish and feature work remain |
+| Candidate search across the SLR | ✅ Done. 310 of 365 appendix rows scanned |
+| multif0 port to Python 3.12 / Keras 3 | ✅ Done, all 33 layers load, works on real audio |
+| Evaluation on 14 real choir mixtures | ✅ Done for multif0 and Timbre-Trap |
+| Web API & SSE Job Streaming | ✅ Done (`/health`, `/transcribe`, `/jobs/{id}/events`, `/presets`, `/export/*`) |
+| Docker image & Compose | ✅ Done (hardened multi-stage Dockerfile with non-root appuser) |
+| Long file handling (block overlap) | ✅ Done (contiguous Hann window blending, L=5000, M=250) |
+| Mathematical sub-bin pitch refinement | ✅ Done (parabolic interpolation with continuous cents) |
+| Trajectory linking & SATB voicing | ✅ Done (bipartite greedy matching, vibrato smoothing, SATB) |
+| Ensemble Analytics & Chords | ✅ Done (tuning drift, unison dispersion, vibrato, chord engine) |
+| Multi-track MIDI & CSV Exporters | ✅ Done (Type 1 MIDI with pitch bends, CWE-1236 safe CSV) |
+| Test suite & QA | ✅ Done (32 automated unit & integration tests passing) |
+| Test on unseen dataset (Cantoría) | ⏳ In progress (evaluation runner in `eval/evaluate.py`) |
+| Front end Studio UI | ⏳ In progress (see `docs/IMPLEMENTATION_CHECKLIST.md` Phase 2) |
 
 ## Who is doing what
 

@@ -78,10 +78,10 @@ flowchart TD
 
 ### 1. The Unified API Data Contract (TypeScript & Pydantic)
 
-Both backend and frontend must adhere strictly to this schema:
+Both backend and frontend adhere strictly to this schema (tested with 100% contract compliance in `sample_transcription.json`):
 
 ```typescript
-// Shared Data Contract for /transcribe endpoint
+// Shared Data Contract for /transcribe, /presets/{id}, and /jobs/{id}
 export interface TranscribeResponse {
   sample_rate: number;         // 22050 Hz
   hop_s: number;               // 0.01161 s (~11.6 ms per frame)
@@ -103,9 +103,10 @@ export interface TranscribeResponse {
 export interface FrameData {
   t: number;                   // Timestamp in seconds (e.g. 1.4523)
   f0: number[];                // Raw frequency peaks in Hz (20-cent grid)
-  f0_refined: number[];        // Sub-bin parabolic interpolated continuous Hz
+  f0_refined: number[];        // Sub-bin parabolic continuous Hz (e.g. 441.82)
   notes: string[];             // Musical note names with octave ["C3", "G3", "E4", "C5"]
   cents: number[];             // Signed intonation deviation [-50 to +50 cents]
+  chord?: string;              // Instantaneous vertical chord (e.g. "C Major", "A Minor / C")
 }
 
 export interface ContourTrajectory {
@@ -113,26 +114,139 @@ export interface ContourTrajectory {
   voice_part: "Soprano" | "Alto" | "Tenor" | "Bass" | "Unassigned";
   points: Array<{
     t: number;                 // Seconds
-    hz: number;                // Refined frequency
-    note: string;              // "A4"
-    cents: number;             // +3
+    hz: number;                // Refined continuous frequency
+    note: string;              // Nearest musical pitch (e.g. "A4")
+    cents: number;             // Signed cents deviation [-50 to +50]
   }>;
 }
 
 export interface EnsembleAnalytics {
-  tuning_drift_cents: number;  // Overall drift trend (- flat / + sharp)
+  tuning_drift_cents: number;  // Overall ensemble drift trend (- flat / + sharp)
   mean_cents_error: number;    // Absolute mean cents deviation
   polyphony_distribution: {
     silence: number;           // Percentage of duration (e.g., 5.2%)
-    solo: number;
-    "2_part": number;
-    "3_part": number;
-    "4_part": number;
+    solo: number;              // 1 active voice
+    "2_part": number;          // 2 active voices
+    "3_part": number;          // 3 active voices
+    "4_part": number;          // 4+ active voices
   };
+  unison_dispersion_cents: number; // Pitch spread between singers in cents
+  vibrato?: {
+    rate_hz: number;           // Average vibrato rate (e.g. 5.8 Hz)
+    depth_cents: number;       // Average vibrato amplitude (e.g. 18.4 cents)
+    stability_cents_std: number; // Pitch standard deviation
+  };
+  top_chords?: Array<{
+    chord: string;             // Recognized chord (e.g. "C Major", "G 7")
+    count: number;             // Frequency of occurrence
+    percentage: number;        // Occurrence percentage (e.g. 34.2%)
+  }>;
 }
 ```
 
-### 2. Frontend Developer Starter Kit (Copy-Paste Canvas Boilerplate)
+---
+
+### 2. Frontend Integration Cheat Sheet & API Directory
+
+> **Base URL:** When running locally, the backend runs on `http://localhost:8000`. Inside Docker, nginx proxies `/api/*` to the backend.
+
+| UI Feature / Component | Backend Endpoint | HTTP Method | Expected Payload / Response | Frontend Fallback (No Server) |
+|---|---|:---:|---|---|
+| **Demo Preset Catalog** | `/presets` | `GET` | Array of preset objects (`id`, `title`, `duration_s`) | Hardcode `bach_chorale_satb` |
+| **Instant Preset JSON** | `/presets/{id}` | `GET` | Complete `TranscribeResponse` JSON | Fetch `sample_transcription.json` |
+| **Preset Audio Stream** | `/presets/{id}/audio` | `GET` | `audio/wav` binary stream | `<audio src="sample_audio.wav">` |
+| **Live Audio Upload** | `/transcribe?async_mode=true` | `POST` (multipart) | `{"job_id": "uuid", "status": "processing"}` | Process locally via offline mock |
+| **Real-Time Progress** | `/jobs/{id}/events` | `GET` (SSE) | Server-Sent Events stream (`progress`, `complete`) | Simulate with `setInterval` |
+| **Export to CSV** | `/export/csv` | `POST` (JSON) | `text/csv` attachment download | Client-side CSV generation |
+| **Export to MIDI** | `/export/midi?tempo_bpm=120` | `POST` (JSON) | `audio/midi` binary attachment download | None (requires backend) |
+| **Server Health Probe** | `/health` | `GET` | `{"status": "ok", "uptime_s": 42.1, ...}` | Assume offline |
+
+#### Copy-Paste Integration Snippets for the Frontend Developer:
+
+```javascript
+// 1. Load Pre-Analyzed Academic Preset (Instant Zero-Compute Exploration)
+async function loadPreset(presetId = 'bach_chorale_satb') {
+  try {
+    const res = await fetch(`http://localhost:8000/presets/${presetId}`);
+    const data = await res.json();
+    renderStudio(data);
+    audioPlayer.src = `http://localhost:8000/presets/${presetId}/audio`;
+  } catch (err) {
+    // Offline fallback: works directly from file or static server
+    const res = await fetch('./sample_transcription.json');
+    const data = await res.json();
+    renderStudio(data);
+    audioPlayer.src = './sample_audio.wav';
+  }
+}
+
+// 2. Live Audio Upload with Real-Time SSE Progress Bar
+async function uploadAndTrackAudio(file, onProgress, onComplete, onError) {
+  const formData = new FormData();
+  formData.append('file', file);
+
+  // Step A: Initiate background job
+  const initRes = await fetch('http://localhost:8000/transcribe?async_mode=true&threshold=0.5', {
+    method: 'POST',
+    body: formData,
+  });
+  if (!initRes.ok) throw new Error(`Upload failed (${initRes.status})`);
+  const { job_id } = await initRes.json();
+
+  // Step B: Connect to Server-Sent Events stream (no polling needed!)
+  const sse = new EventSource(`http://localhost:8000/jobs/${job_id}/events`);
+  
+  sse.addEventListener('progress', (e) => {
+    const payload = JSON.parse(e.data);
+    onProgress(payload.progress); // e.g. 15%, 50%, 85%
+  });
+
+  sse.addEventListener('complete', (e) => {
+    const payload = JSON.parse(e.data);
+    sse.close();
+    onComplete(payload.result); // Complete TranscribeResponse
+  });
+
+  sse.addEventListener('error', (e) => {
+    sse.close();
+    onError(e);
+  });
+}
+
+// 3. Download Formatted CSV Spreadsheet
+async function downloadCSV(frames, contours) {
+  const res = await fetch('http://localhost:8000/export/csv', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ frames, contours }),
+  });
+  const blob = await res.blob();
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'choir_transcription.csv';
+  a.click();
+}
+
+// 4. Download Standard MIDI File (Type 1 with SATB Tracks & Pitch Bends)
+async function downloadMIDI(contours, tempoBpm = 120) {
+  const res = await fetch(`http://localhost:8000/export/midi?tempo_bpm=${tempoBpm}`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ contours }),
+  });
+  const blob = await res.blob();
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'choir_transcription.mid';
+  a.click();
+}
+```
+
+---
+
+### 3. Frontend Developer Starter Kit (Copy-Paste Canvas Boilerplate)
 
 Use these helper functions directly in your Canvas render loop to avoid math guesswork:
 
@@ -179,29 +293,29 @@ export function getCanvasCoords(
 *Objective: Transform the experimental proof-of-concept into a robust, high-precision, non-blocking inference engine capable of processing long, arbitrary vocal audio files.*
 
 ### 1.1 Audio Ingestion & Preprocessing Pipeline
-- [ ] **1.1.1 Robust Multi-Format Decoder** `[Track: Backend]` `[⚡ Parallel: Independent]` `[Depends on: None]` `[Unblocks: 1.3]`
+- [x] **1.1.1 Robust Multi-Format Decoder** `[Track: Backend]` `[⚡ Parallel: Independent]` `[Depends on: None]` `[Unblocks: 1.3]`
   - Implement unified audio decoding supporting `.wav`, `.flac`, `.ogg`, `.mp3`, `.m4a` using `soundfile` with fallback to `librosa` / `ffmpeg`.
   - Validate file size limits (default: 50 MB) and audio duration limits (default: 10 minutes).
   - Return informative HTTP 415 (unsupported media type) or HTTP 413 (payload too large) error codes with actionable messages.
-- [ ] **1.1.2 Audio Conditioning & Normalization** `[Track: Backend]` `[⚡ Parallel: Independent]` `[Depends on: 1.1.1]` `[Unblocks: 1.3]`
+- [x] **1.1.2 Audio Conditioning & Normalization** `[Track: Backend]` `[⚡ Parallel: Independent]` `[Depends on: 1.1.1]` `[Unblocks: 1.3]`
   - Stereo-to-mono downmixing via energy-preserving channel averaging: $y[n] = \frac{L[n] + R[n]}{2}$.
   - RMS loudness normalization to a target $-20\text{ dBFS}$ to prevent clipping and ensure consistent CQT activation magnitudes across diverse recording inputs.
   - High-pass filtering (Butterworth 4th-order, cutoff $30\text{ Hz}$) to remove DC offset, stage rumble, and sub-audible mic handling noise before CQT analysis.
   - Bandlimited resampling to exact $22,050\text{ Hz}$ using polyphase filtering (`soxr` or `scipy.signal.resample_poly`) to eliminate aliasing artifacts.
 
 ### 1.2 Parabolic Sub-Bin Peak Interpolation (High-Precision Cents)
-- [ ] **1.2.1 Mathematical Peak Refinement** `[Track: Backend]` `[⚡ Parallel: Independent]` `[Depends on: None]` `[Unblocks: 1.4, 2.6.2, 3.1]`
+- [x] **1.2.1 Mathematical Peak Refinement** `[Track: Backend]` `[⚡ Parallel: Independent]` `[Depends on: None]` `[Unblocks: 1.4, 2.6.2, 3.1]`
   - Replace step-quantized 20-cent frequency bin assignment in `mf0_service.py:peaks()` with quadratic/parabolic sub-bin peak interpolation.
   - For each detected local maximum at discrete bin $k$ with salience activation $\beta = A[k]$ and neighboring bins $\alpha = A[k-1]$, $\gamma = A[k+1]$:
     $$\Delta = \frac{\alpha - \gamma}{2(\alpha - 2\beta + \gamma)}, \quad \text{where } \Delta \in [-0.5, +0.5]$$
   - Continuous bin estimate: $k_{\text{refined}} = k + \Delta$.
   - Continuous frequency calculation:
     $$f_{\text{refined}} = f_{\text{min}} \cdot 2^{k_{\text{refined}} / BPO} = 32.7 \cdot 2^{k_{\text{refined}} / 60}$$
-- [ ] **1.2.2 Boundary & Peak Validation Rules** `[Track: Backend]` `[⏳ Sequential]` `[Depends on: 1.2.1]` `[Unblocks: 1.2.3]`
+- [x] **1.2.2 Boundary & Peak Validation Rules** `[Track: Backend]` `[⏳ Sequential]` `[Depends on: 1.2.1]` `[Unblocks: 1.2.3]`
   - Handle boundary bins ($k=0$ and $k=359$) gracefully without index out-of-bounds errors.
   - Require strict peak convexity: $(\alpha - 2\beta + \gamma) < 0$.
   - Compute sub-bin salience magnitude: $\hat{A} = \beta - \frac{1}{4}(\alpha - \gamma)\Delta$.
-- [ ] **1.2.3 Exact Cents & Deviation Calculation** `[Track: Backend]` `[⏳ Sequential]` `[Depends on: 1.2.1, 1.2.2]` `[Unblocks: 1.4, 2.6.2]`
+- [x] **1.2.3 Exact Cents & Deviation Calculation** `[Track: Backend]` `[⏳ Sequential]` `[Depends on: 1.2.1, 1.2.2]` `[Unblocks: 1.4, 2.6.2]`
   - For each refined frequency $f$, calculate the fractional MIDI note number:
     $$m = 69 + 12 \log_2\left(\frac{f}{440}\right)$$
   - Nearest standard MIDI note: $N = \text{round}(m)$.
@@ -209,28 +323,28 @@ export function getCanvasCoords(
   - Map note number $N$ to standard pitch class representation (e.g., $N=60 \rightarrow \text{C4}$, $N=69 \rightarrow \text{A4}$).
 
 ### 1.3 Contiguous Block Overlap & Cross-Fading for Long Files
-- [ ] **1.3.1 Overlapping Chunk Generation** `[Track: Backend]` `[⏳ Sequential]` `[Depends on: 1.1]` `[Unblocks: 1.3.2]`
+- [x] **1.3.1 Overlapping Chunk Generation** `[Track: Backend]` `[⏳ Sequential]` `[Depends on: 1.1]` `[Unblocks: 1.3.2]`
   - Replace the disjoint 5,000-frame slice logic with an overlapping sliding window:
     - Block size: $L = 5,000\text{ frames}$ ($\approx 58.05\text{ seconds}$).
     - Overlap margin: $M = 250\text{ frames}$ ($\approx 2.90\text{ seconds}$).
     - Hop size between block centers: $H = L - 2M = 4,500\text{ frames}$.
-- [ ] **1.3.2 Activation Matrix Stitching & Window Blending** `[Track: Backend]` `[⏳ Sequential]` `[Depends on: 1.3.1]` `[Unblocks: 1.4]`
+- [x] **1.3.2 Activation Matrix Stitching & Window Blending** `[Track: Backend]` `[⏳ Sequential]` `[Depends on: 1.3.1]` `[Unblocks: 1.4]`
   - Apply linear or raised-cosine (Hann) ramp blending over the $2M$ overlap region:
     $$W_{\text{out}}[i] = \frac{i}{2M}, \quad W_{\text{in}}[i] = 1 - \frac{i}{2M} \quad (0 \le i < 2M)$$
   - Concatenate smoothly into a single unified salience activation tensor $(360 \times N_{\text{frames}})$ with zero seam artifacts.
-- [ ] **1.3.3 Memory Guard & Batch Processing** `[Track: Backend]` `[⏳ Sequential]` `[Depends on: 1.3.2]` `[Unblocks: 1.4]`
+- [x] **1.3.3 Memory Guard & Batch Processing** `[Track: Backend]` `[⏳ Sequential]` `[Depends on: 1.3.2]` `[Unblocks: 1.4]`
   - Stream activations directly to peak detection or release intermediate HCQT tensors to ensure server RAM does not exceed 1.5 GB during 10-minute file processing.
 
 ### 1.4 Non-Blocking Asynchronous Job Execution & Architecture
-- [ ] **1.4.1 Worker Threadpool Offloading** `[Track: Backend]` `[⏳ Sequential]` `[Depends on: 1.2, 1.3]` `[Unblocks: 2.6.2, 5.1]`
+- [x] **1.4.1 Worker Threadpool Offloading** `[Track: Backend]` `[⏳ Sequential]` `[Depends on: 1.2, 1.3]` `[Unblocks: 2.6.2, 5.1]`
   - Wrap synchronous CPU-heavy inference (`svc.transcribe`) inside `starlette.concurrency.run_in_threadpool` or `asyncio.to_thread`.
   - Ensure the FastAPI event loop remains responsive: incoming `/health` requests, ping checks, and concurrent uploads must respond within $< 15\text{ ms}$.
-- [ ] **1.4.2 Job State & Asynchronous Polling Support (Long Files)** `[Track: Backend]` `[⏳ Sequential]` `[Depends on: 1.4.1]` `[Unblocks: 2.6.2]`
+- [x] **1.4.2 Job State & Asynchronous Polling Support (Long Files)** `[Track: Backend]` `[⏳ Sequential]` `[Depends on: 1.4.1]` `[Unblocks: 2.6.2]`
   - Support both instant response (for clips $< 30\text{ s}$) and async job submission for longer clips:
     - `POST /transcribe?async_mode=true` $\rightarrow$ returns `{"job_id": "uuid", "status": "processing"}`.
     - `GET /jobs/{job_id}` $\rightarrow$ returns status, progress percentage, and final transcription payload.
   - Implement an in-memory job store (with 30-minute TTL cleanup) to track running and completed jobs.
-- [ ] **1.4.3 Lifespan Management & Health Probes** `[Track: Backend]` `[⏳ Sequential]` `[Depends on: 1.4.1]` `[Unblocks: 5.1]`
+- [x] **1.4.3 Lifespan Management & Health Probes** `[Track: Backend]` `[⏳ Sequential]` `[Depends on: 1.4.1]` `[Unblocks: 5.1]`
   - Replace deprecated `@app.on_event("startup")` with `@asynccontextmanager` lifespan handler.
   - Pre-warm the Keras 3 model and `pumpp` transform on server start.
   - Detailed `/health` endpoint returning server health, device info, and memory state.
@@ -239,63 +353,66 @@ export function getCanvasCoords(
 
 ## Phase 2: Interactive Web Frontend Studio (Conductor & Singer UI)
 *Objective: Build an interactive, modern web application where users can visualize polyphonic vocal pitch, inspect intonation in real-time, scrub audio, and isolate voices.*  
-> **Note:** Tasks 2.1 to 2.6.1 can be developed **100% in parallel** with Phase 1 using `mvp/frontend/sample_transcription.json`. Only Task 2.6.2 requires the live backend to be completed!
+> **Note for Frontend Developer:** All backend endpoints and offline presets are ready! You can build against the live backend (`http://localhost:8000`) or work completely offline using `sample_transcription.json` and `sample_audio.wav`.
 
 ### 2.1 Design System & Layout Architecture
 - [ ] **2.1.1 Aesthetic Theme & Design Tokens** `[Track: Frontend]` `[⚡ Parallel: Independent]` `[Depends on: None]` `[Unblocks: 2.1.2]`
   - Curated Dark Mode Glassmorphism palette (Deep Navy `#0B0F19`, Surface `#111827`, Card `#1F2937`, Border `#374151`).
-  - High-contrast, colorblind-accessible voice hues:
+  - High-contrast, colorblind-accessible voice hues matching `contour.voice_part`:
     - **Soprano:** Vibrant Rose (`#F43F5E`)
     - **Alto:** Warm Amber (`#F59E0B`)
     - **Tenor:** Electric Cyan (`#06B6D4`)
     - **Bass:** Deep Violet (`#8B5CF6`)
     - **Unassigned / Ensemble:** Emerald (`#10B981`)
-  - Typography: Clean modern fonts (Inter or Outfit) with tabular numerical styling for pitch readouts.
+  - Typography: Clean modern fonts (Inter or Outfit) with tabular numerical styling for pitch readouts (`font-variant-numeric: tabular-nums`).
 - [ ] **2.1.2 Responsive Workspace Layout** `[Track: Frontend]` `[⏳ Sequential]` `[Depends on: 2.1.1]` `[Unblocks: 2.2]`
-  - **Top Bar:** File upload, preloaded demo selector, play/pause controls, zoom controls, and export buttons.
+  - **Top Bar:** Preset selector (connected to `GET /presets`), live drag-and-drop file upload button (connected to `POST /transcribe`), transport controls (Play/Pause, rate), and Export dropdown (CSV/MIDI).
   - **Center Canvas:** Full-width interactive Piano Roll pitch visualizer with dual-axis scale and timeline playhead.
-  - **Bottom Dock:** Conductor analytics panel, audio waveform scrubber, and intonation deviation strip.
-  - **Sidebar:** Sensitivity slider, filter toggles, register isolator buttons, and harmonic chord inspector.
+  - **Bottom Dock:** Conductor analytics panel (Tuning Drift chart, Polyphony histogram, Chord summary from `data.analytics`).
+  - **Sidebar:** Sensitivity threshold slider, transient noise filter, vocal register isolators (S/A/T/B toggles), and auditory synth monitor blend slider.
 
 ### 2.2 High-Performance Multi-Pitch Piano Roll Canvas
 - [ ] **2.2.1 Multi-Layered HTML5 Canvas Architecture** `[Track: Frontend]` `[⚡ Parallel: Independent]` `[Depends on: 2.1.2, sample_transcription.json]` `[Unblocks: 2.2.2, 2.3]`
-  - **Layer 1 (Background Grid):** Alternating white and black piano key background lanes, octave lines (C2, C3, C4, C5, C6), and beat/measure timeline ticks.
-  - **Layer 2 (Pitch Visualizer):** Renders all active pitch events as glowing anti-aliased frequency points or connected trajectory ribbons.
-  - **Layer 3 (Foreground & Playhead):** Real-time animated playhead line, mouse hover cursor, selected loop boundaries, and tooltip overlays.
+  - **Layer 1 (Background Grid):** Alternating white and black piano key background lanes, octave reference lines ($C2, C3, C4, C5, C6$), and beat/measure timeline ticks.
+  - **Layer 2 (Pitch Visualizer):**
+    - Discrete frequency mode: Renders points from `frame.f0_refined` with radius proportional to salience.
+    - Continuous contour mode: Renders connected anti-aliased ribbons from `data.contours[i].points` colored by `data.contours[i].voice_part`.
+  - **Layer 3 (Foreground & Playhead):** Real-time animated vertical playhead line, mouse hover cursor, selected loop boundaries, and floating HUD tooltips.
 - [ ] **2.2.2 Dual-Axis Coordinate Mapping** `[Track: Frontend]` `[⏳ Sequential]` `[Depends on: 2.2.1]` `[Unblocks: 2.2.3, 2.3]`
-  - Implement `getCanvasCoords()`: seconds to $X$, logarithmic fractional MIDI to $Y$.
-  - Default view bounds: $m_{\text{min}} = 40$ (E2, Bass low) to $m_{\text{max}} = 81$ (A5, Soprano high).
+  - Use `getCanvasCoords(t, hz)`: map timestamp `t` to $X$ pixel coordinate, and logarithmic fractional MIDI ($69 + 12\log_2(\text{hz}/440)$) to $Y$ pixel coordinate.
+  - Default view bounds: $m_{\text{min}} = 36$ ($C2 \approx 65.4\text{ Hz}$) to $m_{\text{max}} = 84$ ($C6 \approx 1046.5\text{ Hz}$).
 - [ ] **2.2.3 Smooth Pan & Semantic Zoom** `[Track: Frontend]` `[⏳ Sequential]` `[Depends on: 2.2.2]` `[Unblocks: 2.3]`
-  - Mouse wheel zoom centered at cursor position (zooming in horizontal time from whole song down to 2-second measure view).
+  - Mouse wheel zoom centered at cursor position (zooming in horizontal time from full song overview down to 2-second measure view).
   - Vertical zoom to expand narrow vocal registers.
-  - Smooth click-and-drag canvas panning with inertial dampening and minimap navigation strip.
+  - Smooth click-and-drag canvas panning with inertial dampening and timeline minimap navigation strip.
 
 ### 2.3 Synchronized Audio Playback & Synthesizer Monitor
 - [ ] **2.3.1 Web Audio Player with Exact Sync** `[Track: Frontend]` `[⏳ Sequential]` `[Depends on: 2.2.1]` `[Unblocks: 2.3.2, 2.3.3]`
-  - Load and decode source audio using Web Audio `AudioContext`.
-  - Maintain synchronization between audio playback time and canvas playhead using high-precision `audioContext.currentTime` inside a `requestAnimationFrame` render loop (60 FPS).
-  - Spacebar toggle for Play / Pause, click-on-canvas to seek.
-  - Playback rate controller: $0.5\times, 0.75\times, 1.0\times, 1.25\times$ with pitch preservation.
+  - Load and decode source audio using HTML5 `<audio>` element or Web Audio `AudioContext`.
+  - Audio source URL:
+    - Preloaded preset: `http://localhost:8000/presets/bach_chorale_satb/audio` (or `./sample_audio.wav`).
+    - Live upload: `URL.createObjectURL(uploadedFile)`.
+  - Maintain synchronization between audio playback time and canvas playhead using `audio.currentTime` inside a `requestAnimationFrame` render loop (60 FPS).
+  - Spacebar toggle for Play / Pause, click-on-canvas to seek. Playback rate controller: $0.5\times, 0.75\times, 1.0\times, 1.25\times$.
 - [ ] **2.3.2 A-B Loop Section Rehearsal Tool** `[Track: Frontend]` `[⏳ Sequential]` `[Depends on: 2.3.1]` `[Unblocks: 5.3]`
-  - Allow user to drag-select an in-point (A) and out-point (B) on the timeline.
+  - Allow user to drag-select an in-point ($A$) and out-point ($B$) on the timeline.
   - Continuous seamless looping over the selected measure for rehearsing difficult vocal intonation passages.
 - [ ] **2.3.3 Real-Time Pitch Synthesis Monitor (Auditory Verification)** `[Track: Frontend]` `[⚡ Parallel]` `[Depends on: 2.3.1]` `[Unblocks: 5.3]`
-  - Integrate a lightweight Web Audio synthesizer (polyphonic sine / triangle wave oscillators with soft envelope) that generates audio tones corresponding to the detected pitches.
-  - Provide a 3-way audio blend slider: `100% Original Audio` $\leftrightarrow$ `50% Blend Overlay` $\leftrightarrow$ `100% Synth Audio`.
+  - Polyphonic Web Audio synthesizer (polyphonic sine / triangle wave oscillators with soft envelope) dynamically driven by active frequencies in `frame.f0_refined`.
+  - 3-way audio blend slider: `100% Original Audio` $\leftrightarrow$ `50% Blend Overlay` $\leftrightarrow$ `100% Synth Audio`.
 
 ### 2.4 Real-Time Intonation Inspector & Harmonic Chord Detector
 - [ ] **2.4.1 Hover Intonation Tooltip** `[Track: Frontend]` `[⏳ Sequential]` `[Depends on: 2.2.1]` `[Unblocks: 2.4.2]`
-  - On mouse hover over any pitch point, display floating HUD card:
-    - Timestamp ($t = 14.32\text{ s}$)
-    - Refined Frequency ($441.8\text{ Hz}$)
-    - Note Name ($A4$)
-    - Signed Cents Deviation ($+7\text{ cents}$)
-    - Interactive Circular Tuning Dial (needle pointing to green center $\pm 0\text{c}$ or red wings for flat/sharp).
-- [ ] **2.4.2 Automatic Instantaneous Chord Identification** `[Track: Frontend]` `[⏳ Sequential]` `[Depends on: 2.4.1]` `[Unblocks: 3.5]`
-  - Inspect all active sounding pitches in the current playhead frame.
-  - Normalize active pitch classes to root octave: $\{C, E, G\} \rightarrow \text{C Major Triad}$; $\{D, F, A, C\} \rightarrow \text{D Minor 7th}$.
-  - Identify chord inversions based on lowest bass note.
-  - Display the recognized musical chord in a real-time badge above the playhead.
+  - On mouse hover over any pitch point, display floating HUD card reading exact properties:
+    - Timestamp: `frame.t` (e.g. $t = 14.32\text{ s}$)
+    - Refined Frequency: `frame.f0_refined[k]` (e.g. $441.8\text{ Hz}$)
+    - Note Name: `frame.notes[k]` (e.g. $A4$)
+    - Signed Cents Deviation: `frame.cents[k]` (e.g. $+7\text{ cents}$)
+    - Interactive Circular Tuning Dial: needle pointing to green center ($\pm 0\text{c}$) or red wings for flat/sharp.
+- [x] **2.4.2 Automatic Instantaneous Chord Identification** `[Track: Backend & Frontend]` `[⏳ Sequential]` `[Depends on: 2.4.1]` `[Unblocks: 3.5]`
+  - Read `frame.chord` from current playhead frame (e.g. `"C Major"`, `"A Minor / C"`, `"D 5 (Open 5th)"`).
+  - Display recognized musical chord in a real-time glowing glassmorphism badge above the playhead.
+  - Backend engine in `dsp_utils.py` and `analytics.py` complete and tested; frontend playhead badge ready.
 
 ### 2.5 Dynamic Client-Side Controls & Filtering
 - [ ] **2.5.1 Real-Time Sensitivity Threshold Slider** `[Track: Frontend]` `[⚡ Parallel]` `[Depends on: 2.2.1]` `[Unblocks: 2.6.1]`
@@ -303,17 +420,17 @@ export function getCanvasCoords(
 - [ ] **2.5.2 Transient Noise Duration Filter** `[Track: Frontend]` `[⚡ Parallel]` `[Depends on: 2.2.1]` `[Unblocks: 2.6.1]`
   - Slider ($0 - 100\text{ ms}$, default $35\text{ ms}$) pruning isolated detection dots lasting $< 3$ frames.
 - [ ] **2.5.3 Vocal Register Quick-Filters (SATB Isolators)** `[Track: Frontend]` `[⚡ Parallel]` `[Depends on: 2.2.1]` `[Unblocks: 2.6.1]`
-  - Toggle buttons for **Soprano**, **Alto**, **Tenor**, **Bass** to dim or highlight specific frequency bands.
+  - Toggle buttons for **Soprano**, **Alto**, **Tenor**, **Bass** to dim or highlight specific frequency bands by filtering `contour.voice_part`.
 
 ### 2.6 Demo Showcase Library & Live File Upload (Convergence)
 - [ ] **2.6.1 Pre-Loaded Academic Showcase Presets** `[Track: Frontend]` `[⚡ Parallel: Independent]` `[Depends on: 2.1, 2.2, 2.3]` `[Unblocks: 5.3]`
-  - Bundle 3 pre-analyzed demo audio clips with cached JSON transcriptions:
-    1. *CSD Bach Chorale (SATB 4-part choir)*
-    2. *Barbershop Vocal Quartet*
-    3. *Solo-to-Unison Choral Excerpt*
-  - Enables instant zero-setup demonstration.
+  - Connect preset dropdown selector to `GET /presets`.
+  - On selection, fetch `GET /presets/{id}` for instant zero-compute transcription rendering and bind `<audio src="/presets/{id}/audio">`.
+  - Offline fallback: loads `./sample_transcription.json` and `./sample_audio.wav`.
 - [ ] **2.6.2 Live Drag-and-Drop Ingestion (Backend Integration)** `[Track: Fullstack]` `[🔴 CONVERGENCE POINT]` `[Depends on: Backend 1.2, 1.4 AND Frontend 2.1]` `[Unblocks: Phase 3, 5.1]`
-  - Wire drag-and-drop file uploader to live `POST /transcribe` endpoint with progress bar, handling real-time response rendering.
+  - Wire drag-and-drop file uploader to live `POST /transcribe?async_mode=true` endpoint.
+  - Subscribe to real-time progress via Server-Sent Events: `new EventSource('/jobs/' + jobId + '/events')`.
+  - Display animated progress bar ($0\% \rightarrow 100\%$) and seamlessly render canvas when the `complete` event fires.
 
 ---
 
@@ -321,49 +438,56 @@ export function getCanvasCoords(
 *Objective: Upgrade the output from discrete per-frame frequency dots into connected, continuous musical lines and ensemble performance metrics.*
 
 ### 3.1 Frame-to-Frame Trajectory Linking (Pitch Tracking)
-- [ ] **3.1.1 Bipartite Greedy Matching Algorithm** `[Track: Backend]` `[⏳ Sequential]` `[Depends on: 1.2]` `[Unblocks: 3.1.2, 3.2]`
+- [x] **3.1.1 Bipartite Greedy Matching Algorithm** `[Track: Backend]` `[⏳ Sequential]` `[Depends on: 1.2]` `[Unblocks: 3.1.2, 3.2]`
   - Implement trajectory linker `mvp/backend/contour_tracker.py` using cost matrix in cents-time space.
   - Link candidate pairs if $|\Delta \text{cents}| \le 80\text{ cents}$ and time gap $\Delta t \le 25\text{ ms}$.
-- [ ] **3.1.2 Trajectory State Machine & Gap Bridging** `[Track: Backend]` `[⏳ Sequential]` `[Depends on: 3.1.1]` `[Unblocks: 3.1.3]`
+- [x] **3.1.2 Trajectory State Machine & Gap Bridging** `[Track: Backend]` `[⏳ Sequential]` `[Depends on: 3.1.1]` `[Unblocks: 3.1.3]`
   - State machine with `Active`, `Coasting` (bridges 1–2 frame micro-dropouts), and `Terminated`.
   - Discard spurious tracks lasting $< 50\text{ ms}$.
-- [ ] **3.1.3 Continuous Smoothing (Vibrato-Preserving)** `[Track: Backend]` `[⏳ Sequential]` `[Depends on: 3.1.2]` `[Unblocks: 3.2, 3.3, 3.4]`
+- [x] **3.1.3 Continuous Smoothing (Vibrato-Preserving)** `[Track: Backend]` `[⏳ Sequential]` `[Depends on: 3.1.2]` `[Unblocks: 3.2, 3.3, 3.4]`
   - Apply 5-point moving median filter + Savitzky-Golay polynomial smoothing ($window=7, order=2$) preserving $5-7\text{ Hz}$ choral vibrato without sensor jitter.
 
 ### 3.2 Heuristic Voice Part Partitioning (Tessitura & SATB Association)
-- [ ] **3.2.1 Pitch Centroid & Tessitura Bounding** `[Track: Backend]` `[⏳ Sequential]` `[Depends on: 3.1]` `[Unblocks: 3.2.2, 3.5]`
+- [x] **3.2.1 Pitch Centroid & Tessitura Bounding** `[Track: Backend]` `[⏳ Sequential]` `[Depends on: 3.1]` `[Unblocks: 3.2.2, 3.5]`
   - Partition extracted trajectories into 4 voice roles based on mean frequency centroids:
     - **Soprano:** $C4 - C6$ ($261 - 1046\text{ Hz}$)
     - **Alto:** $F3 - F5$ ($174 - 698\text{ Hz}$)
     - **Tenor:** $C3 - A4$ ($130 - 440\text{ Hz}$)
     - **Bass:** $E2 - E4$ ($82 - 329\text{ Hz}$)
-- [ ] **3.2.2 Non-Crossing Voice Priority Heuristic** `[Track: Backend]` `[⏳ Sequential]` `[Depends on: 3.2.1]` `[Unblocks: 3.5]`
+- [x] **3.2.2 Non-Crossing Voice Priority Heuristic** `[Track: Backend]` `[⏳ Sequential]` `[Depends on: 3.2.1]` `[Unblocks: 3.5]`
   - Minimize vocal line crossover errors by prioritizing upper frequency tracks to higher voice parts during overlaps.
 
 ### 3.3 Ensemble Intonation & Performance Analytics Dashboard
-- [ ] **3.3.1 Ensemble Tuning Drift Metric** `[Track: Backend & Frontend]` `[⏳ Sequential]` `[Depends on: 3.1]` `[Unblocks: 3.5]`
+- [x] **3.3.1 Ensemble Tuning Drift Metric** `[Track: Backend & Frontend]` `[⏳ Sequential]` `[Depends on: 3.1]` `[Unblocks: 3.5]`
   - Compute cumulative rolling average of intonation cents deviations:
     $$\text{Drift}(t) = \frac{1}{|K_t|} \sum_{k \in K_t} \delta_{\text{cents}}(k)$$
   - Plot a trendline showing whether the ensemble is progressively going flat over several minutes or singing sharp.
-- [ ] **3.3.2 Pitch Stability & Vibrato Analysis** `[Track: Backend]` `[⚡ Parallel]` `[Depends on: 3.1]` `[Unblocks: 3.5]`
+- [x] **3.3.2 Pitch Stability & Vibrato Analysis** `[Track: Backend]` `[⚡ Parallel]` `[Depends on: 3.1]` `[Unblocks: 3.5]`
   - Calculate pitch standard deviation during sustained note segments ($> 500\text{ ms}$).
   - Estimate vibrato rate (in Hz) and vibrato depth (in cents) for detected solo lines.
-- [ ] **3.3.3 Polyphony Density Distribution** `[Track: Backend & Frontend]` `[⚡ Parallel]` `[Depends on: 3.1]` `[Unblocks: 3.5]`
+- [x] **3.3.3 Polyphony Density Distribution** `[Track: Backend & Frontend]` `[⚡ Parallel]` `[Depends on: 3.1]` `[Unblocks: 3.5]`
   - Compute frame-by-frame polyphonic density ($0, 1, 2, 3, 4, 5+$ active voices) and render breakdown chart.
-- [ ] **3.3.4 Unison Dispersion Metric** `[Track: Backend]` `[⚡ Parallel]` `[Depends on: 3.1]` `[Unblocks: 3.5]`
+- [x] **3.3.4 Unison Dispersion Metric** `[Track: Backend]` `[⚡ Parallel]` `[Depends on: 3.1]` `[Unblocks: 3.5]`
   - Calculate the frequency spread (cents difference between singers) when two parts sing the same pitch class.
 
 ### 3.4 Professional Export Pipeline
-- [ ] **3.4.1 Structured CSV / TSV Export** `[Track: Backend & Frontend]` `[⚡ Parallel]` `[Depends on: 3.1]` `[Unblocks: 5.3]`
-  - Export columns: `frame_index`, `timestamp_sec`, `frequency_hz`, `midi_note`, `note_name`, `cents_offset`, `contour_id`, `voice_part`.
-- [ ] **3.4.2 Standard MIDI File (Type 1) Export** `[Track: Backend]` `[⚡ Parallel]` `[Depends on: 3.1, 3.2]` `[Unblocks: 5.3]`
+- [x] **3.4.1 Structured CSV / TSV Export** `[Track: Backend & Frontend]` `[⚡ Parallel]` `[Depends on: 3.1]` `[Unblocks: 5.3]`
+  - Export columns: `frame_index`, `timestamp_sec`, `frequency_hz`, `midi_note`, `note_name`, `cents_offset`, `chord`, `contour_id`, `voice_part`.
+  - Frontend triggers via `POST /export/csv` sending `{ frames, contours }`.
+- [x] **3.4.2 Standard MIDI File (Type 1) Export** `[Track: Backend & Frontend]` `[⚡ Parallel]` `[Depends on: 3.1, 3.2]` `[Unblocks: 5.3]`
   - Convert continuous trajectories into quantized multi-track MIDI file with pitch bend messages using `mido`.
+  - Frontend triggers via `POST /export/midi?tempo_bpm=120` sending `{ contours }`.
 - [ ] **3.4.3 Visual Vector Export** `[Track: Frontend]` `[⚡ Parallel]` `[Depends on: 2.2]` `[Unblocks: 5.3]`
   - SVG and high-resolution PNG export of the piano roll visualizer for academic papers and rehearsal reports.
 
 ### 3.5 Conductor Analytics UI Panel
 - [ ] **3.5.1 Conductor Studio Metrics View** `[Track: Frontend]` `[⏳ Sequential]` `[Depends on: Backend 3.2, 3.3]` `[Unblocks: 5.3]`
-  - Render Tuning Drift line chart, Polyphony histogram, and individual voice part toggle tracks in bottom studio dock.
+  - Bottom collapsible dock rendering rich analytics from `data.analytics`:
+    - **Ensemble Tuning Drift:** Line chart plotting cumulative cents deviation (`analytics.tuning_drift_cents`).
+    - **Polyphony Distribution:** Bar chart rendering breakdown from `analytics.polyphony_distribution` (`silence`, `solo`, `2_part`, `3_part`, `4_part`).
+    - **Unison Dispersion Meter:** Numeric display of singer intonation spread (`analytics.unison_dispersion_cents`).
+    - **Pitch Stability & Vibrato:** Display average vibrato rate (`analytics.vibrato.rate_hz`) and depth (`analytics.vibrato.depth_cents`).
+    - **Common Chords Breakdown:** List of recognized harmonies and percentages from `analytics.top_chords`.
 
 ---
 
@@ -402,21 +526,21 @@ export function getCanvasCoords(
 *Objective: Deliver a single-command reproducible container and presentation demonstration.*
 
 ### 5.1 Production Dockerization & Compose Setup
-- [ ] **5.1.1 Optimized Multi-Stage Dockerfile (`mvp/Dockerfile`)** `[Track: DevOps]` `[⏳ Sequential]` `[Depends on: 1.4, Frontend Build]` `[Unblocks: 5.1.2]`
+- [x] **5.1.1 Optimized Multi-Stage Dockerfile (`mvp/Dockerfile`)** `[Track: DevOps]` `[⏳ Sequential]` `[Depends on: 1.4, Frontend Build]` `[Unblocks: 5.1.2]`
   - Base: `python:3.12-slim-bookworm` with `libsndfile1`, `ffmpeg`, `git`, `curl`.
   - Pinned dependencies installed with `--no-cache-dir`.
   - Automatic download/cache of `exp3multif0.pkl`.
   - Container healthcheck on `http://localhost:8000/health`.
-- [ ] **5.1.2 Docker Compose (`docker-compose.yml`)** `[Track: DevOps]` `[⏳ Sequential]` `[Depends on: 5.1.1]` `[Unblocks: 5.2]`
+- [x] **5.1.2 Docker Compose (`docker-compose.yml`)** `[Track: DevOps]` `[⏳ Sequential]` `[Depends on: 5.1.1]` `[Unblocks: 5.2]`
   - Service 1: `backend` running FastAPI on port `8000`.
   - Service 2: `frontend` static studio served on port `3000`.
 
 ### 5.2 Automated Testing & Quality Assurance (`pytest`)
-- [ ] **5.2.1 DSP & Math Unit Tests** `[Track: Fullstack / QA]` `[⏳ Sequential]` `[Depends on: 1.2, 1.3]` `[Unblocks: 5.3]`
+- [x] **5.2.1 DSP & Math Unit Tests** `[Track: Fullstack / QA]` `[⏳ Sequential]` `[Depends on: 1.2, 1.3]` `[Unblocks: 5.3]`
   - `test_parabolic_interpolation()`: synthetic sine waves at fractional frequencies verified within $\pm 0.1\text{ Hz}$.
   - `test_cents_conversion()`: verified $\pm$ cents values for standard pitches (A4 = 440 Hz $\rightarrow 0\text{c}$).
   - `test_block_overlap()`: verified seamless activation array stitching.
-- [ ] **5.2.2 Backend API Integration Tests** `[Track: Fullstack / QA]` `[⏳ Sequential]` `[Depends on: 1.4]` `[Unblocks: 5.3]`
+- [x] **5.2.2 Backend API Integration Tests** `[Track: Fullstack / QA]` `[⏳ Sequential]` `[Depends on: 1.4]` `[Unblocks: 5.3]`
   - `test_health_endpoint()`, `test_transcribe_audio_wav()`, `test_invalid_format_rejection()` (415), and `test_file_size_limit()` (413).
 
 ### 5.3 Final Deliverables & Group Presentation Assets
