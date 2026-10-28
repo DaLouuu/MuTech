@@ -67,6 +67,29 @@
               </button>
             </div>
 
+            <section id="playback-controls" class="playback-controls" aria-label="Audio playback" hidden>
+              <div class="playback-heading">
+                <span>LISTEN</span>
+                <output id="playback-time" for="playback-seek">0:00 / 0:00</output>
+              </div>
+              <div class="playback-row">
+                <button id="play-button" class="play-button" type="button" disabled aria-label="Play audio">
+                  <span id="play-icon" aria-hidden="true">▶</span>
+                </button>
+                <input
+                  id="playback-seek"
+                  class="playback-seek"
+                  type="range"
+                  min="0"
+                  max="0"
+                  step="0.01"
+                  value="0"
+                  aria-label="Seek audio"
+                  disabled
+                />
+              </div>
+            </section>
+
             <div class="setting-row">
               <div>
                 <label for="threshold">Sensitivity</label>
@@ -112,17 +135,28 @@
               <span>Time runs left to right · note height follows musical pitch</span>
             </div>
             <div id="chart-wrap" class="chart-wrap" hidden>
-              <canvas
-                id="pitch-chart"
-                role="img"
-                aria-label="Pitch trace over time"
-              ></canvas>
+              <div class="time-axis-wrap" aria-hidden="true">
+                <canvas id="time-axis"></canvas>
+                <span id="axis-playhead" class="playhead axis-playhead"></span>
+              </div>
+              <div id="pitch-scroll" class="pitch-scroll">
+                <div class="pitch-stage">
+                  <canvas id="pitch-chart" role="img" aria-label="Pitch trace over time" tabindex="0"></canvas>
+                  <span id="pitch-playhead" class="playhead pitch-playhead"></span>
+                </div>
+              </div>
               <div id="chart-tooltip" class="chart-tooltip" hidden></div>
             </div>
             <div id="chart-legend" class="chart-legend" hidden>
-              <span class="legend-dot"></span>
-              <span>Detected pitches</span>
-              <span class="legend-note">Each dot is one detected pitch in a frame</span>
+              <span class="segment-swatch" aria-hidden="true"></span>
+              <span>Note segments</span>
+              <span class="contour-swatch" aria-hidden="true"></span>
+              <span>Pitch contour</span>
+              <label class="raw-toggle">
+                <input id="raw-detections-toggle" type="checkbox" />
+                <span>Raw detections</span>
+              </label>
+              <span class="legend-note">Scroll for pitch range · click to seek when audio is loaded</span>
             </div>
           </section>
         </section>

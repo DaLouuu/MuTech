@@ -18,9 +18,9 @@ RUN git clone --depth 1 https://github.com/helenacuesta/multif0-estimation-polyv
 COPY requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy backend and preset demonstration assets
+# Copy backend and only the preset assets required by the API.
 COPY backend /app/backend
-COPY frontend /app/frontend
+COPY frontend/sample_transcription.json frontend/sample_audio.wav /app/frontend/
 
 # Create non-root system user for security compliance (CIS benchmark)
 RUN useradd -m -u 1000 appuser && \

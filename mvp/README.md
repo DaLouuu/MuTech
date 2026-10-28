@@ -72,6 +72,35 @@ curl -F "file=@some_choir_clip.wav" "http://localhost:8000/transcribe?threshold=
 
 The first start takes about 5 seconds to load the model. A 30 second clip takes about 22 seconds to process on 2 CPU cores. Full details, including every setting, are in [docs/BACKEND_GUIDE.md](docs/BACKEND_GUIDE.md).
 
+## Run the frontend and backend with Docker
+
+From the repository root, build and start both services:
+
+```bash
+docker compose up --build
+```
+
+Open the frontend at `http://localhost:3000`. The frontend image installs its
+Node dependencies, builds the Vite app, and serves the production assets with
+Nginx. Browser API requests use the same-origin `/api` path; Nginx forwards
+them to the `backend` service on the private Compose network. No separate
+`npm run dev` process is needed.
+
+The backend API remains available directly at `http://localhost:8000`, with
+interactive docs at `http://localhost:8000/docs`. Compose waits for the
+backend's `/health` check before starting the frontend. Stop both services
+with `docker compose down`.
+
+The Compose setup publishes frontend port `3000` and backend port `8000`. It
+sets `VITE_API_BASE_URL=/api` as a frontend **build argument** and sets
+`MF0_REPO=/app/multif0-estimation-polyvocals` and `CORS_ORIGINS=*` in the
+backend container. No separate frontend runtime API URL is needed because the
+browser uses the same-origin Nginx proxy.
+
+The Docker build downloads backend dependencies and the model repository, so
+an internet connection is required during the first build. Frontend host port
+`3000` and backend host port `8000` must be available.
+
 ## What the MVP does and does not do
 
 **Does.** Takes a choir recording (WAV, FLAC, OGG or MP3) and returns, for every 11.6 ms frame, the list of pitches in Hz that it hears.
@@ -90,7 +119,7 @@ The first start takes about 5 seconds to load the model. A 30 second clip takes 
 | multif0 port to Python 3.12 / Keras 3 | ✅ Done, all 33 layers load, works on real audio |
 | Evaluation on 14 real choir mixtures | ✅ Done for multif0 and Timbre-Trap |
 | Web API & SSE Job Streaming | ✅ Done (`/health`, `/transcribe`, `/jobs/{id}/events`, `/presets`, `/export/*`) |
-| Docker image & Compose | ✅ Done (hardened multi-stage Dockerfile with non-root appuser) |
+| Docker image & Compose | ✅ Done (non-root backend and multi-stage frontend build) |
 | Long file handling (block overlap) | ✅ Done (contiguous Hann window blending, L=5000, M=250) |
 | Mathematical sub-bin pitch refinement | ✅ Done (parabolic interpolation with continuous cents) |
 | Trajectory linking & SATB voicing | ✅ Done (bipartite greedy matching, vibrato smoothing, SATB) |

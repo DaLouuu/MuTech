@@ -75,6 +75,11 @@ Once launched, access the application services in your browser:
 - 📖 **Interactive Swagger Docs:** [`http://localhost:8000/docs`](http://localhost:8000/docs)
 - 🩺 **System Health Probe:** [`http://localhost:8000/health`](http://localhost:8000/health)
 
+Compose builds the Vite frontend into static assets and serves them with Nginx;
+the browser's `/api` requests are reverse-proxied to the backend over the
+Compose network. No separate frontend development server is needed for this
+Docker workflow. The backend port remains published for direct API access.
+
 To stop the containers:
 ```bash
 docker compose down
@@ -185,7 +190,11 @@ MuTech/
 ├── README.md                      # Executive overview, architecture & setup (this file)
 │
 ├── mvp/                           # ── Applied Engineering MVP (Choir Pitch Tracker) ──
-│   ├── Dockerfile                 # Hardened multi-stage container (non-root appuser)
+│   ├── Dockerfile                 # Backend container (non-root appuser)
+│   ├── .dockerignore              # Excludes local environments and frontend build files
+│   ├── frontend/
+│   │   ├── Dockerfile             # Vite build stage + Nginx static-file server
+│   │   └── nginx.conf             # Static hosting and /api reverse proxy
 │   ├── requirements.txt           # Production backend dependencies
 │   ├── requirements-timbretrap.txt# Comparative evaluation dependencies
 │   │

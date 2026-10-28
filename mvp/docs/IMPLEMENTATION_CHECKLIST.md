@@ -533,7 +533,8 @@ export function getCanvasCoords(
   - Container healthcheck on `http://localhost:8000/health`.
 - [x] **5.1.2 Docker Compose (`docker-compose.yml`)** `[Track: DevOps]` `[⏳ Sequential]` `[Depends on: 5.1.1]` `[Unblocks: 5.2]`
   - Service 1: `backend` running FastAPI on port `8000`.
-  - Service 2: `frontend` static studio served on port `3000`.
+  - Service 2: `frontend` built by Vite and served by Nginx on port `3000`.
+  - Nginx reverse-proxies same-origin `/api/` requests to `backend:8000`; frontend startup waits for backend health.
 
 ### 5.2 Automated Testing & Quality Assurance (`pytest`)
 - [x] **5.2.1 DSP & Math Unit Tests** `[Track: Fullstack / QA]` `[⏳ Sequential]` `[Depends on: 1.2, 1.3]` `[Unblocks: 5.3]`

@@ -1,0 +1,12 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+frontend/node_modules/
+frontend/dist/
+frontend/*.tsbuildinfo
+frontend/*.mp3
+frontend/*.wav
+!frontend/sample_audio.wav
+frontend/response_*.json
