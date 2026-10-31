@@ -9,13 +9,27 @@ Implements Checklist Phase 1.1:
     * Bandlimited resampling to 22,050 Hz via polyphase filtering
 """
 
+import fractions
+import importlib
 import io
 import math
 import os
 from typing import Union
 import numpy as np
 import scipy.signal
-import soundfile as sf
+
+# Audio decoders (soundfile primary, librosa optional fallback)
+try:
+    import soundfile as sf
+except ImportError:
+    sf = None
+
+# Optional fallback audio backend
+librosa = None
+try:
+    librosa = importlib.import_module("librosa")
+except (ImportError, ModuleNotFoundError):
+    pass
 
 TARGET_SR = 22050
 TARGET_RMS_DBFS = -20.0  # ~0.1 linear RMS amplitude
@@ -80,36 +94,50 @@ def decode_audio(
         raise AudioProcessingError("Audio file is empty (0 bytes).", status_code=400)
 
     try:
-        if isinstance(source, bytes):
-            file_obj = io.BytesIO(source)
-            y, sr = sf.read(file_obj, dtype="float32")
-        elif isinstance(source, io.BytesIO):
-            source.seek(0)
-            y, sr = sf.read(source, dtype="float32")
-        else:
-            y, sr = sf.read(source, dtype="float32")
-        return y, sr
-    except Exception as e:
-        # Fallback using librosa if available
-        try:
-            import librosa
+        if sf is not None:
+            if isinstance(source, bytes):
+                file_obj = io.BytesIO(source)
+                y, sr = sf.read(file_obj, dtype="float32")
+            elif isinstance(source, io.BytesIO):
+                source.seek(0)
+                y, sr = sf.read(source, dtype="float32")
+            else:
+                y, sr = sf.read(source, dtype="float32")
+            return y, sr
+        elif librosa is not None:
             if isinstance(source, bytes):
                 file_obj = io.BytesIO(source)
                 y, sr = librosa.load(file_obj, sr=None, mono=False)
-                if y.ndim > 1:
-                    y = y.T
             elif isinstance(source, io.BytesIO):
                 source.seek(0)
                 y, sr = librosa.load(source, sr=None, mono=False)
-                if y.ndim > 1:
-                    y = y.T
             else:
                 y, sr = librosa.load(source, sr=None, mono=False)
+            if y.ndim > 1:
+                y = y.T
+            return y.astype(np.float32), sr
+        else:
+            raise AudioProcessingError("No audio decoder available. Install 'soundfile' or 'librosa'.", status_code=500)
+    except AudioProcessingError:
+        raise
+    except Exception as e:
+        # Fallback using librosa if available
+        if librosa is not None and sf is not None:
+            try:
+                if isinstance(source, bytes):
+                    file_obj = io.BytesIO(source)
+                    y, sr = librosa.load(file_obj, sr=None, mono=False)
+                elif isinstance(source, io.BytesIO):
+                    source.seek(0)
+                    y, sr = librosa.load(source, sr=None, mono=False)
+                else:
+                    y, sr = librosa.load(source, sr=None, mono=False)
                 if y.ndim > 1:
                     y = y.T
-            return y.astype(np.float32), sr
-        except Exception:
-            raise UnsupportedAudioFormatError(f"Failed to decode audio stream: {str(e)}")
+                return y.astype(np.float32), sr
+            except Exception:
+                pass
+        raise UnsupportedAudioFormatError(f"Failed to decode audio stream: {str(e)}")
 
 
 def downmix_to_mono(y: np.ndarray) -> np.ndarray:
@@ -178,7 +206,6 @@ def resample_audio(y: np.ndarray, orig_sr: int, target_sr: int = TARGET_SR) -> n
 
     # If gcd is small (e.g. prime sample rates), limit filter length to avoid CPU freeze
     if up > 500 or down > 500:
-        import fractions
         frac = fractions.Fraction(target_sr, orig_sr).limit_denominator(200)
         up, down = frac.numerator, frac.denominator
 

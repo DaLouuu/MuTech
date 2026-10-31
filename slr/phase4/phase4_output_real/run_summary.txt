@@ -1,9 +1,0 @@
-MuTech Phase 4 - K-Means clustering run summary
-  input dir         : /tmp/real_phase3_output
-  papers            : 365
-  tf-idf terms      : 2000
-  k tried           : [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-  best k (silhouette): 7
-  k used            : 7
-  silhouette at k   : 0.0390
-  cluster sizes     : {0: 47, 1: 73, 2: 41, 3: 73, 4: 22, 5: 79, 6: 30}

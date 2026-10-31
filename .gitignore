@@ -26,6 +26,11 @@ desktop.ini
 # Local multif0 weights clone
 multif0-estimation-polyvocals/
 
+# Frontend dependencies & build artifacts
+node_modules/
+dist/
+*.tsbuildinfo
+
 # SLR mock outputs
 mock_phase3_output/
 slr/phase4/mock_phase3_output/

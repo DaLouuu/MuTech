@@ -9,22 +9,60 @@ Implements Checklist Phase 1 & Phase 3:
 - 3.3 Ensemble intonation drift & polyphony analytics (analytics.py)
 """
 
+# Standard Library Imports
+import importlib
 import os
 import time
-from typing import Optional, Union, Callable
+from typing import Callable, Optional, Union
+
+# Third-Party Scientific & DSP Imports
 import numpy as np
 
+from analytics import compute_ensemble_analytics
+from audio_processor import TARGET_SR, load_and_condition_audio
+from contour_tracker import link_contours
 from dsp_utils import (
+    BINS_PER_OCTAVE,
+    FMIN,
+    N_BINS,
+    bin_to_frequency,
+    identify_vertical_chord,
     refine_salience_peaks,
     stitch_overlapping_blocks,
-    bin_to_frequency,
-    FMIN,
-    BINS_PER_OCTAVE,
-    N_BINS,
 )
-from audio_processor import load_and_condition_audio, TARGET_SR
-from contour_tracker import link_contours
-from analytics import compute_ensemble_analytics
+
+# Optional Machine Learning & Deep Learning Imports (keras, tensorflow, h5py, pumpp)
+keras = None
+tf = None
+layers = None
+h5py = None
+pumpp = None
+
+try:
+    keras = importlib.import_module("keras")
+    layers = getattr(keras, "layers", None)
+except (ImportError, ModuleNotFoundError):
+    try:
+        _tf_pkg = importlib.import_module("tensorflow")
+        keras = getattr(_tf_pkg, "keras", None)
+        layers = getattr(keras, "layers", None) if keras else None
+    except (ImportError, ModuleNotFoundError):
+        pass
+
+try:
+    tf = importlib.import_module("tensorflow")
+except (ImportError, ModuleNotFoundError):
+    pass
+
+try:
+    h5py = importlib.import_module("h5py")
+except (ImportError, ModuleNotFoundError):
+    pass
+
+try:
+    pumpp = importlib.import_module("pumpp")
+except (ImportError, ModuleNotFoundError):
+    pass
 
 def _find_repo_path() -> str:
     """Find valid multif0-estimation-polyvocals repo path dynamically."""
@@ -60,9 +98,8 @@ _model_load_error: Optional[str] = None
 
 def _build_model():
     """Rebuild multif0 Late/Deep (model3) architecture in Keras 3."""
-    import keras
-    import tensorflow as tf
-    from keras import layers
+    if keras is None or layers is None or tf is None:
+        raise ImportError("Keras and TensorFlow are required to build the multif0 model.")
 
     def base(x, let, b_start):
         x = layers.BatchNormalization(name=f"batch_normalization_{b_start}")(x)
@@ -110,10 +147,11 @@ def load():
     if _model is not None:
         return
 
+    if keras is None or layers is None or h5py is None or pumpp is None:
+        _model_load_error = "Required deep learning dependencies (keras, tensorflow, h5py, pumpp) are not installed."
+        return
+
     try:
-        import h5py
-        import pumpp
-        from keras import layers
 
         weights_path = os.path.join(REPO, "models", "exp3multif0.pkl")
         if not os.path.exists(weights_path):
@@ -272,7 +310,6 @@ def transcribe(
         progress_callback(97.0)
 
     # 5. Build Sub-sampled Frames Response
-    from dsp_utils import identify_vertical_chord
     frames_data = []
     for i in range(0, n_frames, hop):
         pitches = refined_f0[i]

@@ -11,11 +11,9 @@ Starting point for the group's MVP. It came out of **Task 1**: find an open sour
 | You are... | Read this first |
 |---|---|
 | Anyone new to the project | This page, then [docs/RESEARCH_REPORT.md](docs/RESEARCH_REPORT.md) |
-| Working on the **back end** | [docs/BACKEND_GUIDE.md](docs/BACKEND_GUIDE.md) |
-| Working on the **front end** | [docs/FRONTEND_GUIDE.md](docs/FRONTEND_GUIDE.md) |
+| Developer / Engineer (Back & Front) | [docs/DEVELOPER_GUIDE.md](docs/DEVELOPER_GUIDE.md) |
+| Tracking Delivery & Tasks | [docs/IMPLEMENTATION_CHECKLIST.md](docs/IMPLEMENTATION_CHECKLIST.md) |
 | Re-running or extending the tests | [docs/EVALUATION_GUIDE.md](docs/EVALUATION_GUIDE.md) |
-| Planning the next steps | [docs/DECISIONS_AND_NEXT_STEPS.md](docs/DECISIONS_AND_NEXT_STEPS.md) & [docs/IMPLEMENTATION_CHECKLIST.md](docs/IMPLEMENTATION_CHECKLIST.md) |
-| Looking up a term | [docs/GLOSSARY.md](docs/GLOSSARY.md) |
 
 ## What is in this folder
 
@@ -42,11 +40,12 @@ mvp/
 └── docs/
     ├── RESEARCH_REPORT.md       full findings: candidates, tests, datasets, risks, sources
     ├── IMPLEMENTATION_CHECKLIST.md  step-by-step 4-phase implementation checklist
-    ├── BACKEND_GUIDE.md
-    ├── FRONTEND_GUIDE.md
-    ├── EVALUATION_GUIDE.md
-    ├── DECISIONS_AND_NEXT_STEPS.md
-    └── GLOSSARY.md
+    ├── DEVELOPER_GUIDE.md       consolidated master developer & architecture guide
+    ├── DEVELOPER_GUIDE.docx     formatted Microsoft Word version of Developer Guide
+    ├── IMPLEMENTATION_CHECKLIST.md  step-by-step 4-phase implementation checklist
+    ├── IMPLEMENTATION_CHECKLIST.docx formatted Microsoft Word version of Checklist
+    ├── RESEARCH_REPORT.md       full findings: candidates, tests, datasets, risks, sources
+    └── EVALUATION_GUIDE.md      evaluation protocol and benchmark reproducibility
 ```
 
 ## Quick start (back end)
@@ -70,7 +69,7 @@ uvicorn app:app --host 0.0.0.0 --port 8000
 curl -F "file=@some_choir_clip.wav" "http://localhost:8000/transcribe?threshold=0.5"
 ```
 
-The first start takes about 5 seconds to load the model. A 30 second clip takes about 22 seconds to process on 2 CPU cores. Full details, including every setting, are in [docs/BACKEND_GUIDE.md](docs/BACKEND_GUIDE.md).
+The first start takes about 5 seconds to load the model. A 30 second clip takes about 22 seconds to process on 2 CPU cores. Full details, including every setting, are in [docs/DEVELOPER_GUIDE.md](docs/DEVELOPER_GUIDE.md).
 
 ## Run the frontend and backend with Docker
 

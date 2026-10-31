@@ -1,0 +1,172 @@
+{
+  "epochs": [
+    "Foundational (2020-2021)",
+    "Consolidation (2022-2023)",
+    "Modern/Expansion (2024-2026)"
+  ],
+  "topic_counts_by_epoch": {
+    "Consolidation (2022-2023)": {
+      "0": 4,
+      "1": 21,
+      "2": 9,
+      "3": 19,
+      "4": 9,
+      "5": 20,
+      "6": 14
+    },
+    "Foundational (2020-2021)": {
+      "0": 1,
+      "1": 16,
+      "2": 10,
+      "3": 26,
+      "4": 4,
+      "5": 16,
+      "6": 5
+    },
+    "Modern/Expansion (2024-2026)": {
+      "0": 44,
+      "1": 31,
+      "2": 30,
+      "3": 27,
+      "4": 12,
+      "5": 37,
+      "6": 10
+    }
+  },
+  "topic_shares_by_epoch": {
+    "Consolidation (2022-2023)": {
+      "0": 0.0417,
+      "1": 0.2188,
+      "2": 0.0938,
+      "3": 0.1979,
+      "4": 0.0938,
+      "5": 0.2083,
+      "6": 0.1458
+    },
+    "Foundational (2020-2021)": {
+      "0": 0.0128,
+      "1": 0.2051,
+      "2": 0.1282,
+      "3": 0.3333,
+      "4": 0.0513,
+      "5": 0.2051,
+      "6": 0.0641
+    },
+    "Modern/Expansion (2024-2026)": {
+      "0": 0.2304,
+      "1": 0.1623,
+      "2": 0.1571,
+      "3": 0.1414,
+      "4": 0.0628,
+      "5": 0.1937,
+      "6": 0.0524
+    }
+  },
+  "sankey_links": [
+    {
+      "source": "Consolidation (2022-2023)",
+      "target": "Topic 0",
+      "value": 4
+    },
+    {
+      "source": "Consolidation (2022-2023)",
+      "target": "Topic 1",
+      "value": 21
+    },
+    {
+      "source": "Consolidation (2022-2023)",
+      "target": "Topic 2",
+      "value": 9
+    },
+    {
+      "source": "Consolidation (2022-2023)",
+      "target": "Topic 3",
+      "value": 19
+    },
+    {
+      "source": "Consolidation (2022-2023)",
+      "target": "Topic 4",
+      "value": 9
+    },
+    {
+      "source": "Consolidation (2022-2023)",
+      "target": "Topic 5",
+      "value": 20
+    },
+    {
+      "source": "Consolidation (2022-2023)",
+      "target": "Topic 6",
+      "value": 14
+    },
+    {
+      "source": "Foundational (2020-2021)",
+      "target": "Topic 0",
+      "value": 1
+    },
+    {
+      "source": "Foundational (2020-2021)",
+      "target": "Topic 1",
+      "value": 16
+    },
+    {
+      "source": "Foundational (2020-2021)",
+      "target": "Topic 2",
+      "value": 10
+    },
+    {
+      "source": "Foundational (2020-2021)",
+      "target": "Topic 3",
+      "value": 26
+    },
+    {
+      "source": "Foundational (2020-2021)",
+      "target": "Topic 4",
+      "value": 4
+    },
+    {
+      "source": "Foundational (2020-2021)",
+      "target": "Topic 5",
+      "value": 16
+    },
+    {
+      "source": "Foundational (2020-2021)",
+      "target": "Topic 6",
+      "value": 5
+    },
+    {
+      "source": "Modern/Expansion (2024-2026)",
+      "target": "Topic 0",
+      "value": 44
+    },
+    {
+      "source": "Modern/Expansion (2024-2026)",
+      "target": "Topic 1",
+      "value": 31
+    },
+    {
+      "source": "Modern/Expansion (2024-2026)",
+      "target": "Topic 2",
+      "value": 30
+    },
+    {
+      "source": "Modern/Expansion (2024-2026)",
+      "target": "Topic 3",
+      "value": 27
+    },
+    {
+      "source": "Modern/Expansion (2024-2026)",
+      "target": "Topic 4",
+      "value": 12
+    },
+    {
+      "source": "Modern/Expansion (2024-2026)",
+      "target": "Topic 5",
+      "value": 37
+    },
+    {
+      "source": "Modern/Expansion (2024-2026)",
+      "target": "Topic 6",
+      "value": 10
+    }
+  ]
+}

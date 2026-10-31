@@ -435,6 +435,12 @@ def add_formatted_text(paragraph, text, default_color=None, force_bold=False):
                 run.font.color.rgb = default_color
 
 if __name__ == '__main__':
-    md_file = r'c:\Users\asus\OneDrive\Desktop\Personal\School\DLSU\MuTech\Repo\MuTech\mvp\docs\IMPLEMENTATION_CHECKLIST.md'
-    out_docx = r'c:\Users\asus\OneDrive\Desktop\Personal\School\DLSU\MuTech\Repo\MuTech\mvp\docs\IMPLEMENTATION_CHECKLIST.docx'
+    import sys
+    if len(sys.argv) >= 3:
+        md_file = sys.argv[1]
+        out_docx = sys.argv[2]
+    else:
+        md_file = r'c:\Users\asus\OneDrive\Desktop\Personal\School\DLSU\MuTech\Repo\MuTech\mvp\docs\IMPLEMENTATION_CHECKLIST.md'
+        out_docx = r'c:\Users\asus\OneDrive\Desktop\Personal\School\DLSU\MuTech\Repo\MuTech\mvp\docs\IMPLEMENTATION_CHECKLIST.docx'
     build_docx(md_file, out_docx)
+    print(f"Successfully generated {out_docx}!")

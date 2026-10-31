@@ -1,8 +1,0 @@
-MuTech Phase 3 - Text Mining run summary
-  input file        : /tmp/mutech/priority_records_from_rayyan.csv
-  rows read         : 365
-  papers kept       : 365
-  papers dropped    : 0
-  TF-IDF matrix     : 365 docs x 2000 terms
-  require_include   : False
-  ngram_range       : (1, 2)

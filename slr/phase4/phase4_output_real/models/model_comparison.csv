@@ -1,5 +1,0 @@
-model,silhouette_cosine,ari_vs_kmeans,ari_vs_agglomerative,ari_vs_nmf,ari_vs_lda
-kmeans,0.039,1.0,0.3377,0.5375,0.2835
-agglomerative,0.0278,0.3377,1.0,0.3737,0.2488
-nmf,0.041,0.5375,0.3737,1.0,0.2978
-lda,0.0187,0.2835,0.2488,0.2978,1.0

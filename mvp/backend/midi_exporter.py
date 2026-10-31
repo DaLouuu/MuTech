@@ -6,6 +6,7 @@ Implements Checklist Phase 3:
 """
 
 import io
+import math
 import mido
 from mido import MidiFile, MidiTrack, Message, MetaMessage
 
@@ -105,7 +106,6 @@ def generate_midi_type1(
             for p in pts:
                 hz = p.get("hz", 0)
                 if hz > 0:
-                    import math
                     m = int(round(69 + 12 * math.log2(hz / 440.0)))
                     midi_notes.append(m)
 

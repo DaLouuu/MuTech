@@ -9,11 +9,18 @@ Implements Checklist Phase 1.4 & Phase 3.4 with production hardening:
 - Memory exhaustion DoS guards (streaming chunk reader) and CORS security
 """
 
-import os
-import time
 import asyncio
+import json
+import os
+import sys
+import time
 from contextlib import asynccontextmanager
 from typing import Optional, Any
+
+# Ensure backend directory is in sys.path for direct and package execution
+_BACKEND_DIR = os.path.dirname(os.path.abspath(__file__))
+if _BACKEND_DIR not in sys.path:
+    sys.path.insert(0, _BACKEND_DIR)
 
 import psutil
 from pydantic import BaseModel, Field
@@ -241,8 +248,6 @@ async def stream_job_events(job_id: str):
     if not job:
         raise HTTPException(status_code=404, detail=f"Job '{job_id}' not found.")
 
-    import json
-
     async def event_generator():
         last_progress = -1.0
         last_status = ""
@@ -352,7 +357,6 @@ def get_preset_transcription(preset_id: str):
     if not os.path.exists(json_path):
         raise HTTPException(status_code=404, detail="Preset transcription file missing.")
 
-    import json
     with open(json_path, "r", encoding="utf-8") as f:
         return json.load(f)
 

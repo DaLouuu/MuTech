@@ -3,7 +3,7 @@
 > **Target:** `multif0` (Cuesta, McFee & Gómez, ISMIR 2020 / Cuesta & Gómez, TISMIR 2022)  
 > **Application:** Polyphonic Vocal & Choir Pitch Tracking, Repertoire Visualization, and Ensemble Intonation Analytics  
 > **Status:** Active Engineering Roadmap  
-> **Related Documentation:** [Backend Guide](BACKEND_GUIDE.md) | [Frontend Guide](FRONTEND_GUIDE.md) | [Research Report](RESEARCH_REPORT.md) | [Decisions & Next Steps](DECISIONS_AND_NEXT_STEPS.md) | [Glossary](GLOSSARY.md)
+> **Related Documentation:** [Developer Guide](DEVELOPER_GUIDE.md) | [Research Report](RESEARCH_REPORT.md) | [Evaluation Guide](EVALUATION_GUIDE.md)
 
 ---
 

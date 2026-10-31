@@ -4,12 +4,14 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.156-green.svg)](https://fastapi.tiangolo.com/)
 [![Keras](https://img.shields.io/badge/Keras-3.15-red.svg)](https://keras.io/)
 [![Docker](https://img.shields.io/badge/Docker-Compose%20Ready-2496ED.svg)](https://www.docker.com/)
-[![Tests](https://img.shields.io/badge/Tests-32%20Passing-brightgreen.svg)]()
+[![Tests](https://img.shields.io/badge/Tests-33%20Passing-brightgreen.svg)]()
 [![PRISMA](https://img.shields.io/badge/SLR%20Corpus-365%20Papers-purple.svg)]()
 
 > **MuTech** is a two-part research and engineering initiative for **Intelligent Music Processing (Music Information Retrieval - MIR)**:
 > 1. **Academic Pillar:** A Systematic Literature Review (SLR) analyzing 365 peer-reviewed studies on singing, ensemble performance, and multi-pitch estimation using PRISMA, NLP text-mining, topic clustering, and Social Network Analysis (SNA).
 > 2. **Engineering Pillar:** An applied polyphonic **Choir Pitch Tracker & Intonation Studio MVP** powered by a modernized, production-hardened port of the deep convolutional `multif0` model (Cuesta et al., ISMIR 2020 / TISMIR 2022).
+>
+> **Handover Guide:** See [**UPDATES_AND_HANDOVER_GUIDE.md**](UPDATES_AND_HANDOVER_GUIDE.md) (or Word [`.docx`](UPDATES_AND_HANDOVER_GUIDE.docx)) for details on recent code updates, file paths, and verification commands.
 
 ---
 
@@ -22,9 +24,9 @@ flowchart TD
     subgraph Research_Pillar ["Pillar 1: Systematic Literature Review (SLR) Pipeline"]
         direction TB
         P1["<b>Phase 1-2: Ingestion & Screening</b><br/>Scopus & IEEE exports (N=365) via PRISMA"]
-        P3["<b>Phase 3: Text Mining</b><br/>NLP cleaning, tokenization & TF-IDF vectorization"]
-        P4["<b>Phase 4: Topic Modeling</b><br/>K-Means, Agglomerative, NMF, LDA clustering"]
-        P5["<b>Phase 5: Social Network Analysis</b><br/>Co-occurrence network & GitHub Pages dashboard"]
+        P3["<b>Phase 3: Text Mining</b><br/>NLP cleaning, PMI collocations & LSA/SciBERT"]
+        P4["<b>Phase 4: Topic Modeling & Stability</b><br/>4-model suite, soft topics & bootstrap stability"]
+        P5["<b>Phase 5: SNA & Temporal Evolution</b><br/>Co-occurrence network, alluvial flow & dashboard"]
         P6["<b>Phase 6: Academic Manuscript</b><br/>LaTeX submission synthesizing 365 papers"]
         P1 --> P3 --> P4 --> P5 --> P6
     end
@@ -140,7 +142,7 @@ Open your browser and navigate to:
 
 ### Option 3: Running the Automated Test Suite & Code Reviewer
 
-To verify all 32 unit, integration, and security tests across the backend:
+To verify all 33 unit, integration, and security tests across the backend:
 
 ```bash
 # Run pytest test suite from repository root
@@ -150,10 +152,38 @@ python -m pytest mvp/backend/tests/test_suite.py -v
 python .agents/skills/mutech-code-reviewer/scripts/run_reviewer_checks.py
 ```
 
+---
+
+### Option 4: Running the Systematic Literature Review (SLR) Pipeline
+
+The entire SLR research workflow (Phases 1 to 5) has been consolidated into unified, reproducible execution interfaces with automated PRISMA validation gates:
+
+- **Launch Interactive Web UI Dashboard (Fastest & Visual):**
+  ```bash
+  python slr/pipeline_ui_server.py
+  ```
+  Open **[`http://localhost:8000`](http://localhost:8000)** in your browser to run any phase selectively or execute the complete pipeline with live progress bars, dynamic $k$ tuning, and automated gate status badges.
+
+- **Run Single-Command CLI (Batch Automation):**
+  ```bash
+  # Execute all 5 phases end-to-end with validation gates
+  python slr/run_pipeline.py --all
+
+  # Or run any individual phase on demand
+  python slr/run_pipeline.py --phase 1    # Ingestion & 2-tier deduplication
+  python slr/run_pipeline.py --phase 2    # PRISMA screening & Rayyan handshake
+  python slr/run_pipeline.py --phase 3    # NLP text mining, domain stopwords, LSA
+  python slr/run_pipeline.py --phase 4 --k 7  # 4-model benchmarking (c-TF-IDF)
+  python slr/run_pipeline.py --phase 5    # SNA network graph & live dashboard update
+  ```
+
+- **Interactive Jupyter Notebooks:**
+  Open [`slr/notebooks/MuTech_SLR_Interactive_UI.ipynb`](slr/notebooks/MuTech_SLR_Interactive_UI.ipynb) for a click-to-run `ipywidgets` dashboard, or open [`slr/notebooks/MuTech_SLR_Consolidated_Pipeline.ipynb`](slr/notebooks/MuTech_SLR_Consolidated_Pipeline.ipynb) for the full sequential narrative with 2021–2026 Scopus/IEEE citations.
+
 Test Results:
 ```
 ============================= test session starts =============================
-collected 32 items
+collected 33 items
 mvp/backend/tests/test_suite.py::test_parabolic_interpolation_symmetric PASSED             [  3%]
 mvp/backend/tests/test_suite.py::test_cents_conversion_standard_pitches PASSED             [ 12%]
 mvp/backend/tests/test_suite.py::test_refine_salience_peaks_synthetic PASSED               [ 18%]
@@ -166,12 +196,12 @@ mvp/backend/tests/test_suite.py::test_csv_injection_sanitization PASSED         
 mvp/backend/tests/test_suite.py::test_resample_nonstandard_rate_dos_protection PASSED      [ 81%]
 mvp/backend/tests/test_suite.py::test_identify_vertical_chord PASSED                       [ 93%]
 mvp/backend/tests/test_suite.py::test_job_sse_stream_events PASSED                         [100%]
-======================== 32 passed, 1 warning in 2.95s ========================
+======================== 33 passed, 1 warning in 2.95s ========================
 ```
 
 ---
 
-### Option 4: Published Online Research Dashboard (GitHub Pages)
+### Option 5: Published Online Research Dashboard (GitHub Pages)
 
 The interactive Social Network Analysis (SNA) topic cluster visualizer from the Systematic Literature Review is hosted live on GitHub Pages:
 🔗 **Live Dashboard:** [https://dalouuu.github.io/MuTech/](https://dalouuu.github.io/MuTech/)
@@ -188,6 +218,8 @@ MuTech/
 ├── .dockerignore                  # Docker build context exclusion rules
 ├── .gitignore                     # Git tracking exclusions (caches, weights, virtualenvs)
 ├── README.md                      # Executive overview, architecture & setup (this file)
+├── UPDATES_AND_HANDOVER_GUIDE.md  # 🌟 Handover guide for groupmates (what changed, why, where to edit)
+├── UPDATES_AND_HANDOVER_GUIDE.docx# Formatted Word version of the handover guide
 │
 ├── mvp/                           # ── Applied Engineering MVP (Choir Pitch Tracker) ──
 │   ├── Dockerfile                 # Backend container (non-root appuser)
@@ -225,24 +257,23 @@ MuTech/
 │   │   └── ...
 │   │
 │   └── docs/                      # Technical Documentation & Roadmaps
-│       ├── IMPLEMENTATION_CHECKLIST.md  # Detailed master checklist & developer kit
-│       ├── IMPLEMENTATION_CHECKLIST.docx# Word version with high-res architecture diagram
-│       ├── BACKEND_GUIDE.md       # Math formulas, settings, & DSP documentation
-│       ├── FRONTEND_GUIDE.md      # Canvas architecture & Web Audio synchronization
+│       ├── DEVELOPER_GUIDE.md     # Consolidated master developer & architecture guide (.md & .docx)
+│       ├── IMPLEMENTATION_CHECKLIST.md  # Detailed master checklist & developer kit (.md & .docx)
 │       ├── RESEARCH_REPORT.md     # SLR evidence, benchmark metrics, & limitations
-│       ├── DECISIONS_AND_NEXT_STEPS.md # Key architecture decisions log
-│       └── GLOSSARY.md            # MIR & choral intonation domain definitions
+│       └── EVALUATION_GUIDE.md    # Multi-F0 benchmark evaluation protocol on choir datasets
 │
 ├── slr/                           # ── Systematic Literature Review (SLR) Pipeline ──
-│   ├── README.md                  # SLR methodology, pipeline phases, and data inventory
-│   ├── guides/                    # Research Audit & Paper Update Guides
-│   │   ├── ROOT_CAUSE_AUDIT.md    # Cluster discrepancy and anomaly root cause audit
-│   │   └── SLR_PAPER_UPDATE_GUIDE.md # Systematic guide for updating survey manuscript
-│   ├── phase1_2/                  # Domain 1: Paper Collection & PRISMA Screening
-│   ├── phase3/                    # Domain 2: NLP Text Mining & TF-IDF Vectorization
-│   ├── phase4/                    # Domain 3: Machine Learning Topic Modeling (K-Means/NMF/LDA)
-│   ├── phase5/                    # Domain 4: Social Network Analysis (SNA) Graph Modeling
-│   └── phase6_manuscript/         # Domain 5: Academic Manuscript Draft & Camera-Ready Figures
+│   ├── README.md                  # Comprehensive SLR documentation & quick-start guide
+│   ├── data/                      # Single source of truth (01_raw, 02_screening)
+│   ├── outputs/                   # Canonical artifacts (prisma, representations, models, network)
+│   ├── archive/                   # Isolated historical baseline prior runs
+│   ├── manuscript/                # Academic paper drafts, figures, and authoritative tables
+│   ├── guides/                    # Guides & evidence (.md & .docx): ROOT_CAUSE_AUDIT, PIPELINE_CONFIGURATION, SLR_METHODOLOGY_REFERENCES, SLR_PAPER_UPDATE
+│   ├── notebooks/                 # MuTech_SLR_Consolidated_Pipeline.ipynb & UI widgets
+│   ├── src/                       # pipeline_engine.py (modular core functions & validation gates)
+│   ├── pipeline_ui_server.py      # Standalone FastAPI Web Dashboard (http://localhost:8000)
+│   ├── run_pipeline.py            # CLI runner for Phases 1 to 5
+│   └── requirements.txt           # SLR Python research dependencies
 │
 └── docs/                          # ── Published GitHub Pages Dashboard ──
     ├── README.md                  # GitHub Pages hosting documentation

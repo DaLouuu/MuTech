@@ -1,0 +1,13 @@
+{
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}/mvp/backend",
+    "${workspaceFolder}/slr",
+    "${workspaceFolder}/slr/src"
+  ],
+  "python.autoComplete.extraPaths": [
+    "${workspaceFolder}/mvp/backend",
+    "${workspaceFolder}/slr",
+    "${workspaceFolder}/slr/src"
+  ]
+}
+

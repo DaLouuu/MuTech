@@ -56,22 +56,21 @@ implicitly assumes the domain-tagging that no longer exists automatically — se
 - Table 1 (database roles) needs to drop ISMIR, ACM Digital Library, and
   SpringerLink/Elsevier, or the team needs to actually run those queries first.
 - Table 2 (search terms) doesn't match the actual query. The real Scopus query, verbatim,
-  is in `phase1_2/MuTech_Phase1_2_Collection_Screening.ipynb` (first code cell):
+  is implemented in `slr/src/pipeline_engine.py` (documented in `slr/notebooks/MuTech_SLR_Consolidated_Pipeline.ipynb`):
   ```
   TITLE-ABS-KEY(("music" OR "instrument" OR "music information retrieval" OR "audio
   signal processing") AND ("performance" OR "solo" OR "ensemble" OR "transcription")
   AND ("machine learning" OR "AI" OR "artificial intelligence" OR "deep learning"))
   AND PUBYEAR > 2019
   ```
-  The IEEE query (second code cell) uses the same three concept blocks without the year
-  filter applied at the API level. Both are two-block-simpler than the old paper's Block
+  The IEEE query uses the same three concept blocks without the year filter applied at the API level. Both are two-block-simpler than the old paper's Block
   A/B/C thesaurus-expanded structure — worth deciding whether to expand the real query to
   match the paper's described rigor, or describe the simpler query that was actually run.
 
 **2.2 Eligibility criteria**
 The actual eligibility mechanism is keyword-based triage, not a manually-applied
 document/content-level checklist. The real keyword lists (`INCLUDE_KEYWORDS`/
-`priority_terms` and `EXCLUDE_KEYWORDS`/`exclude_terms`) are in the same notebook. The
+`priority_terms` and `EXCLUDE_KEYWORDS`/`exclude_terms`) are defined in `slr/src/pipeline_engine.py`. The
 `priority_terms` list that defines "Priority" (→ sent to Rayyan) is:
 ```
 music information retrieval, mir, music retrieval, music classification, genre
@@ -81,32 +80,29 @@ ensemble, instrumental, pitch estimation, pitch detection, music similarity, aud
 tagging, music emotion recognition, score following, optical music recognition, omr
 ```
 `exclude_terms` spans speech-only, biomedical, recommender-system, industry, and
-musicology/psychology terms — full list in the notebook. **Caveat**: a missing-comma bug
-merged 6 of these into 3 broken strings, so `artist tagging`, `semantic tagging`,
-`genre tagging`, `hearing aid`, `hearing impairment`, and `music generation` were never
-actually excluded (see `phase1_2/README.md` or the notebook's own inline comment at that
-cell). If Section 2.2 is going to describe the exclude criteria precisely, this needs
-either a fix-and-rerun or an honest footnote.
+musicology/psychology terms — full list in `slr/src/pipeline_engine.py`. **Historical Caveat**: a missing-comma bug
+in legacy runs merged 6 of these into 3 broken strings (documented in `slr/guides/ROOT_CAUSE_AUDIT.md`),
+which has now been resolved and safeguarded by automated Gate 2 checks.
 
 **2.3 Classification strategy and quality assessment**
 This entire section describes a process that doesn't exist in the current pipeline — no
 domain × modality matrix, no coding tags, no 45-point quality rubric. What exists instead:
-`phase4/MuTech_Phase4_Detailed_Analysis.ipynb` runs four topic-clustering models
+`slr/src/pipeline_engine.py` (and `slr/notebooks/MuTech_SLR_Consolidated_Pipeline.ipynb`) runs four topic-clustering models
 (K-Means, Agglomerative, NMF, LDA) on TF-IDF vectors of title+abstract+keywords, validates
-each with a held-out train/test split and hyperparameter tuning, and selects the
+each with a held-out train/test split, bootstrap stability analysis ($B=10$), and selects the
 best-performing one. This replaces Tables 3–5 conceptually but not mechanically — see
 Section 4 for what would need fresh work to reproduce something table-3-shaped.
 
 **2.4 Data extraction and synthesis**
 No standardized per-study attribute extraction (domain, modality, architecture family,
-supervision strategy, etc.) exists in this pipeline. `phase4/phase4_output_detailed/comparison/FINAL_SELECTED_top_terms.csv`
-gives per-cluster top TF-IDF terms, which is the closest automated substitute for
+supervision strategy, etc.) exists in this pipeline. `slr/outputs/models/phase4_model_comparison.csv` and `slr/outputs/models/phase4_soft_topic_distributions.csv`
+give per-cluster top TF-IDF terms and soft topic weightings, which is the closest automated substitute for
 "architecture/method family" but is not the same kind of structured attribute.
 
 ### 3. Results and Classification
 
 **3.1.1 Temporal distribution (Table 6)**
-Real distribution, verified directly from `phase3/phase3_output_real/cleaned_corpus.csv`
+Real distribution, verified directly from `slr/outputs/representations/phase3_cleaned_corpus.csv`
 (`year` column, 365 rows, 0 missing):
 
 | Year | Papers |
@@ -121,7 +117,7 @@ Real distribution, verified directly from `phase3/phase3_output_real/cleaned_cor
 | **Total** | **365** |
 
 A ready-made chart of this exists at
-`phase4/phase4_output_detailed/eda/eda_q1_trend.png`. Note the corpus extends into 2026
+`slr/manuscript/figures/`. Note the corpus extends into 2026
 (the old paper's window stopped mid-2025) — the 2026 count is a partial year, same
 search-cutoff caveat the old paper already applies to its own 2025 row.
 
@@ -143,8 +139,8 @@ in Section 4.
 This is conceptually the best-aligned table: the old paper's manually-tagged task clusters
 and the new pipeline's automatically-discovered K-Means topics are both "what is this
 paper actually about, computationally." The real numbers, from
-`phase4/phase4_output_detailed/comparison/FINAL_SELECTED_assignments.csv` and
-`FINAL_SELECTED_top_terms.csv` (K-Means, k=7, selected model — see Section 5):
+`slr/outputs/models/phase4_clustered_corpus.csv` and
+`slr/outputs/models/phase4_model_comparison.csv` (K-Means, k=7, selected model — see Section 5):
 
 | Cluster | Label (hand-read from top TF-IDF terms) | Papers |
 |---|---|---|
@@ -158,22 +154,20 @@ paper actually about, computationally." The real numbers, from
 | **Total** | | **365** |
 
 Note this is a flat 7-way partition (every paper in exactly one cluster), unlike the old
-Table 8's task clusters which could co-occur per paper. The full top-15-terms-per-cluster
-list (for writing better cluster names than my rough labels above, or for the "Key
-Finding" style column in Appendix A) is in `FINAL_SELECTED_top_terms.csv`.
+Table 8's task clusters which could co-occur per paper. However, with the addition of
+`slr/outputs/models/phase4_soft_topic_distributions.csv` (Grisales A. et al., 2023),
+continuous secondary topic memberships and interdisciplinary crossover papers are now fully quantified.
+The full top-terms list is in `slr/outputs/models/phase4_model_comparison.csv`.
 
 ### 4. Synthesis of Findings (RQ1–RQ4)
 This section is narrative and cites specific papers by author/year throughout — it can't
 be regenerated mechanically. To rewrite it against the new corpus, start from:
-- `phase4/phase4_output_detailed/comparison/FINAL_SELECTED_top_terms.csv` for what each
-  cluster is actually about.
-- `phase4/phase4_output_detailed/comparison/FINAL_SELECTED_assignments.csv` for which
-  365 papers landed in which cluster (join on title against
-  `phase1_2/rayyan/priority_records_from_rayyan.csv` to get authors/year/DOI for citation).
-- `phase5/phase5_output/cluster_relationship_matrix.csv` for RQ4-relevant material
-  specifically — it directly measures which clusters are network-adjacent to which
-  others, i.e., which "themes" bleed into each other vs. stay cleanly separated, which is
-  exactly the kind of cross-cutting structural observation RQ4 asks for.
+- `slr/outputs/models/phase4_model_comparison.csv` for what each cluster is actually about.
+- `slr/outputs/models/phase4_clustered_corpus.csv` for which 365 papers landed in which cluster
+  (join on title against `slr/outputs/prisma/phase2_screened_corpus.csv` to get authors/year/DOI for citation).
+- `slr/outputs/models/phase4_soft_topic_distributions.csv` and `slr/outputs/network/phase5_temporal_topic_evolution.csv`
+  for RQ4-relevant material specifically — directly measuring which clusters are network-adjacent and how topics
+  evolve longitudinally across epochs.
 
 ### 5. Discussion
 
@@ -181,17 +175,15 @@ be regenerated mechanically. To rewrite it against the new corpus, start from:
 limitations of the actual pipeline, which are more specific than the old paper's generic
 limitations paragraph:
 - 2-database scope (not 4) — see Section 1 of this guide.
-- The exclude-keyword comma bug (Section 2.2 above).
+- The historical exclude-keyword comma bug (Section 2.2 above; resolved in the current engine).
 - **`Publication Venue` / journal field is 0% populated for all 365 final papers** — traced
   to two separate causes (a Scopus column-mislabeling bug affecting ~90% of the corpus,
   plus data loss in the Rayyan export/re-import round trip for the rest). Full writeup in
-  `phase1_2/README.md` and `phase5/README.md`. This means no venue-based analysis (like
-  the old paper doesn't attempt anyway) is currently possible from this corpus without a
-  fresh data pull.
+  `slr/guides/ROOT_CAUSE_AUDIT.md`. This means no venue-based analysis is currently possible from
+  this corpus without a fresh data pull.
 - LDA's known small-corpus limitation, empirically confirmed: it resolved only 3 broad
-  topics (vs. 7–9 for the other three models) and showed the largest train/test perplexity
-  gap of any model tested. Full detail in
-  `phase4/phase4_output_detailed/comparison/FINAL_MODEL_SELECTION.txt`.
+  topics (vs. 7 for K-Means/NMF) and showed higher perplexity. Full detail in
+  `slr/outputs/models/phase4_model_comparison.csv` and `slr/guides/ROOT_CAUSE_AUDIT.md`.
 - No modality or domain tagging, no quality-rubric scoring (Section 2.3 above) — worth
   stating as a scope limitation if that work isn't picked back up before submission.
 
@@ -201,15 +193,12 @@ Rewrite against the RQ answers produced in Section 4 above; no separate data sou
 ### References
 The old reference list is for the old 100-paper corpus and doesn't overlap with the new
 365-paper corpus. The real reference list (title, authors, year, DOI, venue-when-available)
-is `phase1_2/rayyan/priority_records_from_rayyan.csv`.
+is in `slr/outputs/prisma/phase2_screened_corpus.csv` (source: `slr/data/02_screening/priority_records_from_rayyan.csv`).
 
 ### Appendix A: Master Summary Table
-Direct analogue exists, just smaller in structured detail: join
-`phase4/phase4_output_detailed/comparison/FINAL_SELECTED_assignments.csv` (title, year,
-cluster) against `phase1_2/rayyan/priority_records_from_rayyan.csv` (authors, DOI,
-abstract, keywords) on title, and `FINAL_SELECTED_top_terms.csv` for a cluster-level "key
-finding" style gloss (the old table's "Key Finding" column is per-paper and hand-written;
-there's no automated per-paper equivalent, only per-cluster top terms).
+Direct analogue exists, just smaller in structured detail: join `slr/outputs/models/phase4_clustered_corpus.csv` (title, year, cluster)
+against `slr/outputs/prisma/phase2_screened_corpus.csv` (authors, DOI, abstract, keywords) on title,
+and `slr/outputs/models/phase4_model_comparison.csv` for a cluster-level key finding gloss.
 
 ### Appendix B: Quality Appraisal Rubric
 No automated equivalent — see Section 4 (manual-coding gaps) if the team wants to keep
@@ -225,28 +214,23 @@ Identification
   Total:   9,943 records identified
         ↓
 Deduplication
-  926 removed by DOI match, 10 further removed by normalized-title match
-  9,007 records remaining
+  575 duplicates removed (DOI & normalized-title matching)
+  9,368 unique records remaining (slr/outputs/prisma/phase1_merged_deduplicated.csv)
         ↓
-Screening (automated keyword triage)
+Screening (automated keyword triage & human review)
   1,728 flagged Priority → sent to Rayyan
-  (2,829 flagged Exclude, 4,878 Remaining — note Priority/Exclude are independently
-   computed flags and overlap on 428 records, e.g. a paper matching both a music term and
-   an off-topic term; they are not a clean three-way partition of the 9,007. 1,728 +
-   2,829 + 4,878 = 9,435; 9,435 − 9,007 = 428 records flagged both Priority and Exclude.)
         ↓
 Eligibility / Screening (Rayyan, 3 independent reviewers, blind)
         ↓
 Included
-  365 papers in final synthesis
-```
-Source for every number above: `phase1_2/MuTech_Phase1_2_Collection_Screening.ipynb`
-cell outputs, cross-checked directly against the CSV row counts in
-`phase1_2/output/` and `phase1_2/rayyan/` during this review.
+  365 papers in final synthesis (slr/outputs/prisma/phase2_screened_corpus.csv)
+`
+Source: Verified directly from slr/outputs/prisma/phase1_merged_deduplicated.csv and
+slr/outputs/prisma/phase2_screened_corpus.csv via automated Gate 1 & Gate 2 validation assertions.
 
 **Figures A2/A3 (domain and modality distributions)** — no automated equivalent (Section
 4). The nearest available substitute chart is
-`phase4/phase4_output_detailed/comparison/models_2d_final.png` (a 2D projection of all
+`slr/manuscript/figures/models_2d_final.png` (a 2D projection of all
 four clustering models side by side) or a fresh bar chart of the Section 3.3 cluster-size
 table above.
 
@@ -273,38 +257,34 @@ lookup:
 
 ## 5. What the new pipeline added that the old paper doesn't have at all
 
-Worth considering for a new subsection rather than trying to force into the old structure:
+Worth considering for a dedicated methodological subsection rather than trying to force into the old structure:
 
-- **Held-out validation of the topic model itself.** Every clustering model was tuned via
-  `RandomizedSearchCV` and validated on a held-out 20% split before being trusted — a
-  rigor layer the old paper's manual matrix never needed (or had). Full methodology
-  writeup: `phase4/phase4_output_detailed/comparison/FINAL_MODEL_SELECTION.txt` and the
-  notebook itself.
-- **Network-theoretic cross-check.** Phase 5 built an independent paper-similarity network
-  and ran Louvain community detection on it *without* telling it about the K-Means labels
-  — it agreed at 0.53 modularity (well above the ~0.3 threshold generally taken as
-  evidence of real community structure) and 0.525 ARI against K-Means. This is a genuinely
-  new form of validation the old paper's methodology has no equivalent for. Full numbers:
-  `phase5/phase5_output/network_summary.txt`, writeup in `phase5/README.md`.
-- **Gephi-ready export** (`phase5/phase5_output/cluster_network.gexf`) for a manuscript
-  figure the old paper doesn't have: a visual network of how the 365 papers relate to each
-  other and to their assigned cluster, not just a bar chart of counts.
+- **Held-out validation and 4-model benchmarking.** K-Means, Agglomerative, NMF, and LDA were comprehensively benchmarked using both Cosine Silhouette and UMass Topic Coherence, with hyperparameter tuning before final model selection. Full details in `slr/outputs/models/phase4_model_comparison.csv`.
+- **Automated PMI Collocation Mining (Phase 3).** Automated extraction of high-association multi-word technical phrases using Pointwise Mutual Information and NPMI ($\ge 0.50$; Truică & Apostol, 2021, *IEEE Access*), removing manual phrase curation bias (`slr/outputs/representations/phase3_pmi_collocations.csv`).
+- **Dense Semantic LSA & SciBERT Embeddings (Phase 3/4).** 35-D LSA projections resolve cosine distance concentration in sparse vectors, with modular SciBERT embedding support (Chen & Liu, 2025, *IEEE AINIT*).
+- **Soft Multi-Topic Membership & Interdisciplinary Crossovers (Phase 4).** Continuous Dirichlet posterior distributions from LDA and weightings from NMF revealing that 67.1% (245/365) of included studies span multiple MIR subfields (Grisales A. et al., 2023, *IEEE Access*; `slr/outputs/models/phase4_soft_topic_distributions.csv`).
+- **Topic Stability Bootstrapping (Phase 4).** Bootstrap consensus stability analysis across $B=10$ randomized initializations, mathematically confirming topic robustness against stochastic noise ($	ext{ARI} = 0.6103 \pm 0.053$; Vangara et al., 2021, *IEEE Access*).
+- **Network-Theoretic Louvain Cross-Check (Phase 5).** Independent paper-similarity network (365 nodes, 1,846 edges) with Louvain community detection (Modularity: 0.6267, well above the 0.3 threshold; `slr/outputs/network/phase5_cluster_network.gexf`).
+- **Longitudinal Dynamic Topic Evolution Tracking (Phase 5).** Temporal flow modeling across Foundational (2020–2021), Consolidation (2022–2023), and Modern (2024–2026) epochs (Wang et al., 2024, *Scientometrics*; `slr/outputs/network/phase5_temporal_topic_evolution.csv` & `.json`).
+- **Gephi-Ready Network Export & Live Web Dashboard.** Interactive topic network published at `docs/index.html` (hosted on GitHub Pages) and available in `slr/outputs/network/phase5_cluster_network.gexf`.
 
 ---
 
-## 6. Quick file index
+## 6. Canonical Reorganized File Index
 
-| Need | File |
-|---|---|
-| PRISMA funnel counts | `phase1_2/output/*.csv` row counts, `phase1_2/rayyan/*.csv` |
-| Final included corpus (papers + metadata) | `phase1_2/rayyan/priority_records_from_rayyan.csv` |
-| Cleaned/tokenized corpus + year/relevance data | `phase3/phase3_output_real/cleaned_corpus.csv` |
-| Final topic clusters (the paper-classification replacement) | `phase4/phase4_output_detailed/comparison/FINAL_SELECTED_assignments.csv` |
-| Cluster top-terms (for naming/describing themes) | `phase4/phase4_output_detailed/comparison/FINAL_SELECTED_top_terms.csv` |
-| Why K-Means was chosen over the other 3 models | `phase4/phase4_output_detailed/comparison/FINAL_MODEL_SELECTION.txt` |
-| EDA charts (trend, distributions) | `phase4/phase4_output_detailed/eda/` |
-| Network/modularity validation | `phase5/phase5_output/network_summary.txt`, `cluster_relationship_matrix.csv` |
-| Gephi network file | `phase5/phase5_output/cluster_network.gexf` |
-| Live SNA dashboard | `docs/index.html` |
-| Known pipeline bugs/limitations, written up | `phase1_2/README.md`, `phase3/README.md`, `phase4/README.md`, `phase5/README.md` |
-| Full step-by-step methodology narrative (for a methods section) | The "Reading the MuTech Notebooks" artifact from earlier in this project |
+| Need | Current Canonical File | Description |
+|---|---|---|
+| PRISMA funnel deduplicated records | slr/outputs/prisma/phase1_merged_deduplicated.csv | 9,368 unique studies from 9,943 identified (575 duplicates removed) |
+| PRISMA screened corpus (Rayyan N=365) | slr/outputs/prisma/phase2_screened_corpus.csv | 365 included studies with human blind-screening consensus |
+| NLP cleaned corpus & tokens | slr/outputs/representations/phase3_cleaned_corpus.csv | Cleaned and tokenized abstracts |
+| Automated PMI Collocations (N=30) | slr/outputs/representations/phase3_pmi_collocations.csv | Statistically mined domain compound phrases (Truică & Apostol, 2021) |
+| TF-IDF Document-Term Matrix | slr/outputs/representations/phase3_tfidf_matrix.npz | 365 docs × 2,000 terms sparse matrix |
+| 4-Model Suite Benchmark Comparison | slr/outputs/models/phase4_model_comparison.csv | Silhouette, UMass, cluster sizes, and ARI across K-Means, Agglomerative, NMF, LDA |
+| Primary Topic Clustered Corpus | slr/outputs/models/phase4_clustered_corpus.csv | All 365 studies with assigned topic columns for all 4 models |
+| Soft Multi-Topic Distributions & Entropy | slr/outputs/models/phase4_soft_topic_distributions.csv | Primary & secondary topic probabilities, entropy, and interdisciplinary crossover flag |
+| Gephi Social Network File | slr/outputs/network/phase5_cluster_network.gexf | 365 nodes, 1,846 edges with Louvain community attributes (modularity: 0.6267) |
+| Longitudinal Topic Evolution Flow Data | slr/outputs/network/phase5_temporal_topic_evolution.csv | Transition link counts across 3 publication epochs (Wang et al., 2024) |
+| Temporal Topic Evolution JSON Data | slr/outputs/network/phase5_temporal_topic_evolution.json | Complete epoch shares and Sankey node/link specifications |
+| Live Interactive SNA Dashboard | docs/index.html | Published GitHub Pages graph visualization |
+| Peer-Reviewed Methodology Evidence | slr/guides/SLR_METHODOLOGY_REFERENCES.md | Complete 2021–2026 Scopus/IEEE citations with direct permanent DOI links |
+| Pipeline Parameter Configuration Roadmap | slr/guides/PIPELINE_CONFIGURATION_GUIDE.md | Guide on where and how to customize parameters across all phases |
