@@ -1,0 +1,301 @@
+paper_id,title,classification,screening_decision,reasoning
+2791,Deep Learning-Based Acoustic Event Detection and Classification Using Cochleogram Images,IRRELEVANT,EXCLUDE,The title addresses general acoustic event detection rather than musical performance or music information retrieval.
+8151,Deep Learning Techniques for Pattern Recognition in EEG Audio Signal-Processing-Based Eye-Closed and Eye-Open Cases,IRRELEVANT,EXCLUDE,The title focuses on EEG physiological signal pattern recognition rather than computational music analysis.
+9168,Leveraging GANs in Deep Learning for Enhanced Ovarian Cyst Detection,IRRELEVANT,EXCLUDE,The title describes a medical imaging application for ovarian cyst detection unrelated to music information retrieval.
+5634,Acoustic Features for Identifying Suicide Risk in Crisis Hotline Callers: Machine Learning Approach,IRRELEVANT,EXCLUDE,The title involves non-musical speech audio analysis for suicide risk detection.
+8745,Transfer learning based bearing and rotor fault diagnosis of induction motor,IRRELEVANT,EXCLUDE,The title describes industrial machinery fault diagnosis outside the scope of MIR.
+7033,Orientation and triage of preschool students' interest development based on deep learning model,IRRELEVANT,EXCLUDE,The title focuses on educational triage for student interest development unrelated to music audio processing.
+6235,ChromEDA: Chromosome classification by ensemble framework based domain adaptation,IRRELEVANT,EXCLUDE,The title covers biological chromosome classification unrelated to music information retrieval.
+6396,CLASSIFICATION OF DAMAGE STATE IN CARBON FIBER REINFORCED COMPOSITES USING TRANSFER LEARNING,IRRELEVANT,EXCLUDE,The title focuses on structural damage classification in carbon fiber composites.
+6521,Bi-directional Estimation of Infant Heart and Respiration Rates Using Machine Learning Algorithms,IRRELEVANT,EXCLUDE,The title describes physiological signal monitoring for infant heart and respiration rates.
+760,Significance of Technical Indicators in the Era of Machine Learning,IRRELEVANT,EXCLUDE,The title focuses on financial trading technical indicators outside the scope of MIR.
+3516,Laser-induced breakdown spectroscopy chemometrics for ChemCam Mars in situ data analysis based on deep learning and pretrained-model-based transfer learning,IRRELEVANT,EXCLUDE,The title focuses on Mars planetary spectroscopy data analysis.
+9438,Deep Learning-based Diagnosis of Sugarcane Leaf Scald Diseases: A Cutting-Edge Approach,IRRELEVANT,EXCLUDE,The title covers agricultural plant disease diagnosis.
+6924,Developing Deep Learning Model for Abnormal Heartbeat Detection in Electrocardiography Signals,IRRELEVANT,EXCLUDE,The title describes electrocardiography signal processing for heartbeat anomaly detection.
+4229,Hate Speech Detection Using Classical Machine Learning and Transformer-Based Models,IRRELEVANT,EXCLUDE,The title focuses on NLP hate speech detection in text/speech.
+5171,Shifted windowing vision transformer-based skin cancer classification via transfer learning,IRRELEVANT,EXCLUDE,The title covers medical image classification for skin cancer.
+7365,One-dimensional residual convolutional neural network and percussion-based method for pipeline leakage and water deposit detection,IRRELEVANT,EXCLUDE,The title describes industrial pipeline leakage inspection using non-musical percussion signals.
+1717,Voice-Based Gender Detection Using Deep Learning: a Comprehensive Review,IRRELEVANT,EXCLUDE,The title involves speech-based gender detection unrelated to musical singing.
+3656,Scalable imaging through scattering media via physics-informed sparse optronic convolutional neural networks with knowledge distillation,IRRELEVANT,EXCLUDE,The title addresses optical physics imaging through scattering media.
+4267,Developing A Multi-Disease Risk Prediction Model Using Machine Learning,IRRELEVANT,EXCLUDE,The title describes medical multi-disease risk forecasting.
+39,A systematically designed open-access dataset for cross-microscope machine learning benchmarking in complex steel microstructure classification,IRRELEVANT,EXCLUDE,The title addresses steel microstructure image classification in materials science.
+2302,Deep Learning-Based for Accurate Estimation of Hypertension Risk Using Health Data,IRRELEVANT,EXCLUDE,The title covers clinical health risk estimation for hypertension.
+7703,Analysis and Evaluation of PointNet for Indoor Office Point Cloud Semantic Segmentation,IRRELEVANT,EXCLUDE,The title focuses on 3D point cloud semantic segmentation for indoor architecture.
+6433,Automated Assessment of Simulated Laparoscopic Surgical Performance using 3DCNN,IRRELEVANT,EXCLUDE,The title evaluates simulated laparoscopic surgical performance.
+5244,Leveraging Machine Learning for Song and Artist Success Prediction: A Multimodal Approach,IRRELEVANT,EXCLUDE,The title focuses on commercial market/success prediction rather than audio performance processing.
+4607,Accuracy Enhancement of Arabic Handwritten Signature Verification: A Case Study of Mobilenet-V2,IRRELEVANT,EXCLUDE,The title addresses handwritten signature verification in document processing.
+7518,Deep learning baseline correction method via multi-scale analysis and regression,IRRELEVANT,EXCLUDE,The title addresses non-musical analytical chemistry baseline correction.
+2189,MagadhiNet: A Deep CNN for Magadhi Prakrit Descendant Language Identification Using Multi-Scale MFCC Derivatives and Spectral Features,IRRELEVANT,EXCLUDE,The title addresses spoken language identification rather than musical audio.
+6033,Versatile time-window sliding machine learning techniques for stock market forecasting,IRRELEVANT,EXCLUDE,The title focuses on stock market financial forecasting.
+5673,Transformer OLTC Operation Monitoring Framework Through Acoustic Signal Processing and Convolutional Neural Networks,IRRELEVANT,EXCLUDE,The title involves acoustic signal monitoring of electrical power equipment.
+2563,A Comprehensive Survey of Bird Sound Classification Using Machine Learning and Deep Learning Approaches,IRRELEVANT,EXCLUDE,The title surveys bird bioacoustics classification.
+6991,An Introduction to the Innovative Path and Exploration of the Teaching Reform of Ethnic Vocal Music,IRRELEVANT,EXCLUDE,The title describes educational reform policy in vocal teaching without computational processing.
+4758,"Comparison of Hybrid ETS-LSTM, Transformer, and XGBoost Models for Forecasting Air Quality Based on Historical Data",IRRELEVANT,EXCLUDE,The title focuses on environmental air quality forecasting.
+1351,A deep learning approach for infrasound signal detection in snow-covered terrain,IRRELEVANT,EXCLUDE,The title addresses geophysical infrasound signal detection.
+7601,Modified Double U-Net Architecture for Medical Image Segmentation,IRRELEVANT,EXCLUDE,The title describes medical image segmentation algorithms.
+7658,1D Convolutional Neural Network for Obstructive Sleep Apnea Detection,IRRELEVANT,EXCLUDE,The title addresses medical sleep apnea detection using 1D CNNs.
+8212,Deep Learning for Instrument Detection and Assessment of Operative Skill in Surgical Videos,IRRELEVANT,EXCLUDE,The title addresses surgical instrument detection in medical videos.
+200,SSTLNetwork: a self-supervised spectral reconstruction network with hybrid attention for near-infrared spectral transfer learning,IRRELEVANT,EXCLUDE,The title focuses on chemical near-infrared spectroscopy analysis.
+8471,Thermal Change Index-Based Diabetic Foot Thermogram Image Classification Using Machine Learning Techniques,IRRELEVANT,EXCLUDE,The title describes medical thermogram image classification for diabetic foot.
+7190,Transfer Learning for Dysphagia Detection,IRRELEVANT,EXCLUDE,The title addresses clinical dysphagia detection using transfer learning.
+7526,QUIC Network Traffic Classification Using Ensemble Machine Learning Techniques,IRRELEVANT,EXCLUDE,The title focuses on network protocol traffic classification.
+5231,Multimodal Hate Speech Detection in Dravidian Languages Using Text and Audio Features,IRRELEVANT,EXCLUDE,The title addresses hate speech detection in natural speech.
+7473,A novel hybrid deep learning model for price prediction,IRRELEVANT,EXCLUDE,The title describes financial price forecasting.
+4497,Real-Time Financial Risk Modeling Using Deep Learning Techniques,IRRELEVANT,EXCLUDE,The title focuses on financial market risk modeling.
+2432,Deep Audio Classification of Capuchin Bird Calls Using STFT Spectrograms,IRRELEVANT,EXCLUDE,The title addresses bioacoustic bird call classification.
+8225,Can Deep Learning distinguish chaos from noise? Numerical experiments and general considerations,IRRELEVANT,EXCLUDE,The title addresses mathematical/physics dynamic systems analysis.
+1835,Deep Learning Based Acoustic Drone Detection,IRRELEVANT,EXCLUDE,The title covers acoustic detection of aerial drones.
+7824,Enhanced Prediction of Heart Disease Using Machine Learning and Deep Learning,IRRELEVANT,EXCLUDE,The title addresses medical prediction of heart disease.
+1674,Transfer learning-based acoustic anomaly detection for automotive actuators,IRRELEVANT,EXCLUDE,The title addresses industrial acoustic anomaly detection in automotive components.
+6841,Bee Hive Acoustic Monitoring and Processing Using Convolutional Neural Network and Machine Learning,IRRELEVANT,EXCLUDE,The title addresses bioacoustic monitoring of bee hives.
+1918,Performance Enhancement of Dolphin Sound Classification via Data Augmentation,IRRELEVANT,EXCLUDE,The title covers bioacoustic dolphin sound classification.
+229,Interoperability of machine learning classifiers across LC-MS platforms for non-targeted authentication of honey botanical origin,IRRELEVANT,EXCLUDE,The title focuses on chemical mass spectrometry of honey samples.
+6568,Bone Tumour Detection and Classification Using Deep Learning Based on Computed Tomography,IRRELEVANT,EXCLUDE,The title describes CT scan analysis for bone tumour diagnosis.
+5447,Non-Intrusive Motorcycle Engine Fault Diagnosis Using LSTM Network and Spectrogram-Based Audio Analysis,IRRELEVANT,EXCLUDE,The title focuses on engine acoustic fault diagnosis.
+5436,Convolutional Neural Network based Behavioural Analysis of English Classroom Teaching for Ecological Education,IRRELEVANT,EXCLUDE,The title describes classroom behavioral analysis for general education.
+8768,Accurate photovoltaic power prediction models based on deep convolutional neural networks and gated recurrent units,IRRELEVANT,EXCLUDE,The title focuses on solar photovoltaic power forecasting.
+5550,IoT Anomaly Detection with Sound-Based Spectral Analysis and Lightweight Model,IRRELEVANT,EXCLUDE,The title addresses non-musical IoT acoustic anomaly detection.
+3209,Comparative analysis of daily global solar radiation prediction using deep learning models inputted with stochastic variables,IRRELEVANT,EXCLUDE,The title addresses solar radiation prediction in meteorology.
+4700,Gold price forecasting using ML and DL models,IRRELEVANT,EXCLUDE,The title covers financial gold price forecasting.
+6343,Attention-based multi-views and multi-scale temporal information fusion convolutional neural network for motor imagery EEG decoding,IRRELEVANT,EXCLUDE,The title focuses on motor imagery EEG decoding unrelated to music.
+8214,Human-computer interaction based health diagnostics using ResNet34 for tongue image classification,IRRELEVANT,EXCLUDE,The title describes medical image diagnosis for tongue classification.
+1224,Hybrid deep learning for automated detection of spatiotemporal change points in InSAR time series: a case study on the Campi Flegrei volcano using a CNN–LSTM model,IRRELEVANT,EXCLUDE,The title focuses on volcanic geophysics and radar time series.
+5635,Few-Shot Object Detection in Unmanned Aerial Vehicles-Based Transmission Line Inspection: A Method Based on Transfer Learning and Attention Mechanism,IRRELEVANT,EXCLUDE,The title addresses drone inspection of electrical transmission lines.
+8971,CNN Augmented Dimensionality Reduction With Neural Network Ensembles for Low Resource Data Classification,IRRELEVANT,EXCLUDE,The title focuses on general machine learning dimensionality reduction techniques.
+8660,RNN-BOF: A Multivariate Global Recurrent Neural Network for Binary Outcome Forecasting of Inpatient Aggression,IRRELEVANT,EXCLUDE,The title describes clinical forecasting of inpatient aggression.
+2975,GLaSS-CNN: a generalized noise-robust CNN for spoken digit recognition with embedded spectrogram processing,IRRELEVANT,EXCLUDE,The title focuses on spoken digit speech recognition.
+1262,A hybrid deep learning framework for day-ahead PV forecasting using coarse-grained weather data,IRRELEVANT,EXCLUDE,The title addresses photovoltaic power forecasting.
+8431,Analysis of Cataract Surgery Instrument Identification Performance of Convolutional and Recurrent Neural Network Ensembles Leveraging BigCat,IRRELEVANT,EXCLUDE,The title describes surgical instrument identification in cataract surgery.
+1077,Physics-guided Deep Learning for the Classification of Wolf–Rayet Stars in DESI,IRRELEVANT,EXCLUDE,The title focuses on astronomical star classification in astrophysics.
+5253,"XAU/USD Price Prediction Using Deep Learning: Hyperparameter Optimization with Bayesian, Grey-Wolf and Genetic Algorithms",IRRELEVANT,EXCLUDE,The title addresses financial currency exchange price prediction.
+6976,Efficient deep learning architecture for the classification of diseased plant leaves,IRRELEVANT,EXCLUDE,The title focuses on agricultural plant leaf disease classification.
+3716,Searching for Strong Lenses from DESI Legacy Surveys with a Hybrid CNN-Transformer Architecture with Self-supervised Learning,IRRELEVANT,EXCLUDE,The title covers astronomical strong lens detection in survey data.
+644,A novel hybrid physics-data driven encoder-decoder model for wind turbine wake predictions,IRRELEVANT,EXCLUDE,The title focuses on wind turbine wake predictions in renewable energy.
+6737,xDFPAD: Explainable Tabular Deep Learning for Fingerprint Presentation Attack Detection,IRRELEVANT,EXCLUDE,The title focuses on fingerprint biometric security attack detection.
+3917,CNN-BO-LSTM: an ensemble framework for prognosis of liver cancer,IRRELEVANT,EXCLUDE,The title covers clinical prognosis of liver cancer.
+4354,Masking-Augmentation on Mel-Spectrogram and MFCC for White-crowned Sparrow Vocalization Variants Classification,IRRELEVANT,EXCLUDE,The title addresses sparrow bioacoustic vocalization classification.
+1644,A deep neural network for CrIS cloud detection and transfer to HIRAS via implicit contrastive learning,IRRELEVANT,EXCLUDE,The title focuses on meteorology cloud detection from satellite instruments.
+9311,Estimation of Direction of Signals using Wavenet in Wireless Communication Systems,IRRELEVANT,EXCLUDE,The title focuses on signal processing in wireless communication systems.
+7837,Facial Emotion Recognition and Classification Using the Convolutional Neural Network-10 (CNN-10),IRRELEVANT,EXCLUDE,The title addresses visual facial emotion recognition.
+7448,Noninvasive Human Ballistocardiography Assessment Based on Deep Learning,IRRELEVANT,EXCLUDE,The title describes medical ballistocardiography assessment.
+8266,An Audio-Visual Dataset and Deep Learning Frameworks for Crowded Scene Classification,IRRELEVANT,EXCLUDE,The title covers crowded scene classification in surveillance/environmental audio.
+7137,A Speech Dataset for the Recognition and Analysis of COVID-19 Coughs,IRRELEVANT,EXCLUDE,The title presents a speech dataset for COVID-19 cough detection.
+1298,Percussion-based method for detecting wall tie presence in masonry walls using deep learning technique,IRRELEVANT,EXCLUDE,The title describes civil engineering acoustic wall inspection.
+7488,Aurora Classification in All-Sky Images via CNN–Transformer,IRRELEVANT,EXCLUDE,The title covers atmospheric aurora classification in satellite/all-sky images.
+1402,Boosting dental image classification performance with EfficientFormer via transfer learning,IRRELEVANT,EXCLUDE,The title covers dental image classification.
+8380,A3 C-TL-GTO: Alzheimer Automatic Accurate Classification Using Transfer Learning and Artificial Gorilla Troops Optimizer,IRRELEVANT,EXCLUDE,The title addresses medical diagnosis of Alzheimer's disease.
+5722,"Predicting Stock Prices: Strategies of Ensemble Learning with Transformer, ARIMA, and Linear Regression Models",IRRELEVANT,EXCLUDE,The title focuses on stock price financial prediction.
+8649,ParalMGC: Multiple Audio Representations for Synthetic Human Speech Attribution,IRRELEVANT,EXCLUDE,The title addresses synthetic human speech attribution rather than music.
+628,Self-Supervised Learning for Annotation-Efficient Endoscopic Instrument Segmentation,IRRELEVANT,EXCLUDE,The title focuses on endoscopic surgical instrument image segmentation.
+966,Convertible bond return predictability with machine learning,IRRELEVANT,EXCLUDE,The title focuses on financial convertible bond returns.
+2191,Multi-Label Classification of Toxicity in Music Lyrics: Benchmarking Machine Learning Against Deep Learning Approaches,IRRELEVANT,EXCLUDE,The title addresses textual lyrics toxicity classification without audio processing.
+4957,Decoding Listener's Identity: Person Identification from EEG Signals Using a Lightweight Spiking Transformer,IRRELEVANT,EXCLUDE,The title focuses on person identification from EEG signals.
+8874,An interpretable deep learning approach for calibration transfer among multiple near-infrared instruments,IRRELEVANT,EXCLUDE,The title addresses analytical chemistry near-infrared instrument calibration.
+4044,Multi-Criteria Decision Support System for Predicting Financial Futures Using Ensemble of Deep Learning Algorithms with Heuristic Search Mechanisms,IRRELEVANT,EXCLUDE,The title focuses on financial futures prediction.
+8711,Magnetic Target Detection Using PointRend-Based Region-Convolutional Neural Network,IRRELEVANT,EXCLUDE,The title covers magnetic target detection.
+7779,1D Convolutional Neural Network-based Chlorophyll-a Retrieval Algorithm for Sentinel-2 MultiSpectral Instrument in Various Trophic States,IRRELEVANT,EXCLUDE,The title focuses on satellite multispectral remote sensing.
+712,Cry-P3CNN: audio signal processing based neonatal cry classification using improved reinforcement learning,IRRELEVANT,EXCLUDE,The title addresses bioacoustic neonatal cry classification.
+8725,Deep Learning Based Bipedal Segmentation in Diabetic Foot Infrared Thermography,IRRELEVANT,EXCLUDE,The title covers medical infrared thermography for diabetic foot.
+1923,CNN-transformer hybrid deep learning method for suppressing interference fringe noise,IRRELEVANT,EXCLUDE,The title focuses on optical interference fringe noise suppression.
+9064,Green Machine Learning: Analysing the Energy Efficiency of Machine Learning Models,IRRELEVANT,EXCLUDE,The title addresses general energy efficiency of machine learning models.
+4604,Machine Learning-Driven Angle of Arrival Estimation for a Moving Signal Source,IRRELEVANT,EXCLUDE,The title covers angle of arrival signal estimation for moving radar/wireless sources.
+3190,Out-of-distribution reject option method for dataset shift problem in early disease onset prediction,IRRELEVANT,EXCLUDE,The title addresses medical early disease onset prediction.
+4360,Research on Pointer-Type Scale Instrument Recognition Using Three-Stage Algorithm Framework,IRRELEVANT,EXCLUDE,The title focuses on physical gauge/dial scale reading rather than musical instruments.
+1898,Depression and Anxiety Screening for Pregnant Women and General Users Using AI Speech,IRRELEVANT,EXCLUDE,The title covers psychiatric screening using speech audio.
+926,Optimizing measurements of the rate of radon exhalation from porous media using a hybrid convolutional neural network-transformer model,IRRELEVANT,EXCLUDE,The title focuses on nuclear physics measurements of radon exhalation.
+7281,Development of a lightweight convolutional neural network-based visual model for sediment concentration prediction by incorporating the IoT concept,IRRELEVANT,EXCLUDE,The title addresses environmental sediment concentration prediction.
+2078,Spur Gear Fault Diagnosis Using Deep Learning with Wavelet Feature Attention and Spike Encoding,IRRELEVANT,EXCLUDE,The title focuses on mechanical gear fault diagnosis.
+5855,Application of deep learning for semantic segmentation in robotic prostatectomy: Comparison of convolutional neural networks and visual transformers,IRRELEVANT,EXCLUDE,The title covers surgical video segmentation in prostatectomy.
+5085,Harnessing Artificial Intelligence for Stock Market Price Forecasting,IRRELEVANT,EXCLUDE,The title focuses on stock market price forecasting.
+4278,A Systematic Review of Machine Learning-Based Infant Cry Signal Analysis,IRRELEVANT,EXCLUDE,The title surveys infant cry acoustic signal analysis.
+4950,Time Difference of Arrival Estimator Based on Generative Adversarial Networks,IRRELEVANT,EXCLUDE,The title focuses on general array time difference of arrival estimation.
+3461,Reconstruction of Well Logging Based on Adversarial Autoencoders and Transformers,IRRELEVANT,EXCLUDE,The title addresses geological well logging reconstruction.
+4118,Detection and Prediction of Bond Degradation for Piezo Impedance-Based Structural Health Monitoring (PISHM) Using Hybrid Deep Learning Model,IRRELEVANT,EXCLUDE,The title covers structural health monitoring in civil engineering.
+5134,A Deep Learning Framework for Insect Sound Classification Integrating STFT and Log Mel Spectrogram with CNN,IRRELEVANT,EXCLUDE,The title addresses bioacoustic insect sound classification.
+4952,Component Compatibility Features From Earthquake Ground Motion Recordings,IRRELEVANT,EXCLUDE,The title covers seismological earthquake ground motion analysis.
+7398,A Deep Convolutional Neural Network for Detecting Volcanic Thermal Anomalies from Satellite Images,IRRELEVANT,EXCLUDE,The title covers satellite image detection of volcanic thermal anomalies.
+2789,Research on Digital Instrument Reading Algorithm Based on Deep Learning,IRRELEVANT,EXCLUDE,The title covers digital gauge/meter instrument reading rather than musical instruments.
+5686,PhysCL: Knowledge-Aware Contrastive Learning of Physiological Signal Models for Cuff-Less Blood Pressure Estimation,IRRELEVANT,EXCLUDE,The title covers physiological blood pressure estimation.
+1373,Deep convolutional neural network for early detection of diabetic foot in plantar thermogram images: a comparative analysis of machine learning approaches,IRRELEVANT,EXCLUDE,The title covers medical thermogram image diagnosis for diabetic foot.
+2035,Infant Cry Sound Analysis and Classification with the Help of Machine Learning to Detect Early in Infancy,IRRELEVANT,EXCLUDE,The title addresses bioacoustic infant cry classification.
+9127,Fusion of MFCC Features and CNN Architectures for Multi-Dataset Speech Emotion Recognition,IRRELEVANT,EXCLUDE,The title addresses speech emotion recognition in non-singing vocal audio.
+8258,Detecting glaucoma from multi-modal data using probabilistic deep learning,IRRELEVANT,EXCLUDE,The title covers medical glaucoma diagnosis.
+8300,Development and Validation of a Model for Laparoscopic Colorectal Surgical Instrument Recognition Using Convolutional Neural Network-Based Instance Segmentation and Videos of Laparoscopic Procedures,IRRELEVANT,EXCLUDE,The title covers surgical instrument recognition in laparoscopic video.
+3685,Advancing real-time Viral strains identification and microbiological diagnostics with YOLOv8 and Machine learning,IRRELEVANT,EXCLUDE,The title covers microbiological diagnostics and viral strain identification.
+6005,Multiplex Detection of Foodborne Pathogens using 3D Nanostructure Swab and Deep Learning-Based Classification of Raman Spectra,IRRELEVANT,EXCLUDE,The title covers detection of foodborne pathogens using Raman spectra.
+8628,Deep Learning Based Map Code Recognition Method,IRRELEVANT,EXCLUDE,The title covers map code OCR and computer vision.
+8251,Deep learning and statistical methods for short- and long-term solar irradiance forecasting for Islamabad,IRRELEVANT,EXCLUDE,The title focuses on solar irradiance environmental forecasting.
+6981,Automated spectral transfer learning strategy for semi-supervised regression on Chlorophyll-a retrievals with Sentinel-2 imagery,IRRELEVANT,EXCLUDE,The title addresses satellite remote sensing of chlorophyll levels.
+9088,Impact Analysis of Evaluation Task Setting on a Public Dataset for Rolling Bearing Diagnostics Using Deep Learning,IRRELEVANT,EXCLUDE,The title covers industrial rolling bearing diagnostic testing.
+8642,Classification of Forest Point Cloud Considering Relative Elevation and Change of Curvature Using RandLA-Net,IRRELEVANT,EXCLUDE,The title focuses on forest lidar point cloud classification.
+5139,Emotional Analysis and Interpretation of Music Conducting Works Based on Artificial Intelligence,IRRELEVANT,EXCLUDE,The title describes a computational audio analysis model applied to musical conducting and emotional expression.
+9076,SHAP-LM: Optimized Music Genre Classification via SHAP-Guided Feature Selection and Lightweight Modeling,IRRELEVANT,EXCLUDE,The title addresses automatic music genre classification using machine learning on musical audio.
+9390,A Bimodal Music Genre Classification Model Based on Convolutional Attention Mechanisms,IRRELEVANT,EXCLUDE,The title proposes a bimodal model for the MIR task of music genre classification.
+1612,Beyond Global and Local: A Stacked Ensemble Approach to Symbolic Music Emotion Recognition,IRRELEVANT,EXCLUDE,"The title covers music emotion recognition, a core MIR task."
+8332,AI System Design for Robotic Hand to Play the Piano,IRRELEVANT,EXCLUDE,The title addresses computational robotic performance analysis for piano playing.
+7667,Music Emotion Recognition using Convolutional Neural Networks for Regional Languages,IRRELEVANT,EXCLUDE,The title addresses music emotion recognition across vocal and language domains.
+3941,Classification of Music Genres using Multimodal Deep Learning Technique,IRRELEVANT,EXCLUDE,The title focuses on multimodal deep learning for music genre classification.
+4906,"Cross-Level Feature Fusion for Music Emotion Recognition: Integrating Mel-Spectrogram, High-Level Musical Descriptors and Symbolic MIDI Data with Attention Mechanisms",IRRELEVANT,EXCLUDE,The title explicitly details cross-level feature fusion for music emotion recognition using mel-spectrogram audio features.
+6931,Music Emotion Classification Algorithm Based on Multimodal Deep Learning,IRRELEVANT,EXCLUDE,The title covers music emotion classification using deep learning.
+1789,From Time Domain to Frequency Domain: A Music Deepfake Detection Model Based on Multi-Branch Convolutional Neural Network,IRRELEVANT,EXCLUDE,The title addresses computational music deepfake audio detection.
+5440,Music Genre Classification using Artificial Neural Network and Spectral Feature Analysis,IRRELEVANT,EXCLUDE,The title covers music genre classification using spectral audio features.
+6805,Instrument Emotion Recognition from Polyphonic Instrumental Music using MFCC and CENS Features with Deep Neural Networks,IRRELEVANT,EXCLUDE,The title directly evaluates emotion recognition from polyphonic instrumental music audio features.
+5382,Classification of Music Genres based on Machine Learning SVM and CNN,IRRELEVANT,EXCLUDE,The title describes machine learning models applied to music genre classification.
+8412,Optimized deep learning for genre classification via improved moth flame algorithm,IRRELEVANT,EXCLUDE,The title addresses deep learning optimization for music genre classification.
+2541,A Comparative Analysis of Music Genre Classification via Tree-based Ensemble Learning Algorithms,IRRELEVANT,EXCLUDE,The title compares ensemble algorithms for automatic music genre classification.
+5487,Hybrid CNN and RNN Variant Model for Indian Music Genre Classification,IRRELEVANT,EXCLUDE,The title addresses Indian music genre classification using deep neural networks.
+4281,Hierarchical BiLSTM Encoding for Vocal-Driven Cover Song Detection,IRRELEVANT,EXCLUDE,"The title explicitly details vocal-driven cover song detection, a core singing MIR task."
+8996,Automatic Live Music Song Identification Using Multi-level Deep Sequence Similarity Learning,IRRELEVANT,EXCLUDE,The title focuses on automatic live music song identification.
+5305,Classifying Music Genre and Recommending songs using various ML Algorithms,IRRELEVANT,EXCLUDE,The title addresses music genre classification and recommendation.
+6733,Exploring Empirical Mode Decomposition for Music Genre Classification Using Deep Learning,IRRELEVANT,EXCLUDE,The title addresses music genre classification using empirical mode decomposition and deep learning.
+1505,Decoding Cultural Music Classification with Machine Learning and Segment Length Analysis,IRRELEVANT,EXCLUDE,The title covers cultural music audio classification using segment length analysis.
+8804,AMBIGUITY MODELLING WITH LABEL DISTRIBUTION LEARNING FOR MUSIC CLASSIFICATION,IRRELEVANT,EXCLUDE,The title directly focuses on label distribution learning for music classification.
+7639,Machine Learning Approaches and Analysis for Bangla Music Genre Classification,IRRELEVANT,EXCLUDE,The title addresses Bangla music genre classification using machine learning.
+4682,Segment Transformer: AI-Generated Music Detection via Music Structural Analysis,IRRELEVANT,EXCLUDE,The title directly targets AI-generated music detection using structural analysis.
+2706,Mu-Mixer: A Hierarchical MLP-Based Framework for Cover Song Identification,IRRELEVANT,EXCLUDE,The title presents a novel framework for cover song identification.
+7377,An Empirical Study on the Effectiveness of Feature Selection and Ensemble Learning Techniques for Music Genre Classification,IRRELEVANT,EXCLUDE,The title evaluates feature selection for music genre classification.
+4123,Music Genre Classification Using Deep Neural Network with Feature Selection and Optimization via Evolutionary Algorithm,IRRELEVANT,EXCLUDE,The title covers music genre classification with deep neural networks.
+6818,AN EXPERIMENTAL COMPARISON OF MULTI-VIEW SELF-SUPERVISED METHODS FOR MUSIC TAGGING,IRRELEVANT,EXCLUDE,The title compares self-supervised methods for automatic music tagging.
+7308,Comparison and analysis of accuracy of traditional random forest machine learning model and XGBoost model on music emotion classification dataset,IRRELEVANT,EXCLUDE,The title evaluates machine learning models on a music emotion classification dataset.
+9124,A Short Survey and Comparison of CNN-Based Music Genre Classification Using Multiple Spectral Features,IRRELEVANT,EXCLUDE,The title surveys CNN-based music genre classification methods.
+3586,Deep Learning-Based Analysis of Emotional Expression and Performance Characteristics in Vocal Music Teaching,IRRELEVANT,EXCLUDE,The title applies deep learning to analyze emotional expression in vocal singing performance.
+4009,Predicting song genre with deep learning,IRRELEVANT,EXCLUDE,The title directly focuses on song genre prediction using deep learning.
+6858,Music Genre Classification Using Long Short-Term Memory with Gated Recurrent Unit,IRRELEVANT,EXCLUDE,The title covers music genre classification using recurrent neural networks.
+9077,Melspectrogram Based Music Genre Classification System Using Vision Transformer,IRRELEVANT,EXCLUDE,The title covers music genre classification using mel-spectrograms and Vision Transformers.
+7339,Automatic music genre classification using deep learning,IRRELEVANT,EXCLUDE,The title covers automatic music genre classification.
+6725,Automatic Song Genre Classification in Bengali Music: A Comparative Study of Machine Learning and Deep Learning Approaches,IRRELEVANT,EXCLUDE,The title covers automatic song genre classification in Bengali music.
+70,A deep learning framework for emotion recognition in music using multimodal data fusion,IRRELEVANT,EXCLUDE,The title explicitly details emotion recognition in music using multimodal data fusion.
+4885,Interpretable Deep Learning for Music Genre Classification Using Spectrogram Analysis,IRRELEVANT,EXCLUDE,The title focuses on interpretable music genre classification using spectrograms.
+4803,Classification of Iranian classical music using a combination of simple networks,IRRELEVANT,EXCLUDE,The title covers automatic classification of Iranian classical music.
+8292,Music emotion recognition based on segment-level two-stage learning,IRRELEVANT,EXCLUDE,The title directly focuses on music emotion recognition.
+8469,Sensing Control Parameters of Flute from Microphone Sound Based on Machine Learning from Robotic Performer,IRRELEVANT,EXCLUDE,The title senses acoustic flute performance control parameters from audio.
+7604,Modularized composite attention network for continuous music emotion recognition,IRRELEVANT,EXCLUDE,The title presents a network for continuous music emotion recognition.
+6526,A Chaotic Gradient-based Optimization with Support Vector Machine for Chinese Folk Music Classification,IRRELEVANT,EXCLUDE,The title covers Chinese folk music classification.
+827,Joint spectro-temporal and perceptual feature learning using a dual-track attention network for music genre classification,IRRELEVANT,EXCLUDE,The title addresses joint spectro-temporal learning for music genre classification.
+2622,Let the Model Learn to Feel: Mode-Guided Tonality Injection for Symbolic Music Emotion Recognition,IRRELEVANT,EXCLUDE,The title addresses symbolic music emotion recognition and tonality.
+7969,A Comparative Performance Evaluation of Machine Learning Approaches for Spectrogram-based Music Genre Classification,IRRELEVANT,EXCLUDE,The title evaluates machine learning on spectrogram-based music genre classification.
+3214,Music genre classification with parallel convolutional neural networks and capuchin search algorithm,IRRELEVANT,EXCLUDE,The title addresses music genre classification with parallel CNNs.
+4701,Deep Transfer Learning for Indian Classical Music Genre Classification,IRRELEVANT,EXCLUDE,The title covers Indian classical music genre classification using transfer learning.
+6348,Music Emotion Recognition Using Ensemble Learning,IRRELEVANT,EXCLUDE,The title focuses on music emotion recognition using ensemble learning.
+4612,Towards Explainable Music Emotion Recognition for Guitar Improvisations,IRRELEVANT,EXCLUDE,The title directly addresses explainable music emotion recognition for guitar improvisations.
+7189,Exploring CNN-Based Architectures for Vietnamese Traditional Music Genre Classification,IRRELEVANT,EXCLUDE,The title addresses Vietnamese traditional music genre classification.
+5101,Content-Based Hybrid Deep Learning Model for Classical Music Recommendation,IRRELEVANT,EXCLUDE,The title addresses content-based classical music recommendation from audio/features.
+9475,Oktoechos Classification and Generation of Liturgical Music using Deep Learning Frameworks,IRRELEVANT,EXCLUDE,The title covers Oktoechos classification and liturgical music analysis.
+7838,Music Genre Classification Using LSTM and CNN,IRRELEVANT,EXCLUDE,The title covers music genre classification using LSTM and CNN architectures.
+4992,Optimizing Musical Genre Classification Using Genetic Algorithms,IRRELEVANT,EXCLUDE,The title addresses musical genre classification optimization.
+6525,Biomechanical and machine learning approaches to automating the identification of musical styles and emotions through human motion analysis,IRRELEVANT,EXCLUDE,The title addresses identification of musical styles and emotions in performance.
+81,Research on music emotion recognition and classification model based on deep learning,IRRELEVANT,EXCLUDE,The title directly focuses on music emotion recognition and classification.
+7766,Impact of Machine Learning in Music Genre Classification using CNN,IRRELEVANT,EXCLUDE,The title addresses music genre classification using convolutional neural networks.
+9437,Music Genre Classification using Artificial Neural Networks,IRRELEVANT,EXCLUDE,The title covers music genre classification using artificial neural networks.
+374,Normative Evaluation of Finger Action Posture in Piano Performance Based on Deep Learning,IRRELEVANT,EXCLUDE,The title focuses on evaluating finger posture in piano performance.
+2500,Poems as Musical Instruments: an AI Music Performance Interface Based on the Concepts of Chinese Qin Songs,IRRELEVANT,EXCLUDE,The title presents an AI music performance interface based on Chinese Qin songs.
+7722,Enhancing Gesture Recognition for Musical Conducting: A Study on Diverse Data Classification and Stacked Neural Network Architectures,IRRELEVANT,EXCLUDE,The title focuses on gesture recognition for musical conducting.
+7158,Unsupervised Harmonic Parameter Estimation Using Differentiable DSP and Spectral Optimal Transport,IRRELEVANT,EXCLUDE,The title addresses harmonic parameter estimation for musical audio.
+4138,Arabic Music Classification Using Machine Learning Algorithms with Combined Robust Features,IRRELEVANT,EXCLUDE,The title covers Arabic music classification using machine learning.
+5609,Deepfake Detection of Singing Voices With Whisper Encodings,IRRELEVANT,EXCLUDE,The title explicitly details deepfake detection for singing voices.
+9163,LC-Protonets: Multi-Label Few-Shot Learning for World Music Audio Tagging,IRRELEVANT,EXCLUDE,The title directly addresses world music audio tagging using few-shot learning.
+2262,Phase-Aware Deep Learning with Complex-Valued CNNs for Audio Signal Applications,IRRELEVANT,EXCLUDE,The title addresses general audio processing architectures that may be applicable to music audio processing.
+4424,Direction-of-Arrival Estimation Meets Machine Learning: Bridging Model-Based Signal Processing and Data-Driven Inference,IRRELEVANT,EXCLUDE,The title covers general audio direction-of-arrival signal processing which may be relevant to spatial MIR.
+4843,Audio Tagging – Deep Learning Approach,IRRELEVANT,EXCLUDE,The title addresses audio tagging which strongly overlaps with music auto-tagging.
+2326,Empirical Comparison of Feature-Based and Neural Frameworks for Multilingual Emotion Detection,IRRELEVANT,EXCLUDE,The title involves emotion detection across audio/text features that could include music audio.
+2393,Multimodal Audio-Text Transformer for Language-Based Audio Retrieval,IRRELEVANT,EXCLUDE,The title describes language-based audio retrieval which is highly applicable to music audio retrieval.
+2881,Multi-Scale Self-Supervised Learning for Efficient Audio Deepfake Detection,IRRELEVANT,EXCLUDE,The title covers audio deepfake detection which applies to music deepfake verification.
+1969,Resilient Unsupervised Deep Learning for Data Denoising via Noise-to-Semiclean Training,IRRELEVANT,EXCLUDE,The title covers audio data denoising techniques applicable to music signals.
+6357,Echo Cancellation Based on Improved Wave-U-Net,IRRELEVANT,EXCLUDE,The title describes neural echo cancellation applicable to musical audio processing.
+5188,Detecting Deepfake Audio Using Spectrogram-Based Machine Learning Approaches,IRRELEVANT,EXCLUDE,The title describes general deepfake audio detection applicable to music audio.
+1739,FEEL: AfNIRS–EEG Emotion Dataset and Benchmark Library,IRRELEVANT,EXCLUDE,The title presents a physiological emotion dataset that may include music emotion benchmarks.
+9498,Data generation with device-modeling using Treble’s hybrid cloud-based system,IRRELEVANT,EXCLUDE,The title describes acoustic device modeling and data generation that could apply to audio MIR.
+1995,Neural Decoding of Music Effects on Mental Fatigue States,IRRELEVANT,EXCLUDE,The title describes neuro-decoding during music exposure which may correlate with music cognitive processing.
+9290,Performing with the inclusive machine: Roadmap for the design of AI collaborative musical instrument,IRRELEVANT,EXCLUDE,The title discusses AI collaborative musical instrument design.
+9050,ARTMV: A Cross-Modal Art Music Video Dataset for Proprioceptive Valence Perception,IRRELEVANT,EXCLUDE,The title introduces a music video dataset for valence perception that may contain audio MIR features.
+9149,A Two-Stage U-Net for High-Fidelity Denoising of Historical Recordings,IRRELEVANT,EXCLUDE,The title covers audio denoising for historical recordings which applies directly to historical music audio.
+7498,Deep learning’s shallow gains: a comparative evaluation of algorithms for automatic music generation,IRRELEVANT,EXCLUDE,The title evaluates deep learning algorithms for automatic music generation.
+7449,An End-to-End Musical Instrument System That Translates Electromyogram Biosignals to Synthesized Sound,IRRELEVANT,EXCLUDE,The title describes a musical instrument biosignal system for synthesized sound.
+7186,FusionNet: A Multi-Modal Deep Learning Framework for Emotion Recognition and Mental Health Assessment,IRRELEVANT,EXCLUDE,The title covers multimodal emotion recognition that could encompass music audio.
+1308,Deep Learning for Direction of Arrival Estimation: A Review of Hybrid Model-Data Fusion,IRRELEVANT,EXCLUDE,The title surveys direction of arrival estimation which is relevant to multichannel MIR array processing.
+4739,CombinedNet: A Hybrid Model for Deepfake Audio Detection Using Deep Learning Techniques,IRRELEVANT,EXCLUDE,The title covers deepfake audio detection which applies to music audio deepfakes.
+4199,Robust Audio Representation Learning with Differential Privacy via Self-Supervised Contrastive Pre-Training,IRRELEVANT,EXCLUDE,The title addresses self-supervised audio representation learning relevant to MIR.
+3746,Single-microphone deep envelope separation based auditory attention decoding for competing speech and music,IRRELEVANT,EXCLUDE,The title involves audio envelope separation for speech and music signals.
+956,Dual-stream spatiotemporal graph convolutional networks for EEG-based human emotion recognition,IRRELEVANT,EXCLUDE,The title covers EEG emotion recognition which may include music-induced emotional decoding.
+7617,Contrastive Self-Supervised Learning for Automated Multi-Modal Dance Performance Assessment,IRRELEVANT,EXCLUDE,The title covers dance performance assessment which may incorporate music audio synchronization.
+2878,ACReNet: A Knowledge-Enhanced Neural Framework for High-Precision Audio Reconstruction from Basilar-Membrane Motion,IRRELEVANT,EXCLUDE,The title covers neural audio reconstruction from basilar-membrane motion relevant to auditory/MIR models.
+6120,Performance Analysis of Deep Learning Model-Compression Techniques for Audio Classification on Edge Devices,IRRELEVANT,EXCLUDE,The title addresses audio classification model compression applicable to edge MIR.
+4035,Transformer-Based Model for Auditory EEG Decoding,IRRELEVANT,EXCLUDE,The title addresses auditory EEG decoding which may encompass musical auditory processing.
+6557,A Method of Constructing Ensemble Classifiers for Recognizing Audio Data of Various Nature,IRRELEVANT,EXCLUDE,The title describes recognizing audio data of various nature which may include music audio.
+8688,Real-Time Low Power Audio Distortion Circuit Modeling: a TinyML Deep Learning Approach,IRRELEVANT,EXCLUDE,The title covers audio distortion circuit modeling relevant to musical audio effects.
+8694,Malaria Detection from Blood Cell Images Using Convolutional Neural Network Model,IRRELEVANT,EXCLUDE,
+9441,The Sophtar: a networkable feedback string instrument with embedded machine learning,RELEVANT,RETAIN,The title focuses on an embedded machine learning string instrument relevant to instrumental music performance.
+3021,Motiv: A Dataset of Latent Space Representations of Musical Phrase Motions,RELEVANT,RETAIN,The title explicitly introduces a dataset of latent space representations for analyzing musical performance phrase motions.
+8477,Multimodal image and audio music transcription,RELEVANT,RETAIN,The title explicitly addresses automatic music transcription using audio data.
+7908,"The ACCompanion: Combining Reactivity, Robustness, and Musical Expressivity in an Automatic Piano Accompanist",RELEVANT,RETAIN,The title presents an automatic accompanist system for interactive piano performance.
+8722,Study on the Application of Improved Audio Recognition Technology Based on Deep Learning in Vocal Music Teaching,RELEVANT,RETAIN,The title applies audio recognition technology directly to vocal music performance and teaching.
+6649,An investigation of CNN-LSTM music recognition algorithm in ethnic vocal technique singing,RELEVANT,RETAIN,The title investigates neural music recognition algorithms applied to ethnic vocal singing techniques.
+6753,Piano Performance Evaluation System Based on Neural Network and Its Application in Piano Teaching,RELEVANT,RETAIN,The title explicitly proposes a neural network system for evaluating instrumental piano performance.
+8530,Balancing bias and performance in polyphonic piano transcription systems,RELEVANT,RETAIN,The title evaluates performance in polyphonic piano automatic transcription systems.
+7945,Tackling the Cocktail Fork Problem for Separation and Transcription of Real-World Soundtracks,RELEVANT,RETAIN,The title addresses soundtrack audio source separation and transcription.
+3589,Deep Learning-Based Assessment and Optimization of Music Performance Ability,RELEVANT,RETAIN,The title focuses on deep learning assessment of musical performance ability.
+6282,Efficient music analysis mechanism based on AI and IoT data mining,RELEVANT,RETAIN,The title describes computational AI music analysis mechanisms.
+8549,Bi-Directional Long Short-Term Memory Neural Networks for Music Composition,RELEVANT,RETAIN,The title describes neural network architectures applied to music composition.
+2913,Adaptive Singing Voice Enhancement for Live Stages,RELEVANT,RETAIN,The title explicitly focuses on adaptive singing voice enhancement for live vocal performances.
+8749,Construction and Optimization of Artificial Intelligence-Assisted Interactive College Music Performance Teaching System,RELEVANT,RETAIN,The title involves AI-assisted evaluation systems for interactive college music performance.
+7422,Application of Deep Learning in Vocal Music Teaching,RELEVANT,RETAIN,The title applies deep learning methods to vocal music performance teaching.
+1673,Embodied algorithms in vocal performance: Kinesthesis 2.0 and the transformation of player–instrument–algorithm assemblages,RELEVANT,RETAIN,The title investigates algorithmic processing in vocal performance.
+7464,Survey of Research on Automatic Music Annotation and Classification Methods,RELEVANT,RETAIN,The title surveys automatic music annotation and classification methods in MIR.
+6743,PhonHuBERT: A Phoneme Transcription Tool for Song Datasets,RELEVANT,RETAIN,The title explicitly details phoneme transcription for vocal song datasets.
+8952,Real-World Music Plagiarism Detection with Music Segment Transcription System,RELEVANT,RETAIN,The title combines music segment transcription with music plagiarism detection.
+3372,Explainable Instrument Classification: From MFCC Mean-Vector Models to CNNs on MFCC and Mel-Spectrograms with t-SNE and Grad-CAM Insights,RELEVANT,RETAIN,The title explicitly covers musical instrument classification using audio spectrogram features.
+8614,Acoustics-specific Piano Velocity Estimation,RELEVANT,RETAIN,The title directly focuses on acoustic piano performance velocity estimation.
+7645,Ensemble Machine Learning Models for Root Note Detection in Irish Instrumental Dance Music,RELEVANT,RETAIN,The title addresses root note detection in instrumental traditional music.
+6854,Deep Semantic Feature Extraction to Overcome Overlapping Frequencies for Instrument Recognition in Indonesian Traditional Music Orchestras,RELEVANT,RETAIN,The title addresses instrument recognition in polyphonic traditional orchestral music audio.
+8517,Analysis of Piano Performance Characteristics by Deep Learning and Artificial Intelligence and Its Application in Piano Teaching,RELEVANT,RETAIN,The title applies deep learning to analyze piano performance characteristics.
+4603,The IEEE-IS2 2025 Music Packet Loss Concealment Challenge,RELEVANT,RETAIN,The title describes a challenge for music audio packet loss concealment.
+3419,The Polyphonic Audio to Roman Corpus,RELEVANT,RETAIN,The title introduces a corpus mapping polyphonic music audio to harmonic analysis.
+3199,Dense dynamic convolutional network for Bel canto vocal technique assessment,RELEVANT,RETAIN,The title focuses on neural assessment of Bel canto singing vocal techniques.
+7182,Evaluation of Intelligent Tutoring System in Sight-Singing and Ear Training Instruction,RELEVANT,RETAIN,The title evaluates an intelligent tutoring system for sight-singing performance.
+1013,HOMAYON: A hybrid fusion transformer for microtonal music auto-tagging using melody-aware timbre representations,RELEVANT,RETAIN,The title describes a transformer for microtonal music auto-tagging.
+6420,Deep Learning-Based Music Genre Classification using Convolutional Neural Network,RELEVANT,RETAIN,The title covers music genre classification with convolutional neural networks.
+5337,Introducing EG-IPT and ipt~: a novel electric guitar dataset and a new Max/MSP object for real-time classification of instrumental playing techniques,RELEVANT,RETAIN,The title introduces an electric guitar dataset for instrumental playing technique classification.
+4600,A Novel Voice-Processing Method Leveraging Polyphonic Audio for Instrument Recognition Using Machine Learning,RELEVANT,RETAIN,The title presents a method leveraging polyphonic audio for musical instrument recognition.
+3316,Machine learning-based efficient audio production separation method,RELEVANT,RETAIN,The title describes machine learning methods for audio production source separation.
+9479,SYMBOLIC MUSIC REPRESENTATIONS FOR CLASSIFICATION TASKS: A SYSTEMATIC EVALUATION,RELEVANT,RETAIN,The title evaluates symbolic music representations for classification tasks.
+3621,A Deep-Learning Framework with Multi-Feature Fusion and Attention Mechanism for Classification of Chinese Traditional Instruments,RELEVANT,RETAIN,The title explicitly focuses on classification of traditional musical instruments.
+8673,A Multimodal Strategy for Singing Language Identification,RELEVANT,RETAIN,The title directly addresses singing voice language identification.
+7644,Hindustani raga and singer classification using 2D and 3D pose estimation from video recordings,RELEVANT,RETAIN,The title addresses Hindustani raga and singer performance classification.
+8654,An Overview of Automatic Piano Performance Assessment within the Music Education Context,RELEVANT,RETAIN,The title overviews automatic piano performance assessment systems.
+8396,Construction of Intelligent Recognition and Learning Education Platform of National Music Genre Under Deep Learning,RELEVANT,RETAIN,The title covers intelligent recognition of national music genres under deep learning.
+8832,The Application of Minority Music Style Recognition Based on Deep Convolution Loop Neural Network,RELEVANT,RETAIN,The title applies neural networks to minority music style recognition.
+6030,MDX-Mixer: Music Demixing by Leveraging Source Signals Separated by Existing Demixing Models,RELEVANT,RETAIN,The title proposes a source separation model for music demixing.
+8704,Educational Evaluation of Piano Performance by the Deep Learning Neural Network Model,RELEVANT,RETAIN,The title evaluates piano performance using deep neural network models.
+675,Beyond output metrics: reframing AI-assisted vocal pedagogy through human learning and educational value,RELEVANT,RETAIN,The title addresses AI-assisted vocal pedagogy for singing performance.
+4435,The Influence of Denoising Pre-processing on the Performance of Kulkul Sound Classification Using Transformers,RELEVANT,RETAIN,"The title addresses sound classification of Kulkul, a traditional percussion instrument."
+635,The effects of AI second opinions on collaborative confidence and decision-making: evidence from a controlled study of postgraduate vocal accompanists,RELEVANT,RETAIN,The title investigates AI collaboration with postgraduate vocal accompanists in musical performance.
+5033,Enhanced piano audio feature recognition: a novel MFCC-based method with F-HRSF and convolutional neural network,RELEVANT,RETAIN,The title explicitly details audio feature recognition for piano performance audio.
+4263,Predicting Music Origin with Deep Learning,RELEVANT,RETAIN,The title focuses on predicting music origin using deep learning.
+7643,Research on the Application of Voice Recognition Algorithm Based on Neural Network Model in Piano Teaching,RELEVANT,RETAIN,The title applies voice and audio recognition algorithms to piano performance teaching.
+5749,Digital Technology in Cultural Heritage: Construction and Evaluation Methods of AI-Based Ethnic Music Dataset,RELEVANT,RETAIN,The title covers AI-based ethnic music dataset construction and evaluation.
+5423,LLaQo: Towards a Query-Based Coach in Expressive Music Performance Assessment,RELEVANT,RETAIN,The title directly focuses on expressive music performance assessment.
+9351,Low-Resource Rhythm Learning of South Asian Beat Structures: Machine Learning Approaches to Nattuvangam,RELEVANT,RETAIN,The title addresses rhythm learning and beat structures for South Asian musical performance.
+2176,Personalized Vocal Music Instruction Through a Deep Learning Approach in Web-Based Learning Systems,RELEVANT,RETAIN,The title applies deep learning to personalized vocal music instruction.
+7177,Safeguarding Music Artists Through Machine Learning Based Singer Classification,RELEVANT,RETAIN,The title directly focuses on machine learning based singer classification.
+8802,DEEP PERFORMER: SCORE-TO-AUDIO MUSIC PERFORMANCE SYNTHESIS,RELEVANT,RETAIN,The title addresses score-to-audio music performance synthesis.
+3360,ResNet50-Driven Quality Inspection for Recorder Musical Instrument,RELEVANT,RETAIN,The title addresses quality inspection and classification of recorder musical instruments.
+8758,A Deep Learning-Enabled Composition System Based on Piano Score Recognition,RELEVANT,RETAIN,The title focuses on piano score recognition and composition systems.
+5483,Research on Action Recognition and Feedback System in Piano Teaching Based on Deep Learning,RELEVANT,RETAIN,The title applies action recognition to piano performance teaching.
+8929,Music Sheet Classification using Squeeze-and-Excitation ResNet50 Network,RELEVANT,RETAIN,The title focuses on music sheet classification using deep neural networks.
+8374,Audio recognition of Chinese traditional instruments based on machine learning,RELEVANT,RETAIN,The title directly addresses audio recognition of traditional musical instruments.
+4684,A Comparative Study of Statistical Features and Deep Learning for Orchestral Texture Classification,RELEVANT,RETAIN,The title directly addresses orchestral texture classification in music audio.
+6007,A review on AI-enabled techniques for evaluating musician's performance,RELEVANT,RETAIN,The title overviews AI techniques for evaluating musician performance.
+902,Evaluating pre-trained audio embeddings for the classification of traditional Portuguese musical instruments,RELEVANT,RETAIN,The title evaluates audio embeddings for traditional musical instrument classification.
+6347,A Case Study of AI Application in Singing Research,RELEVANT,RETAIN,The title explicitly applies AI methods to singing performance research.
+4595,Convolutional Neural Network-Based Transfer Learning for Indonesian Wind and String Instrument Image Classification,UNCERTAIN,RETAIN,The title involves musical instrument classification although it suggests image-based modal input.
+4548,Research on audio signal feature recognition and classification based on machine learning,UNCERTAIN,RETAIN,The title describes general audio feature recognition that could plausibly include music signals.
+4610,Poster - A Preliminary Music Data Collector for Networked Music Performance,UNCERTAIN,RETAIN,The title involves networked music performance data collection that could support MIR tasks.
+3251,Innovation of Music Teaching Methods in Universities Based on Fuzzy Decision Support Systems and Deep Learning,UNCERTAIN,RETAIN,The title mentions deep learning in music teaching and may contain audio processing components.
+6700,From Vision to Sound: The Application of ViT-LSTM in Music Sequence,UNCERTAIN,RETAIN,The title describes sequential music processing that may involve audio models.
+7809,Building Blocks for a Complex-Valued Transformer Architecture,UNCERTAIN,RETAIN,The title presents neural architectures relevant to complex signal and audio processing.
+3151,Visual language transformer framework for multimodal dance performance evaluation and progression monitoring,UNCERTAIN,RETAIN,The title describes multimodal performance evaluation which may incorporate music audio features.
+1973,Deployment of Quantized Deep Noise Suppression on Real-Time Edge Platforms,UNCERTAIN,RETAIN,The title describes audio noise suppression methods relevant to audio signal enhancement.
+3246,As Good as It KAN Get: High-Fidelity Audio Representation,UNCERTAIN,RETAIN,The title addresses high-fidelity audio representation learning relevant to MIR.
+1432,AI-ASSISTED NOTATION SYSTEMS IN MUSIC PEDAGOGY,UNCERTAIN,RETAIN,The title covers AI notation systems which may involve automatic music transcription.
+5347,Sonicolour: Exploring Colour Control of Sound Synthesis with Interactive Machine Learning,UNCERTAIN,RETAIN,The title explores sound synthesis control with interactive machine learning.
+2542,Adaptive Efficacy Assessment Method for Music Education via Multimodal Deep Learning Fusion,UNCERTAIN,RETAIN,The title covers multimodal assessment for music education.

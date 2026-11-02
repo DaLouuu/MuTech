@@ -1,0 +1,351 @@
+paper_id,title,classification,screening_decision,reasoning
+6886,Design of Emotion Analysis Model IABC-Deep Learning-based for Vocal Performance,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+9263,Environmental Fluoride Exposure and Vocal Performance Health among Music Students: A Machine Learning and PLS-SEM Multi-Mediation Analysis,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+2397,A real-time music performance emotion recognition system integrating computer vision and audio signal processing,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+6518,Research on Music Emotion Recognition and Intelligent Classification System Based on Deep Learning,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+9004,Real-time audio signal recognition system using Machine Learning techniques for security applications,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+8049,Automatic Sleep Stage Classification Method based on Transformer-in-Transformer,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+8557,Musical Instrument Timber-evoked EEG Classification Based on Deep Learning,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+2861,Percussion and Instrumentation in Music Emotion Recognition: A Feature Engineering Approach,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+7820,Research on the Application of Voice Acoustics for Speech Intelligence in Folk Songs,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+4711,Local Equivariance Error-Based Metrics for Evaluating Sampling-Frequency-Independent Property of Neural Network,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+9550,Combination of deep-learning-based audio separation and speech enhancement for noise reduction of extracted signal from polyphonic music,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+8813,Research on the Fusion Model of Professional Vocal Music Performance Voice Care and Artificial Intelligence Technology in Intelligent Medical Treatment,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+3057,Application of artificial intelligence CNN model in emotional recognition of instrumental music,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+7776,Application Model Construction of Emotional Expression and Propagation Path of Deep Learning in National Vocal Music,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+492,SwaraNet: A Dual Task Deep Learning Framework for Classification of Indian Classical Musical Instruments and Emotions Using AudioNet and Bi-GRU with Attention,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+7584,Music Emotion Recognition Based on a Neural Network with an Inception-GRU Residual Structure,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+8713,Multimodal Music Emotion Recognition with Hierarchical Cross-Modal Attention Network,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+1639,Music singing emotion classification and recognition method based on deep representation learning,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+2464,A Hybrid Deep Learning Model for Vocal Emotion Classification using Speech Signals,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+7620,3D Audio Signal Processing Systems for Speech Enhancement and Sound Localization and Detection,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+9471,EXPLORING DEEP LEARNING METHODOLOGIES FOR MUSIC EMOTION RECOGNITION,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+2441,Application of Artificial Intelligence in Music Emotion Recognition,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+6219,A Comparison Study of Deep Learning Methodologies for Music Emotion Recognition,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+8175,Stacked auto-encoders based visual features for speech/music classification,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+9454,VGGISH FOR MUSIC/SPEECH CLASSIFICATION IN RADIO BROADCASTING,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+5083,A Multimodal Deep Network for Music Emotion Recognition Using Audio Chorus and Lyrics,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+1010,Music Emotion Classification with Audio-Text Fusion,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+5113,Deep Learning Techniques for Voice Disorder Detection: A Transfer Learning and Data Augmentation Approach,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+4045,Applications Research of Deep Learning in the Skill Enhancement of Taekwondo Athletes,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+7962,MuSE-SVS: Multi-Singer Emotional Singing Voice Synthesizer That Controls Emotional Intensity,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+3060,Joint Learning of Emotion and Singing Style for Enhanced Music Style Understanding,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+9214,Person Re-identification Based on Deep Learning Algorithms with Manual Extracted Colour and Texture Features,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+3323,Deep Learning-Based Music Emotion Recognition Framework for Intelligent Vocal Pedagogy,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+4534,A Falsetto Detection Algorithm for Enhancing Voice Gender Recognition,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+4801,An Integrated Deep Learning Framework for Multi-Objective Optimization of Music Emotion Recognition and Composition,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+4066,Polyphonic Music Emotion Classification: Feature-Label Enhanced Approach,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+3110,Exploring Transfer Learning from Speech to Singing Voice Processing,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+3115,Adapting Speech Recognition Architectures for Note-Level Singing Transcription,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+6306,Transferability of Audio Representations Learned from Speech to Music Tasks,IRRELEVANT,EXCLUDE,Topic outside MIR scope.
+6772,Machine Learning for Monitoring Vocal Health and Performance of Professional Singers,RELEVANT,RETAIN,Topic outside MIR scope.
+8772,Deep Learning Long Short-Term Memory based Automatic Music Transcription System for Carnatic Music,RELEVANT,RETAIN,Eligible MIR task.
+7814,Exploiting Music Source Separation For Singing Voice Detection,RELEVANT,RETAIN,Eligible MIR task.
+2983,A Hybrid Model for Automatic Music Transcription of Hulusi Based on Multi-Feature Fusion,RELEVANT,RETAIN,Eligible MIR task.
+7733,On Beat Tracking and Tempo Estimation of Musical Audio Signals via Deep Learning,RELEVANT,RETAIN,Eligible MIR task.
+5406,Comparative Analysis of Different Spectrogram Types for Musical Instrument Classification,RELEVANT,RETAIN,Eligible MIR task.
+9517,Automatic Music Transcription using Convolutional Neural Networks and Constant-Q transform,RELEVANT,RETAIN,Eligible MIR task.
+7897,Contrastive Learning based Deep Latent Masking for Music Source Separation,RELEVANT,RETAIN,Eligible MIR task.
+9047,Monaural Music Source Separation Using Deep Convolutional Neural Network Embedded with Feature Extraction Module,RELEVANT,RETAIN,Eligible MIR task.
+9006,Score-Informed Music Source Separation: Improving Synthetic-To-Real Generalization in Classical Music,RELEVANT,RETAIN,Eligible MIR task.
+5407,Challenges and Advancements in Automated Music Transcription: A Focus on Multiple-Pitch Estimation,RELEVANT,RETAIN,Eligible MIR task.
+3180,ICKAN: A deep musical instrument classification model incorporating Kolmogorov-Arnold network,RELEVANT,RETAIN,Eligible MIR task.
+9399,REFINING AUDIO-TO-SCORE ALIGNMENT FOR SINGING VOICE TRANSCRIPTION,RELEVANT,RETAIN,Eligible MIR task.
+7984,Multi-Instrument Polyphonic Melody Transcription Based on Deep Learning,RELEVANT,RETAIN,Eligible MIR task.
+7277,Piano automatic transcription based on transformer,RELEVANT,RETAIN,Eligible MIR task.
+2777,Enhancing automatic music transcription of Thai xylophone music performed with hard mallets: a deep learning approach and comparative analysis,RELEVANT,RETAIN,Eligible MIR task.
+8805,EXPLORING TRANSFORMER'S POTENTIAL ON AUTOMATIC PIANO TRANSCRIPTION,RELEVANT,RETAIN,Eligible MIR task.
+1364,How Far Can a U-Net Go? An Empirical Analysis of Music Source Separation Performance,RELEVANT,RETAIN,Eligible MIR task.
+9542,MULTI-PITCH ESTIMATION MEETS MICROPHONE MISMATCH: APPLICABILITY OF DOMAIN ADAPTATION,RELEVANT,RETAIN,Eligible MIR task.
+7688,Music Transcription Based on Deep Learning,RELEVANT,RETAIN,Eligible MIR task.
+8119,SepMLP: An All-MLP Architecture for Music Source Separation,RELEVANT,RETAIN,Eligible MIR task.
+6413,"Impact of Rhythm, Tempo, and Rest Variations on Pitch Detection in Deep Learning-Based Piano Transcription Models",RELEVANT,RETAIN,Eligible MIR task.
+2252,Music Pitch Recognition and Audio Signal Feature Modeling Based on Machine Learning,RELEVANT,RETAIN,Eligible MIR task.
+7761,Toward Leveraging Pre-Trained Self-Supervised Frontends for Automatic Singing Voice Understanding Tasks: Three Case Studies,RELEVANT,RETAIN,Eligible MIR task.
+3222,Deep learning-based musical instrument classification using LSTM networks,RELEVANT,RETAIN,Eligible MIR task.
+7259,Stripe-Transformer: deep stripe feature learning for music source separation,RELEVANT,RETAIN,Eligible MIR task.
+9401,BEAT AND DOWNBEAT TRACKING IN PERFORMANCE MIDI USING AN END-TO-END TRANSFORMER ARCHITECTURE,RELEVANT,RETAIN,Eligible MIR task.
+3117,Chinese instrument music source separation with frequency-attentive multi-band neural networks,RELEVANT,RETAIN,Eligible MIR task.
+6766,MUSIC SOURCE SEPARATION BASED ON A LIGHTWEIGHT DEEP LEARNING FRAMEWORK (DTTNET: DUAL-PATH TFC-TDF UNET),RELEVANT,RETAIN,Eligible MIR task.
+9481,A CROSS-VERSION APPROACH TO AUDIO REPRESENTATION LEARNING FOR ORCHESTRAL MUSIC,RELEVANT,RETAIN,Eligible MIR task.
+6876,DLVS4Audio2Sheet: Deep Learning-Based Vocal Separation for Audio into Music Sheet Conversion,RELEVANT,RETAIN,Eligible MIR task.
+5571,Automatic Piano Transcription with Frequency Attention and Time Attention Fusion Mechanism,RELEVANT,RETAIN,Eligible MIR task.
+7815,A U-Net Based Architecture for Automatic Music Transcription,RELEVANT,RETAIN,Eligible MIR task.
+8186,Paralinguistic singing attribute recognition using supervised machine learning for describing the classical tenor solo singing voice in vocal pedagogy,RELEVANT,RETAIN,Eligible MIR task.
+5567,Exploiting Automatic Source Separation and Music Transcription for Music Emotion Recognition,RELEVANT,RETAIN,Eligible MIR task.
+8639,Artificial Intelligence and Machine Learning for Music Classification,RELEVANT,RETAIN,Eligible MIR task.
+1045,MMIC: A forward-bidirectional mamba architecture for musical instrument classification,RELEVANT,RETAIN,Eligible MIR task.
+7151,SCNet: Sparse Compression Network for Music Source Separation,RELEVANT,RETAIN,Eligible MIR task.
+8730,Automatic Music Transcription for the Thai Xylophone played with Soft Mallets,RELEVANT,RETAIN,Eligible MIR task.
+5441,No Data Required: Zero-Shot Domain Adaptation for Automatic Music Transcription,RELEVANT,RETAIN,Eligible MIR task.
+8637,Research on Music Classification Method Based on Artificial Intelligence,RELEVANT,RETAIN,Eligible MIR task.
+8079,Transfer Learning with Deep Neural Embeddings for Music Classification Tasks,RELEVANT,RETAIN,Eligible MIR task.
+5115,RTrans-D3Net: Music Source Separation with Multi-Dilated Convolutions and Transformer,RELEVANT,RETAIN,Eligible MIR task.
+6831,A study on improving the performance of the machine-learning based automatic music transcription model by utilizing pitch number information,RELEVANT,RETAIN,Eligible MIR task.
+4058,A Performance Analysis on Matrix Factorisations in Solving Musical Instrument Source Separation Problem,RELEVANT,RETAIN,Eligible MIR task.
+8065,Unsupervised Music Source Separation Using Differentiable Parametric Source Models,RELEVANT,RETAIN,Eligible MIR task.
+9510,Enhancing Parameter Efficiency for Music Source Separation Models,RELEVANT,RETAIN,Eligible MIR task.
+3908,Hybrid dual-path network: Singing voice separation in the waveform domain by combining Conformer and Transformer architectures,RELEVANT,RETAIN,Eligible MIR task.
+2537,The Spheres Dataset: Multitrack Orchestral Recordings for Music Source Separation and Information Retrieval,RELEVANT,RETAIN,Eligible MIR task.
+8714,Comparing Deep Models and Evaluation Strategies for Multi-Pitch Estimation in Music Recordings,RELEVANT,RETAIN,Eligible MIR task.
+5565,Research on an automatic transcription method for piano music based on artificial neural networks,RELEVANT,RETAIN,Eligible MIR task.
+8124,A Music Cognition–Guided Framework for Multi-pitch Estimation,RELEVANT,RETAIN,Eligible MIR task.
+5710,Research on Automatic Piano Music Transcription Algorithm Based on CNN,RELEVANT,RETAIN,Eligible MIR task.
+9182,Design and Development of Real‐Time Music Transcription Using Digital Signal Processing,RELEVANT,RETAIN,Eligible MIR task.
+8947,Exploring Jukebox: A Novel Audio Representation for Music Genre Identification in MIR,RELEVANT,RETAIN,Eligible MIR task.
+6555,Benchmarking Music Demixing Models for Deep Drum Source Separation,RELEVANT,RETAIN,Eligible MIR task.
+9201,Improving Music Source Separation with Simo Stereo Band-Split Rnn,RELEVANT,RETAIN,Eligible MIR task.
+5429,Unsupervised Domain Adaptation for Music Transcription: Exploiting Cross-Version Data,RELEVANT,RETAIN,Eligible MIR task.
+8833,Automatic musical transcription of the Tatar folk song: comparative analysis of AI-powered programs,RELEVANT,RETAIN,Eligible MIR task.
+7278,Implementation of Music Similarity Analysis System Employing Source Separation and Automatic Transcription Learning,RELEVANT,RETAIN,Eligible MIR task.
+6893,Classification of Musical Instruments' Sound using kNN and CNN,RELEVANT,RETAIN,Eligible MIR task.
+8020,Deep Learning-Based Classification of Indian Classical Music Based on Raga,RELEVANT,RETAIN,Eligible MIR task.
+5416,COCOLA: Coherence-Oriented Contrastive Learning of Musical Audio Representations,RELEVANT,RETAIN,Eligible MIR task.
+5533,Musical Beat Recognition using Machine Learning,RELEVANT,RETAIN,Eligible MIR task.
+8911,Query by Humming Music Information Retrieval using DNN-LSTM based Melody Extraction and Noise Filtration,RELEVANT,RETAIN,Eligible MIR task.
+5434,Automatic Music Classification Algorithm based on AI Internet and Image Processing Technology,RELEVANT,RETAIN,Eligible MIR task.
+7300,Polyphonic piano transcription based on graph convolutional network,RELEVANT,RETAIN,Eligible MIR task.
+8108,MusicYOLO: A Vision-Based Framework for Automatic Singing Transcription,RELEVANT,RETAIN,Eligible MIR task.
+6833,A hybrid CNN-LSTM model with adaptive instance normalization for one shot singing voice conversion,RELEVANT,RETAIN,Eligible MIR task.
+7627,"Deep Learning-Based Automatic Music Transcription of the Diwdiw-as, a Native Filipino Bamboo Flute",RELEVANT,RETAIN,Eligible MIR task.
+9183,A Distribution Matching Approach to Neural Piano Transcription with Optimal Transport,RELEVANT,RETAIN,Eligible MIR task.
+8032,Transcription of Arabic and Turkish Music Using Convolutional Neural Networks,RELEVANT,RETAIN,Eligible MIR task.
+1492,SpectTrans: Joint Spectral–Temporal Modeling for Polyphonic Piano Transcription via Spectral Gating Networks,RELEVANT,RETAIN,Eligible MIR task.
+4461,Inspecting Deep Learning Techniques for Music Transcription,RELEVANT,RETAIN,Eligible MIR task.
+9573,LEARNING SPARSE ANALYTIC FILTERS FOR PIANO TRANSCRIPTION,RELEVANT,RETAIN,Eligible MIR task.
+1608,Interference Reduction in Music Source Separation Through Recurrent Inference with Deep Neural Network Models,RELEVANT,RETAIN,Eligible MIR task.
+7374,How reliable are posterior class probabilities in automatic music classification?,RELEVANT,RETAIN,Eligible MIR task.
+7668,Music Classification Using Machine Learning Methods,RELEVANT,RETAIN,Eligible MIR task.
+7173,LyriX : Automated Lyrics Transcription Using Deep Learning-Based Residual UNet Model,RELEVANT,RETAIN,Eligible MIR task.
+7267,Note-level singing melody transcription with transformers,RELEVANT,RETAIN,Eligible MIR task.
+6598,Annotation-Free Automatic Music Transcription with Scalable Synthetic Data and Adversarial Domain Confusion,RELEVANT,RETAIN,Eligible MIR task.
+8966,Automatic Lyrics Transcription of Polyphonic Music With Lyrics-Chord Multi-Task Learning,RELEVANT,RETAIN,Eligible MIR task.
+8921,Timbre-Based Pretraining with Pseudo-Labels for Multi-Instrument Automatic Music Transcription,RELEVANT,RETAIN,Eligible MIR task.
+8912,Expanding Automatic Music Transcription Dataset via Single Note Audio Synthesized Data,RELEVANT,RETAIN,Eligible MIR task.
+4086,SynthSOD: Developing an Heterogeneous Dataset for Orchestra Music Source Separation,RELEVANT,RETAIN,Eligible MIR task.
+4130,NetScribed: A Deep Learning Approach for Machine-Based Melody Transcription of Audio Files,RELEVANT,RETAIN,Eligible MIR task.
+9547,HPPNET: MODELING THE HARMONIC STRUCTURE AND PITCH INVARIANCE IN PIANO TRANSCRIPTION,RELEVANT,RETAIN,Eligible MIR task.
+9507,AUDIO EMBEDDINGS AS TEACHERS FOR MUSIC CLASSIFICATION,RELEVANT,RETAIN,Eligible MIR task.
+6371,An Ensemble Approach to Raga Classification Using Deep and Traditional Machine Learning,RELEVANT,RETAIN,Eligible MIR task.
+7587,A Hybrid CNN and RNN Variant Model for Music Classification,RELEVANT,RETAIN,Eligible MIR task.
+9063,Hardware-Accelerated Music Transcription on the Cloud via FPGA Implementation,RELEVANT,RETAIN,Eligible MIR task.
+8918,Spectrogram Event Based Feature Representation for Generalizable Automatic Music Transcription,RELEVANT,RETAIN,Eligible MIR task.
+4081,Improving Singing Voice Transcription Generalization with AI Generated Accompaniments,RELEVANT,RETAIN,Eligible MIR task.
+8913,YourMT3+: Multi-Instrument Music Transcription with Enhanced Transformer Architectures and Cross-Dataset STEM Augmentation,RELEVANT,RETAIN,Eligible MIR task.
+8272,Transformer-Based Music Language Modelling and Transcription,RELEVANT,RETAIN,Eligible MIR task.
+3597,Applications and Comparative Analysis of Machine Learning and Statistical Learning Signal Processing in Music Genre Classification,RELEVANT,RETAIN,Eligible MIR task.
+5607,Learning Music Audio Representations With Limited Data,RELEVANT,RETAIN,Eligible MIR task.
+4410,Chroma Features Based Music Genre Classification Using Machine and Deep Learning Algorithms,RELEVANT,RETAIN,Eligible MIR task.
+5914,DAFE-MSGAT: Dual-Attention Feature Extraction and Multi-Scale Graph Attention Network for Polyphonic Piano Transcription,RELEVANT,RETAIN,Eligible MIR task.
+7519,Late multimodal fusion for image and audio music transcription,RELEVANT,RETAIN,Eligible MIR task.
+6596,Self-Supervised Learning-Based General Fine-tuning Framework for Audio Classification and Event Detection,RELEVANT,RETAIN,Eligible MIR task.
+9049,A Study of Audio Mixing Methods for Piano Transcription in Violin-Piano Ensembles,RELEVANT,RETAIN,Eligible MIR task.
+4717,Integrating High Order Ambisonics and Deep Learning for Advanced Instrument Separation in Spatial Audio Applications,RELEVANT,RETAIN,Eligible MIR task.
+8806,Spain-NET: SPATIALLY-INFORMED STEREOPHONIC MUSIC SOURCE SEPARATION,RELEVANT,RETAIN,Eligible MIR task.
+9246,Symbolic-Domain Musical Instrument Classification Using Knowledge Distillation from Audio-Teacher to Symbolic-Student,RELEVANT,RETAIN,Eligible MIR task.
+8011,Music Source Separation With Band-Split RNN,RELEVANT,RETAIN,Eligible MIR task.
+9197,Source Separation For A Cappella Music,RELEVANT,RETAIN,Eligible MIR task.
+9539,TAILED U-NET: MULTI-SCALE MUSIC REPRESENTATION LEARNING,RELEVANT,RETAIN,Eligible MIR task.
+8634,Music Classification Model Development Based on Audio Recognition using Transformer Model,RELEVANT,RETAIN,Eligible MIR task.
+9089,Towards Blind Data Cleaning: A Case Study in Music Source Separation,RELEVANT,RETAIN,Eligible MIR task.
+6534,Music genre classification using deep learning: a comparative analysis of CNNs and RNNs,RELEVANT,RETAIN,Eligible MIR task.
+4841,TuFoC: regional classification of Turkish folk music recordings using deep learning on Mel spectrograms,RELEVANT,RETAIN,Eligible MIR task.
+8513,An evaluation of deep neural network models for music classification using spectrograms,RELEVANT,RETAIN,Eligible MIR task.
+8622,An Efficient Short-Time Discrete Cosine Transform and Attentive MultiResUNet Framework for Music Source Separation,RELEVANT,RETAIN,Eligible MIR task.
+8324,Robustness of musical features on deep learning models for music genre classification,RELEVANT,RETAIN,Eligible MIR task.
+1478,Multitrack Music Transcription Based on Joint Learning of Onset and Frame Streams,RELEVANT,RETAIN,Eligible MIR task.
+7787,Onsets and Velocities: Affordable Real-Time Piano Transcription Using Convolutional Neural Networks,RELEVANT,RETAIN,Eligible MIR task.
+8955,MATT. A Multiple-instance Attention Mechanism for Long-tail Music Genre Classification,RELEVANT,RETAIN,Eligible MIR task.
+1646,Consideration Data Augmentation Using Frequency Characteristics for Vocal Separation in Monaural Music Source Signals,RELEVANT,RETAIN,Eligible MIR task.
+6367,Multi-Task Learning Approaches for Music Similarity Representation Learning Based on Individual Instrument Sounds,RELEVANT,RETAIN,Eligible MIR task.
+2536,Genre Classification of Sinhala Songs Using Machine Learning Based on Audio Features,RELEVANT,RETAIN,Eligible MIR task.
+6580,Multi Label Sound Classification using Deep Learning Models,RELEVANT,RETAIN,Eligible MIR task.
+6168,Performance evaluation of music genre prediction system using convolutional neural network and random forest,RELEVANT,RETAIN,Eligible MIR task.
+5367,Classification of Music Structural Functions using Deep Learning,RELEVANT,RETAIN,Eligible MIR task.
+7397,Low Complexity Deep Learning Framework for Greek Orthodox Church Hymns Classification,RELEVANT,RETAIN,Eligible MIR task.
+8928,Music Genre Classification Using Convolutional Neural Network Method,RELEVANT,RETAIN,Eligible MIR task.
+4913,"Deep Neural Network and SVM-Based Multiclass Musical Instruments Classification Using MFCC, STFT, and Related Acoustic Features",RELEVANT,RETAIN,Eligible MIR task.
+4488,A Comprehensive Survey on Machine and Deep Learning Techniques for Genre Prediction in Folk Songs,RELEVANT,RETAIN,Eligible MIR task.
+6983,Source Separation of Piano Concertos Using Musically Motivated Augmentation Techniques,RELEVANT,RETAIN,Eligible MIR task.
+8957,Music Source Components Isolation using MultiHead Transformers and Encoders,RELEVANT,RETAIN,Eligible MIR task.
+5326,Interpretable Machine Learning Techniques for Audio Source Separation,RELEVANT,RETAIN,Eligible MIR task.
+412,Music genre classification using spectrogram images and a lightweight efficientnet-based CNN,RELEVANT,RETAIN,Eligible MIR task.
+5176,Deep Learning versus Machine Learning for Music Genre Classification: A Dual-Dataset Evaluation,RELEVANT,RETAIN,Eligible MIR task.
+8943,Timbre-Trap: A Low-Resource Framework for Instrument-Agnostic Music Transcription,RELEVANT,RETAIN,Eligible MIR task.
+459,A deep learning-based framework for automatic transcription of Thai xylophone music with model and perceptual evaluation,RELEVANT,RETAIN,Eligible MIR task.
+1982,Music Genre Classification Using Dual-Branch Feature Fusion of Mel-Spectrogram Embeddings and Acoustic Statistical Descriptors,RELEVANT,RETAIN,Eligible MIR task.
+6081,Toward deep drum source separation,RELEVANT,RETAIN,Eligible MIR task.
+7974,Direction specific ambisonics source separation with end-to-end deep learning,RELEVANT,RETAIN,Eligible MIR task.
+5595,An Ensemble Approach to Music Source Separation: A Comparative Analysis of Conventional and Hierarchical Stem Separation,RELEVANT,RETAIN,Eligible MIR task.
+6843,Construction and Implementation of Content-Based National Music Retrieval Model Under Deep Learning,RELEVANT,RETAIN,Eligible MIR task.
+2824,Leveraging Prompt Engineering and Retrieval-Augmented Generation with Large Language Models for AI-Driven Music Source Separation,RELEVANT,RETAIN,Eligible MIR task.
+9010,MuQ: Self-Supervised Music Representation Learning With Mel Residual Vector Quantization,RELEVANT,RETAIN,Eligible MIR task.
+6686,VICMus: Variance-Invariance-Covariance Regularization for Music Representation Learning,RELEVANT,RETAIN,Eligible MIR task.
+5397,Automatic Guitar Transcription With Deep Neural Networks,RELEVANT,RETAIN,Eligible MIR task.
+6817,BEAST: ONLINE JOINT BEAT AND DOWNBEAT TRACKING BASED ON STREAMING TRANSFORMER,RELEVANT,RETAIN,Eligible MIR task.
+370,A Multi-Scale Feature Enhancement Model for Instrument Classification in Complex Musical Scenes,RELEVANT,RETAIN,Eligible MIR task.
+9568,TOWARDS EFFICIENT MODELS FOR MUSIC SOURCE SEPARATION: COMPARING UNET AND CONV-TASNET,RELEVANT,RETAIN,Eligible MIR task.
+9152,Using Harmonic and Percussive Source Separation to Improve Acoustic Features for Music Segmentation,RELEVANT,RETAIN,Eligible MIR task.
+7323,End-to-end multi-task learning for note-level singing transcription,RELEVANT,RETAIN,Eligible MIR task.
+5483,Design and Implementation of Automatic Music Classification Application System Combining Big Data Feature Mining,RELEVANT,RETAIN,Eligible MIR task.
+6851,Optimised machine learning frameworks for Indian classical music raga identification,RELEVANT,RETAIN,Eligible MIR task.
+1679,Multi-instrument music genre classification with multi-stream attention network,RELEVANT,RETAIN,Eligible MIR task.
+6312,Development of Digital Archiving Tool to Capture Multi-Channel Performance in Japanese Traditional Performing Arts by Music Information Retrieval,RELEVANT,RETAIN,Eligible MIR task.
+3125,Robust music source separation by generating audio mixtures,RELEVANT,RETAIN,Eligible MIR task.
+3835,Automated transcription of Indonesian traditional music: a systematic review,RELEVANT,RETAIN,Eligible MIR task.
+1629,Enhancing Raga Recognition in Indian Classical Music Using Deep Learning Models,RELEVANT,RETAIN,Eligible MIR task.
+8660,Deep Learning for Real-Time Music Transcription: Evaluating Models on Low-Power Devices,RELEVANT,RETAIN,Eligible MIR task.
+1222,Automated Beat Tracking in Jazz Ensembles Using Time-Delay Neural Networks,RELEVANT,RETAIN,Eligible MIR task.
+8704,Machine Learning Techniques for Audio and Text-Based Music Classification,RELEVANT,RETAIN,Eligible MIR task.
+6292,End-to-End Automatic Music Transcription of String Ensembles,RELEVANT,RETAIN,Eligible MIR task.
+8655,Symbolic Music Representation Learning with Masked Transformers,RELEVANT,RETAIN,Eligible MIR task.
+3840,Pitch Tracking in A Cappella Singing: A Comparison of Autocorrelation and Neural Network Approaches,RELEVANT,RETAIN,Eligible MIR task.
+1225,Contrastive Semi-Supervised Learning for Singing Voice Separation,RELEVANT,RETAIN,Eligible MIR task.
+8663,Real-time Beat Tracking on Mobile Devices Using Quantized CNNs,RELEVANT,RETAIN,Eligible MIR task.
+6296,Multi-Instrument Transcription via Shared Representation Learning and Task-Specific Decoding,RELEVANT,RETAIN,Eligible MIR task.
+4075,Improved Generalization in Music Source Separation via Score-Informed Conditioning,RELEVANT,RETAIN,Eligible MIR task.
+8661,Hierarchical Classification of Musical Genres and Subgenres Using Attention Networks,RELEVANT,RETAIN,Eligible MIR task.
+3845,Self-Supervised Audio Representations for Music Performance Assessment,RELEVANT,RETAIN,Eligible MIR task.
+1635,Cross-Dataset Evaluation of Automatic Piano Transcription Systems,RELEVANT,RETAIN,Eligible MIR task.
+8710,Deep Generative Models for Missing Audio Inpainting in Singing Voice Recordings,RELEVANT,RETAIN,Eligible MIR task.
+1230,Analysis of Timing Deviations in Expressive Piano Performance via Audio-to-Score Alignment,RELEVANT,RETAIN,Eligible MIR task.
+3120,Singing Voice Detection in Polyphonic Music Using Temporal Convolutional Networks,RELEVANT,RETAIN,Eligible MIR task.
+4080,Domain Adaptation for Source Separation of Historical Music Recordings,RELEVANT,RETAIN,Eligible MIR task.
+8666,Graph Neural Networks for Representing Polyphonic Music Structure,RELEVANT,RETAIN,Eligible MIR task.
+3850,Evaluating the Impact of Data Scarcity on Deep Learning Models for Music Transcription,RELEVANT,RETAIN,Eligible MIR task.
+8673,A Benchmark for Zero-Shot Music Classification Using Natural Language Prompts,RELEVANT,RETAIN,Eligible MIR task.
+3125,End-to-End Singing Voice Separation and Lyrics Alignment,RELEVANT,RETAIN,Eligible MIR task.
+9200,Deep Learning Approaches in Topics of Singing Information Processing,UNCERTAIN,RETAIN,Plausible MIR relevance.
+8944,Chinese Traditional Musical Instrument Computer Intelligent Recognition Based on Recurrent Neural Network,UNCERTAIN,RETAIN,Plausible MIR relevance.
+8994,Instrument Recognition in Polyphonic Music with Multimodal Feature-Assisted Deep Convolutional Neural Networks,UNCERTAIN,RETAIN,Plausible MIR relevance.
+8795,Singing Melody Extraction Based on Joint Network with Res-CBAM,UNCERTAIN,RETAIN,Plausible MIR relevance.
+8569,Non-negative Matrix Factorization and DenseNet based Monophonic Singing Voice Separation,UNCERTAIN,RETAIN,Plausible MIR relevance.
+8602,"A Deep-Learning Based Framework for Source Separation, Analysis, and Synthesis of Choral Ensembles",UNCERTAIN,RETAIN,Plausible MIR relevance.
+9572,SEMI-SUPERVISED CONVOLUTIVE NMF FOR AUTOMATIC PIANO TRANSCRIPTION,UNCERTAIN,RETAIN,Plausible MIR relevance.
+8592,VocEmb4SVS: Improving Singing Voice Separation with Vocal Embeddings,UNCERTAIN,RETAIN,Plausible MIR relevance.
+8062,Vocal92: Audio Dataset With a Cappella Solo Singing and Speech,UNCERTAIN,RETAIN,Plausible MIR relevance.
+8964,Sing2Song: An Accompaniment Generation System Based on Solo Singing,UNCERTAIN,RETAIN,Plausible MIR relevance.
+4039,CNN-ML Framework-Based Predominant Musical Instrument Recognition Using Mel-Spectrogram,UNCERTAIN,RETAIN,Plausible MIR relevance.
+6249,MCSSME: Multi-Task Contrastive Learning for Semi-supervised Singing Melody Extraction from Polyphonic Music,UNCERTAIN,RETAIN,Plausible MIR relevance.
+3897,Proposal and Evaluation of a Pitch Estimation Model Based on Reconstruction of the Spectrum of Input Sound by Using Timbre Information and Pitch Information,UNCERTAIN,RETAIN,Plausible MIR relevance.
+1370,A lightweight real-time karaoke system with improved singing voice separation via fundamental frequency estimation integration,UNCERTAIN,RETAIN,Plausible MIR relevance.
+7653,Music Instrument Recognition using Deep Learning,UNCERTAIN,RETAIN,Plausible MIR relevance.
+7707,Transfer Learning using Musical/Non-Musical Mixtures for Multi-Instrument Recognition,UNCERTAIN,RETAIN,Plausible MIR relevance.
+5530,Robust CNN-based Musical Instrument Recognition with Enhanced Feature Learning,UNCERTAIN,RETAIN,Plausible MIR relevance.
+7852,Boost Predominant Instrument Recognition Performance with MagiaSearch and MagiaClassifier,UNCERTAIN,RETAIN,Plausible MIR relevance.
+7843,Pitch Estimation by Denoising Preprocessor and Hybrid Estimation Model,UNCERTAIN,RETAIN,Plausible MIR relevance.
+8144,Dual Task Monophonic Singing Transcription,UNCERTAIN,RETAIN,Plausible MIR relevance.
+3775,Applying Artificial Intelligence Techniques to Build a Singing Evaluation System in Choral Singing,UNCERTAIN,RETAIN,Plausible MIR relevance.
+7895,MF-PAM: Accurate Pitch Estimation through Periodicity Analysis and Multi-level Feature Fusion,UNCERTAIN,RETAIN,Plausible MIR relevance.
+5519,Singing Voice Accompaniment Data Augmentation with Generative Models,UNCERTAIN,RETAIN,Plausible MIR relevance.
+7760,Ensemble of Transformer and Convolutional Recurrent Neural Network for Improving Discrimination Accuracy in Automatic Chord Recognition,UNCERTAIN,RETAIN,Plausible MIR relevance.
+6881,SinTechSVS: A Singing Technique Controllable Singing Voice Synthesis System,UNCERTAIN,RETAIN,Plausible MIR relevance.
+8133,Optimized Deep Learning Audio Tagging Approach,UNCERTAIN,RETAIN,Plausible MIR relevance.
+3203,Vocal performance evaluation of the intelligent note recognition method based on deep learning,UNCERTAIN,RETAIN,Plausible MIR relevance.
+4676,Accuracy Improvement of Automatic Chord Recognition with Source Separation Preprocessing,UNCERTAIN,RETAIN,Plausible MIR relevance.
+5086,Predominant Instrument Recognition in Polyphonic Music Using Hybrid-CNN Model Algorithm,UNCERTAIN,RETAIN,Plausible MIR relevance.
+9176,Soft Dynamic Time Warping for Multi-Pitch Estimation and Beyond,UNCERTAIN,RETAIN,Plausible MIR relevance.
+8936,Spatio-Channel Complementary Learning for Polyphonic Music Instrument Recognition,UNCERTAIN,RETAIN,Plausible MIR relevance.
+9548,ANALYSIS AND DETECTION OF SINGING TECHNIQUES IN REPERTOIRES OF J-POP SOLO SINGERS,UNCERTAIN,RETAIN,Plausible MIR relevance.
+8545,Online Music Performance Evaluation System Based on Apriori Algorithm,UNCERTAIN,RETAIN,Plausible MIR relevance.
+6819,Personalized Music Improvisation,UNCERTAIN,RETAIN,Plausible MIR relevance.
+9211,Violin Note Spectrum Detection Based on a Multi-Fundamental Frequency Estimation Algorithm,UNCERTAIN,RETAIN,Plausible MIR relevance.
+8977,PRSF: Pitched-Noise-Robust Score Following Based on Multimodal Learning,UNCERTAIN,RETAIN,Plausible MIR relevance.
+7013,Construction of a vocal singing style repository based on a deep learning model,UNCERTAIN,RETAIN,Plausible MIR relevance.
+6823,ENHANCING NOTE-LEVEL SINGING TRANSCRIPTION MODEL WITH UNLABELED AND WEAKLY LABELED DATA,UNCERTAIN,RETAIN,Plausible MIR relevance.
+6536,Mobile-AMT: Real-time Polyphonic Piano Transcription for In-the-Wild Recordings,UNCERTAIN,RETAIN,Plausible MIR relevance.
+8958,Leveraging Timbre Semantic Descriptors for Cross-Dataset Instrument Recognition,UNCERTAIN,RETAIN,Plausible MIR relevance.
+3455,Multi-Instance Multi-Scale Graph Attention Neural Net with Label Semantic Embeddings for Instrument Recognition,UNCERTAIN,RETAIN,Plausible MIR relevance.
+2845,ChordFormer: A Conformer-Based Architecture for Large-Vocabulary Audio Chord Recognition,UNCERTAIN,RETAIN,Plausible MIR relevance.
+3668,New Thinking on Music Performance Teaching System Based on Artificial Intuition,UNCERTAIN,RETAIN,Plausible MIR relevance.
+1118,Design of AI-Assisted Intelligent Music Performance Training System and Adaptive Feedback Model,UNCERTAIN,RETAIN,Plausible MIR relevance.
+5430,Vocal Performance Evaluation System using Hybrid Convolutional Neural Network and Long Short-Term Memory,UNCERTAIN,RETAIN,Plausible MIR relevance.
+5594,Intelligent Guitar Chord Recognition Using Spectrogram-Based Feature Extraction and AlexNet Architecture for Categorization,UNCERTAIN,RETAIN,Plausible MIR relevance.
+5189,MusiQAl: A Dataset for Music Question–Answering through Audio–Video Fusion,UNCERTAIN,RETAIN,Plausible MIR relevance.
+8682,MIC_FuzzyNET: Fuzzy Integral Based Ensemble for Automatic Classification of Musical Instruments From Audio Signals,UNCERTAIN,RETAIN,Plausible MIR relevance.
+1632,Audio Strips Network (ASNet) and Amalgamated Audio Features (A2F): A Synergistic Approach for Audio Source Separation,UNCERTAIN,RETAIN,Plausible MIR relevance.
+7912,A novel deep learning-based multi-instrument recognition method for polyphonic music,UNCERTAIN,RETAIN,Plausible MIR relevance.
+1000,Design of a Vocal Audio Feature Extraction and Teaching Correction Assistance System Integrating CNN and LSTM,UNCERTAIN,RETAIN,Plausible MIR relevance.
+9056,HAMLET-Net: A Deep Harmonic-Aware Semisupervised Network for Interpretable Melody Extraction of Music and Singing,UNCERTAIN,RETAIN,Plausible MIR relevance.
+6506,Meta-Learning-Based Supervised Domain Adaptation for Melody Extraction,UNCERTAIN,RETAIN,Plausible MIR relevance.
+4114,EDM10: A Polyphonic Stereo Dataset with Identical BGM for Musical Instrument Identification,UNCERTAIN,RETAIN,Plausible MIR relevance.
+4556,Designing Musical Instrument Identification Systems Using Lightweight Machine Learning Architectures,UNCERTAIN,RETAIN,Plausible MIR relevance.
+3793,Development and verification of automatic recognition system for vocal performance styles based on ResNet,UNCERTAIN,RETAIN,Plausible MIR relevance.
+2270,AI-Based Instrumental Music Composition for Vocal Inputs,UNCERTAIN,RETAIN,Plausible MIR relevance.
+9419,Comparing the Accuracy of CNN Model with Inception V3 for Music Instrument Recognition,UNCERTAIN,RETAIN,Plausible MIR relevance.
+4028,Chromagram Features Analysis for Learning-Based Query by Humming Systems,UNCERTAIN,RETAIN,Plausible MIR relevance.
+7884,An Order-Complexity Model for Aesthetic Quality Assessment of Homophony Music Performance,UNCERTAIN,RETAIN,Plausible MIR relevance.
+1593,Performance Optimization of Digital Music Multi-Instrument Recognition Based on an Improved DCNN Model and Bi-LSTM,UNCERTAIN,RETAIN,Plausible MIR relevance.
+9022,Implementation of Computationally Efficient And Accurate Music Auto Tagging,UNCERTAIN,RETAIN,Plausible MIR relevance.
+4851,HingeNet: A Harmonic-Aware Fine-Tuning Approach for Beat Tracking,UNCERTAIN,RETAIN,Plausible MIR relevance.
+9505,MARBLE: Music Audio Representation Benchmark for Universal Evaluation,UNCERTAIN,RETAIN,Plausible MIR relevance.
+7618,TAPE: An End-to-End Timbre-Aware Pitch Estimator,UNCERTAIN,RETAIN,Plausible MIR relevance.
+9359,A Dataset of Amateur Karaoke Singing and Audiobook Narration,UNCERTAIN,RETAIN,Plausible MIR relevance.
+7375,Onset Detection for String Instruments Using Bidirectional Temporal and Convolutional Recurrent Networks,UNCERTAIN,RETAIN,Plausible MIR relevance.
+1202,A two-stage deep learning framework for lead instrument recognition in polyphonic music featuring Chinese instruments,UNCERTAIN,RETAIN,Plausible MIR relevance.
+6968,Towards the Implementation of an Automatic Composition System for Popular Songs,UNCERTAIN,RETAIN,Plausible MIR relevance.
+5803,Music time signature detection using ResNet18,UNCERTAIN,RETAIN,Plausible MIR relevance.
+6863,Interactive Singing Melody Extraction Based on Active Adaptation,UNCERTAIN,RETAIN,Plausible MIR relevance.
+7170,Converting Vocal Performances into Sheet Music Leveraging Large Language Models,UNCERTAIN,RETAIN,Plausible MIR relevance.
+3208,Multi-pitch estimation with polyphony per instrument information for Western classical and electronic music,UNCERTAIN,RETAIN,Plausible MIR relevance.
+2340,A Signal Processing-Guided Machine Learning Approach to Automated Detection of Time Signatures in Music,UNCERTAIN,RETAIN,Plausible MIR relevance.
+8986,Application of Computational Methods for Comparative Music Analysis,UNCERTAIN,RETAIN,Plausible MIR relevance.
+6004,Evaluating Feature Selection Algorithms for Machine Learning-Based Musical Instrument Identification in Monophonic Recordings,UNCERTAIN,RETAIN,Plausible MIR relevance.
+8975,Improving Query by Humming System using Frequency-Temporal Attention Network and Partial Query Matching,UNCERTAIN,RETAIN,Plausible MIR relevance.
+9117,Multi-Layer Combined Frequency and Periodicity Representations for Multi-Pitch Estimation of Multi-Instrument Music,UNCERTAIN,RETAIN,Plausible MIR relevance.
+3416,Haptic Music Feedback through Audio Decomposition,UNCERTAIN,RETAIN,Plausible MIR relevance.
+2311,A weighted multimodal fusion and deep learning framework for quantitative evaluation of music performance effects,UNCERTAIN,RETAIN,Plausible MIR relevance.
+6595,RevNet: A Review Network with Group Aggregation Fusion for Singing Melody Extraction,UNCERTAIN,RETAIN,Plausible MIR relevance.
+9000,Chinese style pop music generation based on recurrent neural network,UNCERTAIN,RETAIN,Plausible MIR relevance.
+5703,Pitch-aware generative pretraining improves multi-pitch estimation with scarce data,UNCERTAIN,RETAIN,Plausible MIR relevance.
+1714,Distorted Realities: Classifying Extreme Vocals Between Harmony and Noise – A Machine–Human Evaluation of Vocal Confusion Patterns,UNCERTAIN,RETAIN,Plausible MIR relevance.
+9245,Compact Convolutional Transformers for Multiple Predominant Instrument Recognition in Polyphonic Music,UNCERTAIN,RETAIN,Plausible MIR relevance.
+5579,Musical Instrument Recognition Using Machine Learning Approaches,UNCERTAIN,RETAIN,Plausible MIR relevance.
+8672,SingAug: Data Augmentation for Singing Voice Synthesis with Cycle-consistent Training Strategy,UNCERTAIN,RETAIN,Plausible MIR relevance.
+9098,BACHI: Boundary-Aware Symbolic Chord Recognition Through Masked Iterative Decoding on POP and Classical Music,UNCERTAIN,RETAIN,Plausible MIR relevance.
+7116,The Comparison of Different Deep Learning Models for Chinese Musical Instrument Recognition,UNCERTAIN,RETAIN,Plausible MIR relevance.
+6840,Diversified Teaching Strategies for Ethnic Instrumental Music Courses in Colleges and Universities in the Information Age,UNCERTAIN,RETAIN,Plausible MIR relevance.
+704,Modeling monophthongal versus diphthongal /aɪ/ in sung vocal performance with interpretable machine learning,UNCERTAIN,RETAIN,Plausible MIR relevance.
+4133,Near Infrared Spectroscopy (NIRS) Model Based on Transfer Learning,UNCERTAIN,RETAIN,Plausible MIR relevance.
+8922,NOISEX:A Classifier for Music Instruments Using Convolutional Neural Network,UNCERTAIN,RETAIN,Plausible MIR relevance.
+8757,Music Score Recognition Method Based on Deep Learning,UNCERTAIN,RETAIN,Plausible MIR relevance.
+6062,Genetic Algorithm-Based Optimization of Weighted Voting in Ensemble Models for Time Signature Detection,UNCERTAIN,RETAIN,Plausible MIR relevance.
+6887,An objective evaluation method of vocal singing effect based on artificial intelligence technology,UNCERTAIN,RETAIN,Plausible MIR relevance.
+5896,Research on the Design of Music Learning Singing System Based on Artificial Intelligence Feature Comparison,UNCERTAIN,RETAIN,Plausible MIR relevance.
+4101,Predominant Musical Instrument Identification Using Deep Hybrid Neural Networks,UNCERTAIN,RETAIN,Plausible MIR relevance.
+9229,Deep Learning for Automatic Detection of Musical Instruments in Audio Signals,UNCERTAIN,RETAIN,Plausible MIR relevance.
+2796,Beat Tracking Algorithm Based on Multi-scale Feature Fusion and Attention Mechanism,UNCERTAIN,RETAIN,Plausible MIR relevance.
+1576,Analysis of Vocal Training Feedback Mechanisms Assisted by Artificial Intelligence,UNCERTAIN,RETAIN,Plausible MIR relevance.
+5193,Automatic Piano Arrangement for Three-Part Choral of Female Voices,UNCERTAIN,RETAIN,Plausible MIR relevance.
+6323,A Multimodal Complex Model for Measuring the Quality of Music Performance,UNCERTAIN,RETAIN,Plausible MIR relevance.
+7315,Reducing Sensing Errors in a Mixed Reality Musical Instrument,UNCERTAIN,RETAIN,Plausible MIR relevance.
+2932,Modern AI program Chinese choral arts: cognitive training and motivation of college choristers,UNCERTAIN,RETAIN,Plausible MIR relevance.
+3182,The singing style of female roles in ethnic opera under artificial intelligence and deep neural networks,UNCERTAIN,RETAIN,Plausible MIR relevance.
+7320,Comparative Analysis of Deep Learning Architectures and Vision Transformers for Musical Key Estimation,UNCERTAIN,RETAIN,Plausible MIR relevance.
+9137,An Event-Based Sequence Modeling Approach to Recognizing Non-Triad Chords with Oversegmentation Minimization,UNCERTAIN,RETAIN,Plausible MIR relevance.
+2428,Polyphonic music melody generation model based on inverse reinforcement learning algorithm,UNCERTAIN,RETAIN,Plausible MIR relevance.
+8126,A Multi-Stage Automatic Evaluation System for Sight-Singing,UNCERTAIN,RETAIN,Plausible MIR relevance.
+4943,Design and Development of University Vocal Music Teaching System Based on Optimized Neural Network,UNCERTAIN,RETAIN,Plausible MIR relevance.
+7240,Timbre-Based Portable Musical Instrument Recognition Using LVQ Learning Algorithm,UNCERTAIN,RETAIN,Plausible MIR relevance.
+6153,Generation and Analysis of Vocal Spectrograms: Combining Generative Adversarial Networks,UNCERTAIN,RETAIN,Plausible MIR relevance.
+3332,Singing Timbre Popularity Assessment Based on Multimodal Large Foundation Model,UNCERTAIN,RETAIN,Plausible MIR relevance.
+2072,Real-Time Guitar Chord Recognition via FPGA-accelerated Wavelet Analysis,UNCERTAIN,RETAIN,Plausible MIR relevance.
+7986,Optimized Deep Neural Networks Audio Tagging Framework for Virtual Business Assistant,UNCERTAIN,RETAIN,Plausible MIR relevance.
+9535,A DEEP LEARNING METHOD FOR MELODY EXTRACTION FROM A POLYPHONIC SYMBOLIC MUSIC REPRESENTATION,UNCERTAIN,RETAIN,Plausible MIR relevance.
+9520,CREPE Notes: A new method for segmenting pitch contours into discrete notes,UNCERTAIN,RETAIN,Plausible MIR relevance.
+4543,"Advances in Bird Bioacoustics Using Deep Learning: A Comprehensive Review of Vocal Mechanisms, Acoustic Communication, and Conservation Application",UNCERTAIN,RETAIN,Plausible MIR relevance.
+8305,Recognition of musical beat and style and applications in interactive humanoid robot,UNCERTAIN,RETAIN,Plausible MIR relevance.
+8530,Attention-based instrument recognition,UNCERTAIN,RETAIN,Plausible MIR relevance.
+6230,Design of Visual Output Device for Musical Elements Based on Big Data,UNCERTAIN,RETAIN,Plausible MIR relevance.
+7289,Automatic Music Generation Model and System Optimization Using Artificial Intelligence,UNCERTAIN,RETAIN,Plausible MIR relevance.
+6273,Real-Time Drum Beat Classification using Self-Organizing Maps with Micro-Controller,UNCERTAIN,RETAIN,Plausible MIR relevance.
+8642,Cross-Cultural Musical Timbre Classification,UNCERTAIN,RETAIN,Plausible MIR relevance.
+4070,Attention Mechanisms for Improved Instrument Recognition in Crowded Orchestral Mixes,UNCERTAIN,RETAIN,Plausible MIR relevance.
+1630,Evaluating the Robustness of Music Demixing Models to Adversarial Audio Perturbations,UNCERTAIN,RETAIN,Plausible MIR relevance.
+8705,A Review of Multi-Pitch Estimation Techniques for Western Classical Music,UNCERTAIN,RETAIN,Plausible MIR relevance.
+8668,Few-Shot Learning for Rare Instrument Recognition in World Music,UNCERTAIN,RETAIN,Plausible MIR relevance.
+6301,Joint Estimation of Chords and Beats Using Multi-Task Learning,UNCERTAIN,RETAIN,Plausible MIR relevance.
+1640,Unsupervised Onset Detection Using Predictability Metrics,UNCERTAIN,RETAIN,Plausible MIR relevance.
+8715,Incorporating Music Theory Constraints into Neural Network Models for Chord Recognition,UNCERTAIN,RETAIN,Plausible MIR relevance.
+1235,Robust Rhythm Analysis in the Presence of Varying Tempo and Expressive Timing,UNCERTAIN,RETAIN,Plausible MIR relevance.
+4085,Multi-resolution Spectrogram Analysis for Improved High-Frequency Instrument Recognition,UNCERTAIN,RETAIN,Plausible MIR relevance.
