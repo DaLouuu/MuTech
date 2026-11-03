@@ -1,0 +1,1 @@
+record_id,pdf_path,full_text_eligible,full_text_exclusion_reason,reviewer_id,C1_score,C1_evidence_quote,C1_pdf_page,C1_notes,C2_score,C2_evidence_quote,C2_pdf_page,C2_notes,C3_score,C3_evidence_quote,C3_pdf_page,C3_notes,C4_score,C4_evidence_quote,C4_pdf_page,C4_notes,C5_score,C5_evidence_quote,C5_pdf_page,C5_notes,total_score,appraisal_decision,adjudication_notes
