@@ -1,0 +1,112 @@
+==============================================================================
+MUTECH SLR — CANONICAL NUMBERS MANIFEST v4 (364 STUDIES)
+==============================================================================
+
+Corpus screened via Gemini-validated preliminary screening.
+Total candidates: 547 | Included: 364 | Excluded: 75 | Deferred (API limit): 108
+
+1. YEAR DISTRIBUTION
+------------------------------------------------------------------------------
+  2022:  57 ( 15.7%)
+  2023:  62 ( 17.0%)
+  2024:  79 ( 21.7%)
+  2025:  96 ( 26.4%)
+  2026:  70 ( 19.2%)
+  Total: 364
+
+2. DOMAIN DISTRIBUTION (Gemini Standardized)
+------------------------------------------------------------------------------
+  GENERAL        : 155 ( 42.6%)
+  INSTRUMENTAL   : 115 ( 31.6%)
+  VOCAL          :  78 ( 21.4%)
+  ENSEMBLE       :  16 (  4.4%)
+  Total: 364
+
+3. TOPIC CLUSTER DISTRIBUTION (K-Means k=7)
+------------------------------------------------------------------------------
+  Topic 0 (Vocal / Multi-modal Emotion & Opera):  66 ( 18.1%)
+  Topic 1 (Automatic Music Transcription & Tablature (AMT)):  58 ( 15.9%)
+  Topic 2 (Music Source Separation & Drum Mixture (MSS)):  50 ( 13.7%)
+  Topic 3 (Self-Supervised & Representation Learning (SSL)):  43 ( 11.8%)
+  Topic 4 (Audio-Score Alignment & Query-by-Humming (QBH)):  29 (  8.0%)
+  Topic 5 (Acoustic Feature Classification & Regional MIR):  77 ( 21.2%)
+  Topic 6 (Singing Voice Synthesis & Lyric Alignment (SVS)):  41 ( 11.3%)
+  Total: 364
+
+4. TOPIC x DOMAIN CROSSTAB
+------------------------------------------------------------------------------
+domain_gemini  ENSEMBLE  GENERAL  INSTRUMENTAL  VOCAL  All
+topic_kmeans                                              
+0                     2       26            30      8   66
+1                     1        8            40      9   58
+2                     6       28            11      5   50
+3                     1       30             5      7   43
+4                     1       13             4     11   29
+5                     1       46            24      6   77
+6                     4        4             1     32   41
+All                  16      155           115     78  364
+
+
+5. TOPIC x YEAR CROSSTAB
+------------------------------------------------------------------------------
+Year          2022  2023  2024  2025  2026  All
+topic_kmeans                                   
+0                7    11    10    20    18   66
+1               14    15    10     9    10   58
+2                6    10    10    14    10   50
+3                4    10    14    11     4   43
+4                4     5     4     7     9   29
+5               12     7    16    27    15   77
+6               10     4    15     8     4   41
+All             57    62    79    96    70  364
+
+
+6. MODEL BENCHMARK COMPARISON
+------------------------------------------------------------------------------
+        Model  Silhouette (Cosine)  UMass Coherence  Min Cluster Size  Max Cluster Size  ARI vs K-Means
+      K-Means               0.0266          -0.8736                29                77          1.0000
+Agglomerative               0.0219          -1.1095                 3               141          0.3710
+          NMF               0.0234          -0.9389                41                70          0.5347
+          LDA               0.0099          -1.0366                21               112          0.2260
+
+Topic Stability: Mean ARI = 0.5299 +- 0.0614 (100 bootstrap iterations)
+Interdisciplinary / Crossover Studies: 257 (70.6%)
+
+7. NETWORK TOPOLOGY
+------------------------------------------------------------------------------
+Nodes: 364 | Edges: 1873 (8-NN Cosine Similarity Graph)
+Louvain Modularity Q: 0.6126
+Temporal Alluvial Transitions (2 Epochs: 2022-2023 vs 2024-2026):
+  Consolidation (2022-2023) -> Topic 0: 18 papers
+  Consolidation (2022-2023) -> Topic 1: 29 papers
+  Consolidation (2022-2023) -> Topic 2: 16 papers
+  Consolidation (2022-2023) -> Topic 3: 14 papers
+  Consolidation (2022-2023) -> Topic 4: 9 papers
+  Consolidation (2022-2023) -> Topic 5: 19 papers
+  Consolidation (2022-2023) -> Topic 6: 14 papers
+  Modern/Expansion (2024-2026) -> Topic 0: 48 papers
+  Modern/Expansion (2024-2026) -> Topic 1: 29 papers
+  Modern/Expansion (2024-2026) -> Topic 2: 34 papers
+  Modern/Expansion (2024-2026) -> Topic 3: 29 papers
+  Modern/Expansion (2024-2026) -> Topic 4: 20 papers
+  Modern/Expansion (2024-2026) -> Topic 5: 58 papers
+  Modern/Expansion (2024-2026) -> Topic 6: 27 papers
+
+
+8. ARCHITECTURAL PREVALENCE & TEMPORAL SHIFT
+------------------------------------------------------------------------------
+  CNN / Convolutional                       : 120 ( 33.0%) | 2022-2023:  28.6% -> 2024-2026:  35.1%
+  Transformer / Attention                   :  82 ( 22.5%) | 2022-2023:  21.8% -> 2024-2026:  22.9%
+  RNN / LSTM / GRU                          :  65 ( 17.9%) | 2022-2023:  15.1% -> 2024-2026:  19.2%
+  Self-Supervised / Pretrained / Foundation :  42 ( 11.5%) | 2022-2023:  13.4% -> 2024-2026:  10.6%
+  Diffusion / Generative                    :   7 (  1.9%) | 2022-2023:   0.0% -> 2024-2026:   2.9%
+  Classical ML / DSP                        :  36 (  9.9%) | 2022-2023:   6.7% -> 2024-2026:  11.4%
+
+
+9. REPORTED CHALLENGES & PRACTICES
+------------------------------------------------------------------------------
+  Generalization / Robustness / Domain Shift:  74 ( 20.3%) | 2022-2023:  14.3% -> 2024-2026:  23.3%
+  Data Scarcity / Annotation Bottleneck     :  35 (  9.6%) | 2022-2023:   9.2% -> 2024-2026:   9.8%
+  Noise / Polyphony / Mixture Complexity    :  80 ( 22.0%) | 2022-2023:  20.2% -> 2024-2026:  22.9%
+  Real-time / Latency / Embedded Deployment :  53 ( 14.6%) | 2022-2023:  10.1% -> 2024-2026:  16.7%
+  Subjective Evaluation / Listening Tests   :  10 (  2.7%) | 2022-2023:   4.2% -> 2024-2026:   2.0%

@@ -15,7 +15,7 @@ that matter more than any individual statistic — this isn't a find-and-replace
 | | Old paper (`OLD SLR.pdf`) | Current pipeline (this repo) |
 |---|---|---|
 | Databases | 4: ISMIR, IEEE Xplore, ACM Digital Library, SpringerLink/Elsevier | **2: Scopus, IEEE Xplore.** ISMIR, ACM, SpringerLink were never queried anywhere in this repo. |
-| Corpus size | 100 included studies | **365 included papers** |
+| Corpus size | 100 included studies | **364 included papers** (screened via validated Gemini preliminary screening from 547 candidates; see `numbers_manifest_v4_canonical.txt`) |
 | Search window | Primary 2020–2025, with pre-2020 foundational exceptions | 2020–2026 (`PUBYEAR > 2019`); no explicit foundational-paper carve-out |
 | Classification approach | Manual: two-axis domain × modality matrix, hand-coded by the review team, plus a 45-point quality rubric (Borbon & Ebardo) | **Automated: TF-IDF + K-Means clustering** into 7 topic clusters (validated against 3 other models — Agglomerative, NMF, LDA — and selected as the best fit; see Section 5). No modality tagging, no quality-rubric scoring exists anywhere in the pipeline. |
 | Screening | Title/abstract screening described narratively, no named tool | **Rayyan**, 3 independent reviewers, blind screening with a recorded per-reviewer decision trail |

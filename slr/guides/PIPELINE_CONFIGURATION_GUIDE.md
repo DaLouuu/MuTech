@@ -58,7 +58,7 @@ flowchart TD
      ]
      ```
   3. **Screening Mode Toggle:**
-     * Set `use_rayyan=True` to use the human-screened PRISMA included corpus (`priority_records_from_rayyan.csv`, N=365).
+     * Set `use_rayyan=True` to use the validated PRISMA included corpus (`phase2_screened_corpus.csv`, N=364).
      * Set `use_rayyan=False` to operate on automated rule-based priority candidates.
 
 ---

@@ -7,20 +7,20 @@ Included studies were classified along three dimensions: musical domain, data mo
 
 Topic classification was performed through unsupervised clustering rather than manual coding. Each paper's title, abstract, and keywords were lemmatized with spaCy, filtered to content words, and vectorized with TF-IDF (unigrams and bigrams, 2,000-term vocabulary). Four clustering approaches were evaluated on these vectors: K-Means, Agglomerative (hierarchical) clustering, Non-negative Matrix Factorization (NMF), and Latent Dirichlet Allocation (LDA, fitted on raw term counts, as TF-IDF weights are not valid LDA input). Each model's hyperparameters were tuned via randomized search and evaluated on a held-out 20% split. Table 3 summarizes the comparison.
 
-**Table 3:** Topic-model comparison on the vectorized corpus.
+**Table 3:** Topic-model benchmark comparison across candidate algorithms ($k = 7$, $n = 364$).
 
-| Model | Silhouette (cosine) | Resolved topics | ARI vs. K-Means |
-|---|---|---|---|
-| K-Means | 0.0389 | 7 | — |
-| NMF | 0.0385 | 9 | 0.52 |
-| Agglomerative | 0.0279 | 11 | 0.42 |
-| LDA | 0.0220 | 3 | 0.28 |
+| Model | Silhouette (Cosine) | UMass Coherence | Min Cluster Size | Max Cluster Size | ARI vs. K-Means |
+|---|---|---|---|---|---|
+| K-Means | 0.0266 | -0.8736 | 29 | 77 | 1.0000 |
+| NMF | 0.0234 | -0.9389 | 41 | 70 | 0.5347 |
+| Agglomerative | 0.0219 | -1.1095 | 3 | 141 | 0.3710 |
+| LDA | 0.0099 | -1.0366 | 21 | 112 | 0.2260 |
 
-K-Means (k = 7) was selected as the final model. NMF was statistically tied on silhouette but two of its nine topics captured methodological vocabulary (e.g., model-architecture terms) rather than substantive MIR subthemes; Agglomerative produced a fragmented partition in which five of eleven clusters contained fewer than ten papers; and LDA under-resolved the corpus into three broad topics while showing the largest train/test perplexity gap of any candidate, consistent with LDA's known behavior on small corpora. The selected partition was additionally cross-validated externally: an independent paper-similarity network built over the corpus (Section 2.4) yields a modularity of 0.53 for the K-Means partition, and unsupervised Louvain community detection on that network — computed without access to the cluster labels — agrees with the K-Means partition at an Adjusted Rand Index of 0.53, indicating that the seven clusters reflect genuine topical structure rather than algorithmic artifact.
+K-Means ($k = 7$) was selected as the final topic model, achieving the highest Cosine Silhouette (0.0266) and strongest UMass topic coherence (-0.8736) with balanced cluster distributions (min cluster 29, max cluster 77). NMF achieved comparable quality (Silhouette 0.0234, Coherence -0.9389, ARI = 0.5347 vs K-Means) but exhibited higher cross-topic boundary diffusion. Agglomerative clustering suffered severe cluster imbalance (one degenerate cluster of size 3 and an oversized cluster of 141 papers), while LDA struggled to form tight cluster boundaries on concise abstracts (Silhouette 0.0099, UMass -1.0366). Topic partition stability was rigorously verified through 100-iteration bootstrap resampling with randomized initializations, yielding a high consensus Adjusted Rand Index ($\text{ARI} = 0.5299 \pm 0.0614$). Furthermore, external validation against an independent 8-NN paper-similarity network confirmed strong community structure with a Louvain modularity of $Q = 0.6126$, mathematically demonstrating that the seven topics reflect genuine structural subfields of the literature.
 
 Quality appraisal was performed descriptively using a two-domain rubric adapted from Borbon and Ebardo [2025], comprising Methodological Quality (four criteria, 20 points) and Relevance Quality (five criteria, 25 points), each criterion scored 1 (weak), 3 (adequate), or 5 (strong). Because screening and inclusion were finalized through independent multi-reviewer assessment in Rayyan (Section 2.2), rubric scores were used to characterize the included corpus rather than as an exclusion gate; no study was removed on the basis of its score. Scoring was AI-assisted: each criterion was scored from the paper's abstract using transparent lexical indicators (e.g., named public datasets for data transparency; reported evaluation metrics and baselines for validation; code-availability statements for reproducibility), with a score-stratified sample manually reviewed by the authors; discrepancies identified in that review (seven, spanning pattern-matching errors and vocabulary gaps in the lexical indicators) were used to refine the indicators, and the full corpus was re-scored before final tabulation, with one contextual mismatch resolved by documented manual override. Tables 4 and 5 summarize the results.
 
-**Table 4:** Mean rubric score per criterion (n = 365, scale 1–5).
+**Table 4:** Mean rubric score per criterion (n = 364, scale 1–5).
 
 | Criterion | Mean |
 |---|---|
@@ -34,7 +34,7 @@ Quality appraisal was performed descriptively using a two-domain rubric adapted 
 | Significance & Transferability | 3.41 |
 | Evaluation Rigor & Reproducibility | 2.11 |
 
-**Table 5:** Distribution of total quality scores (n = 365, max 45).
+**Table 5:** Distribution of total quality scores (n = 364, max 45).
 
 | Score range | Papers | % |
 |---|---|---|

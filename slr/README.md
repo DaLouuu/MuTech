@@ -1,7 +1,7 @@
 # Systematic Literature Review (SLR) Research Pipeline
 ## Intelligent Music Processing for Singing, Ensembles, and Instrumental Performance
 
-This directory contains the complete academic research pipeline analyzing **365 peer-reviewed studies** collected from Scopus and IEEE Xplore, synthesized following the **PRISMA 2020** methodology.
+This directory contains the complete academic research pipeline analyzing **364 peer-reviewed studies** collected from Scopus and IEEE Xplore, screened via validated multi-agent LLM screening and synthesized following the **PRISMA 2020** methodology.
 
 ---
 
@@ -69,7 +69,7 @@ slr/
 Every phase transition is guarded by automated assertions enforcing PRISMA compliance:
 
 * **Gate 1 (Post-Phase 1):** Verifies non-empty database ingestion and ensures deduplication math accounts for all identified records ($\text{Identified} - \text{Duplicates} = \text{Unique}$).
-* **Gate 2 (Post-Phase 2):** Verifies PRISMA study flow conservation and validates the 365 included study count against Rayyan human screening.
+* **Gate 2 (Post-Phase 2):** Verifies PRISMA study flow conservation and validates the 364 included study count against validated multi-stage screening.
 * **Gate 3 (Post-Phase 3):** Validates feature extraction, checks vocabulary size ($>500$ content terms), and verifies zero silent drops during text mining.
 * **Gate 4 (Post-Phase 4):** Ensures all 4 models converge without degenerate/singleton clusters, computes both Cosine Silhouette and UMass Topic Coherence, and extracts c-TF-IDF keywords.
 * **Gate 5 (Post-Phase 5):** Confirms 100% corpus node representation in the similarity graph, evaluates Louvain modularity, and synchronizes the live web dashboard.
